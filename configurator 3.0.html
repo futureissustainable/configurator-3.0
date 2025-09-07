@@ -1,0 +1,81 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIOBUILDS Modular Configurator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="config">
+    <div class="left-images">
+        <div class="image-wrapper">
+            <img id="stickyImg1" src="" alt="Imagine produs configurat 1">
+            <img id="stickyImg2" src="" alt="Imagine produs configurat 2">
+        </div>
+        <div class="stacked-image-container">
+            <img id="stackedImgTop" src="" alt="Imagine de sus produs configurat">
+            <img id="stackedImgBottom" src="" alt="Imagine de jos produs configurat">
+        </div>
+    </div>
+
+    <div class="right-content">
+        <div class="top-section">
+            <h1 id="houseModelName">Sanctuary</h1>
+            <p id="modelDescription" class="model-specs"></p>
+            <div class="multistep-form">
+                <div class="form-tab" id="step-1">
+                    <!-- Section H2 is removed for cleaner look -->
+                    <div class="options-container"> 
+                        <!-- Dropdown, separator, and finish radios will be injected here by JS -->
+                    </div>
+                </div>
+                <div class="form-tab" id="step-2">
+                    <h2 id="floorplanStepTitle">Plan</h2>
+                    <div class="options-container"> </div>
+                </div>
+                <div class="form-tab" id="step-3">
+                    <h2 id="upgradesStepTitle">Upgrade</h2>
+                    <div class="options-container"> </div>
+                </div>
+                <div class="form-tab" id="step-5-referral">
+                    <h2 id="referralCodeStepTitle">Cod Recomandare</h2>
+                    <div class="options-container">
+                        <input type="text" id="referral-code-input" class="custom-text-input" placeholder="Opțional">
+                        <div id="discount-message" style="display: none;">Reducere de 4% aplicată</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-section">
+            <div class="price-box" id="priceBox">
+                <h4>De la 159.800 €</h4>
+                <p class="p2">Economii est. la consum (50 ani): 175.285 €</p>
+            </div>
+            <div class="button-row">
+                <button class="continue-button" id="finalContinueBtn">CONTINUĂ</button>
+                <div id="scroll-progress-bar-bottom"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+        <button class="close-button" id="closeModal">&times;</button>
+        <div class="modal-inner">
+        </div>
+    </div>
+</div>
+
+<!-- Link to your external JavaScript file -->
+<script src="script.js"></script>
+</body>
+</html>
