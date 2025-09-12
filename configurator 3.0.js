@@ -1,3 +1,4 @@
+
 (function() {
     // Universal Images
     let blindsImage = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4341f5b9b2742863461ef_375fa4b4b9988f686d5a21cdfd58a106_Blinds.avif";
@@ -48,8 +49,8 @@
                 }
             ],
             "floorplan" : [
-                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d2244f5d6be3af87aab_24m2%20Floorplan%20A.avif", 'price': 0, 'name': 'Compartimentare A', 'modal': "<h3>24m² Compartimentare A</h3><br><p>Interior: 5.70m x 3.10m x 2.50m</p><p>Exterior: 6.40m x 3.80m x 3.20m</p><h4>Camere</h4><p>Dormitor: 14.20m²</p><p>Baie: 2.65m²</p><p>Depozitare / Chichinetă: 0.80m²</p>" },
-                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d22e33276e515d43a8f_24m2%20Floorplan%20B.avif", 'price': 0, 'name': 'Compartimentare B', 'modal': "<h3>24m² Compartimentare B</h3><br><p>Interior: 5.70m x 3.10m x 2.50m</p><p>Exterior: 6.40m x 3.80m x 3.20m</p><h4>Camere</h4><p>Dormitor: 14.20m²</p><p>Baie: 2.65m²</p><p>Depozitare / Chichinetă: 0.80m²</p>" } ] },
+                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d2244f5d6be3af87aab_24m2%20Floorplan%20A.avif", 'price': 0, 'name': 'Plan A', 'modal': "<h3>24m² Plan A</h3><br><p>Interior: 5.70m x 3.10m x 2.50m</p><p>Exterior: 6.40m x 3.80m x 3.20m</p><h4>Camere</h4><p>Dormitor: 14.20m²</p><p>Baie: 2.65m²</p><p>Depozitare / Chichinetă: 0.80m²</p>" },
+                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d22e33276e515d43a8f_24m2%20Floorplan%20B.avif", 'price': 0, 'name': 'Plan B', 'modal': "<h3>24m² Plan B</h3><br><p>Interior: 5.70m x 3.10m x 2.50m</p><p>Exterior: 6.40m x 3.80m x 3.20m</p><h4>Camere</h4><p>Dormitor: 14.20m²</p><p>Baie: 2.65m²</p><p>Depozitare / Chichinetă: 0.80m²</p>" } ] },
         'wanderlust-48' : {
             "image" : "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283782a535d591653c65_48m2%20Wanderlust%204.0.avif",
             "name": "Wanderlust", "energy": 69840, "basePriceText": "De la 59.800 €",
@@ -86,8 +87,8 @@
                 }
             ],
             "floorplan" : [
-                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c525733fc3797a1ea68b6_48m2%20Floorplan%20A.png", 'price': 0, 'name': 'Compartimentare A', 'modal': "<h3>48m² Compartimentare A</h3><br><p>Interior: 11.80m x 3.10m x 2.50m</p><p>Exterior: 12.60m x 3.80m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 19.90m²</p><br><p>1. Dormitor: 11.80m²</p><br><p>1. Baie: 4.50m²</p>"},
-                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f671a54486d036b53_48m2%20Floorplan%20B.png", 'price': 0, 'name': 'Compartimentare B', 'modal': "<h3>48m² Compartimentare B</h3><br><p>Interior: 11.80m x 3.10m x 2.50m</p><p>Exterior: 12.60m x 3.80m x 3.20m</p><h4>Camere</h4><p>1. Dormitor: 11.80m²</p><p>2. Dormitor: 11.80m²</p><br><p>1. Baie: 4.50m²</p><p>2. Baie: 3.50m²</p><p>Hol: 3.50m²</p>" } ] },
+                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c525733fc3797a1ea68b6_48m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A', 'modal': "<h3>48m² Plan A</h3><br><p>Interior: 11.80m x 3.10m x 2.50m</p><p>Exterior: 12.60m x 3.80m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 19.90m²</p><br><p>1. Dormitor: 11.80m²</p><br><p>1. Baie: 4.50m²</p>"},
+                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f671a54486d036b53_48m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B', 'modal': "<h3>48m² Plan B</h3><br><p>Interior: 11.80m x 3.10m x 2.50m</p><p>Exterior: 12.60m x 3.80m x 3.20m</p><h4>Camere</h4><p>1. Dormitor: 11.80m²</p><p>2. Dormitor: 11.80m²</p><br><p>1. Baie: 4.50m²</p><p>2. Baie: 3.50m²</p><p>Hol: 3.50m²</p>" } ] },
         'serenity-95' : {
             "image" : "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428362a03aef0fc05960f_95m2%20Serenity%204.0.avif",
             "name": "Serenity", "energy": 138225, "basePriceText": "De la 109.800 €",
@@ -124,9 +125,9 @@
                 }
             ],
             "floorplan" : [
-                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514e29f50d2da31e84dc_95m2%20Floorplan%20A.png", 'price': 0, 'name': 'Compartimentare A', 'modal': "<h3>95m² Compartimentare A</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 19.90m²</p><br><p>1. Dormitor: 11.80m²</p><br><p>1. Baie: 4.50m²</p>"},
-                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fdf7becede16b71e9_95m2%20Floorplan%20B.png", 'price': 0, 'name': 'Compartimentare B', 'modal': "<h3>95m² Compartimentare B</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Camere</h4><p>1. Dormitor: 11.80m²</p><p>2. Dormitor: 11.80m²</p><br><p>1. Baie: 4.50m²</p><p>2. Baie: 3.50m²</p><p>Hol: 3.50m²</p>"},
-                { 'slug' : "floorplan-c", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff885d32e87f5d5ef_95m2%20Floorplan%20C.png", 'price': 0, 'name': 'Compartimentare C', 'modal': "<h3>95m² Compartimentare C</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 53.70m²</p><br><p>1. Dormitor: 13.10m²</p><br><p>1. Baie: 3.75m²</p><p>2. Baie: 4.35m²</p>"} ] },
+                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514e29f50d2da31e84dc_95m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A', 'modal': "<h3>95m² Plan A</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 19.90m²</p><br><p>1. Dormitor: 11.80m²</p><br><p>1. Baie: 4.50m²</p>"},
+                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fdf7becede16b71e9_95m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B', 'modal': "<h3>95m² Plan B</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Camere</h4><p>1. Dormitor: 11.80m²</p><p>2. Dormitor: 11.80m²</p><br><p>1. Baie: 4.50m²</p><p>2. Baie: 3.50m²</p><p>Hol: 3.50m²</p>"},
+                { 'slug' : "floorplan-c", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff885d32e87f5d5ef_95m2%20Floorplan%20C.png", 'price': 0, 'name': 'Plan C', 'modal': "<h3>95m² Plan C</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 53.70m²</p><br><p>1. Dormitor: 13.10m²</p><br><p>1. Baie: 3.75m²</p><p>2. Baie: 4.35m²</p>"} ] },
         'sanctuary-142' : {
             "image" : "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42836759488180078dc28_142m2%20Sanctuary%204.0.avif",
             "name": "Sanctuary", "energy": 175285, "basePriceText": "De la 159.800 €",
@@ -163,9 +164,9 @@
                 }
             ],
             "floorplan" : [
-                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff7e14cb1b083351b_142m2%20Floorplan%20A.png", 'price': 0, 'name': 'Compartimentare A', 'modal': "<h3>142m² Compartimentare A</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 62.90m²</p><br><p>1. Dormitor: 12.40m²</p><p>2. Dormitor: 12.20m²</p><p>3. Dormitor: 12.40m²</p><p>4. Dormitor: 13.10m²</p><br><p>1. Baie: 3.75m²</p><p>2. Baie: 4.35m²</p>"},
-                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f6966128dbeb27986_142m2%20Floorplan%20B.png", 'price': 0, 'name': 'Compartimentare B', 'modal': "<h3>142m² Compartimentare B</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 75.30m²</p><br><p>1. Dormitor: 12.20m²</p><p>2. Dormitor: 12.40m²</p><p>3. Dormitor: 13.10m²</p><br><p>1. Baie: 3.75m²</p><p>2. Baie: 4.35m²</p>"},
-                { 'slug' : "floorplan-c", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fd4d57aa8ff3d75e9_142m2%20Floorplan%20C.png", 'price': 0, 'name': 'Compartimentare C', 'modal': "<h3>142m² Compartimentare C</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 87.50m²</p><br><p>1. Dormitor: 12.40m²</p><p>2. Dormitor: 13.10m²</p><br><p>1. Baie: 3.75m²</p><p>2. Baie: 4.35m²</p>"} ] }
+                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff7e14cb1b083351b_142m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A', 'modal': "<h3>142m² Plan A</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 62.90m²</p><br><p>1. Dormitor: 12.40m²</p><p>2. Dormitor: 12.20m²</p><p>3. Dormitor: 12.40m²</p><p>4. Dormitor: 13.10m²</p><br><p>1. Baie: 3.75m²</p><p>2. Baie: 4.35m²</p>"},
+                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f6966128dbeb27986_142m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B', 'modal': "<h3>142m² Plan B</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 75.30m²</p><br><p>1. Dormitor: 12.20m²</p><p>2. Dormitor: 12.40m²</p><p>3. Dormitor: 13.10m²</p><br><p>1. Baie: 3.75m²</p><p>2. Baie: 4.35m²</p>"},
+                { 'slug' : "floorplan-c", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fd4d57aa8ff3d75e9_142m2%20Floorplan%20C.png", 'price': 0, 'name': 'Plan C', 'modal': "<h3>142m² Plan C</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 87.50m²</p><br><p>1. Dormitor: 12.40m²</p><p>2. Dormitor: 13.10m²</p><br><p>1. Baie: 3.75m²</p><p>2. Baie: 4.35m²</p>"} ] }
     };
 
     const turnkeyMaterialItemsRaw = `
@@ -831,16 +832,16 @@
                 case 'step-2':
                     const currentFloorplanSlug = queryArgs['SQF_FLOORPLAN'] || (config[type]?.floorplan?.[0]?.slug);
                     const floorplanData = currentFloorplanSlug ? config[type]?.floorplan?.find(f => f.slug === currentFloorplanSlug) : null;
-                    const planLetter = floorplanData ? floorplanData.name.replace('Compartimentare ','') : 'A';
-                    buttonText = `Vezi detaliile compartimentării ${planLetter}`;
+                    const planLetter = floorplanData ? floorplanData.name.replace('Plan ','') : 'A';
+                    buttonText = `Vezi detaliile planului ${planLetter}`;
                     modalContentProvider = () => {
                         const floorplanSlugForModal = queryArgs['SQF_FLOORPLAN'] || (config[type]?.floorplan?.[0]?.slug);
                         const floorplanDataForModal = config[type]?.floorplan?.find(f => f.slug === floorplanSlugForModal);
                         if (!floorplanDataForModal) {
-                             return "<p>Vă rugăm să selectați o compartimentare pentru a vedea detaliile.</p>";
+                             return "<p>Vă rugăm să selectați un plan pentru a vedea detaliile.</p>";
                         }
 
-                        let modalHtml = `<img src="${floorplanDataForModal.image}" alt="Compartimentare ${floorplanDataForModal.name}" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px; onerror="this.onerror=null; this.src='';">`;
+                        let modalHtml = `<img src="${floorplanDataForModal.image}" alt="Plan ${floorplanDataForModal.name}" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px; onerror="this.onerror=null; this.src='';">`;
                         modalHtml += floorplanDataForModal.modal;
 
                         return modalHtml;
@@ -871,7 +872,7 @@
     function setTabTitles() {
         let currentHouseData = config[type];
         if (!currentHouseData) return;
-        setTabTitle('Compartimentare', 'step-2', 'floorplanStepTitle');
+        setTabTitle('Plan', 'step-2', 'floorplanStepTitle');
         setTabTitle('Upgrade', 'step-3', 'upgradesStepTitle');
         setTabTitle('Cod Recomandare', 'step-5-referral', 'referralCodeStepTitle');
     }
@@ -1176,9 +1177,9 @@
             const currentFloorplanSlug = queryArgs['SQF_FLOORPLAN'];
             const floorplanData = config[type]?.floorplan?.find(f => f.slug === currentFloorplanSlug);
             if (floorplanData && floorplanData.name) {
-                floorplanDetailsLink.textContent = `Vezi detaliile compartimentării ${floorplanData.name.replace('Compartimentare ', '')}`;
+                floorplanDetailsLink.textContent = `Vezi detaliile planului ${floorplanData.name.replace('Plan ', '')}`;
             } else {
-                floorplanDetailsLink.textContent = "Vezi detaliile compartimentării";
+                floorplanDetailsLink.textContent = "Vezi detaliile planului";
             }
         }
     }
@@ -1461,9 +1462,9 @@
                         }
                         const floorplanDetailsLink = document.querySelector('#step-2 .feature-details-link');
                         if(floorplanDetailsLink && floorplanData && floorplanData.name){
-                            floorplanDetailsLink.textContent = `Vezi detaliile compartimentării ${floorplanData.name.replace('Compartimentare ', '')}`;
+                            floorplanDetailsLink.textContent = `Vezi detaliile planului ${floorplanData.name.replace('Plan ', '')}`;
                         } else if (floorplanDetailsLink) {
-                            floorplanDetailsLink.textContent = "Vezi detaliile compartimentării";
+                            floorplanDetailsLink.textContent = "Vezi detaliile planului";
                         }
                         updateModelDescription();
 
@@ -1556,7 +1557,7 @@
                  }
 
                  if (!queryArgs['SQF_FLOORPLAN']) {
-                     showNotification(document.getElementById('step-2'), "Vă rugăm să selectați o compartimentare.");
+                     showNotification(document.getElementById('step-2'), "Vă rugăm să selectați un plan de etaj.");
                      allValid = false;
                  }
 
