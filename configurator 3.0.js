@@ -48,8 +48,8 @@
                 }
             ],
             "floorplan" : [
-                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d2244f5d6be3af87aab_24m2%20Floorplan%20A.avif", 'price': 0, 'name': 'Plan A', 'modal': "<h3>24sqm Plan A</h3><br><p>Interior: 5.70m x 3.10m x 2.50m</p><p>Exterior: 6.40m x 3.80m x 3.20m</p><h4>Camere</h4><p>Dormitor: 14.20sqm</p><p>Baie: 2.65sqm</p><p>Depozitare / Chichinetă: 0.80sqm</p>" },
-                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d22e33276e515d43a8f_24m2%20Floorplan%20B.avif", 'price': 0, 'name': 'Plan B', 'modal': "<h3>24sqm Plan B</h3><br><p>Interior: 5.70m x 3.10m x 2.50m</p><p>Exterior: 6.40m x 3.80m x 3.20m</p><h4>Camere</h4><p>Dormitor: 14.20sqm</p><p>Baie: 2.65sqm</p><p>Depozitare / Chichinetă: 0.80sqm</p>" } ] },
+                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d2244f5d6be3af87aab_24m2%20Floorplan%20A.avif", 'price': 0, 'name': 'Compartimentare A', 'modal': "<h3>24m² Compartimentare A</h3><br><p>Interior: 5.70m x 3.10m x 2.50m</p><p>Exterior: 6.40m x 3.80m x 3.20m</p><h4>Camere</h4><p>Dormitor: 14.20m²</p><p>Baie: 2.65m²</p><p>Depozitare / Chichinetă: 0.80m²</p>" },
+                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d22e33276e515d43a8f_24m2%20Floorplan%20B.avif", 'price': 0, 'name': 'Compartimentare B', 'modal': "<h3>24m² Compartimentare B</h3><br><p>Interior: 5.70m x 3.10m x 2.50m</p><p>Exterior: 6.40m x 3.80m x 3.20m</p><h4>Camere</h4><p>Dormitor: 14.20m²</p><p>Baie: 2.65m²</p><p>Depozitare / Chichinetă: 0.80m²</p>" } ] },
         'wanderlust-48' : {
             "image" : "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283782a535d591653c65_48m2%20Wanderlust%204.0.avif",
             "name": "Wanderlust", "energy": 69840, "basePriceText": "De la 59.800 €",
@@ -86,8 +86,8 @@
                 }
             ],
             "floorplan" : [
-                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c525733fc3797a1ea68b6_48m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A', 'modal': "<h3>48sqm Plan A</h3><br><p>Interior: 11.80m x 3.10m x 2.50m</p><p>Exterior: 12.60m x 3.80m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 19.90sqm</p><br><p>1. Dormitor: 11.80sqm</p><br><p>1. Baie: 4.50sqm</p>"},
-                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f671a54486d036b53_48m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B', 'modal': "<h3>48sqm Plan B</h3><br><p>Interior: 11.80m x 3.10m x 2.50m</p><p>Exterior: 12.60m x 3.80m x 3.20m</p><h4>Camere</h4><p>1. Dormitor: 11.80sqm</p><p>2. Dormitor: 11.80sqm</p><br><p>1. Baie: 4.50sqm</p><p>2. Baie: 3.50sqm</p><p>Hol: 3.50sqm</p>" } ] },
+                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c525733fc3797a1ea68b6_48m2%20Floorplan%20A.png", 'price': 0, 'name': 'Compartimentare A', 'modal': "<h3>48m² Compartimentare A</h3><br><p>Interior: 11.80m x 3.10m x 2.50m</p><p>Exterior: 12.60m x 3.80m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 19.90m²</p><br><p>1. Dormitor: 11.80m²</p><br><p>1. Baie: 4.50m²</p>"},
+                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f671a54486d036b53_48m2%20Floorplan%20B.png", 'price': 0, 'name': 'Compartimentare B', 'modal': "<h3>48m² Compartimentare B</h3><br><p>Interior: 11.80m x 3.10m x 2.50m</p><p>Exterior: 12.60m x 3.80m x 3.20m</p><h4>Camere</h4><p>1. Dormitor: 11.80m²</p><p>2. Dormitor: 11.80m²</p><br><p>1. Baie: 4.50m²</p><p>2. Baie: 3.50m²</p><p>Hol: 3.50m²</p>" } ] },
         'serenity-95' : {
             "image" : "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428362a03aef0fc05960f_95m2%20Serenity%204.0.avif",
             "name": "Serenity", "energy": 138225, "basePriceText": "De la 109.800 €",
@@ -124,9 +124,9 @@
                 }
             ],
             "floorplan" : [
-                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514e29f50d2da31e84dc_95m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A', 'modal': "<h3>95sqm Plan A</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 19.90sqm</p><br><p>1. Dormitor: 11.80sqm</p><br><p>1. Baie: 4.50sqm</p>"},
-                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fdf7becede16b71e9_95m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B', 'modal': "<h3>95sqm Plan B</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Camere</h4><p>1. Dormitor: 11.80sqm</p><p>2. Dormitor: 11.80sqm</p><br><p>1. Baie: 4.50sqm</p><p>2. Baie: 3.50sqm</p><p>Hol: 3.50sqm</p>"},
-                { 'slug' : "floorplan-c", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff885d32e87f5d5ef_95m2%20Floorplan%20C.png", 'price': 0, 'name': 'Plan C', 'modal': "<h3>95sqm Plan C</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 53.70sqm</p><br><p>1. Dormitor: 13.10sqm</p><br><p>1. Baie: 3.75sqm</p><p>2. Baie: 4.35sqm</p>"} ] },
+                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514e29f50d2da31e84dc_95m2%20Floorplan%20A.png", 'price': 0, 'name': 'Compartimentare A', 'modal': "<h3>95m² Compartimentare A</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 19.90m²</p><br><p>1. Dormitor: 11.80m²</p><br><p>1. Baie: 4.50m²</p>"},
+                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fdf7becede16b71e9_95m2%20Floorplan%20B.png", 'price': 0, 'name': 'Compartimentare B', 'modal': "<h3>95m² Compartimentare B</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Camere</h4><p>1. Dormitor: 11.80m²</p><p>2. Dormitor: 11.80m²</p><br><p>1. Baie: 4.50m²</p><p>2. Baie: 3.50m²</p><p>Hol: 3.50m²</p>"},
+                { 'slug' : "floorplan-c", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff885d32e87f5d5ef_95m2%20Floorplan%20C.png", 'price': 0, 'name': 'Compartimentare C', 'modal': "<h3>95m² Compartimentare C</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 53.70m²</p><br><p>1. Dormitor: 13.10m²</p><br><p>1. Baie: 3.75m²</p><p>2. Baie: 4.35m²</p>"} ] },
         'sanctuary-142' : {
             "image" : "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42836759488180078dc28_142m2%20Sanctuary%204.0.avif",
             "name": "Sanctuary", "energy": 175285, "basePriceText": "De la 159.800 €",
@@ -154,7 +154,7 @@
                     ],
                     'upgrades' : [
                         [{ 'slug' : "parquet-raw-osb", 'image': "", 'price': 0, 'included': true, 'name': "OSB", 'icon' : osbIconUrl, 'name': "OSB"},
-                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c440551c75cb12af61eff9_142m2%2sanc%20Interior%20Cashmere%204.0.avif", 'price': 0, 'included': true, 'icon' : cashmereIconUrl, 'name': "Parchet Cashmere"},
+                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c440551c75cb12af61eff9_142m2%20Sanctuary%20Interior%20Cashmere%204.0.avif", 'price': 0, 'included': true, 'icon' : cashmereIconUrl, 'name': "Parchet Cashmere"},
                             { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c44055256a682dd59e9ad7_142m2%20Sanctuary%20Interior%20Hazelnut%204.0.avif", 'price': 0, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
                         [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
                             { 'slug' : "facade-lunawood", 'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428364c5adf6fa2aec1c1_142m2%20Sanctuary%20Lunawood%204.0.avif', 'icon' : lunawoodIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Lunawood"} ],
@@ -163,91 +163,91 @@
                 }
             ],
             "floorplan" : [
-                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff7e14cb1b083351b_142m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A', 'modal': "<h3>142sqm Plan A</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 62.90sqm</p><br><p>1. Dormitor: 12.40sqm</p><p>2. Dormitor: 12.20sqm</p><p>3. Dormitor: 12.40sqm</p><p>4. Dormitor: 13.10sqm</p><br><p>1. Baie: 3.75sqm</p><p>2. Baie: 4.35sqm</p>"},
-                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f6966128dbeb27986_142m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B', 'modal': "<h3>142sqm Plan B</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 75.30sqm</p><br><p>1. Dormitor: 12.20sqm</p><p>2. Dormitor: 12.40sqm</p><p>3. Dormitor: 13.10sqm</p><br><p>1. Baie: 3.75sqm</p><p>2. Baie: 4.35sqm</p>"},
-                { 'slug' : "floorplan-c", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fd4d57aa8ff3d75e9_142m2%20Floorplan%20C.png", 'price': 0, 'name': 'Plan C', 'modal': "<h3>142sqm Plan C</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 87.50sqm</p><br><p>1. Dormitor: 12.40sqm</p><p>2. Dormitor: 13.10sqm</p><br><p>1. Baie: 3.75sqm</p><p>2. Baie: 4.35sqm</p>"} ] }
+                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff7e14cb1b083351b_142m2%20Floorplan%20A.png", 'price': 0, 'name': 'Compartimentare A', 'modal': "<h3>142m² Compartimentare A</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 62.90m²</p><br><p>1. Dormitor: 12.40m²</p><p>2. Dormitor: 12.20m²</p><p>3. Dormitor: 12.40m²</p><p>4. Dormitor: 13.10m²</p><br><p>1. Baie: 3.75m²</p><p>2. Baie: 4.35m²</p>"},
+                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f6966128dbeb27986_142m2%20Floorplan%20B.png", 'price': 0, 'name': 'Compartimentare B', 'modal': "<h3>142m² Compartimentare B</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 75.30m²</p><br><p>1. Dormitor: 12.20m²</p><p>2. Dormitor: 12.40m²</p><p>3. Dormitor: 13.10m²</p><br><p>1. Baie: 3.75m²</p><p>2. Baie: 4.35m²</p>"},
+                { 'slug' : "floorplan-c", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fd4d57aa8ff3d75e9_142m2%20Floorplan%20C.png", 'price': 0, 'name': 'Compartimentare C', 'modal': "<h3>142m² Compartimentare C</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 87.50m²</p><br><p>1. Dormitor: 12.40m²</p><p>2. Dormitor: 13.10m²</p><br><p>1. Baie: 3.75m²</p><p>2. Baie: 4.35m²</p>"} ] }
     };
 
-const turnkeyMaterialItemsRaw = `
-MODULAR UPGRADE // TITLE
-Nouă Generație<split>MODULAR, acum perfecționat cu rame din aluminiu certificate Passivhaus, ultra-izolație organică din fibră de lemn, o structură optimizată, mai rezistentă și o selecție exclusivă de finisaje premium. Proiectat pentru confort, durabilitate și eficiență la cel mai înalt nivel.
-STRUCTURĂ // TITLE
-Sistemul Structural MODULAR<split>Îmbină rezistența mecanică remarcabilă cu eficiența fără precedent, eliminând complet punțile termice. Certificat pentru eficiență energetică de Passive House Institute (Darmstadt, Germania) la 0.15 W/(m²K) și pentru sustenabilitate de EPD (International).
-Structură C24 Timber Frame BIOBUILDS<split>Lemn certificat FSC/PEFC, rezistență excepțională la sarcini.
-Izolație din fibră de lemn STEICO<split>Organic, sustenabil și ultra-eficient (λ ≈ 0,036 W/m·K), certificat CE.
-Placă ECO OSB 3 (AGEPAN, Germania)<split>Fără formaldehidă și VOC, aprobat Passive House, certificat CE.
-Placă DWD (AGEPAN, Germania)<split>Permite pereților să „respire”, menținând etanșeitatea la exterior; certificat CE.
-Membrană inteligentă<split>Asigură etanșeitatea interioară cu difuzie controlată a vaporilor spre exterior.
-FINISAJE EXTERIOARE // TITLE
-Fațadă ventilată din lemn Yakisugi/Lunawood<split>Lemn natural termotratat, cu întreținere semnificativ redusă, rezistență excelentă la foc, durabil, cu estetică deosebită și proveniență sustenabilă.
-Acoperiș plat ventilat<split>Performanță termică superioară, durată de viață extinsă prin prevenirea acumulării de umiditate și supraîncălzire. Acoperișul are o pantă invizibilă (~5°), hidroizolat cu membrană premium, garanție minim 10 ani de producător.
-Sistem de colectare a apei pluviale integrat<split>Jgheaburi ascunse, integrate discret în fațadă, pregătite pentru colectarea sustenabilă a apei de ploaie.
-FERESTRE ȘI UȘI EXTERIOARE // TITLE
-Profile de aluminiu Genesis 90<split>Profile rigide, ultra-eficiente, certificate pentru case pasive (Uwi ≤ 0,85 W/m²K), certificat CE.
-Geam triplu stratificat, laminat<split>Eficiență și siguranță excepțională (U = 0,50 W/m²K), laminat pentru protecție suplimentară.
-BUCĂTĂRIE // TITLE
-Instalații pentru bucătărie<split>Instalații preechipate, gata pentru mobilierul și electrocasnicele tale.
-INSTALAȚII TEHNICE // TITLE
-Instalație electrică<split>Tablou electric complet, conform standardelor stricte UE. Comutatoare și protecții conforme normelor locale, inclusiv tehnologie AFDD.
-Instalație sanitară<split>Țevi și fitinguri de calitate superioară (PPR/PEX), compatibile cu toate reglementările locale și UE.
-FINISAJE INTERIOARE COMPLETE // TITLE
-Tavan cu lamele din lemn + fetru<split>Lemn natural și fetru reciclat; absorbție acustică excelentă.
-Tapet din fibră de sticlă<split>Rezistență foarte mare la tracțiune și uzură; lavabil; aspect modern.
-Parchet triplustratificat din lemn natural<split>Grosime 9–14 mm; lemn certificat FSC/PEFC; finisaj foarte durabil.
-Prize Schneider<split>Prize premium produse în Germania; certificate CE/VDE.
-UȘI INTERIOARE // TITLE
-Uși interioare S10<split>Certificate CE; Interior solid.
-FINISAJE COMPLETE BAIE // TITLE
-Plăci din compozit de piatră<split>Plăci întregi premium de 2.5 × 1.2 m; 100% impermeabile; rezistență foarte mare în timp.
-Lavoar cu design italian<split>Material compozit premium; ultra-subțire, modern și durabil.
-WC suspendat Grohe<split>Produs în Germania; design minimalist, modern.
-Boiler Ariston Velis<split>Design ultra-subțire; eficiență energetică ridicată.
-Duș walk-in<split>Proiectat în Franța; design minimalist, modern.
-SISTEME SMART // TITLE
-Șină de iluminat<split>Configurare flexibilă pentru LED și spoturi; estetică modernă.
-Iluminat Smart<split>Philips HUE sau IKEA TRÅDFRI; configurare Smart ușoară.
-Jaluzele exterioare Smart<split>Blochează > 95% din radiația solară; control prin aplicație/manual; certificate de Institutul de Case Pasive din Darmstadt, Germania; certificate CE.
-Genvex Premium Preheat 250<split>Recuperare de căldură de până la 95%; pompă de căldură integrată pentru încălzire și răcire.
-CERTIFICĂRI ȘI GARANȚII // TITLE
-Certificare Passivhaus<split>Emisă de Passive House Institute (Germania), atestă eficiența energetică fără precedent, confort excepțional. Pentru o locuință permanentă construită conform celor mai stricte standarde internaționale.
-Certificare EPD<split>Emisă de EPD International, confirmă un produs carbon negativ și practici responsabile de construcție.
-Marcaj CE<split>Toate componentele respectă reglementările UE pentru produse de construcții.
-Garanție standard UE<split>24 de luni rezidențial. 12 luni comercial. Opțiuni de extindere a garanției disponibile la cerere.
-Garanții producător<split>Beneficiarii primesc acoperire completă prin garanțiile oferite de furnizorii individuali.
-DISCLAIMER // TITLE
-Performanțe Tehnice<split>Performanțele menționate (inclusiv consumul energetic) sunt calculate conform condițiilor standard Passive House. Rezultatele reale pot avea variații în funcție de climă, orientarea casei, dimensiuni și modul de utilizare. Pentru detalii exacte, consultați calculele PHPP (Passive House Planning Package) aferente proiectului.
-`;
-const semiTurnkeyMaterialItemsRaw = `
-MODULAR UPGRADE // TITLE
-Nouă Generație<split>MODULAR, acum perfecționat cu rame din aluminiu certificate Passivhaus, ultra-izolație organică din fibră de lemn, și o structură optimizată. Proiectat pentru confort, durabilitate și eficiență la cel mai înalt nivel.
-STRUCTURĂ // TITLE
-Sistemul Structural MODULAR<split>Îmbină rezistența mecanică remarcabilă cu eficiența fără precedent, eliminând complet punțile termice. Certificat pentru eficiență energetică de Passive House Institute (Darmstadt, Germania) la 0.15 W/(m²K) și pentru sustenabilitate de EPD (International).
-Structură C24 Timber Frame BIOBUILDS<split>Lemn certificat FSC/PEFC, rezistență excepțională la sarcini.
-Izolație din fibră de lemn STEICO<split>Organic, sustenabil și ultra-eficient (λ ≈ 0,036 W/m·K), certificat CE.
-Placă ECO OSB 3 (AGEPAN, Germania)<split>Fără formaldehidă și VOC, aprobat Passive House, certificat CE.
-Placă DWD (AGEPAN, Germania)<split>Permite pereților să „respire”, menținând etanșeitatea la exterior; certificat CE.
-Membrană inteligentă<split>Asigură etanșeitatea interioară cu difuzie controlată a vaporilor spre exterior.
-FINISAJE EXTERIOARE // TITLE
-Fațadă ventilată din lemn Yakisugi/Lunawood<split>Lemn natural termotratat, cu întreținere semnificativ redusă, rezistență excelentă la foc, durabil, cu estetică deosebită și proveniență sustenabilă.
-Acoperiș plat ventilat<split>Performanță termică superioară, durată de viață extinsă prin prevenirea acumulării de umiditate și supraîncălzire. Acoperișul are o pantă invizibilă (~5°), hidroizolat cu membrană premium, garanție minim 10 ani de producător.
-Sistem de colectare a apei pluviale integrat<split>Jgheaburi ascunse, integrate discret în fațadă, pregătite pentru colectarea sustenabilă a apei de ploaie.
-FERESTRE ȘI UȘI EXTERIOARE // TITLE
-Profile de aluminiu Genesis 90<split>Profile rigide, ultra-eficiente, certificate pentru case pasive (Uwi ≤ 0,85 W/m²K), certificat CE.
-Geam triplu stratificat, laminat<split>Eficiență și siguranță excepțională (U = 0,50 W/m²K), laminat pentru protecție suplimentară.
-BUCĂTĂRIE // TITLE
-Instalații pentru bucătărie<split>Instalații preechipate, gata pentru mobilierul și electrocasnicele tale.
-INSTALAȚII TEHNICE // TITLE
-Instalație electrică<split>Tablou electric complet, conform standardelor stricte UE. Comutatoare și protecții conforme normelor locale, inclusiv tehnologie AFDD.
-Instalație sanitară<split>Țevi și fitinguri de calitate superioară (PPR/PEX), compatibile cu toate reglementările locale și UE.
-CERTIFICĂRI ȘI GARANȚII // TITLE
-Certificare Passivhaus<split>Emisă de Passive House Institute (Germania), atestă eficiența energetică fără precedent, confort excepțional. Pentru o locuință permanentă construită conform celor mai stricte standarde internaționale.
-Certificare EPD<split>Emisă de EPD International, confirmă un produs carbon negativ și practici responsabile de construcție.
-Marcaj CE<split>Toate componentele respectă reglementările UE pentru produse de construcții.
-Garanție standard UE<split>24 de luni rezidențial. 12 luni comercial. Opțiuni de extindere a garanției disponibile la cerere.
-Garanții producător<split>Beneficiarii primesc acoperire completă prin garanțiile oferite de furnizorii individuali.
-DISCLAIMER // TITLE
-Performanțe Tehnice<split>Performanțele menționate (inclusiv consumul energetic) sunt calculate conform condițiilor standard Passive House. Rezultatele reale pot avea variații în funcție de climă, orientarea casei, dimensiuni și modul de utilizare. Pentru detalii exacte, consultați calculele PHPP (Passive House Planning Package) aferente proiectului.
-`;
+    const turnkeyMaterialItemsRaw = `
+    MODULAR UPGRADE // TITLE
+    Nouă Generație<split>MODULAR, acum perfecționat cu rame din aluminiu certificate Passivhaus, ultra-izolație organică din fibră de lemn, o structură optimizată, mai rezistentă și o selecție exclusivă de finisaje premium. Proiectat pentru confort, durabilitate și eficiență la cel mai înalt nivel.
+    STRUCTURĂ // TITLE
+    Sistemul Structural MODULAR<split>Îmbină rezistența mecanică remarcabilă cu eficiența fără precedent, eliminând complet punțile termice. Certificat pentru eficiență energetică de Passive House Institute (Darmstadt, Germania) la 0.15 W/(m²K) și pentru sustenabilitate de EPD (International).
+    Structură C24 Timber Frame BIOBUILDS<split>Lemn certificat FSC/PEFC, rezistență excepțională la sarcini.
+    Izolație din fibră de lemn STEICO<split>Organic, sustenabil și ultra-eficient (λ ≈ 0,036 W/m·K), certificat CE.
+    Placă ECO OSB 3 (AGEPAN, Germania)<split>Fără formaldehidă și VOC, aprobat Passive House, certificat CE.
+    Placă DWD (AGEPAN, Germania)<split>Permite pereților să „respire”, menținând etanșeitatea la exterior; certificat CE.
+    Membrană inteligentă<split>Asigură etanșeitatea interioară cu difuzie controlată a vaporilor spre exterior.
+    FINISAJE EXTERIOARE // TITLE
+    Fațadă ventilată din lemn Yakisugi/Lunawood<split>Lemn natural termotratat, cu întreținere semnificativ redusă, rezistență excelentă la foc, durabil, cu estetică deosebită și proveniență sustenabilă.
+    Acoperiș plat ventilat<split>Performanță termică superioară, durată de viață extinsă prin prevenirea acumulării de umiditate și supraîncălzire. Acoperișul are o pantă invizibilă (~5°), hidroizolat cu membrană premium, garanție minim 10 ani de producător.
+    Sistem de colectare a apei pluviale integrat<split>Jgheaburi ascunse, integrate discret în fațadă, pregătite pentru colectarea sustenabilă a apei de ploaie.
+    FERESTRE ȘI UȘI EXTERIOARE // TITLE
+    Profile de aluminiu Genesis 90<split>Profile rigide, ultra-eficiente, certificate pentru case pasive (Uwi ≤ 0,85 W/m²K), certificat CE.
+    Geam triplu stratificat, laminat<split>Eficiență și siguranță excepțională (U = 0,50 W/m²K), laminat pentru protecție suplimentară.
+    BUCĂTĂRIE // TITLE
+    Instalații pentru bucătărie<split>Instalații preechipate, gata pentru mobilierul și electrocasnicele tale.
+    INSTALAȚII TEHNICE // TITLE
+    Instalație electrică<split>Tablou electric complet, conform standardelor stricte UE. Comutatoare și protecții conforme normelor locale, inclusiv tehnologie AFDD.
+    Instalație sanitară<split>Țevi și fitinguri de calitate superioară (PPR/PEX), compatibile cu toate reglementările locale și UE.
+    FINISAJE INTERIOARE COMPLETE // TITLE
+    Tavan cu lamele din lemn + fetru<split>Lemn natural și fetru reciclat; absorbție acustică excelentă.
+    Tapet din fibră de sticlă<split>Rezistență foarte mare la tracțiune și uzură; lavabil; aspect modern.
+    Parchet triplustratificat din lemn natural<split>Grosime 9–14 mm; lemn certificat FSC/PEFC; finisaj foarte durabil.
+    Prize Schneider<split>Prize premium produse în Germania; certificate CE/VDE.
+    UȘI INTERIOARE // TITLE
+    Uși interioare S10<split>Certificate CE; Interior solid.
+    FINISAJE COMPLETE BAIE // TITLE
+    Plăci din compozit de piatră<split>Plăci întregi premium de 2.5 × 1.2 m; 100% impermeabile; rezistență foarte mare în timp.
+    Lavoar cu design italian<split>Material compozit premium; ultra-subțire, modern și durabil.
+    WC suspendat Grohe<split>Produs în Germania; design minimalist, modern.
+    Boiler Ariston Velis<split>Design ultra-subțire; eficiență energetică ridicată.
+    Duș walk-in<split>Proiectat în Franța; design minimalist, modern.
+    SISTEME SMART // TITLE
+    Șină de iluminat<split>Configurare flexibilă pentru LED și spoturi; estetică modernă.
+    Iluminat Smart<split>Philips HUE sau IKEA TRÅDFRI; configurare Smart ușoară.
+    Jaluzele exterioare Smart<split>Blochează > 95% din radiația solară; control prin aplicație/manual; certificate de Institutul de Case Pasive din Darmstadt, Germania; certificate CE.
+    Genvex Premium Preheat 250<split>Recuperare de căldură de până la 95%; pompă de căldură integrată pentru încălzire și răcire.
+    CERTIFICĂRI ȘI GARANȚII // TITLE
+    Certificare Passivhaus<split>Emisă de Passive House Institute (Germania), atestă eficiența energetică fără precedent, confort excepțional. Pentru o locuință permanentă construită conform celor mai stricte standarde internaționale.
+    Certificare EPD<split>Emisă de EPD International, confirmă un produs carbon negativ și practici responsabile de construcție.
+    Marcaj CE<split>Toate componentele respectă reglementările UE pentru produse de construcții.
+    Garanție standard UE<split>24 de luni rezidențial. 12 luni comercial. Opțiuni de extindere a garanției disponibile la cerere.
+    Garanții producător<split>Beneficiarii primesc acoperire completă prin garanțiile oferite de furnizorii individuali.
+    DISCLAIMER // TITLE
+    Performanțe Tehnice<split>Performanțele menționate (inclusiv consumul energetic) sunt calculate conform condițiilor standard Passive House. Rezultatele reale pot avea variații în funcție de climă, orientarea casei, dimensiuni și modul de utilizare. Pentru detalii exacte, consultați calculele PHPP (Passive House Planning Package) aferente proiectului.
+    `;
+    const semiTurnkeyMaterialItemsRaw = `
+    MODULAR UPGRADE // TITLE
+    Nouă Generație<split>MODULAR, acum perfecționat cu rame din aluminiu certificate Passivhaus, ultra-izolație organică din fibră de lemn, și o structură optimizată. Proiectat pentru confort, durabilitate și eficiență la cel mai înalt nivel.
+    STRUCTURĂ // TITLE
+    Sistemul Structural MODULAR<split>Îmbină rezistența mecanică remarcabilă cu eficiența fără precedent, eliminând complet punțile termice. Certificat pentru eficiență energetică de Passive House Institute (Darmstadt, Germania) la 0.15 W/(m²K) și pentru sustenabilitate de EPD (International).
+    Structură C24 Timber Frame BIOBUILDS<split>Lemn certificat FSC/PEFC, rezistență excepțională la sarcini.
+    Izolație din fibră de lemn STEICO<split>Organic, sustenabil și ultra-eficient (λ ≈ 0,036 W/m·K), certificat CE.
+    Placă ECO OSB 3 (AGEPAN, Germania)<split>Fără formaldehidă și VOC, aprobat Passive House, certificat CE.
+    Placă DWD (AGEPAN, Germania)<split>Permite pereților să „respire”, menținând etanșeitatea la exterior; certificat CE.
+    Membrană inteligentă<split>Asigură etanșeitatea interioară cu difuzie controlată a vaporilor spre exterior.
+    FINISAJE EXTERIOARE // TITLE
+    Fațadă ventilată din lemn Yakisugi/Lunawood<split>Lemn natural termotratat, cu întreținere semnificativ redusă, rezistență excelentă la foc, durabil, cu estetică deosebită și proveniență sustenabilă.
+    Acoperiș plat ventilat<split>Performanță termică superioară, durată de viață extinsă prin prevenirea acumulării de umiditate și supraîncălzire. Acoperișul are o pantă invizibilă (~5°), hidroizolat cu membrană premium, garanție minim 10 ani de producător.
+    Sistem de colectare a apei pluviale integrat<split>Jgheaburi ascunse, integrate discret în fațadă, pregătite pentru colectarea sustenabilă a apei de ploaie.
+    FERESTRE ȘI UȘI EXTERIOARE // TITLE
+    Profile de aluminiu Genesis 90<split>Profile rigide, ultra-eficiente, certificate pentru case pasive (Uwi ≤ 0,85 W/m²K), certificat CE.
+    Geam triplu stratificat, laminat<split>Eficiență și siguranță excepțională (U = 0,50 W/m²K), laminat pentru protecție suplimentară.
+    BUCĂTĂRIE // TITLE
+    Instalații pentru bucătărie<split>Instalații preechipate, gata pentru mobilierul și electrocasnicele tale.
+    INSTALAȚII TEHNICE // TITLE
+    Instalație electrică<split>Tablou electric complet, conform standardelor stricte UE. Comutatoare și protecții conforme normelor locale, inclusiv tehnologie AFDD.
+    Instalație sanitară<split>Țevi și fitinguri de calitate superioară (PPR/PEX), compatibile cu toate reglementările locale și UE.
+    CERTIFICĂRI ȘI GARANȚII // TITLE
+    Certificare Passivhaus<split>Emisă de Passive House Institute (Germania), atestă eficiența energetică fără precedent, confort excepțional. Pentru o locuință permanentă construită conform celor mai stricte standarde internaționale.
+    Certificare EPD<split>Emisă de EPD International, confirmă un produs carbon negativ și practici responsabile de construcție.
+    Marcaj CE<split>Toate componentele respectă reglementările UE pentru produse de construcții.
+    Garanție standard UE<split>24 de luni rezidențial. 12 luni comercial. Opțiuni de extindere a garanției disponibile la cerere.
+    Garanții producător<split>Beneficiarii primesc acoperire completă prin garanțiile oferite de furnizorii individuali.
+    DISCLAIMER // TITLE
+    Performanțe Tehnice<split>Performanțele menționate (inclusiv consumul energetic) sunt calculate conform condițiilor standard Passive House. Rezultatele reale pot avea variații în funcție de climă, orientarea casei, dimensiuni și modul de utilizare. Pentru detalii exacte, consultați calculele PHPP (Passive House Planning Package) aferente proiectului.
+    `;
 
     function parseItemLine(line) {
         if (!line || line.trim() === "") return null;
@@ -570,7 +570,7 @@ Performanțe Tehnice<split>Performanțele menționate (inclusiv consumul energet
         } else if (rawPrice === 0) {
             priceDisplayHTML = `<span class="option-price">Inclus</span>`;
         } else {
-            priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)}</span>`;
+            priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} + TVA</span>`;
         }
 
         return `
@@ -589,7 +589,7 @@ Performanțe Tehnice<split>Performanțele menționate (inclusiv consumul energet
         if (price === 0) {
             displayPriceText = "Inclus";
         } else {
-            displayPriceText = formatCurrency(price);
+            displayPriceText = `${formatCurrency(price)} + TVA`;
         }
 
         return `
@@ -796,10 +796,10 @@ Performanțe Tehnice<split>Performanțele menționate (inclusiv consumul energet
         if (!descriptionEl) return;
 
         const modelDescriptions = {
-            'sanctuary': '142mp - 4 dormitoare',
-            'serenity': '95mp - 3 dormitoare',
-            'wanderlust': '48mp - 1 sau 2 dormitoare',
-            'nomad': '24mp - 1 dormitor'
+            'sanctuary': '142m² - 4 dormitoare',
+            'serenity': '95m² - 3 dormitoare',
+            'wanderlust': '48m² - 1 sau 2 dormitoare',
+            'nomad': '24m² - 1 dormitor'
         };
 
         // The 'type' variable is available in this scope, e.g., 'sanctuary-142'
@@ -831,16 +831,16 @@ Performanțe Tehnice<split>Performanțele menționate (inclusiv consumul energet
                 case 'step-2':
                     const currentFloorplanSlug = queryArgs['SQF_FLOORPLAN'] || (config[type]?.floorplan?.[0]?.slug);
                     const floorplanData = currentFloorplanSlug ? config[type]?.floorplan?.find(f => f.slug === currentFloorplanSlug) : null;
-                    const planLetter = floorplanData ? floorplanData.name.replace('Plan ','') : 'A';
-                    buttonText = `Vezi detaliile planului ${planLetter}`;
+                    const planLetter = floorplanData ? floorplanData.name.replace('Compartimentare ','') : 'A';
+                    buttonText = `Vezi detaliile compartimentării ${planLetter}`;
                     modalContentProvider = () => {
                         const floorplanSlugForModal = queryArgs['SQF_FLOORPLAN'] || (config[type]?.floorplan?.[0]?.slug);
                         const floorplanDataForModal = config[type]?.floorplan?.find(f => f.slug === floorplanSlugForModal);
                         if (!floorplanDataForModal) {
-                             return "<p>Vă rugăm să selectați un plan pentru a vedea detaliile.</p>";
+                             return "<p>Vă rugăm să selectați o compartimentare pentru a vedea detaliile.</p>";
                         }
 
-                        let modalHtml = `<img src="${floorplanDataForModal.image}" alt="Plan ${floorplanDataForModal.name}" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px; onerror="this.onerror=null; this.src='';">`;
+                        let modalHtml = `<img src="${floorplanDataForModal.image}" alt="Compartimentare ${floorplanDataForModal.name}" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px; onerror="this.onerror=null; this.src='';">`;
                         modalHtml += floorplanDataForModal.modal;
 
                         return modalHtml;
@@ -871,7 +871,7 @@ Performanțe Tehnice<split>Performanțele menționate (inclusiv consumul energet
     function setTabTitles() {
         let currentHouseData = config[type];
         if (!currentHouseData) return;
-        setTabTitle('Plan', 'step-2', 'floorplanStepTitle');
+        setTabTitle('Compartimentare', 'step-2', 'floorplanStepTitle');
         setTabTitle('Upgrade', 'step-3', 'upgradesStepTitle');
         setTabTitle('Cod Recomandare', 'step-5-referral', 'referralCodeStepTitle');
     }
@@ -1176,9 +1176,9 @@ Performanțe Tehnice<split>Performanțele menționate (inclusiv consumul energet
             const currentFloorplanSlug = queryArgs['SQF_FLOORPLAN'];
             const floorplanData = config[type]?.floorplan?.find(f => f.slug === currentFloorplanSlug);
             if (floorplanData && floorplanData.name) {
-                floorplanDetailsLink.textContent = `See details for floorplan ${floorplanData.name.replace('Plan ', '')}`;
+                floorplanDetailsLink.textContent = `Vezi detaliile compartimentării ${floorplanData.name.replace('Compartimentare ', '')}`;
             } else {
-                floorplanDetailsLink.textContent = "See details for floorplan";
+                floorplanDetailsLink.textContent = "Vezi detaliile compartimentării";
             }
         }
     }
@@ -1333,7 +1333,7 @@ Performanțe Tehnice<split>Performanțele menționate (inclusiv consumul energet
                 firstName = option.name;
                 if (option.price === 0 && option.included) { firstPriceText = "Inclus"; }
                 else if (option.price === 0) { firstPriceText = "Inclus"; }
-                else { firstPriceText = formatCurrency(option.price); }
+                else { firstPriceText = `${formatCurrency(option.price)} + TVA`; }
             }
         });
 
@@ -1423,7 +1423,7 @@ Performanțe Tehnice<split>Performanțele menționate (inclusiv consumul energet
                         const finishDetailsLink = document.querySelector('#step-1 .feature-details-link');
                         const newFinishDataForLink = config[type].options.find(o => o.slug === target.value);
                         if (finishDetailsLink && newFinishDataForLink) {
-                            finishDetailsLink.textContent = `Explore what's included in ${newFinishDataForLink.name}`;
+                            finishDetailsLink.textContent = `Explorează ce este inclus în ${newFinishDataForLink.name}`;
                         }
 
                         const newFinishData = config[type].options.find(o => o.slug === target.value);
@@ -1461,9 +1461,9 @@ Performanțe Tehnice<split>Performanțele menționate (inclusiv consumul energet
                         }
                         const floorplanDetailsLink = document.querySelector('#step-2 .feature-details-link');
                         if(floorplanDetailsLink && floorplanData && floorplanData.name){
-                            floorplanDetailsLink.textContent = `See details for floorplan ${floorplanData.name.replace('Plan ', '')}`;
+                            floorplanDetailsLink.textContent = `Vezi detaliile compartimentării ${floorplanData.name.replace('Compartimentare ', '')}`;
                         } else if (floorplanDetailsLink) {
-                            floorplanDetailsLink.textContent = "See details for floorplan";
+                            floorplanDetailsLink.textContent = "Vezi detaliile compartimentării";
                         }
                         updateModelDescription();
 
@@ -1556,7 +1556,7 @@ Performanțe Tehnice<split>Performanțele menționate (inclusiv consumul energet
                  }
 
                  if (!queryArgs['SQF_FLOORPLAN']) {
-                     showNotification(document.getElementById('step-2'), "Vă rugăm să selectați un plan de etaj.");
+                     showNotification(document.getElementById('step-2'), "Vă rugăm să selectați o compartimentare.");
                      allValid = false;
                  }
 
