@@ -404,9 +404,13 @@
         progressBar.style.width = `${progressBarWidth}%`;
     }
 
+    /**
+     * FIX: The unifiedScrollHandler now only manages the button and progress bar.
+     * The call to updateImageBasedOnScrollPercentage() has been removed to prevent
+     * images from reloading on every scroll event, which saves significant bandwidth.
+     */
     function unifiedScrollHandler() {
         handleStickyBottomAnimation();
-        updateImageBasedOnScrollPercentage();
         updateScrollProgressBar();
     }
 
@@ -420,8 +424,12 @@
         setTimeout(unifiedScrollHandler, 250);
     }
 
-    let scrollPercentageTriggers = [];
-    let lastShownImageSrcByPercentage = null;
+    // REMOVED: All variables and functions related to scroll-based image changes are no longer needed.
+    // let scrollPercentageTriggers = [];
+    // let lastShownImageSrcByPercentage = null;
+    // function initializeScrollPercentageTriggers() { ... }
+    // function updateImageBasedOnScrollPercentage() { ... }
+
 
     const upgradeRenderConfig = [
         { groupIndex: 0, queryParam: 'SQF_PARQUET', type: 'parquet', defaultName: 'Parchet' },
@@ -429,115 +437,6 @@
         { groupIndex: 2, queryParam: 'SQF_VENTILATION', type: 'checkbox', defaultName: 'Sistem de ventilatie' },
         { groupIndex: 3, queryParam: 'SQF_BLINDS', type: 'checkbox', defaultName: 'Jaluzele Smart' }
     ];
-
-    function initializeScrollPercentageTriggers() {
-        scrollPercentageTriggers = [];
-        const explicitSectionThresholds = [
-            { tabId: 'step-1', imagePercentStart: 0 },
-            { tabId: 'step-2', imagePercentStart: 30 },
-            { tabId: 'step-3', imagePercentStart: 60 }
-        ];
-
-        explicitSectionThresholds.forEach(trigger => {
-            const tabElement = document.getElementById(trigger.tabId);
-            if (tabElement && tabElement.dataset.sectionImageSrc) {
-                scrollPercentageTriggers.push({
-                    tabId: trigger.tabId,
-                    startPercent: trigger.imagePercentStart
-                });
-            }
-        });
-        scrollPercentageTriggers.sort((a, b) => a.startPercent - b.startPercent);
-    }
-
-    function updateImageBasedOnScrollPercentage() {
-        if (scrollPercentageTriggers.length === 0 && formTabsArray.length > 0) {
-            const firstTabWithImage = formTabsArray.find(tab => tab.dataset.sectionImageSrc);
-            if (firstTabWithImage && firstTabWithImage.dataset.sectionImageSrc !== lastShownImageSrcByPercentage) {
-                if (firstTabWithImage.id === 'step-1') {
-                    updateMainDisplayImage();
-                } else {
-                    switchToSingleImageView();
-                    const isFloorplan = firstTabWithImage.id === 'step-2';
-                    crossfadeStickyImage(firstTabWithImage.dataset.sectionImageSrc, isFloorplan);
-                    lastShownImageSrcByPercentage = firstTabWithImage.dataset.sectionImageSrc;
-                }
-            }
-            return;
-        }
-        if(scrollPercentageTriggers.length === 0) return;
-
-        let scrollTop, scrollHeight, clientHeight;
-        const isDesktop = window.innerWidth > 768;
-
-        if (isDesktop && rightContentElement) {
-            scrollTop = rightContentElement.scrollTop;
-            scrollHeight = rightContentElement.scrollHeight;
-            clientHeight = rightContentElement.clientHeight;
-        } else {
-            scrollTop = window.scrollY || document.documentElement.scrollTop;
-            scrollHeight = document.documentElement.scrollHeight;
-            clientHeight = document.documentElement.clientHeight;
-        }
-
-        const scrollableDistance = scrollHeight - clientHeight;
-        if (scrollableDistance <= 0) {
-            const firstTrigger = scrollPercentageTriggers[0];
-            if (firstTrigger) {
-                const firstTab = document.getElementById(firstTrigger.tabId);
-                if (firstTab) {
-                    if (firstTab.id === 'step-1') {
-                        updateMainDisplayImage();
-                    } else if (firstTab.dataset.sectionImageSrc && lastShownImageSrcByPercentage !== firstTab.dataset.sectionImageSrc) {
-                        switchToSingleImageView();
-                        const isFloorplan = firstTab.id === 'step-2';
-                        crossfadeStickyImage(firstTab.dataset.sectionImageSrc, isFloorplan);
-                        lastShownImageSrcByPercentage = firstTab.dataset.sectionImageSrc;
-                    }
-                }
-            }
-            return;
-        }
-
-        const currentScrollPercent = Math.min(100, Math.max(0, (scrollTop / scrollableDistance) * 100));
-        let activeTabId = null;
-
-        for (let i = scrollPercentageTriggers.length - 1; i >= 0; i--) {
-            if (currentScrollPercent >= (scrollPercentageTriggers[i].startPercent - 0.01) ) {
-                activeTabId = scrollPercentageTriggers[i].tabId;
-                break;
-            }
-        }
-
-        if (!activeTabId && scrollPercentageTriggers.length > 0) {
-            activeTabId = scrollPercentageTriggers[0].tabId;
-        }
-
-        if (activeTabId) {
-            const activeTabElement = document.getElementById(activeTabId);
-            let newImageSrc = null;
-            let applyContainFit = false;
-
-            if (activeTabId === 'step-1') {
-                updateMainDisplayImage();
-                return;
-            } else if (activeTabId === 'step-2') {
-                const currentFloorplanSlug = queryArgs['SQF_FLOORPLAN'];
-                const floorplanData = config[type]?.floorplan?.find(f => f.slug === currentFloorplanSlug);
-                newImageSrc = floorplanData?.image;
-                applyContainFit = true;
-            } else {
-                newImageSrc = activeTabElement?.dataset.sectionImageSrc;
-                applyContainFit = false;
-            }
-
-            if (newImageSrc && newImageSrc !== "" && newImageSrc !== lastShownImageSrcByPercentage) {
-                switchToSingleImageView();
-                crossfadeStickyImage(newImageSrc, applyContainFit);
-                lastShownImageSrcByPercentage = newImageSrc;
-            }
-        }
-    }
 
     const optionTemplate = (labelClass, inputType, inputName, inputValue, optionName, rawPrice, context = "upgrades", isDisabled = false, isChecked = false, fullOptionObject = null) => {
         let priceDisplayHTML = '';
@@ -677,8 +576,7 @@
             finalContinueBtn.disabled = true;
         }
 
-        // Generate Finish options in the first step
-        generateOptions(houseData.options, 'step-1', 'SQF_FINISH', true, 'radio'); // Generate finish options
+        generateOptions(houseData.options, 'step-1', 'SQF_FINISH', true, 'radio');
 
         let effectiveFinishSlug = queryArgs['SQF_FINISH'];
         let finishRadio = document.querySelector(`.multistep-form input[name="SQF_FINISH"][value="${effectiveFinishSlug}"]`);
@@ -720,41 +618,6 @@
         addSectionSpecificModalButtons();
         setInitialImage();
 
-        const upgradeImageOrderForDataset = ['SQF_PARQUET', 'SQF_FACADE', 'SQF_VENTILATION', 'SQF_BLINDS'];
-
-        formTabsArray.forEach((tab) => {
-            if (tab.id === 'step-5-referral') return; // Skip setting image data for referral tab
-
-            let imageForThisTabSection = houseData.image;
-            const currentFinishSlugForImage = queryArgs['SQF_FINISH'];
-            const currentFinishDataForImage = houseData.options.find(o => o.slug === currentFinishSlugForImage);
-
-            if (tab.id === 'step-1' && currentFinishDataForImage) {
-                imageForThisTabSection = currentFinishDataForImage.image || currentFinishDataForImage.images?.[0]?.src || houseData.image;
-            } else if (tab.id === 'step-2') {
-                const currentFloorplanSlug = queryArgs['SQF_FLOORPLAN'];
-                const floorplanData = houseData.floorplan?.find(f => f.slug === currentFloorplanSlug);
-                imageForThisTabSection = floorplanData?.image || currentFinishDataForImage?.image || currentFinishDataForImage?.images?.[0]?.src || houseData.image;
-            } else if (tab.id === 'step-3' && currentFinishDataForImage) {
-                let upgradeImage = null;
-                for (const paramKey of upgradeImageOrderForDataset) {
-                    const slug = queryArgs[paramKey];
-                    if (slug) {
-                        let upgradeData = findUpgradeInCurrentFinish(slug);
-                        if (slug === 'facade-yakisugi' && houseData) {
-                            upgradeData = { ...upgradeData, image: houseData.image };
-                        }
-                        if (upgradeData && upgradeData.image && upgradeData.image !== "") {
-                            upgradeImage = upgradeData.image;
-                            break;
-                        }
-                    }
-                }
-                imageForThisTabSection = upgradeImage || currentFinishDataForImage.image || currentFinishDataForImage.images?.[0]?.src || houseData.image;
-            }
-            tab.dataset.sectionImageSrc = imageForThisTabSection || houseData.image;
-        });
-
         addEventListeners();
         setTabTitles();
 
@@ -778,12 +641,11 @@
         render_economy_price();
         updateURL();
 
-        initializeScrollPercentageTriggers();
+        // Setup scroll listeners for UI elements like the button and progress bar
         setupUnifiedScrollListener();
 
         window.addEventListener('resize', () => {
             setupUnifiedScrollListener();
-            initializeScrollPercentageTriggers();
         }, { passive: true });
 
         const finalContinueBtnRef = document.getElementById('finalContinueBtn');
@@ -803,17 +665,13 @@
             'nomad': '24m² - 1 dormitor'
         };
 
-        // The 'type' variable is available in this scope, e.g., 'sanctuary-142'
         const modelName = type.split('-')[0];
-
-        const descriptionText = modelDescriptions[modelName] || ''; // Use the map to get the text
-
+        const descriptionText = modelDescriptions[modelName] || '';
         descriptionEl.textContent = descriptionText;
     }
 
     function addSectionSpecificModalButtons() {
         formTabsArray.forEach(tab => {
-            // Remove existing button first to prevent duplicates on re-render
             const existingLink = tab.querySelector('.feature-details-link');
             if (existingLink) existingLink.remove();
 
@@ -908,7 +766,6 @@
             stickyImg2.classList.remove('active-sticky-image');
             stickyImg1.classList.remove('object-fit-contain');
             stickyImg2.classList.remove('object-fit-contain');
-            lastShownImageSrcByPercentage = null;
         } else {
             switchToSingleImageView();
             let singleImageSrc = finishData?.image || houseData.image;
@@ -988,19 +845,12 @@
 
             let finalImageToDisplay = imageToDisplaySrc;
             if (!finalImageToDisplay || finalImageToDisplay === "") {
-                const currentTab = document.querySelector('.form-tab input:checked')?.closest('.form-tab');
-                if(currentTab && currentTab.dataset.sectionImageSrc) {
-                    finalImageToDisplay = currentTab.dataset.sectionImageSrc;
-                    applyContainFit = currentTab.id === 'step-2';
-                } else {
-                    finalImageToDisplay = house.image;
-                    applyContainFit = false;
-                }
+                finalImageToDisplay = house.image;
+                applyContainFit = false;
             }
 
             if (finalImageToDisplay && finalImageToDisplay !== "") {
                 crossfadeStickyImage(finalImageToDisplay, applyContainFit);
-                lastShownImageSrcByPercentage = finalImageToDisplay;
             }
         }
     }
@@ -1050,7 +900,6 @@
             if (imageToShow && imageToShow !== "") {
                  switchToSingleImageView();
                  crossfadeStickyImage(imageToShow, applyContainFit);
-                 lastShownImageSrcByPercentage = imageToShow;
             } else {
                 switchToSingleImageView();
                 crossfadeStickyImage(config[type]?.image || "", false);
@@ -1387,7 +1236,6 @@
             form.addEventListener('change', (event) => {
                 const target = event.target;
                 if ((target.tagName === 'INPUT' || target.tagName === 'SELECT') && !target.disabled) {
-                    // Exclude the model select from this generic handler, as it has its own
                     if (target.name === 'SQF_MODEL_SELECT') return;
 
                     const currentFormTab = target.closest('.form-tab');
@@ -1396,8 +1244,6 @@
                     let optionContext = "upgrade";
                     if (target.name === 'SQF_FINISH') optionContext = "finish";
                     else if (target.name === 'SQF_FLOORPLAN') optionContext = "floorplan";
-
-                    let newImageForSection = null;
 
                     if (target.name === 'SQF_FINISH') {
                         queryArgs['SQF_FINISH'] = target.value;
@@ -1426,40 +1272,10 @@
                         if (finishDetailsLink && newFinishDataForLink) {
                             finishDetailsLink.textContent = `Explorează ce este inclus în ${newFinishDataForLink.name}`;
                         }
-
-                        const newFinishData = config[type].options.find(o => o.slug === target.value);
-                        newImageForSection = newFinishData?.image || newFinishData?.images?.[0]?.src || config[type].image;
-                        if (currentFormTab) currentFormTab.dataset.sectionImageSrc = newImageForSection;
-                        document.getElementById('step-1').dataset.sectionImageSrc = newImageForSection;
-                        const step2Tab = document.getElementById('step-2');
-                        if (step2Tab) {
-                            const floorplanSlug = queryArgs['SQF_FLOORPLAN'];
-                            const floorplanData = config[type].floorplan?.find(f => f.slug === floorplanSlug);
-                            step2Tab.dataset.sectionImageSrc = floorplanData?.image || newImageForSection;
-                        }
-                        ['step-3', 'step-5-referral'].forEach(tabId => {
-                            const tabElement = document.getElementById(tabId);
-                            if (tabElement) tabElement.dataset.sectionImageSrc = newImageForSection;
-                        });
-                        initializeScrollPercentageTriggers();
-                        updateImageBasedOnScrollPercentage();
-
                     } else if (target.classList.contains('custom-checkbox')) {
                         updateParquetPriceAndLabel(target);
-                        let upgradeData = findUpgradeInCurrentFinish(target.value);
-                        if (target.value === 'facade-yakisugi' && config[type]) {
-                            newImageForSection = config[type].image;
-                        } else if(upgradeData && upgradeData.image && upgradeData.image !== "") {
-                            newImageForSection = upgradeData.image;
-                        }
-                        if(currentFormTab && newImageForSection) currentFormTab.dataset.sectionImageSrc = newImageForSection;
-
                     } else if (target.name === 'SQF_FLOORPLAN') {
                         const floorplanData = config[type].floorplan.find(f => f.slug === target.value);
-                        if(floorplanData && floorplanData.image && floorplanData.image !== "") {
-                            newImageForSection = floorplanData.image;
-                            if(currentFormTab) currentFormTab.dataset.sectionImageSrc = newImageForSection;
-                        }
                         const floorplanDetailsLink = document.querySelector('#step-2 .feature-details-link');
                         if(floorplanDetailsLink && floorplanData && floorplanData.name){
                             floorplanDetailsLink.textContent = `Vezi detaliile planului ${floorplanData.name.replace('Plan ', '')}`;
@@ -1467,19 +1283,6 @@
                             floorplanDetailsLink.textContent = "Vezi detaliile planului";
                         }
                         updateModelDescription();
-
-                    } else if (target.type === 'checkbox' || target.type === 'radio') {
-                        let upgradeData = findUpgradeInCurrentFinish(target.value);
-                        if(upgradeData && upgradeData.image && upgradeData.image !== "") {
-                            newImageForSection = upgradeData.image;
-                        }
-                        if(currentFormTab && newImageForSection) currentFormTab.dataset.sectionImageSrc = newImageForSection;
-                    }
-
-                    if (currentFormTab && !newImageForSection && target.name !== 'SQF_FINISH') {
-                        const currentFinishSlugForImage = queryArgs['SQF_FINISH'];
-                        const currentFinishDataForImage = config[type].options.find(o => o.slug === currentFinishSlugForImage);
-                        currentFormTab.dataset.sectionImageSrc = currentFinishDataForImage?.image || currentFinishDataForImage?.images?.[0]?.src || config[type].image;
                     }
 
                     if (target.type === 'checkbox' && (target.name === 'SQF_VENTILATION' || target.name === 'SQF_BLINDS')) {
