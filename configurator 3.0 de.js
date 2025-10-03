@@ -1560,5 +1560,4 @@ for (let upgradeGroup of finishData.upgrades) {
 return null;
 
 }
-
 })();
