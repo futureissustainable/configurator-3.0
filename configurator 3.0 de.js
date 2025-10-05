@@ -10,6 +10,177 @@ const hazelnutIconUrl = "https://cdn.prod.website-files.com/6801f60a2febd7da21a3
 
 const yakisugiImageUrl = ""; // This remains empty to use the main model image as a fallback
 
+// Price breakdown data
+const priceBreakdowns = {
+    'nomad-24': {
+        title: 'Nomad – 24 m²',
+        beforeConstruction: {
+            title: 'Vor Baubeginn',
+            items: [
+                { name: 'Vermesser + Lageplan', price: '1.500–2.000' },
+                { name: 'Geotechnisches Gutachten', price: '1.500–2.000' },
+                { name: 'Architekt HOAI LPH 1–5', price: '3.000–4.000' },
+                { name: 'Bauantragsgebühr', price: '1.000–1.500' },
+                { name: 'Netzanschluss Strom Antrag', price: '500–500' },
+                { name: 'Wasseranschluss Antrag', price: '500–500' },
+                { name: 'Statische Berechnung', price: '1.000–1.500' },
+                { name: 'Bauleitung HOAI LPH 6–8', price: '1.500–2.000' }
+            ],
+            total: 10500
+        },
+        duringConstruction: {
+            title: 'Während Bau',
+            items: [
+                { name: 'Schraubfundamente (6 Stk)', price: '2.800–4.000' },
+                { name: 'Hausanschlüsse lokal', price: '2.000–4.000' },
+                { name: 'Autokran + Straßensperrung', price: '1.500–3.000' },
+                { name: 'Elektriker nach Aufwand', price: '500–1.500' },
+                { name: 'Erdarbeiten', price: '2.000–10.000' },
+                { name: 'Zähleranschlusssäule (HAK)', price: '1.000–3.000' },
+                { name: 'Entwässerung/Schächte/Leerrohre', price: '1.000–10.000' },
+                { name: 'Außenanschlussverteiler', price: '2.000–3.000' }
+            ],
+            total: 12800
+        },
+        afterConstruction: {
+            title: 'Nach Bau',
+            items: [
+                { name: 'Kontrollschacht Wasser', price: '1.000–1.500' },
+                { name: 'Außenanlagen minimal (Terrasse)', price: '1.500–2.000' },
+                { name: 'Unvorhergesehenes', price: '500–1.500' }
+            ],
+            total: 3000
+        },
+        grandTotal: 26300
+    },
+    'wanderlust-48': {
+        title: 'Wanderlust – 48 m²',
+        beforeConstruction: {
+            title: 'Vor Baubeginn',
+            items: [
+                { name: 'Architekt HOAI LPH 1–5', price: '5.000–6.000' },
+                { name: 'Bauleitung HOAI LPH 6–8', price: '3.000–4.000' },
+                { name: 'Bauantragsgebühr', price: '1.500–2.000' },
+                { name: 'Energieberater', price: '3.000–5.500' },
+                { name: 'Vermesser + Lageplan', price: '2.000–2.500' },
+                { name: 'Statische Berechnung', price: '1.500–2.000' },
+                { name: 'Geotechnisches Gutachten', price: '1.500–2.000' }
+            ],
+            total: 17500
+        },
+        duringConstruction: {
+            title: 'Während Bau',
+            items: [
+                { name: 'Schraubfundamente (12 Stk)', price: '5.000–6.500' },
+                { name: 'Hausanschlüsse lokal', price: '4.000–8.000' },
+                { name: 'Autokran + Straßensperrung', price: '3.000–8.000' },
+                { name: 'Netzanschluss Strom Antrag', price: '500–500' },
+                { name: 'Wasseranschluss Antrag', price: '500–500' },
+                { name: 'Kontrollschacht Wasser', price: '1.000–1.500' },
+                { name: 'Elektriker nach Aufwand', price: '1.000–2.000' },
+                { name: 'Außenanschlussverteiler', price: '2.000–4.000' }
+            ],
+            total: 17000
+        },
+        afterConstruction: {
+            title: 'Nach Bau',
+            items: [
+                { name: 'Küche', price: '3.000–8.000' },
+                { name: 'Außenanlagen', price: '0–0' },
+                { name: 'Unvorhergesehenes', price: '500–2.000' },
+                { name: 'Terrasse', price: '2.000–3.000' }
+            ],
+            total: 5500
+        },
+        grandTotal: 40000
+    },
+    'serenity-95': {
+        title: 'Serenity – 95 m²',
+        beforeConstruction: {
+            title: 'Vor Baubeginn',
+            items: [
+                { name: 'Architekt HOAI LPH 1–5', price: '8.000–10.000' },
+                { name: 'Bauleitung HOAI LPH 6–8', price: '4.000–5.000' },
+                { name: 'Bauantragsgebühr', price: '1.500–2.500' },
+                { name: 'Energieberater', price: '3.000–5.500' },
+                { name: 'Vermesser + Lageplan', price: '2.000–2.500' },
+                { name: 'Statische Berechnung', price: '1.500–2.500' },
+                { name: 'Geotechnisches Gutachten', price: '1.500–2.000' },
+                { name: 'Netzanschluss Strom Antrag', price: '500–500' },
+                { name: 'Wasseranschluss Antrag', price: '500–500' }
+            ],
+            total: 22500
+        },
+        duringConstruction: {
+            title: 'Während Bau',
+            items: [
+                { name: 'Schraubfundamente (18 Stk)', price: '8.280–12.000' },
+                { name: 'Träger (2 Stk)', price: '6.800–8.000' },
+                { name: 'Hausanschlüsse lokal', price: '5.000–15.000' },
+                { name: 'Autokran + Straßensperrung', price: '3.000–4.000' },
+                { name: 'Kontrollschacht Wasser', price: '1.000–1.500' },
+                { name: 'Elektriker nach Aufwand', price: '1.000–2.000' },
+                { name: 'Außenanschlussverteiler', price: '2.000–6.000' }
+            ],
+            total: 27080
+        },
+        afterConstruction: {
+            title: 'Nach Bau',
+            items: [
+                { name: 'Küche', price: '5.000–12.000' },
+                { name: 'Außenanlagen', price: '0–0' },
+                { name: 'Unvorhergesehenes', price: '500–2.000' },
+                { name: 'Terrasse', price: '2.000–3.500' }
+            ],
+            total: 7500
+        },
+        grandTotal: 57080
+    },
+    'sanctuary-142': {
+        title: 'Sanctuary – 142 m²',
+        beforeConstruction: {
+            title: 'Vor Baubeginn',
+            items: [
+                { name: 'Architekt HOAI LPH 1–5', price: '11.000–13.000' },
+                { name: 'Bauleitung HOAI LPH 6–8', price: '5.000–6.000' },
+                { name: 'Bauantragsgebühr', price: '2.000–2.500' },
+                { name: 'Energieberater', price: '4.500–5.500' },
+                { name: 'Vermesser + Lageplan', price: '2.000–2.500' },
+                { name: 'Statische Berechnung', price: '1.500–2.500' },
+                { name: 'Geotechnisches Gutachten', price: '1.500–2.000' },
+                { name: 'Netzanschluss Strom Antrag', price: '500–500' },
+                { name: 'Wasseranschluss Antrag', price: '500–500' }
+            ],
+            total: 28500
+        },
+        duringConstruction: {
+            title: 'Während Bau',
+            items: [
+                { name: 'Schraubfundamente (24 Stk)', price: '11.000–18.000' },
+                { name: 'Träger (2 Stk)', price: '6.000–9.000' },
+                { name: 'Tiefbauarbeiten', price: '5.000–15.000' },
+                { name: 'Autokran + Straßensperrung', price: '5.000–10.000' },
+                { name: 'Hausanschlüsse lokal', price: '2.000–5.000' },
+                { name: 'Elektriker nach Aufwand', price: '1.000–2.000' },
+                { name: 'Außenanschlussverteiler', price: '3.000–7.000' }
+            ],
+            total: 33000
+        },
+        afterConstruction: {
+            title: 'Nach Bau',
+            items: [
+                { name: 'Küche', price: '7.000–18.000' },
+                { name: 'Außenanlagen', price: '0–0' },
+                { name: 'Unvorhergesehenes', price: '500–2.000' },
+                { name: 'Terrasse', price: '2.500–4.000' }
+            ],
+            total: 10000
+        },
+        grandTotal: 71500
+    }
+};
+
+
 let config = {
     'nomad-24' : {
         "image" : "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4339236794245a361e6b9_742d4a56b01c157fcfb78d250a5c284b_24m2%20Nomad%204.1.avif",
@@ -539,7 +710,89 @@ function generateNewDetailedMaterialModalContent(houseTypeKey) {
     return modalHtml;
 }
 
+// Function to generate price breakdown modal
+function generatePriceBreakdownModalContent(houseTypeKey) {
+    const modelKey = Object.keys(priceBreakdowns).find(key => houseTypeKey.startsWith(key.split('-')[0]));
+    const data = priceBreakdowns[modelKey];
+    if (!data) return '<p>Preisaufschlüsselung nicht verfügbar.</p>';
+
+    let html = `<div class="price-breakdown-modal-content"><h2>${data.title}</h2>`;
+
+    const renderSection = (section) => {
+        let sectionHtml = `<h3>${section.title}</h3>`;
+        sectionHtml += '<div class="price-table">';
+        sectionHtml += '<div class="price-table-header"><div class="price-table-col">Leistung</div><div class="price-table-col">Geschätzter Preis (€)</div></div>';
+        section.items.forEach(item => {
+            sectionHtml += `<div class="price-table-row"><div class="price-table-col">${item.name}</div><div class="price-table-col">${item.price}</div></div>`;
+        });
+        sectionHtml += `<div class="price-table-total"><div class="price-table-col">Summe Kapitel</div><div class="price-table-col">${formatCurrency(section.total)}</div></div>`;
+        sectionHtml += '</div>';
+        return sectionHtml;
+    };
+
+    html += renderSection(data.beforeConstruction);
+    html += renderSection(data.duringConstruction);
+    html += renderSection(data.afterConstruction);
+
+    html += `<div class="grand-total-section">`;
+    html += `<h4>Gesamtsumme ${data.title.split('–')[1].trim()} (Nebenkosten): ${formatCurrency(data.grandTotal)}</h4>`;
+
+    const modularPrice = sumCheckedPrices();
+    const finalDiscountedPrice = referralDiscountActive ? modularPrice * (1 - REFERRAL_DISCOUNT_RATE) : modularPrice;
+
+    html += `<h4>Aktueller Konfigurationspreis (Modular): ${formatCurrency(finalDiscountedPrice)}</h4>`;
+
+    const totalPrice = finalDiscountedPrice + data.grandTotal;
+    html += `<h3>GESAMTPREIS (geschätzt, Modular + alle möglichen Kosten): ${formatCurrency(totalPrice)}</h3>`;
+    html += `</div>`;
+
+    html += `
+        <div class="price-notes-section">
+            <h4>Variablen, die das Budget beeinflussen können</h4>
+            <ul>
+                <li>Entfernung zu den Versorgungsleitungen, HAK-Notwendigkeit, Zählertyp, verfügbare Kapazitäten</li>
+                <li>Schwieriger Boden (Lehm, Stein, Grundwasserspiegel, Hänge) → zusätzliche Erdarbeiten, klassisches Fundament</li>
+                <li>Lokale Vorschriften für Straßensperrungen und Kran (Dauer, Beschilderung)</li>
+                <li>Umfangreiche Außenanlagen (große Terrasse, Wege, Beleuchtung, Zäune)</li>
+            </ul>
+            <h4>Nächste Schritte</h4>
+            <ul>
+                <li>Grundstücksprüfung (Fotos, Katasterplan, Anschlusspunkte)</li>
+                <li>HOAI-Set & Bauantrag: Architekt + Statik + Gutachten</li>
+                <li>Fundamentlayout (Schraubfundamente + Träger) und Logistikplan (Kran, Zugang)</li>
+                <li>Angebote von lokalen Partnern einholen und Liefertermin für das Modul planen</li>
+            </ul>
+        </div>
+    </div>`;
+
+    return html;
+}
+
+
 document.addEventListener("DOMContentLoaded", function() {
+    // Inject CSS for price breakdown modal
+    const modalStyles = `
+        .price-breakdown-modal-content h2, .price-breakdown-modal-content h3 { margin-bottom: 1em; }
+        .price-table { display: flex; flex-direction: column; margin-bottom: 2em; border: 1px solid #eee; border-radius: 8px; overflow: hidden; }
+        .price-table-row, .price-table-header, .price-table-total { display: flex; border-bottom: 1px solid #eee; align-items: center; }
+        .price-table-row:last-child { border-bottom: none; }
+        .price-table-col { padding: 10px 15px; flex: 1; }
+        .price-table-col:last-child { text-align: right; flex-basis: 150px; flex-grow: 0; font-weight: bold; }
+        .price-table-header { background-color: #f9f9f9; font-weight: bold; }
+        .price-table-total { background-color: #f9f9f9; font-weight: bold; border-top: 2px solid #ddd; }
+        .grand-total-section { margin-top: 2em; padding-top: 1em; border-top: 2px solid #ccc; }
+        .grand-total-section h3 { font-size: 1.2em; color: #333; margin-top: 1em; }
+        .grand-total-section h4 { margin-top: 0.5em; }
+        .price-notes-section { margin-top: 2em; font-size: 0.9em; color: #555; }
+        .price-notes-section h4 { margin-top: 1.5em; margin-bottom: 0.5em; }
+        .price-notes-section ul { list-style-position: inside; padding-left: 0; }
+    `;
+    const styleSheet = document.createElement("style");
+    styleSheet.type = "text/css";
+    styleSheet.innerText = modalStyles;
+    document.head.appendChild(styleSheet);
+
+
     queryArgs['SQF_TYPE'] = type;
 
     const urlParams = new URLSearchParams(window.location.search);
@@ -563,6 +816,25 @@ document.addEventListener("DOMContentLoaded", function() {
     if (finalContinueBtn) {
         finalContinueBtn.disabled = true;
     }
+    
+    // Inject Transport Tab
+    const referralTab = document.getElementById('step-5-referral');
+    if (referralTab) {
+        const transportTab = document.createElement('div');
+        transportTab.className = 'form-tab';
+        transportTab.id = 'step-4-transport';
+        transportTab.innerHTML = `
+            <div class="form-tab-header">
+                <h2 id="transportStepTitle">Transport & Nebenkosten</h2>
+            </div>
+            <div class="options-container">
+                <p style="margin-bottom: 15px; font-size: 0.9em; color: #555;">Obwohl der MODULAR-Preis fest und transparent ist (wir dürfen den Preis während Ihres Bauprozesses ethisch und vertraglich niemals erhöhen), hängen zusätzliche Kosten wie Fundament und Anschlüsse stark von Ihrem Grundstücksstandort ab. Um vollständig transparent zu sein, haben wir eine erweiterte Schätzung für alles gemacht, damit Sie von Anfang an alles wissen. Keine versteckten Kosten.</p>
+                <button id="priceBreakdownBtn" class="feature-details-link" style="display:inline-block; width:auto; cursor:pointer;">Alle möglichen Preise transparent aufgeschlüsselt</button>
+            </div>
+        `;
+        referralTab.parentNode.insertBefore(transportTab, referralTab);
+    }
+
 
     generateOptions(houseData.options, 'step-1', 'SQF_FINISH', true, 'radio');
 
@@ -1322,6 +1594,19 @@ function addEventListeners() {
             }
         });
     }
+    
+    // Price breakdown modal listener
+    const priceBreakdownBtn = document.getElementById('priceBreakdownBtn');
+    if (priceBreakdownBtn) {
+        priceBreakdownBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (!modalInnerContent || !modalOverlay) return;
+            const content = generatePriceBreakdownModalContent(type);
+            modalInnerContent.innerHTML = content;
+            modalOverlay.style.display = 'flex';
+        });
+    }
+
 
     const referralInput = document.getElementById('referral-code-input');
     if (referralInput) {
@@ -1560,4 +1845,6 @@ for (let upgradeGroup of finishData.upgrades) {
 return null;
 
 }
+
 })();
+
