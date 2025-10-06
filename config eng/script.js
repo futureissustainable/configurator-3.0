@@ -114,7 +114,7 @@
               {
                 slug: "solar-kit",
                 image: solarImage,
-                price: 2900,
+                price: 7800,
                 included: false,
                 name: "Solar Zero Energy Kit",
               },
@@ -207,7 +207,7 @@
               {
                 slug: "solar-kit",
                 image: solarImage,
-                price: 2900,
+                price: 7800,
                 included: false,
                 name: "Solar Zero Energy Kit",
               },
@@ -330,7 +330,7 @@
               {
                 slug: "solar-kit",
                 image: solarImage,
-                price: 4900,
+                price: 11800,
                 included: false,
                 name: "Solar Zero Energy Kit",
               },
@@ -423,7 +423,7 @@
               {
                 slug: "solar-kit",
                 image: solarImage,
-                price: 4900,
+                price: 11800,
                 included: false,
                 name: "Solar Zero Energy Kit",
               },
@@ -546,7 +546,7 @@
               {
                 slug: "solar-kit",
                 image: solarImage,
-                price: 6900,
+                price: 14800,
                 included: false,
                 name: "Solar Zero Energy Kit",
               },
@@ -639,7 +639,7 @@
               {
                 slug: "solar-kit",
                 image: solarImage,
-                price: 6900,
+                price: 14800,
                 included: false,
                 name: "Solar Zero Energy Kit",
               },
@@ -771,7 +771,7 @@
               {
                 slug: "solar-kit",
                 image: solarImage,
-                price: 8900,
+                price: 16800,
                 included: false,
                 name: "Solar Zero Energy Kit",
               },
@@ -864,7 +864,7 @@
               {
                 slug: "solar-kit",
                 image: solarImage,
-                price: 8900,
+                price: 16800,
                 included: false,
                 name: "Solar Zero Energy Kit",
               },
@@ -1647,6 +1647,38 @@ Technical Performance<split>The mentioned performances (including energy consump
   const REFERRAL_DISCOUNT_RATE = 0.04;
   const VALID_REFERRAL_CODES = ["BUHNICI", "MATEUS"];
 
+  const SHIPPING_PRICES = {
+    "From Factory": 0,
+    "Austria": 7400,
+    "Belgium": 9800,
+    "Bulgaria": 4900,
+    "Croatia": 6300,
+    "Cyprus": "Offer",
+    "Czech Republic": 7100,
+    "Denmark": 9000,
+    "Estonia": 9500,
+    "Finland": 10900,
+    "France": 9500,
+    "Germany": 8500,
+    "Greece": 6800,
+    "Hungary": 5300,
+    "Ireland": "Offer",
+    "Italy": 7900,
+    "Latvia": 9000,
+    "Lithuania": 7900,
+    "Luxembourg": 9300,
+    "Malta": "Offer",
+    "Moldova": 4800,
+    "Netherlands": 9500,
+    "Poland": 6600,
+    "Portugal": 12800,
+    "Serbia": 5200,
+    "Slovakia": 6000,
+    "Slovenia": 6800,
+    "Spain": 11700,
+    "Sweden": 10100
+  };
+
   function handleStickyBottomAnimation() {
     if (!btn || !box) return;
 
@@ -1875,159 +1907,6 @@ Technical Performance<split>The mentioned performances (including energy consump
     </div>`;
   };
 
-  function generatePriceBreakdownModal() {
-    const modelData = priceBreakdownData[type];
-    if (!modelData)
-      return "<p>Price breakdown not available for this model.</p>";
-
-    const modelName = config[type]?.name || type;
-    const modelSize = type.split("-")[1] || "";
-
-    // Get model description
-    const modelDescriptions = {
-      sanctuary: "142m² - 4 bedrooms",
-      serenity: "95m² - 3 bedrooms",
-      wanderlust: "48m² - 1 or 2 bedrooms",
-      nomad: "24m² - 1 bedroom",
-    };
-    const modelKey = type.split("-")[0];
-    const modelDescription = modelDescriptions[modelKey] || `${modelSize}m²`;
-
-    // Get energy savings based on model
-    const energySavings = config[type]?.energy || 0;
-
-    // Helper function to extract the higher number from a range
-    const getHigherValue = (priceRange) => {
-      if (priceRange.includes("–")) {
-        const parts = priceRange.split("–");
-        return parts[1].trim();
-      }
-      return priceRange;
-    };
-
-    let html = `
-          <h2 style="margin-top: 0; margin-bottom: 20px; font-size: 2rem; font-weight: 500; color: #14171c;">Complete Price Transparency</h2>
-          <div style="padding: 0; margin: 20px 0;">
-              <p style="margin: 0; font-size: 0.9rem; line-height: 1.6; color: #737579; font-weight: 300;">
-                  The MODULAR price is clear and guaranteed. Once you begin the collaboration, it will never increase during construction, that's both our mutual and contractual promise. The only possible extra costs are listed here with broad estimates, since they depend on your site, and many may not apply at all. We show these ranges so you have the full picture from the start. That's full transparency.
-              </p>
-          </div>
-
-          <h2 style="margin-top: 30px; margin-bottom: 8px; font-size: 2rem; font-weight: 500; color: #14171c;">${modelName}</h2>
-          <p style="margin: 0 0 30px 0; font-size: 0.9rem; font-weight: 300; color: #737579;">${modelDescription}</p>
-      `;
-
-    // Before Construction
-    html += `<div style="overflow-x: auto; margin-bottom: 30px;">
-          <table style="width: 100%; border-collapse: collapse; background: #fff;">
-              <tbody>
-              <tr style="background: #f0f0f0;">
-                  <td colspan="2" style="padding: 18px 20px; font-size: 0.9rem; font-weight: 500; color: #14171c; border: none;">Before Construction</td>
-              </tr>`;
-
-    modelData.beforeConstruction.forEach((item, index) => {
-      const bgColor = index % 2 === 0 ? "#fff" : "#fafafa";
-      const higherPrice = getHigherValue(item.price);
-      html += `<tr style="background: ${bgColor};">
-              <td style="padding: 16px 20px; font-size: 0.9rem; font-weight: 300; color: #737579; border: none;">${item.en}</td>
-              <td style="padding: 16px 20px; text-align: right; font-size: 0.9rem; font-weight: 300; color: #737579; border: none; white-space: nowrap;">est. €${higherPrice}</td>
-          </tr>`;
-    });
-
-    const beforeSubtotal = getHigherValue(modelData.totals.before);
-    html += `<tr style="background: #f0f0f0; border-top: 2px solid #e0e0e0;">
-          <td style="padding: 18px 20px; font-size: 0.9rem; font-weight: 500; color: #14171c; border: none;">Subtotal</td>
-          <td style="padding: 18px 20px; text-align: right; font-size: 0.9rem; font-weight: 500; color: #14171c; border: none;">est. €${beforeSubtotal}</td>
-      </tr></tbody></table></div>`;
-
-    // During Construction
-    html += `<div style="overflow-x: auto; margin-bottom: 30px;">
-          <table style="width: 100%; border-collapse: collapse; background: #fff;">
-              <tbody>
-              <tr style="background: #f0f0f0;">
-                  <td colspan="2" style="padding: 18px 20px; font-size: 0.9rem; font-weight: 500; color: #14171c; border: none;">During Construction</td>
-              </tr>`;
-
-    modelData.duringConstruction.forEach((item, index) => {
-      const bgColor = index % 2 === 0 ? "#fff" : "#fafafa";
-      const higherPrice = getHigherValue(item.price);
-      html += `<tr style="background: ${bgColor};">
-              <td style="padding: 16px 20px; font-size: 0.9rem; font-weight: 300; color: #737579; border: none;">${item.en}</td>
-              <td style="padding: 16px 20px; text-align: right; font-size: 0.9rem; font-weight: 300; color: #737579; border: none; white-space: nowrap;">est. €${higherPrice}</td>
-          </tr>`;
-    });
-
-    const duringSubtotal = getHigherValue(modelData.totals.during);
-    html += `<tr style="background: #f0f0f0; border-top: 2px solid #e0e0e0;">
-          <td style="padding: 18px 20px; font-size: 0.9rem; font-weight: 500; color: #14171c; border: none;">Subtotal</td>
-          <td style="padding: 18px 20px; text-align: right; font-size: 0.9rem; font-weight: 500; color: #14171c; border: none;">est. €${duringSubtotal}</td>
-      </tr></tbody></table></div>`;
-
-    // After Construction
-    html += `<div style="overflow-x: auto; margin-bottom: 30px;">
-          <table style="width: 100%; border-collapse: collapse; background: #fff;">
-              <tbody>
-              <tr style="background: #f0f0f0;">
-                  <td colspan="2" style="padding: 18px 20px; font-size: 0.9rem; font-weight: 500; color: #14171c; border: none;">After Construction</td>
-              </tr>`;
-
-    modelData.afterConstruction.forEach((item, index) => {
-      const bgColor = index % 2 === 0 ? "#fff" : "#fafafa";
-      const higherPrice = getHigherValue(item.price);
-      html += `<tr style="background: ${bgColor};">
-              <td style="padding: 16px 20px; font-size: 0.9rem; font-weight: 300; color: #737579; border: none;">${item.en}</td>
-              <td style="padding: 16px 20px; text-align: right; font-size: 0.9rem; font-weight: 300; color: #737579; border: none; white-space: nowrap;">est. €${higherPrice}</td>
-          </tr>`;
-    });
-
-    const afterSubtotal = getHigherValue(modelData.totals.after);
-    html += `<tr style="background: #f0f0f0; border-top: 2px solid #e0e0e0;">
-          <td style="padding: 18px 20px; font-size: 0.9rem; font-weight: 500; color: #14171c; border: none;">Subtotal</td>
-          <td style="padding: 18px 20px; text-align: right; font-size: 0.9rem; font-weight: 500; color: #14171c; border: none;">est. €${afterSubtotal}</td>
-      </tr></tbody></table></div>`;
-
-    // Disclaimer
-    html += `<div style="background: #f8f8f8; padding: 20px; border-radius: 5px; margin: 30px 0;">
-          <p style="margin: 0; font-size: 0.85rem; line-height: 1.6; color: #737579; font-weight: 300;">
-              <strong>Disclaimer:</strong> Additional costs vary based on site conditions and local requirements. Factors include distance to utilities and infrastructure capacity, difficult terrain (clay, rock, water table, slopes) requiring additional foundation work, local regulations for road closures and crane permits, and extended landscaping (terrace, pathways, lighting, fencing). Many items may not apply to your project.
-          </p>
-      </div>`;
-
-    // Your Configuration Summary - Now as a table
-    const currentConfigPrice = queryArgs["SQF_PRICE"] || sumCheckedPrices();
-    const additionalCostsEstimate = getHigherValue(modelData.totals.total);
-    const totalEstimate =
-      parseInt(currentConfigPrice) +
-      parseInt(additionalCostsEstimate.replace(".", ""));
-
-    html += `<div style="overflow-x: auto; margin-bottom: 30px; margin-top: 50px;">
-          <table style="width: 100%; border-collapse: collapse; background: #fff;">
-              <tbody>
-              <tr style="background: #f0f0f0;">
-                  <td colspan="2" style="padding: 18px 20px; font-size: 0.9rem; font-weight: 500; color: #14171c; border: none;">Your Configuration Summary</td>
-              </tr>
-              <tr style="background: #fff;">
-                  <td style="padding: 16px 20px; font-size: 0.9rem; font-weight: 300; color: #737579; border: none;">MODULAR Price</td>
-                  <td style="padding: 16px 20px; text-align: right; font-size: 0.9rem; font-weight: 500; color: #14171c; border: none;">${formatCurrency(currentConfigPrice)}</td>
-              </tr>
-              <tr style="background: #fafafa;">
-                  <td style="padding: 16px 20px; font-size: 0.9rem; font-weight: 300; color: #737579; border: none;">Estimated Additional Costs</td>
-                  <td style="padding: 16px 20px; text-align: right; font-size: 0.9rem; font-weight: 500; color: #14171c; border: none;">est. €${additionalCostsEstimate}</td>
-              </tr>
-              <tr style="background: #f0fdf4;">
-                  <td style="padding: 16px 20px; font-size: 0.9rem; font-weight: 300; color: #16a34a; border: none;">Potential Savings over 50 years<br><span style="font-size: 0.8rem;">(vs. avg. EU home at current energy prices)</span></td>
-                  <td style="padding: 16px 20px; text-align: right; font-size: 0.9rem; font-weight: 500; color: #16a34a; border: none;">-${formatCurrency(energySavings)}</td>
-              </tr>
-              <tr style="background: #f0f0f0; border-top: 2px solid #e0e0e0;">
-                  <td style="padding: 18px 20px; font-size: 1rem; font-weight: 500; color: #14171c; border: none;">Total Estimated Investment</td>
-                  <td style="padding: 18px 20px; text-align: right; font-size: 1rem; font-weight: 500; color: #14171c; border: none;">${formatCurrency(totalEstimate)}</td>
-              </tr>
-              </tbody>
-          </table>
-      </div>`;
-
-    return html;
-  }
 
   function generateNewDetailedMaterialModalContent(houseTypeKey) {
     const houseData = config[houseTypeKey];
@@ -2279,10 +2158,6 @@ Technical Performance<split>The mentioned performances (including energy consump
             modalHtml += floorplanDataForModal.modal;
             return modalHtml;
           };
-          break;
-        case "step-4-shipping":
-          buttonText = `Explore transparent potential cost breakdown`;
-          modalContentProvider = () => generatePriceBreakdownModal();
           break;
       }
       if (buttonText && modalContentProvider) {
@@ -3199,11 +3074,66 @@ Technical Performance<split>The mentioned performances (including energy consump
     }
 
     const shippingSelect = document.getElementById("shipping-country-select");
+    const zipCodeContainer = document.getElementById("zip-code-container");
+    const zipCodeInput = document.getElementById("zip-code-input");
+    const shippingPriceDisplay = document.getElementById("shipping-price-display");
+
     if (shippingSelect) {
       shippingSelect.addEventListener("change", (event) => {
         queryArgs["SQF_SHIPPING_COUNTRY"] = event.target.value;
+
+        if (event.target.value && event.target.value !== "") {
+          zipCodeContainer.style.display = "block";
+          zipCodeInput.value = "";
+          shippingPriceDisplay.textContent = "";
+        } else {
+          zipCodeContainer.style.display = "none";
+        }
         updateURL();
       });
+
+      const shippingFromURL = getUrlParameter("SQF_SHIPPING_COUNTRY");
+      if (shippingFromURL) {
+        shippingSelect.value = shippingFromURL;
+        queryArgs["SQF_SHIPPING_COUNTRY"] = shippingFromURL;
+        if (shippingFromURL) {
+          zipCodeContainer.style.display = "block";
+        }
+      }
+    }
+
+    if (zipCodeInput) {
+      zipCodeInput.addEventListener("input", () => {
+        const zipValue = zipCodeInput.value.trim();
+        const selectedCountry = queryArgs["SQF_SHIPPING_COUNTRY"];
+
+        if (zipValue.length >= 3 && selectedCountry && SHIPPING_PRICES[selectedCountry] !== undefined) {
+          let basePrice = SHIPPING_PRICES[selectedCountry];
+
+          if (basePrice === "Offer") {
+            shippingPriceDisplay.textContent = "Est. in Offer";
+          } else {
+            let multiplier = 1;
+            if (type === "serenity-95") multiplier = 2;
+            else if (type === "sanctuary-142") multiplier = 3;
+
+            const finalPrice = basePrice * multiplier;
+            shippingPriceDisplay.textContent = `est. ${formatCurrency(finalPrice)}`;
+          }
+        } else {
+          shippingPriceDisplay.textContent = "";
+        }
+
+        queryArgs["SQF_ZIP_CODE"] = zipValue;
+        updateURL();
+      });
+
+      const zipFromURL = getUrlParameter("SQF_ZIP_CODE");
+      if (zipFromURL) {
+        zipCodeInput.value = zipFromURL;
+        zipCodeInput.dispatchEvent(new Event('input'));
+      }
+    }
 
       // Set initial value from URL
       const shippingFromURL = getUrlParameter("SQF_SHIPPING_COUNTRY");
