@@ -1649,34 +1649,34 @@ Technical Performance<split>The mentioned performances (including energy consump
 
   const SHIPPING_PRICES = {
     "From Factory": 0,
-    "Austria": 7400,
-    "Belgium": 9800,
-    "Bulgaria": 4900,
-    "Croatia": 6300,
-    "Cyprus": "Offer",
+    Austria: 7400,
+    Belgium: 9800,
+    Bulgaria: 4900,
+    Croatia: 6300,
+    Cyprus: "Offer",
     "Czech Republic": 7100,
-    "Denmark": 9000,
-    "Estonia": 9500,
-    "Finland": 10900,
-    "France": 9500,
-    "Germany": 8500,
-    "Greece": 6800,
-    "Hungary": 5300,
-    "Ireland": "Offer",
-    "Italy": 7900,
-    "Latvia": 9000,
-    "Lithuania": 7900,
-    "Luxembourg": 9300,
-    "Malta": "Offer",
-    "Moldova": 4800,
-    "Netherlands": 9500,
-    "Poland": 6600,
-    "Portugal": 12800,
-    "Serbia": 5200,
-    "Slovakia": 6000,
-    "Slovenia": 6800,
-    "Spain": 11700,
-    "Sweden": 10100
+    Denmark: 9000,
+    Estonia: 9500,
+    Finland: 10900,
+    France: 9500,
+    Germany: 8500,
+    Greece: 6800,
+    Hungary: 5300,
+    Ireland: "Offer",
+    Italy: 7900,
+    Latvia: 9000,
+    Lithuania: 7900,
+    Luxembourg: 9300,
+    Malta: "Offer",
+    Moldova: 4800,
+    Netherlands: 9500,
+    Poland: 6600,
+    Portugal: 12800,
+    Serbia: 5200,
+    Slovakia: 6000,
+    Slovenia: 6800,
+    Spain: 11700,
+    Sweden: 10100,
   };
 
   function handleStickyBottomAnimation() {
@@ -1906,7 +1906,6 @@ Technical Performance<split>The mentioned performances (including energy consump
         </label>
     </div>`;
   };
-
 
   function generateNewDetailedMaterialModalContent(houseTypeKey) {
     const houseData = config[houseTypeKey];
@@ -3076,7 +3075,9 @@ Technical Performance<split>The mentioned performances (including energy consump
     const shippingSelect = document.getElementById("shipping-country-select");
     const zipCodeContainer = document.getElementById("zip-code-container");
     const zipCodeInput = document.getElementById("zip-code-input");
-    const shippingPriceDisplay = document.getElementById("shipping-price-display");
+    const shippingPriceDisplay = document.getElementById(
+      "shipping-price-display",
+    );
 
     if (shippingSelect) {
       shippingSelect.addEventListener("change", (event) => {
@@ -3107,7 +3108,11 @@ Technical Performance<split>The mentioned performances (including energy consump
         const zipValue = zipCodeInput.value.trim();
         const selectedCountry = queryArgs["SQF_SHIPPING_COUNTRY"];
 
-        if (zipValue.length >= 3 && selectedCountry && SHIPPING_PRICES[selectedCountry] !== undefined) {
+        if (
+          zipValue.length >= 3 &&
+          selectedCountry &&
+          SHIPPING_PRICES[selectedCountry] !== undefined
+        ) {
           let basePrice = SHIPPING_PRICES[selectedCountry];
 
           if (basePrice === "Offer") {
@@ -3131,15 +3136,7 @@ Technical Performance<split>The mentioned performances (including energy consump
       const zipFromURL = getUrlParameter("SQF_ZIP_CODE");
       if (zipFromURL) {
         zipCodeInput.value = zipFromURL;
-        zipCodeInput.dispatchEvent(new Event('input'));
-      }
-    }
-
-      // Set initial value from URL
-      const shippingFromURL = getUrlParameter("SQF_SHIPPING_COUNTRY");
-      if (shippingFromURL) {
-        shippingSelect.value = shippingFromURL;
-        queryArgs["SQF_SHIPPING_COUNTRY"] = shippingFromURL;
+        zipCodeInput.dispatchEvent(new Event("input"));
       }
     }
 
