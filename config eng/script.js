@@ -910,10 +910,10 @@ New Generation<split>MODULAR, now perfected with Passivhaus certified aluminum f
 STRUCTURE // TITLE
 The MODULAR Structural System<split>Combines remarkable mechanical strength with unprecedented efficiency, completely eliminating thermal bridges. Certified for energy efficiency by the Passive House Institute (Darmstadt, Germany) at 0.15 W/(m²K) and for sustainability by EPD (International).
 C24 Timber Frame BIOBUILDS Structure<split>FSC/PEFC certified wood, exceptional load resistance.
-STEICO wood fiber insulation<split>Organic, sustainable, and ultra-efficient (λ ≈ 0.036 W/m·K), CE certified.
+300mm STEICO wood fiber insulation<split>Organic, sustainable, and ultra-efficient (λ ≈ 0.036 W/m·K), CE certified.
 ECO OSB 3 Board (AGEPAN, Germany)<split>Formaldehyde and VOC-free, Passive House approved, CE certified.
 DWD Board (AGEPAN, Germany)<split>Allows walls to "breathe," maintaining exterior airtightness; CE certified.
-Smart membrane<split>Ensures interior airtightness with controlled vapor diffusion to the exterior.
+ProClima Smart membrane<split>Ensures interior airtightness with controlled vapor diffusion to the exterior.
 EXTERIOR FINISHES // TITLE
 Ventilated facade of Yakisugi/Lunawood wood<split>Thermally treated natural wood, with significantly reduced maintenance, excellent fire resistance, durable, with a special aesthetic and sustainable origin.
 Ventilated flat roof<split>Superior thermal performance, extended lifespan by preventing moisture accumulation and overheating. The roof has an invisible slope (~5°), waterproofed with a premium membrane, minimum 10-year manufacturer warranty.
@@ -959,10 +959,10 @@ New Generation<split>MODULAR, now perfected with Passivhaus certified aluminum f
 STRUCTURE // TITLE
 The MODULAR Structural System<split>Combines remarkable mechanical strength with unprecedented efficiency, completely eliminating thermal bridges. Certified for energy efficiency by the Passive House Institute (Darmstadt, Germany) at 0.15 W/(m²K) and for sustainability by EPD (International).
 C24 Timber Frame BIOBUILDS Structure<split>FSC/PEFC certified wood, exceptional load resistance.
-STEICO wood fiber insulation<split>Organic, sustainable, and ultra-efficient (λ ≈ 0.036 W/m·K), CE certified.
+300mm STEICO wood fiber insulation<split>Organic, sustainable, and ultra-efficient (λ ≈ 0.036 W/m·K), CE certified.
 ECO OSB 3 Board (AGEPAN, Germany)<split>Formaldehyde and VOC-free, Passive House approved, CE certified.
 DWD Board (AGEPAN, Germany)<split>Allows walls to "breathe," maintaining exterior airtightness; CE certified.
-Smart membrane<split>Ensures interior airtightness with controlled vapor diffusion to the exterior.
+ProClima Smart membrane<split>Ensures interior airtightness with controlled vapor diffusion to the exterior.
 EXTERIOR FINISHES // TITLE
 Ventilated facade of Yakisugi/Lunawood wood<split>Thermally treated natural wood, with significantly reduced maintenance, excellent fire resistance, durable, with a special aesthetic and sustainable origin.
 Ventilated flat roof<split>Superior thermal performance, extended lifespan by preventing moisture accumulation and overheating. The roof has an invisible slope (~5°), waterproofed with a premium membrane, minimum 10-year manufacturer warranty.
