@@ -3083,7 +3083,7 @@ Technical Performance<split>The mentioned performances (including energy consump
       shippingSelect.addEventListener("change", (event) => {
         queryArgs["SQF_SHIPPING_COUNTRY"] = event.target.value;
 
-        if (event.target.value && event.target.value !== "") {
+        if (event.target.value && event.target.value !== "" && event.target.value !== "From Factory") {
           zipCodeContainer.style.display = "block";
           zipCodeInput.value = "";
           shippingPriceDisplay.textContent = "";
@@ -3097,7 +3097,7 @@ Technical Performance<split>The mentioned performances (including energy consump
       if (shippingFromURL) {
         shippingSelect.value = shippingFromURL;
         queryArgs["SQF_SHIPPING_COUNTRY"] = shippingFromURL;
-        if (shippingFromURL) {
+        if (shippingFromURL && shippingFromURL !== "From Factory") {
           zipCodeContainer.style.display = "block";
         }
       }
@@ -3153,6 +3153,15 @@ Technical Performance<split>The mentioned performances (including energy consump
     if (finalContinueBtnRef) {
       finalContinueBtnRef.addEventListener("click", () => {
         let allValid = true;
+        
+        // Validate shipping selection
+          if (!queryArgs["SQF_SHIPPING_COUNTRY"] || queryArgs["SQF_SHIPPING_COUNTRY"] === "") {
+            showNotification(
+              document.getElementById("step-4-shipping"),
+              "Please select a delivery option.",
+            );
+            allValid = false;
+          }
 
         if (!queryArgs["SQF_FINISH"]) {
           showNotification(
