@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <style>
+            html {
+                font-family: "Poppins", sans-serif;
+            }
+        </style>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BIOBUILDS Modular Configurator</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Import CSS from GitHub Pages -->
+        <link
+            rel="stylesheet"
+            href="https://futureissustainable.github.io/configurator-3.0/config%20de/style.css"
+        />
+    </head>
+    <body>
+        <div class="config">
+            <div class="left-images">
+                <div class="image-wrapper">
+                    <img
+                        id="stickyImg1"
+                        src=""
+                        alt="Imagine produs configurat 1"
+                    />
+                    <img
+                        id="stickyImg2"
+                        src=""
+                        alt="Imagine produs configurat 2"
+                    />
+                </div>
+                <div class="stacked-image-container">
+                    <img
+                        id="stackedImgTop"
+                        src=""
+                        alt="Imagine de sus produs configurat"
+                    />
+                    <img
+                        id="stackedImgBottom"
+                        src=""
+                        alt="Imagine de jos produs configurat"
+                    />
+                </div>
+            </div>
+
+            <div class="right-content">
+                <div class="top-section">
+                    <h1 id="houseModelName">Sanctuary</h1>
+                    <p id="modelDescription" class="model-specs"></p>
+                    <div class="multistep-form">
+                        <div class="form-tab" id="step-1">
+                            <div class="options-container"></div>
+                        </div>
+                        <div class="form-tab" id="step-2">
+                            <h2 id="floorplanStepTitle">Plan</h2>
+                            <div class="options-container"></div>
+                        </div>
+                        <div class="form-tab" id="step-3">
+                            <h2 id="upgradesStepTitle">Upgrade</h2>
+                            <div class="options-container"></div>
+                        </div>
+                        <div class="form-tab" id="step-4-shipping">
+                            <h2 id="shippingStepTitle">Shipping</h2>
+                            <div class="options-container">
+                                <select
+                                    id="shipping-country-select"
+                                    name="SQF_SHIPPING_COUNTRY"
+                                    class="custom-text-input"
+                                >
+                                    <option value="">
+                                        Select delivery country
+                                    </option>
+                                    <option value="From Factory">
+                                        From Factory
+                                    </option>
+                                    <option value="Austria">Austria</option>
+                                    <option value="Belgium">Belgium</option>
+                                    <option value="Bulgaria">Bulgaria</option>
+                                    <option value="Croatia">Croatia</option>
+                                    <option value="Cyprus">Cyprus</option>
+                                    <option value="Czech Republic">
+                                        Czech Republic
+                                    </option>
+                                    <option value="Denmark">Denmark</option>
+                                    <option value="Estonia">Estonia</option>
+                                    <option value="Finland">Finland</option>
+                                    <option value="France">France</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="Greece">Greece</option>
+                                    <option value="Hungary">Hungary</option>
+                                    <option value="Ireland">Ireland</option>
+                                    <option value="Italy">Italy</option>
+                                    <option value="Latvia">Latvia</option>
+                                    <option value="Lithuania">Lithuania</option>
+                                    <option value="Luxembourg">
+                                        Luxembourg
+                                    </option>
+                                    <option value="Malta">Malta</option>
+                                    <option value="Moldova">Moldova</option>
+                                    <option value="Netherlands">
+                                        Netherlands
+                                    </option>
+                                    <option value="Poland">Poland</option>
+                                    <option value="Portugal">Portugal</option>
+                                    <option value="Serbia">Serbia</option>
+                                    <option value="Slovakia">Slovakia</option>
+                                    <option value="Slovenia">Slovenia</option>
+                                    <option value="Spain">Spain</option>
+                                    <option value="Sweden">Sweden</option>
+                                </select>
+                                <div
+                                    id="zip-code-container"
+                                    style="
+                                        display: none;
+                                        position: relative;
+                                        margin-top: 10px;
+                                    "
+                                >
+                                    <input
+                                        type="text"
+                                        id="zip-code-input"
+                                        class="custom-text-input"
+                                        placeholder="ZIP Code"
+                                        maxlength="10"
+                                    />
+                                    <div
+                                        id="shipping-price-display"
+                                        style="
+                                            position: absolute;
+                                            right: 15px;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            font-size: 0.9rem;
+                                            font-weight: 500;
+                                            color: #14171c;
+                                        "
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-tab" id="step-5-referral">
+                            <h2 id="referralCodeStepTitle">Cod Recomandare</h2>
+                            <div class="options-container">
+                                <input
+                                    type="text"
+                                    id="referral-code-input"
+                                    class="custom-text-input"
+                                    placeholder="Opțional"
+                                />
+                                <div
+                                    id="discount-message"
+                                    style="display: none"
+                                >
+                                    Reducere de 4% aplicată
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom-section">
+                    <div class="price-box" id="priceBox">
+                        <h4>De la 159.800 €</h4>
+                        <p class="p2">
+                            Economii est. la consum (50 ani): 175.285 €
+                        </p>
+                    </div>
+                    <div class="button-row">
+                        <button class="continue-button" id="finalContinueBtn">
+                            CONTINUĂ
+                        </button>
+                        <div id="scroll-progress-bar-bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal-content">
+                <button class="close-button" id="closeModal">&times;</button>
+                <div class="modal-inner"></div>
+            </div>
+        </div>
+
+        <!-- Import JS from GitHub Pages -->
+        <script src="https://futureissustainable.github.io/configurator-3.0/config%20de/script.js"></script>
+    </body>
+</html>
