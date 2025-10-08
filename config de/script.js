@@ -697,7 +697,7 @@
             },
             {
               src: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42836759488180078dc28_142m2%20Sanctuary%204.0.avif",
-              alt: "Sanctuary Schlüsselfertig unten",
+              alt: "Sanctuary Ausbauhaus unten",
             },
           ],
           upgrades: [
@@ -1105,35 +1105,35 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
   const VALID_REFERRAL_CODES = ["BUHNICI", "MATEUS"];
 
   const SHIPPING_PRICES = {
-    "From Factory": 0,
-    Austria: 7400,
-    Belgium: 9800,
-    Bulgaria: 4900,
-    Croatia: 6300,
-    Cyprus: "Angebot",
-    "Czech Republic": 7100,
-    Denmark: 9000,
-    Estonia: 9500,
-    Finland: 10900,
-    France: 9500,
-    Germany: 8500,
-    Greece: 6800,
-    Hungary: 5300,
-    Ireland: "Angebot",
-    Italy: 7900,
-    Latvia: 9000,
-    Lithuania: 7900,
-    Luxembourg: 9300,
+    "Ab Werk": 0,
+    Österreich: 7400,
+    Belgien: 9800,
+    Bulgarien: 4900,
+    Kroatien: 6300,
+    Zypern: "Angebot",
+    Tschechien: 7100,
+    Dänemark: 9000,
+    Estland: 9500,
+    Finnland: 10900,
+    Frankreich: 9500,
+    Deutschland: 8500,
+    Griechenland: 6800,
+    Ungarn: 5300,
+    Irland: "Angebot",
+    Italien: 7900,
+    Lettland: 9000,
+    Litauen: 7900,
+    Luxemburg: 9300,
     Malta: "Angebot",
-    Moldova: 4800,
-    Netherlands: 9500,
-    Poland: 6600,
+    Moldau: 4800,
+    Niederlande: 9500,
+    Polen: 6600,
     Portugal: 12800,
-    Serbia: 5200,
-    Slovakia: 6000,
-    Slovenia: 6800,
-    Spain: 11700,
-    Sweden: 10100,
+    Serbien: 5200,
+    Slowakei: 6000,
+    Slowenien: 6800,
+    Spanien: 11700,
+    Schweden: 10100,
   };
 
   function handleStickyBottomAnimation() {
@@ -1347,7 +1347,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
         <input id="${inputValue}" class="custom-checkbox" type="${inputType}" name="${inputName}" price="${price}" value="${inputValue}"
                                              data-display-label="${displayName}" data-display-price="${displayPriceText}" ${isCheckedByDefault ? 'checked="checked"' : ""}/>
         <label for="${inputValue}" class="checkbox-label">
-            <img src="${checkboxImage || ""}" alt="Icon for ${displayName}" class="checkbox-image" onerror="this.onerror=null; this.src='';">
+            <img src="${checkboxImage || ""}" alt="Icon für ${displayName}" class="checkbox-image" onerror="this.onerror=null; this.src='';">
         </label>
     </div>`;
   };
@@ -1660,9 +1660,9 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     ) {
       switchToStackedImageView();
       stackedImgTop.src = finishData.images[0].src;
-      stackedImgTop.alt = finishData.images[0].alt || "Top image";
+      stackedImgTop.alt = finishData.images[0].alt || "Oberes Bild";
       stackedImgBottom.src = finishData.images[1].src;
-      stackedImgBottom.alt = finishData.images[1].alt || "Bottom image";
+      stackedImgBottom.alt = finishData.images[1].alt || "Unteres Bild";
 
       stickyImg1.classList.remove("active-sticky-image");
       stickyImg2.classList.remove("active-sticky-image");
@@ -2529,7 +2529,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
         if (
           event.target.value &&
           event.target.value !== "" &&
-          event.target.value !== "From Factory"
+          event.target.value !== "Ab Werk"
         ) {
           zipCodeContainer.style.display = "block";
           zipCodeInput.value = "";
@@ -2544,15 +2544,15 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       if (shippingFromURL) {
         shippingSelect.value = shippingFromURL;
         queryArgs["SQF_SHIPPING_COUNTRY"] = shippingFromURL;
-        if (shippingFromURL && shippingFromURL !== "From Factory") {
+        if (shippingFromURL && shippingFromURL !== "Ab Werk") {
           zipCodeContainer.style.display = "block";
         }
       } else {
-        // Default country to Germany if no parameter is in the URL
-        const defaultCountry = "Germany";
+        const defaultCountry = "Deutschland";
         shippingSelect.value = defaultCountry;
         queryArgs["SQF_SHIPPING_COUNTRY"] = defaultCountry;
         zipCodeContainer.style.display = "block";
+        updateURL();
       }
     }
 
@@ -2734,7 +2734,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
 
         for (const key in queryArgs) {
           if (
-            !targetOrderedKeys.includes(key) &&
+            !orderedKeys.includes(key) &&
             queryArgs[key] !== null &&
             queryArgs[key] !== undefined &&
             String(queryArgs[key]).trim() !== ""
