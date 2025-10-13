@@ -1432,7 +1432,7 @@
                      }
                  }
 
-                 window.location.href = '/design/form/' + (targetUrlParams.toString() ? '?' + targetUrlParams.toString() : '');
+                 window.location.href = '/ro-ro/design/form/' + (targetUrlParams.toString() ? '?' + targetUrlParams.toString() : '');
              });
          }
 
