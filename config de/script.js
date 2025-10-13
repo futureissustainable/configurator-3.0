@@ -1424,7 +1424,8 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
 
     const finalContinueBtn = document.getElementById("finalContinueBtn");
     if (finalContinueBtn) {
-      finalContinueBtn.disabled = true;
+      finalContinueBtn.disabled = false;  // Enable immediately
+  finalContinueBtn.classList.add("active");
     }
 
     generateOptions(houseData.options, "step-1", "SQF_FINISH", true, "radio");
