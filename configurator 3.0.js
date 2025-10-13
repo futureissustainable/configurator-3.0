@@ -553,6 +553,7 @@
 
     document.addEventListener("DOMContentLoaded", function() {
         queryArgs['SQF_TYPE'] = type;
+        queryArgs['SQF_SHIPPING_COUNTRY'] = 'Romania';
 
         const urlParams = new URLSearchParams(window.location.search);
         urlParams.forEach((value, key) => {
