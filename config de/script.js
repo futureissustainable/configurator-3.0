@@ -1528,7 +1528,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     );
 
     const finalContinueBtnRef = document.getElementById("finalContinueBtn");
-    if (finalContinueBtnRef) finalContinueBtnRef.textContent = "FORTFAHREN";
+    if (finalContinueBtnRef) finalContinueBtnRef.textContent = "Projektübersicht erhalten";
     const backBtnElement = document.querySelector(".config .go-back-btn");
     if (backBtnElement) backBtnElement.remove();
   });
@@ -2762,7 +2762,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
         }
 
         window.location.href =
-          "/design/form/" +
+          "/de-de/design/form/" +
           (targetUrlParams.toString() ? "?" + targetUrlParams.toString() : "");
       });
     }
