@@ -2725,7 +2725,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
 
         for (const key in queryArgs) {
           if (
-            !orderedKeys.includes(key) &&
+               !targetOrderedKeys.includes(key) && 
             queryArgs[key] !== null &&
             queryArgs[key] !== undefined &&
             String(queryArgs[key]).trim() !== ""
