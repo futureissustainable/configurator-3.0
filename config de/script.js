@@ -2549,7 +2549,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
           zipCodeContainer.style.display = "block";
         }
       } else {
-        const defaultCountry = "Deutschland";
+        const defaultCountry = "Germany";
         shippingSelect.value = defaultCountry;
         queryArgs["SQF_SHIPPING_COUNTRY"] = defaultCountry;
         zipCodeContainer.style.display = "block";
