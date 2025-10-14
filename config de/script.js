@@ -1,3 +1,4 @@
+
 (function () {
   // Universal Images
   let blindsImage =
@@ -1104,37 +1105,37 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
   const REFERRAL_DISCOUNT_RATE = 0.04;
   const VALID_REFERRAL_CODES = ["BUHNICI", "MATEUS"];
 
-const SHIPPING_PRICES = {
-  "Ex Works": 0,
-  Austria: 7400,
-  Belgium: 9800,
-  Bulgaria: 4900,
-  Croatia: 6300,
-  Cyprus: "Angebot",
-  "Czech Republic": 7100,
-  Denmark: 9000,
-  Estonia: 9500,
-  Finland: 10900,
-  France: 9500,
-  Germany: 8500,
-  Greece: 6800,
-  Hungary: 5300,
-  Ireland: "Angebot",
-  Italy: 7900,
-  Latvia: 9000,
-  Lithuania: 7900,
-  Luxembourg: 9300,
-  Malta: "Angebot",
-  Moldova: 4800,
-  Netherlands: 9500,
-  Poland: 6600,
-  Portugal: 12800,
-  Serbia: 5200,
-  Slovakia: 6000,
-  Slovenia: 6800,
-  Spain: 11700,
-  Sweden: 10100,
-};
+  const SHIPPING_PRICES = {
+    "Ex Works": 0,
+    Austria: 7400,
+    Belgium: 9800,
+    Bulgaria: 4900,
+    Croatia: 6300,
+    Cyprus: "Angebot",
+    "Czech Republic": 7100,
+    Denmark: 9000,
+    Estonia: 9500,
+    Finland: 10900,
+    France: 9500,
+    Germany: 8500,
+    Greece: 6800,
+    Hungary: 5300,
+    Ireland: "Angebot",
+    Italy: 7900,
+    Latvia: 9000,
+    Lithuania: 7900,
+    Luxembourg: 9300,
+    Malta: "Angebot",
+    Moldova: 4800,
+    Netherlands: 9500,
+    Poland: 6600,
+    Portugal: 12800,
+    Serbia: 5200,
+    Slovakia: 6000,
+    Slovenia: 6800,
+    Spain: 11700,
+    Sweden: 10100,
+  };
 
   function handleStickyBottomAnimation() {
     if (!btn || !box) return;
@@ -2530,7 +2531,7 @@ const SHIPPING_PRICES = {
         if (
           event.target.value &&
           event.target.value !== "" &&
-            event.target.value !== "Ex Works" 
+          event.target.value !== "Ex Works"
         ) {
           zipCodeContainer.style.display = "block";
           zipCodeInput.value = "";
@@ -2545,7 +2546,7 @@ const SHIPPING_PRICES = {
       if (shippingFromURL) {
         shippingSelect.value = shippingFromURL;
         queryArgs["SQF_SHIPPING_COUNTRY"] = shippingFromURL;
-        if (shippingFromURL && shippingFromURL !== "Ex Works") { 
+        if (shippingFromURL && shippingFromURL !== "Ex Works") {
           zipCodeContainer.style.display = "block";
         }
       } else {
