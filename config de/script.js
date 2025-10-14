@@ -2603,21 +2603,10 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
         modalOverlay.style.display = "none";
     });
 
-    const finalContinueBtnRef = document.getElementById("finalContinueBtn");
+ const finalContinueBtnRef = document.getElementById("finalContinueBtn");
     if (finalContinueBtnRef) {
       finalContinueBtnRef.addEventListener("click", () => {
         let allValid = true;
-
-        if (
-          !queryArgs["SQF_SHIPPING_COUNTRY"] ||
-          queryArgs["SQF_SHIPPING_COUNTRY"] === ""
-        ) {
-          showNotification(
-            document.getElementById("step-4-shipping"),
-            "Bitte eine Lieferoption wählen.",
-          );
-          allValid = false;
-        }
 
         if (!queryArgs["SQF_FINISH"]) {
           showNotification(
