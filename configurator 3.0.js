@@ -1,4 +1,3 @@
-
 (function() {
     // Universal Images
     let blindsImage = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4341f5b9b2742863461ef_375fa4b4b9988f686d5a21cdfd58a106_Blinds.avif";
@@ -9,7 +8,7 @@
     const cashmereIconUrl = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/682781fe749314ab971e22b6_a163b084d45d85d3dc6c99c8ccf00203_Cashmere.avif";
     const hazelnutIconUrl = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6827826189d9a03adacb10fc_0f99c5082da56476985be14a8d96df3d_Hazelnut.avif";
 
-    const yakisugiImageUrl = ""; // This remains empty to use the main model image as a fallback
+    const yakisugiImageUrl = "";
 
     let config = {
         'nomad-24' : {
@@ -49,8 +48,10 @@
                 }
             ],
             "floorplan" : [
-                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d2244f5d6be3af87aab_24m2%20Floorplan%20A.avif", 'price': 0, 'name': 'Plan A', 'modal': "<h3>24m² Plan A</h3><br><p>Interior: 5.70m x 3.10m x 2.50m</p><p>Exterior: 6.40m x 3.80m x 3.20m</p><h4>Camere</h4><p>Dormitor: 14.20m²</p><p>Baie: 2.65m²</p><p>Depozitare / Chichinetă: 0.80m²</p>" },
-                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d22e33276e515d43a8f_24m2%20Floorplan%20B.avif", 'price': 0, 'name': 'Plan B', 'modal': "<h3>24m² Plan B</h3><br><p>Interior: 5.70m x 3.10m x 2.50m</p><p>Exterior: 6.40m x 3.80m x 3.20m</p><h4>Camere</h4><p>Dormitor: 14.20m²</p><p>Baie: 2.65m²</p><p>Depozitare / Chichinetă: 0.80m²</p>" } ] },
+                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d2244f5d6be3af87aab_24m2%20Floorplan%20A.avif", 'price': 0, 'name': 'Plan A', 'modal': "<h3>24m² Plan A</h3><br><h4>Camere</h4><p>Dormitor: 13.26m²</p><p>Baie: 2.71m²</p><br><p><strong>TOTAL: 15.97m²</strong></p>" },
+                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d22e33276e515d43a8f_24m2%20Floorplan%20B.avif", 'price': 0, 'name': 'Plan B', 'modal': "<h3>24m² Plan B</h3><br><h4>Camere</h4><p>Dormitor: 13.26m²</p><p>Baie: 2.71m²</p><br><p><strong>TOTAL: 15.97m²</strong></p>" } 
+            ] 
+        },
         'wanderlust-48' : {
             "image" : "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283782a535d591653c65_48m2%20Wanderlust%204.0.avif",
             "name": "Wanderlust", "energy": 69840, "basePriceText": "De la 59.800 €",
@@ -64,7 +65,7 @@
                     'upgrades' : [
                         [{ 'slug' : "parquet-raw-osb", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42834c118eb9aa4496812_48m2%20Wanderlust%20OSB%204.0.avif", 'price': 0, 'included': true, 'icon' : osbIconUrl, 'name': "OSB"},
                             { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42834f6342091f39dfedb_48m2%20Wanderlust%20OSB%20%2B%20Cashmere%204.0.avif", 'price': 3800, 'included': false, 'icon' : cashmereIconUrl, 'name': "Parchet Cashmere"},
-                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283416e5d5e698aa09c6_48m2%20Wanderlust%20OSB%20%2B%20Hazelnut%204.0.avif", 'price': 3800, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}], // NOTE: DUPLICATE LINK for Hazelnut
+                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283416e5d5e698aa09c6_48m2%20Wanderlust%20OSB%20%2B%20Hazelnut%204.0.avif", 'price': 3800, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
                         [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
                             { 'slug' : "facade-lunawood", 'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428347a78da3d6cd218de_48m2%20Wanderlust%20Lunawood%204.0.avif', 'icon' : lunawoodIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Lunawood"} ],
                         [{ 'slug' : "ventilation-system", 'image': ventilationImage, 'price': 7800, 'included': false, 'name': "Sistem de ventilatie + Tubulatura"}],
@@ -77,8 +78,8 @@
                         {'src':'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283782a535d591653c65_48m2%20Wanderlust%204.0.avif', 'alt':'Wanderlust La cheie Jos'}
                     ],
                     'upgrades' : [
-                        [{ 'slug' : "parquet-raw-osb", 'image': "", 'price': 0, 'included': true, 'name': "OSB", 'icon' : osbIconUrl, 'name': "OSB"},
-                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282fadd6a68f7235f463_48m2%20Wanderlust%20Interior%20Cashmere%204.0.avif", 'price': 0, 'included': true, 'name': "Parchet Cashmere", 'icon' : cashmereIconUrl, 'name': "Parchet Cashmere"},
+                        [{ 'slug' : "parquet-raw-osb", 'image': "", 'price': 0, 'included': true, 'name': "OSB", 'icon' : osbIconUrl},
+                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282fadd6a68f7235f463_48m2%20Wanderlust%20Interior%20Cashmere%204.0.avif", 'price': 0, 'included': true, 'name': "Parchet Cashmere", 'icon' : cashmereIconUrl},
                             { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282f1a20245ff5ca4510_48m2%20Wanderlust%20Interior%20Hazelnut%204.0.avif", 'price': 0, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
                         [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
                             { 'slug' : "facade-lunawood", 'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428347a78da3d6cd218de_48m2%20Wanderlust%20Lunawood%204.0.avif', 'icon' : lunawoodIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Lunawood"} ],
@@ -87,8 +88,10 @@
                 }
             ],
             "floorplan" : [
-                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c525733fc3797a1ea68b6_48m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A', 'modal': "<h3>48m² Plan A</h3><br><p>Interior: 11.80m x 3.10m x 2.50m</p><p>Exterior: 12.60m x 3.80m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 19.90m²</p><br><p>1. Dormitor: 11.80m²</p><br><p>1. Baie: 4.50m²</p>"},
-                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f671a54486d036b53_48m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B', 'modal': "<h3>48m² Plan B</h3><br><p>Interior: 11.80m x 3.10m x 2.50m</p><p>Exterior: 12.60m x 3.80m x 3.20m</p><h4>Camere</h4><p>1. Dormitor: 11.80m²</p><p>2. Dormitor: 11.80m²</p><br><p>1. Baie: 4.50m²</p><p>2. Baie: 3.50m²</p><p>Hol: 3.50m²</p>" } ] },
+                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c525733fc3797a1ea68b6_48m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A', 'modal': "<h3>48m² Plan A</h3><br><h4>Camere</h4><p>Living + Bucătărie: 19.54m²</p><p>Dormitor: 11.43m²</p><p>Baie: 4.23m²</p><br><p><strong>TOTAL: 35.2m²</strong></p>"},
+                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f671a54486d036b53_48m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B', 'modal': "<h3>48m² Plan B</h3><br><h4>Camere</h4><p>Hol: 4.23m²</p><p>Dormitor 1: 11.43m²</p><p>Baie 1: 4.23m²</p><p>Dormitor 2: 11.37m²</p><p>Baie 2: 3.44m²</p><br><p><strong>TOTAL: 34.7m²</strong></p>" } 
+            ] 
+        },
         'serenity-95' : {
             "image" : "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428362a03aef0fc05960f_95m2%20Serenity%204.0.avif",
             "name": "Serenity", "energy": 138225, "basePriceText": "De la 109.800 €",
@@ -115,8 +118,8 @@
                         {'src':'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428362a03aef0fc05960f_95m2%20Serenity%204.0.avif', 'alt':'Serenity La cheie Jos'}
                     ],
                     'upgrades' : [
-                        [{ 'slug' : "parquet-raw-osb", 'image': "", 'price': 0, 'included': true, 'name': "OSB", 'icon' : osbIconUrl, 'name': "OSB"},
-                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282f9eb780fb3d07ba0f_95m2%20Serenity%20Cashmere%204.0.avif", 'price': 0, 'included': true, 'name': "Parchet Cashmere", 'icon' : cashmereIconUrl, 'name': "Parchet Cashmere"},
+                        [{ 'slug' : "parquet-raw-osb", 'image': "", 'price': 0, 'included': true, 'name': "OSB", 'icon' : osbIconUrl},
+                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282f9eb780fb3d07ba0f_95m2%20Serenity%20Cashmere%204.0.avif", 'price': 0, 'included': true, 'name': "Parchet Cashmere", 'icon' : cashmereIconUrl},
                             { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282f8de7c20305542612_95m2%20Serenity%20Hazelnut%204.0.avif", 'price': 0, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
                         [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
                             { 'slug' : "facade-lunawood", 'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42834c7a50abaf20e6a83_95m2%20Serenity%20Lunawood%204.0.avif', 'icon' : lunawoodIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Lunawood"} ],
@@ -125,9 +128,11 @@
                 }
             ],
             "floorplan" : [
-                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514e29f50d2da31e84dc_95m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A', 'modal': "<h3>95m² Plan A</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 19.90m²</p><br><p>1. Dormitor: 11.80m²</p><br><p>1. Baie: 4.50m²</p>"},
-                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fdf7becede16b71e9_95m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B', 'modal': "<h3>95m² Plan B</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Camere</h4><p>1. Dormitor: 11.80m²</p><p>2. Dormitor: 11.80m²</p><br><p>1. Baie: 4.50m²</p><p>2. Baie: 3.50m²</p><p>Hol: 3.50m²</p>"},
-                { 'slug' : "floorplan-c", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff885d32e87f5d5ef_95m2%20Floorplan%20C.png", 'price': 0, 'name': 'Plan C', 'modal': "<h3>95m² Plan C</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 53.70m²</p><br><p>1. Dormitor: 13.10m²</p><br><p>1. Baie: 3.75m²</p><p>2. Baie: 4.35m²</p>"} ] },
+                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514e29f50d2da31e84dc_95m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A', 'modal': "<h3>95m² Plan A</h3><br><h4>Camere</h4><p>Living + Bucătărie: 32.61m²</p><p>Dormitor 1: 12.33m²</p><p>Dormitor 2: 11.82m²</p><p>Dormitor 3: 11.82m²</p><p>Baie 1: 4.63m²</p><p>Baie 2: 3.77m²</p><br><p><strong>TOTAL: 76.98m²</strong></p>"},
+                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fdf7becede16b71e9_95m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B', 'modal': "<h3>95m² Plan B</h3><br><h4>Camere</h4><p>Living + Bucătărie: 45.1m²</p><p>Dormitor 1: 12.33m²</p><p>Dormitor 2: 11.82m²</p><p>Baie 1: 4.63m²</p><p>Baie 2: 3.77m²</p><br><p><strong>TOTAL: 77.65m²</strong></p>"},
+                { 'slug' : "floorplan-c", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff885d32e87f5d5ef_95m2%20Floorplan%20C.png", 'price': 0, 'name': 'Plan C', 'modal': "<h3>95m² Plan C</h3><br><h4>Camere</h4><p>Living + Bucătărie: 57.91m²</p><p>Dormitor 1: 11.82m²</p><p>Baie 1: 4.63m²</p><p>Baie 2: 3.77m²</p><br><p><strong>TOTAL: 78.13m²</strong></p>" } 
+            ] 
+        },
         'sanctuary-142' : {
             "image" : "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42836759488180078dc28_142m2%20Sanctuary%204.0.avif",
             "name": "Sanctuary", "energy": 175285, "basePriceText": "De la 159.800 €",
@@ -154,7 +159,7 @@
                         { 'src':'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42836759488180078dc28_142m2%20Sanctuary%204.0.avif', 'alt':'Sanctuary La cheie Jos'}
                     ],
                     'upgrades' : [
-                        [{ 'slug' : "parquet-raw-osb", 'image': "", 'price': 0, 'included': true, 'name': "OSB", 'icon' : osbIconUrl, 'name': "OSB"},
+                        [{ 'slug' : "parquet-raw-osb", 'image': "", 'price': 0, 'included': true, 'name': "OSB", 'icon' : osbIconUrl},
                             { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c440551c75cb12af61eff9_142m2%20Sanctuary%20Interior%20Cashmere%204.0.avif", 'price': 0, 'included': true, 'icon' : cashmereIconUrl, 'name': "Parchet Cashmere"},
                             { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c44055256a682dd59e9ad7_142m2%20Sanctuary%20Interior%20Hazelnut%204.0.avif", 'price': 0, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
                         [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
@@ -164,9 +169,11 @@
                 }
             ],
             "floorplan" : [
-                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff7e14cb1b083351b_142m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A', 'modal': "<h3>142m² Plan A</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 62.90m²</p><br><p>1. Dormitor: 12.40m²</p><p>2. Dormitor: 12.20m²</p><p>3. Dormitor: 12.40m²</p><p>4. Dormitor: 13.10m²</p><br><p>1. Baie: 3.75m²</p><p>2. Baie: 4.35m²</p>"},
-                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f6966128dbeb27986_142m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B', 'modal': "<h3>142m² Plan B</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 75.30m²</p><br><p>1. Dormitor: 12.20m²</p><p>2. Dormitor: 12.40m²</p><p>3. Dormitor: 13.10m²</p><br><p>1. Baie: 3.75m²</p><p>2. Baie: 4.35m²</p>"},
-                { 'slug' : "floorplan-c", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fd4d57aa8ff3d75e9_142m2%20Floorplan%20C.png", 'price': 0, 'name': 'Plan C', 'modal': "<h3>142m² Plan C</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 87.50m²</p><br><p>1. Dormitor: 12.40m²</p><p>2. Dormitor: 13.10m²</p><br><p>1. Baie: 3.75m²</p><p>2. Baie: 4.35m²</p>"} ] }
+                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff7e14cb1b083351b_142m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A', 'modal': "<h3>142m² Plan A</h3><br><h4>Camere</h4><p>Living + Bucătărie: 62.94m²</p><p>Dormitor 1: 11.82m²</p><p>Dormitor 2: 13.53m²</p><p>Dormitor 3: 11.82m²</p><p>Dormitor 4: 11.82m²</p><p>Baie 1: 4.63m²</p><p>Baie 2: 3.77m²</p><br><p><strong>TOTAL: 120.33m²</strong></p>"},
+                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f6966128dbeb27986_142m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B', 'modal': "<h3>142m² Plan B</h3><br><h4>Camere</h4><p>Living + Bucătărie: 75.22m²</p><p>Dormitor 1: 13.53m²</p><p>Dormitor 2: 11.82m²</p><p>Dormitor 3: 11.82m²</p><p>Baie 1: 4.63m²</p><p>Baie 2: 3.77m²</p><br><p><strong>TOTAL: 120.79m²</strong></p>"},
+                { 'slug' : "floorplan-c", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fd4d57aa8ff3d75e9_142m2%20Floorplan%20C.png", 'price': 0, 'name': 'Plan C', 'modal': "<h3>142m² Plan C</h3><br><h4>Camere</h4><p>Living + Bucătărie: 87.71m²</p><p>Dormitor 1: 13.53m²</p><p>Dormitor 2: 11.82m²</p><p>Baie 1: 4.63m²</p><p>Baie 2: 3.77m²</p><br><p><strong>TOTAL: 121.46m²</strong></p>" } 
+            ] 
+        }
     };
 
     const turnkeyMaterialItemsRaw = `
@@ -177,7 +184,7 @@
     Structură C24 Timber Frame BIOBUILDS<split>Lemn certificat FSC/PEFC, rezistență excepțională la sarcini.
     Izolație din fibră de lemn STEICO<split>Organic, sustenabil și ultra-eficient (λ ≈ 0,036 W/m·K), certificat CE.
     Placă ECO OSB 3 (AGEPAN, Germania)<split>Fără formaldehidă și VOC, aprobat Passive House, certificat CE.
-    Placă DWD (AGEPAN, Germania)<split>Permite pereților să „respire”, menținând etanșeitatea la exterior; certificat CE.
+    Placă DWD (AGEPAN, Germania)<split>Permite pereților să „respire", menținând etanșeitatea la exterior; certificat CE.
     Membrană inteligentă<split>Asigură etanșeitatea interioară cu difuzie controlată a vaporilor spre exterior.
     FINISAJE EXTERIOARE // TITLE
     Fațadă ventilată din lemn Yakisugi/Lunawood<split>Lemn natural termotratat, cu întreținere semnificativ redusă, rezistență excelentă la foc, durabil, cu estetică deosebită și proveniență sustenabilă.
@@ -226,7 +233,7 @@
     Structură C24 Timber Frame BIOBUILDS<split>Lemn certificat FSC/PEFC, rezistență excepțională la sarcini.
     Izolație din fibră de lemn STEICO<split>Organic, sustenabil și ultra-eficient (λ ≈ 0,036 W/m·K), certificat CE.
     Placă ECO OSB 3 (AGEPAN, Germania)<split>Fără formaldehidă și VOC, aprobat Passive House, certificat CE.
-    Placă DWD (AGEPAN, Germania)<split>Permite pereților să „respire”, menținând etanșeitatea la exterior; certificat CE.
+    Placă DWD (AGEPAN, Germania)<split>Permite pereților să „respire", menținând etanșeitatea la exterior; certificat CE.
     Membrană inteligentă<split>Asigură etanșeitatea interioară cu difuzie controlată a vaporilor spre exterior.
     FINISAJE EXTERIOARE // TITLE
     Fațadă ventilată din lemn Yakisugi/Lunawood<split>Lemn natural termotratat, cu întreținere semnificativ redusă, rezistență excelentă la foc, durabil, cu estetică deosebită și proveniență sustenabilă.
@@ -341,8 +348,11 @@
     let currentScrollTarget;
 
     let referralDiscountActive = false;
-    const REFERRAL_DISCOUNT_RATE = 0.04;
-    const VALID_REFERRAL_CODES = ["BUHNICI", "MATEUS"];
+    const REFERRAL_CODES = {
+        "BUHNICI": 0.04,  // 4% discount
+        "MATEUS": 0.04,   // 4% discount
+        "FOREST": 0.05    // 5% discount
+    };
 
     function handleStickyBottomAnimation(){
         if (!btn || !box) return;
@@ -404,11 +414,6 @@
         progressBar.style.width = `${progressBarWidth}%`;
     }
 
-    /**
-     * FIX: The unifiedScrollHandler now only manages the button and progress bar.
-     * The call to updateImageBasedOnScrollPercentage() has been removed to prevent
-     * images from reloading on every scroll event, which saves significant bandwidth.
-     */
     function unifiedScrollHandler() {
         handleStickyBottomAnimation();
         updateScrollProgressBar();
@@ -423,13 +428,6 @@
         currentScrollTarget.addEventListener('scroll', unifiedScrollHandler, { passive: true });
         setTimeout(unifiedScrollHandler, 250);
     }
-
-    // REMOVED: All variables and functions related to scroll-based image changes are no longer needed.
-    // let scrollPercentageTriggers = [];
-    // let lastShownImageSrcByPercentage = null;
-    // function initializeScrollPercentageTriggers() { ... }
-    // function updateImageBasedOnScrollPercentage() { ... }
-
 
     const upgradeRenderConfig = [
         { groupIndex: 0, queryParam: 'SQF_PARQUET', type: 'parquet', defaultName: 'Parchet' },
@@ -626,12 +624,12 @@
         const referralCodeInput = document.getElementById('referral-code-input');
         const initialReferralCodeFromUrl = getUrlParameter('SQF_REFERRAL_CODE');
 
-        if (initialReferralCodeFromUrl && VALID_REFERRAL_CODES.includes(initialReferralCodeFromUrl.toUpperCase())) {
+        if (initialReferralCodeFromUrl && REFERRAL_CODES[initialReferralCodeFromUrl.toUpperCase()]) {
             referralDiscountActive = true;
             if(referralCodeInput) referralCodeInput.value = initialReferralCodeFromUrl;
         } else {
             const initialReferralFromInput = referralCodeInput ? referralCodeInput.value.trim().toUpperCase() : "";
-            if (initialReferralFromInput && VALID_REFERRAL_CODES.includes(initialReferralFromInput)) {
+            if (initialReferralFromInput && REFERRAL_CODES[initialReferralFromInput]) {
                 referralDiscountActive = true;
             } else if (referralCodeInput && initialReferralFromInput) {
                 referralDiscountActive = false;
@@ -642,7 +640,6 @@
         render_economy_price();
         updateURL();
 
-        // Setup scroll listeners for UI elements like the button and progress bar
         setupUnifiedScrollListener();
 
         window.addEventListener('resize', () => {
@@ -700,7 +697,7 @@
                              return "<p>Vă rugăm să selectați un plan pentru a vedea detaliile.</p>";
                         }
 
-                        let modalHtml = `<img src="${floorplanDataForModal.image}" alt="Plan ${floorplanDataForModal.name}" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px; onerror="this.onerror=null; this.src='';">`;
+                        let modalHtml = `<img src="${floorplanDataForModal.image}" alt="Plan ${floorplanDataForModal.name}" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">`;
                         modalHtml += floorplanDataForModal.modal;
 
                         return modalHtml;
@@ -1075,12 +1072,22 @@
         const discountMessageEl = document.getElementById('discount-message');
         let finalPrice = originalPrice;
         let isDiscounted = false;
+        let discountRate = 0;
 
         if (referralDiscountActive) {
-            finalPrice = originalPrice * (1 - REFERRAL_DISCOUNT_RATE);
-            isDiscounted = true;
-            if (discountMessageEl) {
-                discountMessageEl.style.display = 'block';
+            const referralCodeInput = document.getElementById('referral-code-input');
+            const currentCode = referralCodeInput ? referralCodeInput.value.trim().toUpperCase() : "";
+            
+            if (currentCode && REFERRAL_CODES[currentCode]) {
+                discountRate = REFERRAL_CODES[currentCode];
+                finalPrice = originalPrice * (1 - discountRate);
+                isDiscounted = true;
+                
+                if (discountMessageEl) {
+                    const percentageText = (discountRate * 100).toFixed(0);
+                    discountMessageEl.textContent = `Reducere de ${percentageText}% aplicată`;
+                    discountMessageEl.style.display = 'block';
+                }
             }
         } else {
             if (discountMessageEl) {
@@ -1089,7 +1096,6 @@
         }
 
         render_price(finalPrice, isDiscounted, originalPrice);
-
         queryArgs['SQF_PRICE'] = Math.round(finalPrice);
     }
 
@@ -1341,7 +1347,7 @@
         if (referralInput) {
             referralInput.addEventListener('input', () => {
                 const enteredCode = referralInput.value.trim().toUpperCase();
-                referralDiscountActive = VALID_REFERRAL_CODES.includes(enteredCode);
+                referralDiscountActive = REFERRAL_CODES.hasOwnProperty(enteredCode);
                 applyReferralDiscountAndRender();
                 updateURL();
             });
@@ -1425,10 +1431,12 @@
 
                  if (currentReferralCodeValue) {
                      const enteredCodeUpper = currentReferralCodeValue.toUpperCase();
-                     if (referralDiscountActive && VALID_REFERRAL_CODES.includes(enteredCodeUpper)) {
+                     if (referralDiscountActive && REFERRAL_CODES[enteredCodeUpper]) {
                          const capitalizedName = currentReferralCodeValue.charAt(0).toUpperCase() + currentReferralCodeValue.slice(1).toLowerCase();
+                         const discountRate = REFERRAL_CODES[enteredCodeUpper];
+                         const discountPercentage = (discountRate * 100).toFixed(0);
                          targetUrlParams.set('SQF_REFERRAL_NAME', capitalizedName);
-                         targetUrlParams.set('SQF_REFERRAL_VALID', 'yes4');
+                         targetUrlParams.set('SQF_REFERRAL_VALID', `yes${discountPercentage}`);
                      }
                  }
 
@@ -1527,7 +1535,7 @@ function updateURL() {
     const referralCodeInputEl = document.getElementById('referral-code-input');
     const referralCodeValueFromInput = referralCodeInputEl ? referralCodeInputEl.value.trim() : "";
 
-    if (referralDiscountActive && referralCodeValueFromInput && VALID_REFERRAL_CODES.includes(referralCodeValueFromInput.toUpperCase())) {
+    if (referralDiscountActive && referralCodeValueFromInput && REFERRAL_CODES[referralCodeValueFromInput.toUpperCase()]) {
         params.set('SQF_REFERRAL_CODE', referralCodeValueFromInput.toUpperCase());
     } else {
         params.delete('SQF_REFERRAL_CODE');
