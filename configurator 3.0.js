@@ -1,1612 +1,1575 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // --- LANGUAGE AND TRANSLATION ---
-  let currentLang = "ro";
-  const translations = {
-    ro: {
-      pageTitle: "Oferta Generata - Biobuilds",
-      validity: "VALABILITATE: 30 ZILE",
-      offerLabel: "OFERTA",
-      offerFor: "Ofertă-",
-      clientNamePlaceholder: "Nume Client",
-      footerSlogan:
-        "Modular este modern, inovator și sustenabil. Alege spațiul ideal pentru tine, construit la cele mai înalte standarde de construcție din lume.",
-      passiveHouseQuote:
-        ""Modulele sunt fixate cu șuruburi de oțel, apoi acoperite cu o membrană impermeabilă și placate cu lemn durabil. Sistemul este prefabricat în fabrica BioBuilds, oferind livrare rapidă și timpi scurți de asamblare. Sistemul de construcție este certificat Passivhaus, având valori U excepționale și eliminând punțile termice."",
-      energyConsumptionLabel: "Consum de energie:",
-      energyConsumptionValue: ">90% redus",
-      co2Saved: "Tone de CO₂ salvate",
-      co2Lifespan: "pe durata de viață a clădirii",
-      organicWood:
-        "Structură și sistem pe bază de <strong>lemn organic</strong>, cu certificare EPD",
-      lowerEnergy:
-        "Consum de energie cu <strong>95% mai mic</strong>, datorită sistemului Modular",
-      turnkeyTitle: "LA CHEIE",
-      interiorFinishes: "FINISAJE INTERIOARE COMPLETE",
-      woodSlatCeilingTitle: "Tavan cu lamele din lemn + fetru",
-      woodSlatCeilingDesc:
-        "Lemn natural și fetru reciclat; absorbție acustică excelentă.",
-      fiberglassWallpaperTitle: "Tapet din fibră de sticlă",
-      fiberglassWallpaperDesc:
-        "Rezistență foarte mare la tracțiune și uzură; lavabil; aspect modern.",
-      parquetTitle: "Parchet triplustratificat din lemn natural",
-      parquetDesc:
-        "Grosime 9–14 mm; lemn certificat FSC/PEFC; finisaj foarte durabil.",
-      s10DoorsTitle: "Uși interioare S10",
-      s10DoorsDesc: "Certificate CE; Interior solid.",
-      bathroomFinishes: "FINISAJE COMPLETE BAIE",
-      stoneCompositePanelsTitle: "Plăci din compozit de piatră",
-      stoneCompositePanelsDesc:
-        "Plăci întregi premium de 2.5 × 1.2 m; 100% impermeabile; rezistență foarte mare în timp.",
-      italianSinkTitle: "Lavoar cu design italian",
-      italianSinkDesc:
-        "Material compozit premium; ultra-subțire, modern și durabil.",
-      groheWCTitle: "WC suspendat Grohe",
-      groheWCDesc: "Produs în Germania; design minimalist, modern.",
-      aristonBoilerTitle: "Boiler Ariston Velis",
-      aristonBoilerDesc: "Design ultra-subțire; eficiență energetică ridicată.",
-      walkInShowerTitle: "Duș walk-in",
-      walkInShowerDesc: "Proiectat în Franța; design minimalist, modern.",
-      smartSystems: "SISTEME SMART",
-      lightingTrackTitle: "Șină de iluminat",
-      lightingTrackDesc:
-        "Configurare flexibilă pentru LED și spoturi; estetică modernă.",
-      smartLightingTitle: "Iluminat Smart",
-      smartLightingDesc:
-        "Philips HUE sau IKEA TRÅDFRI; configurare Smart ușoară.",
-      smartBlindsTitle: "Jaluzele exterioare Smart",
-      smartBlindsDesc:
-        "Blochează > 95% din radiația solară; control prin aplicație/manual; certificate de Institutul de Case Pasive din Darmstadt, Germania; certificate CE.",
-      ventilationSystemTitle: "Genvex Premium Preheat 250",
-      ventilationSystemDesc:
-        "Recuperare de căldură de până la 95%; pompă de căldură integrată pentru încălzire și răcire.",
-      upgradesAndDelivery: "Upgrades & Livrare",
-      delivery: "Livrare",
-      deliveryCost: "Costul transportului depinde de locație.",
-      screwFoundation: "Fundație pe șuruburi (opțional)",
-      deliveryTime:
-        "Livrarea și instalarea durează între 1 și 5 zile. În cazuri speciale, când proiectul necesită echipamente suplimentare, orice cost suplimentar va fi comunicat transparent.",
-      addOns: "Aditionale",
-      facade: "Fațadă",
-      parquetUpgradeLabel: "Parchet",
-      smartBlindsTitleUpgrade: "Jaluzele exterioare Smart",
-      smartBlindsDescUpgrade:
-        "Blochează peste 95% din radiația solară, controlate prin aplicație sau manual.",
-      ventilationSystemTitleUpgrade: "Sistem de ventilație",
-      solarPanelsTitleUpgrade: "Panouri solare",
-      solarPanelsDescUpgrade: "Produc cu 60% mai multă energie decât consumă casa anual.",
-      notesLabel: "Mențiuni:",
-      termsAndConditions:
-        "Această ofertă este supusă termenilor și condițiilor aplicabile, care pot fi consultate la biobuilds.com/TC. Continuând, confirmați că le înțelegeți și le acceptați.",
-      totalLabel: "TOTAL",
-      vatLabel: "+TVA",
-      turnkey: "La Cheie",
-      "semi-finished": "Semifinisat",
-      plan: "Plan",
-      customPlan: "Plan personalizat",
-      osbStandard: "OSB (Standard)",
-      included: "(Inclus)",
-      dimensions: "Dimensiuni",
-      totalArea: "Suprafață Totală",
-      interiorDimensions: "Dimensiuni Interioare",
-      exteriorDimensions: "Dimensiuni Exterioare",
-      rooms: "Camere",
-      Dormitor: "Dormitor",
-      Baie: "Baie",
-      "Depozitare / Chichinetă": "Depozitare / Chichinetă",
-      "Living + Bucătărie": "Living + Bucătărie",
-      "Dormitor 1": "Dormitor 1",
-      "Dormitor 2": "Dormitor 2",
-      "Dormitor 3": "Dormitor 3",
-      "Dormitor 4": "Dormitor 4",
-      "Baie 1": "Baie 1",
-      "Baie 2": "Baie 2",
-      Hol: "Hol",
-      s2_modular: "MODULAR",
-      s2_structure: "STRUCTURĂ",
-      s2_modularStructure_title: "Structura MODULAR",
-      s2_modularStructure_desc:
-        "Combină rezistența mecanică remarcabilă cu proprietăți de ultra-izolare ce elimină complet punțile termice. Certificată de Institutul de Case Pasive din Darmstadt, Germania și de EPD International. U ≈ 0,11 W/m²K, U-wert.",
-      s2_c24Frame_title: "Cadru din lemn C24",
-      s2_c24Frame_desc:
-        "Lemn C24 cu certificare FSC/PEFC; rezistență foarte mare la sarcina structurală.",
-      s2_woodInsulation_title: "Izolație din fibră de lemn ultra-eficientă",
-      s2_woodInsulation_desc:
-        "Izolație pentru pereți, acoperiș și podea; fibră de lemn ultra-eficientă STEICO λ ≈ 0,036 W/m·K; certificată CE.",
-      s2_osb_title: "OSB 3 ECO, Germania",
-      s2_osb_desc:
-        "Panou structural fără formaldehidă și VOC, aprobat de Institutul de Case Pasive din Darmstadt, Germania; certificat CE.",
-      s2_dwd_title: "Placă DWD, Austria",
-      s2_dwd_desc:
-        "Permeabilă la vapori (permite pereților să „respire" menținându-i etanși la aer din exterior; unidirecțional); certificată CE.",
-      s2_smartMembrane_title: "Membrană Smart (folie)",
-      s2_smartMembrane_desc:
-        "Creează un interior etanș la aer, permițând difuzia vaporilor spre exterior. Certificată de Institutul de Case Pasive din Darmstadt, Germania; certificată CE.",
-      s2_exteriorFinishes: "FINISAJE EXTERIOARE COMPLETE",
-      s2_facadeYakisugi_title: "Fațadă ventilată Yakisugi",
-      s2_facadeYakisugi_desc:
-        "Mentenanță estimată o dată la 10 ani; Cea mai bună rezistență la foc din clasa de lemn natural; impermeabilă.",
-      s2_facadeLunawood_title: "Fațadă Lunawood",
-      s2_facadeLunawood_desc:
-        "O fațadă din pin nordic, tratată termic fără chimicale, pentru o durabilitate excepțională, stabilitate și o nuanță caldă de caramel.",
-      s2_ventRoof_title: "Acoperiș ventilat",
-      s2_ventRoof_desc:
-        "Spațiul ventilat crește performanța termică și durata de viață a acoperișului.",
-      s2_epdmMembrane_title: "Membrană EPDM",
-      s2_epdmMembrane_desc:
-        "Impermeabilă; garanție de 30 de ani de la producător.",
-      s2_rainwater_title: "Sistem de colectare a apei pluviale",
-      s2_rainwater_desc:
-        "Jgheab ascuns integrat în fațadă; pregătit pentru colectare.",
-      s2_windowsDoors: "FERESTRE ȘI UȘI EXTERIOARE",
-      s2_genesisFrame_title: "Cadru din aluminiu Genesis 90",
-      s2_genesisFrame_desc:
-        "Profil rigid, ultra-eficient; Uwi ≤ 0,85 W/m²K; certificat de Institutul de Case Pasive din Darmstadt, Germania; certificat CE.",
-      s2_tripleGlazing_title: "Geam tripan laminat",
-      s2_tripleGlazing_desc:
-        "U = 0,50 W/m²K; sticlă securizată laminată; certificat de Institutul de Case Pasive din Darmstadt, Germania; certificat CE.",
-      s2_kitchen: "BUCĂTĂRIE",
-      s2_kitchenInstall_title: "Instalații pentru bucătărie",
-      s2_kitchenInstall_desc:
-        "Complet pregătite pe poziție pentru mobilierul tău.",
-      s2_installations: "INSTALAȚII",
-      s2_electrical_title: "Instalații electrice",
-      s2_electrical_desc:
-        "Cabluri și copex complet instalate, conforme cu toate reglementările locale aplicabile (ex. CE / Standardul I7/2011 / IEC 60364).",
-      s2_plumbing_title: "Instalații sanitare",
-      s2_plumbing_desc:
-        "Țevi și fitinguri conforme cu toate reglementările locale necesare. PPR / PEX.",
-      s2_certs: "CERTIFICĂRI & GARANȚII",
-      s2_passivhaus_title: "Certificare Passivhaus",
-      s2_passivhaus_desc:
-        "Emitent: Institutul de Case Pasive din Darmstadt, Germania.",
-      s2_epd_title: "Certificare EPD",
-      s2_epd_desc: "Emitent: EPD, Europa.",
-      s2_ce_title: "Marcaj CE",
-      s2_ce_desc:
-        "Toate componentele relevante respectă Regulamentul UE privind produsele pentru construcții.",
-      s2_warranty_title: "Garanție standard UE",
-      s2_warranty_desc:
-        "24 de luni pentru uz privat; 12 luni pentru uz comercial.",
-      timeline_online: "Online",
-      timeline_offer: "Ofertă",
-      timeline_reservation: "Rezervare",
-      timeline_payment10: "10% Plată",
-      timeline_preproduction: "Pre-producție",
-      timeline_payment40: "40% Plată",
-      timeline_production: "Producție",
-      timeline_payment40_2: "40% Plată",
-      timeline_delivery: "Livrare",
-      timeline_payment10_final: "10% Plată",
-    },
-    en: {
-      pageTitle: "Generated Offer - Biobuilds",
-      validity: "VALIDITY: 30 DAYS",
-      offerLabel: "OFFER",
-      offerFor: "Offer-",
-      clientNamePlaceholder: "Client Name",
-      footerSlogan:
-        "Modular is modern, innovative, and sustainable. Choose the ideal space for you, built to the highest construction standards in the world.",
-      passiveHouseQuote:
-        ""The modules are fixed with steel screws, then covered with a waterproof membrane and clad in durable wood. The system is prefabricated in the BioBuilds factory, offering fast delivery and short assembly times. The construction system is Passivhaus certified, having exceptional U-values and eliminating thermal bridges."",
-      energyConsumptionLabel: "Energy Consumption:",
-      energyConsumptionValue: ">90% reduced",
-      co2Saved: "Tons of CO₂ saved",
-      co2Lifespan: "over the building's lifespan",
-      organicWood:
-        "Structure and system based on <strong>organic wood</strong>, with EPD certification",
-      lowerEnergy:
-        "<strong>95% lower</strong> energy consumption, thanks to the Modular system",
-      turnkeyTitle: "TURNKEY",
-      interiorFinishes: "COMPLETE INTERIOR FINISHES",
-      woodSlatCeilingTitle: "Wood slat + felt ceiling",
-      woodSlatCeilingDesc:
-        "Natural wood and recycled felt; excellent acoustic absorption.",
-      fiberglassWallpaperTitle: "Fiberglass wallpaper",
-      fiberglassWallpaperDesc:
-        "Very high tensile strength and wear resistance; washable; modern look.",
-      parquetTitle: "Triple-layered natural wood parquet",
-      parquetDesc:
-        "9–14 mm thickness; FSC/PEFC certified wood; very durable finish.",
-      s10DoorsTitle: "S10 interior doors",
-      s10DoorsDesc: "CE certified; Solid core.",
-      bathroomFinishes: "COMPLETE BATHROOM FINISHES",
-      stoneCompositePanelsTitle: "Stone composite panels",
-      stoneCompositePanelsDesc:
-        "Premium full-size panels of 2.5 × 1.2 m; 100% waterproof; very high durability over time.",
-      italianSinkTitle: "Italian design sink",
-      italianSinkDesc:
-        "Premium composite material; ultra-thin, modern, and durable.",
-      groheWCTitle: "Grohe suspended toilet",
-      groheWCDesc: "Made in Germany; minimalist, modern design.",
-      aristonBoilerTitle: "Ariston Velis boiler",
-      aristonBoilerDesc: "Ultra-slim design; high energy efficiency.",
-      walkInShowerTitle: "Walk-in shower",
-      walkInShowerDesc: "Designed in France; minimalist, modern design.",
-      smartSystems: "SMART SYSTEMS",
-      lightingTrackTitle: "Lighting track",
-      lightingTrackDesc:
-        "Flexible configuration for LEDs and spotlights; modern aesthetic.",
-      smartLightingTitle: "Smart Lighting",
-      smartLightingDesc:
-        "Philips HUE or IKEA TRÅDFRI; easy Smart configuration.",
-      smartBlindsTitle: "Smart exterior blinds",
-      smartBlindsDesc:
-        "Block > 95% of solar radiation; app/manual control; certified by the Passive House Institute in Darmstadt, Germany; CE certified.",
-      ventilationSystemTitle: "Genvex Premium Preheat 250",
-      ventilationSystemDesc:
-        "Heat recovery up to 95%; integrated heat pump for heating and cooling.",
-      upgradesAndDelivery: "Upgrades & Delivery",
-      delivery: "Delivery",
-      deliveryCost: "Shipping cost depends on location.",
-      screwFoundation: "Screw pile foundation (optional)",
-      deliveryTime:
-        "Delivery and installation take between 1 and 5 days. In special cases where the project requires additional equipment, any extra costs will be transparently communicated.",
-      addOns: "Add-ons",
-      facade: "Facade",
-      parquetUpgradeLabel: "Parquet",
-      smartBlindsTitleUpgrade: "Smart exterior blinds",
-      smartBlindsDescUpgrade:
-        "Block over 95% of solar radiation, controlled by app or manually.",
-      ventilationSystemTitleUpgrade: "Ventilation system",
-      solarPanelsTitleUpgrade: "Solar panels",
-      solarPanelsDescUpgrade: "Produces 60% more energy than your home consumes annually.",
-      notesLabel: "Notes:",
-      termsAndConditions:
-        "This offer is subject to the applicable terms and conditions, which can be viewed at biobuilds.com/TC. By proceeding, you confirm that you understand and accept them.",
-      totalLabel: "TOTAL",
-      vatLabel: "+VAT",
-      turnkey: "Turnkey",
-      "semi-finished": "Semi-finished",
-      plan: "Plan",
-      customPlan: "Custom plan",
-      osbStandard: "OSB (Standard)",
-      included: "(Included)",
-      dimensions: "Dimensions",
-      totalArea: "Total Area",
-      interiorDimensions: "Internal Dimensions",
-      exteriorDimensions: "External Dimensions",
-      rooms: "Rooms",
-      Dormitor: "Bedroom",
-      Baie: "Bathroom",
-      "Depozitare / Chichinetă": "Storage / Kitchenette",
-      "Living + Bucătărie": "Living + Kitchen",
-      "Dormitor 1": "Bedroom 1",
-      "Dormitor 2": "Bedroom 2",
-      "Dormitor 3": "Bedroom 3",
-      "Dormitor 4": "Bedroom 4",
-      "Baie 1": "Bathroom 1",
-      "Baie 2": "Bathroom 2",
-      Hol: "Hallway",
-      s2_modular: "MODULAR",
-      s2_structure: "STRUCTURE",
-      s2_modularStructure_title: "MODULAR Structure",
-      s2_modularStructure_desc:
-        "Combines remarkable mechanical strength with ultra-insulating properties that completely eliminate thermal bridges. Certified by the Passive House Institute in Darmstadt, Germany, and by EPD International. U ≈ 0.11 W/m²K, U-wert.",
-      s2_c24Frame_title: "C24 Timber Frame",
-      s2_c24Frame_desc:
-        "C24 wood with FSC/PEFC certification; very high resistance to structural load.",
-      s2_woodInsulation_title: "Ultra-efficient Wood Fiber",
-      s2_woodInsulation_desc:
-        "Insulation for walls, roof, and floor; ultra-efficient STEICO wood fiber λ ≈ 0.036 W/m·K; CE certified.",
-      s2_osb_title: "OSB 3 ECO, Germany",
-      s2_osb_desc:
-        "Formaldehyde and VOC-free structural panel, approved by the Passive House Institute in Darmstadt, Germany; CE certified.",
-      s2_dwd_title: "DWD Board, Austria",
-      s2_dwd_desc:
-        'Vapor permeable (allows walls to "breathe" while keeping them airtight from the outside; unidirectional); CE certified.',
-      s2_smartMembrane_title: "Smart Membrane (foil)",
-      s2_smartMembrane_desc:
-        "Creates an airtight interior, allowing vapor diffusion to the outside. Certified by the Passive House Institute in Darmstadt, Germany; CE certified.",
-      s2_exteriorFinishes: "COMPLETE EXTERIOR FINISHES",
-      s2_facadeYakisugi_title: "Yakisugi Ventilated Facade",
-      s2_facadeYakisugi_desc:
-        "Maintenance estimated once every 10 years; Best fire resistance in its class of natural wood; waterproof.",
-      s2_facadeLunawood_title: "Lunawood Facade",
-      s2_facadeLunawood_desc:
-        "A Nordic pine facade, heat-treated without chemicals for exceptional durability, stability, and a warm caramel hue.",
-      s2_ventRoof_title: "Ventilated Roof",
-      s2_ventRoof_desc:
-        "The ventilated space increases thermal performance and the lifespan of the roof.",
-      s2_epdmMembrane_title: "EPDM Membrane",
-      s2_epdmMembrane_desc: "Waterproof; 30-year manufacturer warranty.",
-      s2_rainwater_title: "Rainwater Collection System",
-      s2_rainwater_desc:
-        "Hidden gutter integrated into the facade; ready for collection.",
-      s2_windowsDoors: "WINDOWS AND EXTERIOR DOORS",
-      s2_genesisFrame_title: "Genesis 90 Aluminum Frame",
-      s2_genesisFrame_desc:
-        "Rigid, ultra-efficient profile; Uwi ≤ 0.85 W/m²K; certified by the Passive House Institute in Darmstadt, Germany; CE certified.",
-      s2_tripleGlazing_title: "Laminated Triple Glazing",
-      s2_tripleGlazing_desc:
-        "U = 0.50 W/m²K; laminated safety glass; certified by the Passive House Institute in Darmstadt, Germany; CE certified.",
-      s2_kitchen: "KITCHEN",
-      s2_kitchenInstall_title: "Kitchen Installations",
-      s2_kitchenInstall_desc: "Fully prepared in position for your furniture.",
-      s2_installations: "INSTALLATIONS",
-      s2_electrical_title: "Electrical Installations",
-      s2_electrical_desc:
-        "Cables and conduits fully installed, compliant with all applicable local regulations (e.g., CE / I7/2011 Standard / IEC 60364).",
-      s2_plumbing_title: "Plumbing Installations",
-      s2_plumbing_desc:
-        "Pipes and fittings compliant with all necessary local regulations. PPR / PEX.",
-      s2_certs: "CERTIFICATIONS & WARRANTIES",
-      s2_passivhaus_title: "Passivhaus Certification",
-      s2_passivhaus_desc:
-        "Issuer: Passive House Institute, Darmstadt, Germany.",
-      s2_epd_title: "EPD Certification",
-      s2_epd_desc: "Issuer: EPD, Europe.",
-      s2_ce_title: "CE Marking",
-      s2_ce_desc:
-        "All relevant components comply with the EU Construction Products Regulation.",
-      s2_warranty_title: "Standard EU Warranty",
-      s2_warranty_desc:
-        "24 months for private use; 12 months for commercial use.",
-      timeline_online: "Online",
-      timeline_offer: "Offer",
-      timeline_reservation: "Reservation",
-      timeline_payment10: "10% Payment",
-      timeline_preproduction: "Pre-production",
-      timeline_payment40: "40% Payment",
-      timeline_production: "Production",
-      timeline_payment40_2: "40% Payment",
-      timeline_delivery: "Delivery",
-      timeline_payment10_final: "10% Payment",
-    },
-    de: {
-      pageTitle: "Angebot Erstellt – Biobuilds",
-      validity: "GÜLTIGKEIT: 30 TAGE",
-      offerLabel: "ANGEBOT",
-      offerFor: "Angebot–",
-      clientNamePlaceholder: "Kunde Name",
-      footerSlogan:
-        "Modular ist modern, innovativ und nachhaltig. Wählen Sie den idealen Raum für sich, gebaut nach den höchsten Baustandards der Welt.",
-      passiveHouseQuote:
-        "„Die Module werden mit Stahlschrauben fixiert, anschließend mit einer wasserdichten Membran abgedeckt und mit langlebigem Holz verkleidet. Das System wird im BioBuilds-Werk vorgefertigt und ermöglicht schnelle Lieferung und kurze Montagezeiten. Das Bausystem ist vom Passivhaus Institut zertifiziert, weist außergewöhnliche U-Werte auf und eliminiert Wärmebrücken."",
-      energyConsumptionLabel: "Energieverbrauch:",
-      energyConsumptionValue: "90 % reduziert",
-      co2Saved: "Tonnen CO₂ eingespart",
-      co2Lifespan: "über die Lebensdauer des Gebäudes",
-      organicWood:
-        "Struktur & System: auf <strong>organischem Holz</strong> basierend, mit EPD-Zertifizierung",
-      lowerEnergy:
-        "<strong>95 % geringerer</strong> Energieverbrauch dank des Modular-Systems",
-      turnkeyTitle: "SCHLÜSSELFERTIG",
-      interiorFinishes: "KOMPLETTE INNENAUSSTATTUNG",
-      woodSlatCeilingTitle: "Holzlamellen + Filzdecke",
-      woodSlatCeilingDesc:
-        "Naturholz und Recycling-Filz; hervorragende Akustikdämpfung.",
-      fiberglassWallpaperTitle: "Glasfasertapete",
-      fiberglassWallpaperDesc:
-        "Sehr hohe Reiß- und Abriebfestigkeit; abwaschbar; modernes Erscheinungsbild.",
-      parquetTitle: "Dreischicht-Parkett",
-      parquetDesc: "9–14 mm, FSC/PEFC-Holz; extrem langlebige Oberfläche.",
-      s10DoorsTitle: "Innentüren S10",
-      s10DoorsDesc: "CE-zertifiziert; Vollkern.",
-      bathroomFinishes: "BADEZIMMERAUSSTATTUNG",
-      stoneCompositePanelsTitle: "Steinverbundplatten",
-      stoneCompositePanelsDesc:
-        "Premium-Vollformatplatten 2,5 × 1,2 m; 100 % wasserdicht; sehr hohe Langlebigkeit.",
-      italianSinkTitle: "Italienisches Design-Waschbecken",
-      italianSinkDesc:
-        "Premium-Verbundstoff; ultra-dünn, modern und langlebig.",
-      groheWCTitle: "Grohe Hänge-WC",
-      groheWCDesc: "Made in Germany; minimalistisches, modernes Design.",
-      aristonBoilerTitle: "Ariston Velis Boiler",
-      aristonBoilerDesc: "Ultra-schlankes Design; hohe Energieeffizienz.",
-      walkInShowerTitle: "Walk-in-Dusche",
-      walkInShowerDesc: "Design aus Frankreich; minimalistisch, modern.",
-      smartSystems: "SMART-SYSTEME",
-      lightingTrackTitle: "Lichtschiene",
-      lightingTrackDesc:
-        "Flexible Konfiguration für LEDs und Spots; moderne Ästhetik.",
-      smartLightingTitle: "Smart Lighting",
-      smartLightingDesc:
-        "Philips HUE oder IKEA TRÅDFRI; einfache Smart-Konfiguration.",
-      smartBlindsTitle: "Smart-Außenjalousien",
-      smartBlindsDesc:
-        "Blockieren >95 % der Sonneneinstrahlung; App- oder manuell steuerbar; zertifiziert vom Passivhaus Institut Darmstadt; CE.",
-      ventilationSystemTitle: "Genvex Premium Preheat 250",
-      ventilationSystemDesc:
-        "Wärmerückgewinnung bis zu 95 %; integrierte Wärmepumpe zum Heizen und Kühlen.",
-      upgradesAndDelivery: "Upgrades & Lieferung",
-      delivery: "Lieferung",
-      deliveryCost: "Lieferkosten abhängig vom Standort.",
-      screwFoundation: "Schraubfundamente (optional)",
-      deliveryTime:
-        "Lieferung und Montage dauern zwischen 1 und 5 Tagen. In besonderen Fällen, in denen das Projekt zusätzliche Ausrüstung erfordert, werden alle Mehrkosten transparent kommuniziert.",
-      addOns: "Zusätze",
-      facade: "Fassaden",
-      parquetUpgradeLabel: "Parkett",
-      smartBlindsTitleUpgrade: "Smart-Außenjalousien",
-      smartBlindsDescUpgrade:
-        "Blockieren über 95 % der Sonneneinstrahlung, per App oder manuell steuerbar.",
-      ventilationSystemTitleUpgrade: "Lüftungssystem",
-      solarPanelsTitleUpgrade: "Solarpaneele",
-      solarPanelsDescUpgrade: "Erzeugt 60 % mehr Energie als Ihr Haus jährlich verbraucht.",
-      notesLabel: "Anmerkungen:",
-      termsAndConditions:
-        "Dieses Angebot unterliegt den geltenden AGB, einsehbar unter biobuilds.com/TC. Mit der Annahme bestätigen Sie, dass Sie diese verstanden und akzeptiert haben.",
-      totalLabel: "GESAMT",
-      vatLabel: "+ MwSt.",
-      turnkey: "Schlüsselfertig",
-      "semi-finished": "Teilfertig",
-      plan: "Plan",
-      customPlan: "Individueller Plan",
-      osbStandard: "OSB (Standard)",
-      included: "(Inklusive)",
-      dimensions: "Dimensionen",
-      totalArea: "Gesamtfläche",
-      interiorDimensions: "Innenmaße",
-      exteriorDimensions: "Außenmaße",
-      rooms: "Räume",
-      Dormitor: "Schlafzimmer",
-      Baie: "Badezimmer",
-      "Depozitare / Chichinetă": "Abstellraum / Kochnische",
-      "Living + Bucătărie": "Wohnen + Küche",
-      "Dormitor 1": "Schlafzimmer 1",
-      "Dormitor 2": "Schlafzimmer 2",
-      "Dormitor 3": "Schlafzimmer 3",
-      "Dormitor 4": "Schlafzimmer 4",
-      "Baie 1": "Badezimmer 1",
-      "Baie 2": "Badezimmer 2",
-      Hol: "Flur",
-      s2_modular: "MODULAR",
-      s2_structure: "STRUKTUR",
-      s2_modularStructure_title: "MODULAR Struktur",
-      s2_modularStructure_desc:
-        "Kombiniert herausragende mechanische Festigkeit mit ultra-isolierenden Eigenschaften, die Wärmebrücken vollständig eliminieren. Zertifiziert durch das Passivhaus Institut Darmstadt und EPD International. U ≈ 0,11 W/m²K.",
-      s2_c24Frame_title: "C24 Holzrahmen",
-      s2_c24Frame_desc:
-        "FSC/PEFC-zertifiziertes C24-Holz; sehr hohe Tragfähigkeit.",
-      s2_woodInsulation_title: "Ultra-effiziente Holzfaserdämmung",
-      s2_woodInsulation_desc:
-        "Dämmung für Wände, Dach und Boden; hocheffiziente STEICO-Holzfaser λ ≈ 0,036 W/m·K; CE-zertifiziert.",
-      s2_osb_title: "OSB 3 ECO, Deutschland",
-      s2_osb_desc:
-        "Frei von Formaldehyd und VOC; vom Passivhaus Institut Darmstadt freigegeben; CE-zertifiziert.",
-      s2_dwd_title: "DWD-Platte, Österreich",
-      s2_dwd_desc:
-        "Dampfdurchlässig (ermöglicht „atmende" Wände, bleibt aber außen luftdicht, unidirektional); CE-zertifiziert.",
-      s2_smartMembrane_title: "Intelligente Membran (Folie)",
-      s2_smartMembrane_desc:
-        "Sorgt für eine luftdichte Innenhülle und ermöglicht gleichzeitig Dampfdiffusion nach außen. Zertifiziert vom Passivhaus Institut Darmstadt; CE.",
-      s2_exteriorFinishes: "KOMPLETTE AUSSENFERTIGUNG",
-      s2_facadeYakisugi_title: "Yakisugi hinterlüftete Fassade",
-      s2_facadeYakisugi_desc:
-        "Wartung nur ca. alle 10 Jahre; beste Feuerbeständigkeit in ihrer Klasse; wasserdicht.",
-      s2_facadeLunawood_title: "Lunawood Fassade",
-      s2_facadeLunawood_desc:
-        "Fassade aus nordischer Kiefer, ohne Chemikalien wärmebehandelt, für außergewöhnliche Haltbarkeit, Stabilität und warmen Karamellton.",
-      s2_ventRoof_title: "Hinterlüftetes Dach",
-      s2_ventRoof_desc:
-        "Der belüftete Zwischenraum erhöht die thermische Leistung und die Lebensdauer des Daches.",
-      s2_epdmMembrane_title: "EPDM-Membran",
-      s2_epdmMembrane_desc: "Wasserdicht; 30 Jahre Herstellergarantie.",
-      s2_rainwater_title: "Regenwassersammelsystem",
-      s2_rainwater_desc:
-        "Verdeckte Dachrinne, in die Fassade integriert; sammelbereit.",
-      s2_windowsDoors: "FENSTER UND AUSSENTÜREN",
-      s2_genesisFrame_title: "Genesis 90 Aluminiumrahmen",
-      s2_genesisFrame_desc:
-        "Stabiles, hocheffizientes Profil; Uwi ≤ 0,85 W/m²K; zertifiziert vom Passivhaus Institut Darmstadt; CE.",
-      s2_tripleGlazing_title: "Verbund-Dreifachverglasung",
-      s2_tripleGlazing_desc:
-        "U = 0,50 W/m²K; Verbundsicherheitsglas; Passivhaus Institut Darmstadt zertifiziert; CE.",
-      s2_kitchen: "KÜCHE",
-      s2_kitchenInstall_title: "Kücheninstallationen",
-      s2_kitchenInstall_desc:
-        "Anschlüsse vollständig vorbereitet, Möbel frei wählbar.",
-      s2_installations: "INSTALLATIONEN",
-      s2_electrical_title: "Elektroinstallationen",
-      s2_electrical_desc:
-        "Vollständig verlegt, gemäß geltenden Normen (CE / I7/2011 / IEC 60364).",
-      s2_plumbing_title: "Sanitärinstallationen",
-      s2_plumbing_desc:
-        "Leitungen und Anschlüsse PPR/PEX, konform mit lokalen Vorschriften.",
-      s2_certs: "ZERTIFIKATE & GARANTIEN",
-      s2_passivhaus_title: "Passivhaus-Zertifizierung",
-      s2_passivhaus_desc:
-        "Aussteller: Passivhaus Institut, Darmstadt, Deutschland.",
-      s2_epd_title: "EPD-Zertifikat",
-      s2_epd_desc: "Aussteller: EPD Europe.",
-      s2_ce_title: "CE-Kennzeichnung",
-      s2_ce_desc:
-        "Alle relevanten Komponenten erfüllen die EU-Bauprodukteverordnung.",
-      s2_warranty_title: "Standard EU-Garantie",
-      s2_warranty_desc:
-        "24 Monate für private Nutzung; 12 Monate für gewerbliche Nutzung.",
-      timeline_online: "Online",
-      timeline_offer: "Angebot",
-      timeline_reservation: "Reservierung",
-      timeline_payment10: "10% Zahlung",
-      timeline_preproduction: "Vorproduktion",
-      timeline_payment40: "40% Zahlung",
-      timeline_production: "Produktion",
-      timeline_payment40_2: "40% Zahlung",
-      timeline_delivery: "Lieferung",
-      timeline_payment10_final: "10% Zahlung",
-    },
-    fr: {
-      pageTitle: "Offre générée - Biobuilds",
-      validity: "VALIDITÉ : 30 JOURS",
-      offerLabel: "OFFRE",
-      offerFor: "Offre -",
-      clientNamePlaceholder: "Nom du client",
-      footerSlogan:
-        "Le modulaire est moderne, innovant et durable. Choisissez l'espace idéal pour vous, construit selon les standards de construction les plus élevés au monde.",
-      passiveHouseQuote:
-        "« Les modules sont fixés avec des vis en acier, puis recouverts d'une membrane étanche et bardés de bois durable. Le système est préfabriqué dans l'usine BioBuilds, offrant une livraison rapide et des temps de montage courts. Le système constructif est certifié Passivhaus, présente des valeurs U exceptionnelles et élimine les ponts thermiques. »",
-      energyConsumptionLabel: "Consommation d'énergie :",
-      energyConsumptionValue: "> 90 % de moins",
-      co2Saved: "Tonnes de CO₂ économisées",
-      co2Lifespan: "sur la durée de vie du bâtiment",
-      organicWood:
-        "Structure et système en <strong>bois naturel</strong>, avec certification EPD",
-      lowerEnergy:
-        "<strong>95 % de consommation en moins</strong> grâce au système modulaire",
-      turnkeyTitle: "CLÉ EN MAIN",
-      interiorFinishes: "FINITIONS INTÉRIEURES COMPLÈTES",
-      woodSlatCeilingTitle: "Plafond à lames de bois + feutre",
-      woodSlatCeilingDesc:
-        "Bois naturel et feutre recyclé ; excellente absorption acoustique.",
-      fiberglassWallpaperTitle: "Toile de verre",
-      fiberglassWallpaperDesc:
-        "Très haute résistance à la traction et à l'usure ; lavable ; rendu moderne.",
-      parquetTitle: "Parquet en bois naturel trois couches",
-      parquetDesc:
-        "Épaisseur 9 à 14 mm ; bois certifié FSC/PEFC ; finition très durable.",
-      s10DoorsTitle: "Portes intérieures S10",
-      s10DoorsDesc: "Certifiées CE ; âme pleine.",
-      bathroomFinishes: "FINITIONS DE SALLE DE BAINS COMPLÈTES",
-      stoneCompositePanelsTitle: "Panneaux en composite de pierre",
-      stoneCompositePanelsDesc:
-        "Panneaux grand format 2,5 × 1,2 m ; 100 % étanches ; très durables dans le temps.",
-      italianSinkTitle: "Vasque design italien",
-      italianSinkDesc:
-        "Matériau composite premium ; ultra-fine, moderne et durable.",
-      groheWCTitle: "WC suspendu Grohe",
-      groheWCDesc: "Fabriqué en Allemagne ; design minimaliste et moderne.",
-      aristonBoilerTitle: "Chauffe-eau Ariston Velis",
-      aristonBoilerDesc: "Design ultra-fin ; haute efficacité énergétique.",
-      walkInShowerTitle: "Douche à l'italienne",
-      walkInShowerDesc: "Conçue en France ; design minimaliste et moderne.",
-      smartSystems: "SYSTÈMES INTELLIGENTS",
-      lightingTrackTitle: "Rail d'éclairage",
-      lightingTrackDesc:
-        "Configuration flexible pour LED et spots ; esthétique moderne.",
-      smartLightingTitle: "Éclairage intelligent",
-      smartLightingDesc:
-        "Philips Hue ou IKEA TRÅDFRI ; configuration domotique simple.",
-      smartBlindsTitle: "Stores extérieurs intelligents",
-      smartBlindsDesc:
-        "Bloque > 95 % du rayonnement solaire ; commande par application ou manuelle ; certifié par le Passive House Institute de Darmstadt, Allemagne ; marquage CE.",
-      ventilationSystemTitle: "Genvex Premium Preheat 250",
-      ventilationSystemDesc:
-        "Récupération de chaleur jusqu'à 95 % ; pompe à chaleur intégrée pour chauffage et rafraîchissement.",
-      upgradesAndDelivery: "Options et Livraison",
-      delivery: "Livraison",
-      deliveryCost: "Les frais de livraison dépendent de votre localisation.",
-      screwFoundation: "Fondations sur pieux vissés (optionnel)",
-      deliveryTime:
-        "La livraison et l'installation prennent entre 1 et 5 jours. Dans les cas particuliers nécessitant des équipements supplémentaires, tout coût additionnel sera communiqué en toute transparence.",
-      addOns: "Options",
-      facade: "Façade",
-      parquetUpgradeLabel: "Parquet",
-      smartBlindsTitleUpgrade: "Stores extérieurs intelligents",
-      smartBlindsDescUpgrade:
-        "Bloque > 95 % du rayonnement solaire, commande via application ou manuelle.",
-      ventilationSystemTitleUpgrade: "Système de ventilation",
-      solarPanelsTitleUpgrade: "Panneaux solaires",
-      solarPanelsDescUpgrade: "Produit 60 % d'énergie en plus que votre maison n'en consomme annuellement.",
-      notesLabel: "Notes :",
-      termsAndConditions:
-        "Cette offre est soumise aux conditions générales applicables, consultables sur biobuilds.com/TC. En poursuivant, vous confirmez les avoir comprises et acceptées.",
-      totalLabel: "TOTAL",
-      vatLabel: "+ TVA",
-      turnkey: "Clé en main",
-      "semi-finished": "Prêt à finir",
-      plan: "Plan",
-      customPlan: "Plan personnalisé",
-      osbStandard: "OSB (Standard)",
-      included: "(Inclus)",
-      dimensions: "Dimensions",
-      totalArea: "Surface totale",
-      interiorDimensions: "Dimensions intérieures",
-      exteriorDimensions: "Dimensions extérieures",
-      rooms: "Pièces",
-      Dormitor: "Chambre",
-      Baie: "Salle de bains",
-      "Depozitare / Chichinetă": "Rangement / Kitchenette",
-      "Living + Bucătărie": "Salon + Cuisine",
-      "Dormitor 1": "Chambre 1",
-      "Dormitor 2": "Chambre 2",
-      "Dormitor 3": "Chambre 3",
-      "Dormitor 4": "Chambre 4",
-      "Baie 1": "Salle de bains 1",
-      "Baie 2": "Salle de bains 2",
-      Hol: "Couloir",
-      s2_modular: "MODULAIRE",
-      s2_structure: "STRUCTURE",
-      s2_modularStructure_title: "Structure MODULAIRE",
-      s2_modularStructure_desc:
-        "Allie une résistance mécanique remarquable à des propriétés ultra-isolantes éliminant totalement les ponts thermiques. Certifiée par le Passive House Institute de Darmstadt, Allemagne, et par EPD International. U ≈ 0,11 W/m²K, valeur U.",
-      s2_c24Frame_title: "Ossature bois C24",
-      s2_c24Frame_desc:
-        "Bois C24 certifié FSC/PEFC ; très haute résistance aux charges structurelles.",
-      s2_woodInsulation_title: "Fibre de bois ultra-performante",
-      s2_woodInsulation_desc:
-        "Isolation des murs, du toit et du plancher ; fibre de bois STEICO ultra-performante λ ≈ 0,036 W/m·K ; certifiée CE.",
-      s2_osb_title: "OSB 3 ECO, Allemagne",
-      s2_osb_desc:
-        "Panneau structurel sans formaldéhyde ni COV, approuvé par le Passive House Institute de Darmstadt, Allemagne ; certifié CE.",
-      s2_dwd_title: "Panneau DWD, Autriche",
-      s2_dwd_desc:
-        "Perméable à la vapeur (laisse « respirer » les parois tout en assurant l'étanchéité à l'air depuis l'extérieur ; unidirectionnel) ; certifié CE.",
-      s2_smartMembrane_title: "Membrane intelligente (film)",
-      s2_smartMembrane_desc:
-        "Crée une étanchéité à l'air intérieure tout en permettant la diffusion de vapeur vers l'extérieur. Certifiée par le Passive House Institute de Darmstadt, Allemagne ; certifiée CE.",
-      s2_exteriorFinishes: "FINITIONS EXTÉRIEURES COMPLÈTES",
-      s2_facadeYakisugi_title: "Façade ventilée Yakisugi",
-      s2_facadeYakisugi_desc:
-        "Entretien estimé tous les 10 ans ; meilleure résistance au feu de sa catégorie en bois naturel ; étanche.",
-      s2_facadeLunawood_title: "Façade Lunawood",
-      s2_facadeLunawood_desc:
-        "Façade en pin nordique, traitée thermiquement sans produits chimiques pour une durabilité et une stabilité exceptionnelles, teinte caramel chaleureuse.",
-      s2_ventRoof_title: "Toiture ventilée",
-      s2_ventRoof_desc:
-        "L'espace ventilé augmente la performance thermique et la durée de vie de la toiture.",
-      s2_epdmMembrane_title: "Membrane EPDM",
-      s2_epdmMembrane_desc: "Étanchéité ; garantie fabricant 30 ans.",
-      s2_rainwater_title: "Système de collecte des eaux pluviales",
-      s2_rainwater_desc:
-        "Gouttière dissimulée intégrée à la façade ; prête pour la récupération.",
-      s2_windowsDoors: "FENÊTRES ET PORTES EXTÉRIEURES",
-      s2_genesisFrame_title: "Châssis aluminium Genesis 90",
-      s2_genesisFrame_desc:
-        "Profil rigide et ultra-performant ; Uwi ≤ 0,85 W/m²K ; certifié par le Passive House Institute de Darmstadt, Allemagne ; marquage CE.",
-      s2_tripleGlazing_title: "Vitrage triple feuilleté",
-      s2_tripleGlazing_desc:
-        "U = 0,50 W/m²K ; verre feuilleté de sécurité ; certifié par le Passive House Institute de Darmstadt, Allemagne ; marquage CE.",
-      s2_kitchen: "CUISINE",
-      s2_kitchenInstall_title: "Raccordements cuisine",
-      s2_kitchenInstall_desc:
-        "Entièrement préparés en position pour votre mobilier.",
-      s2_installations: "INSTALLATIONS",
-      s2_electrical_title: "Installations électriques",
-      s2_electrical_desc:
-        "Câbles et gaines entièrement posés, conformes aux réglementations locales applicables (p. ex. CE / Norme I7/2011 / IEC 60364).",
-      s2_plumbing_title: "Installations de plomberie",
-      s2_plumbing_desc:
-        "Tuyauteries et raccords conformes aux réglementations locales nécessaires. PPR / PEX.",
-      s2_certs: "CERTIFICATIONS ET GARANTIES",
-      s2_passivhaus_title: "Certification Passivhaus",
-      s2_passivhaus_desc:
-        "Émetteur : Passive House Institute, Darmstadt, Allemagne.",
-      s2_epd_title: "Certification EPD",
-      s2_epd_desc: "Émetteur : EPD, Europe.",
-      s2_ce_title: "Marquage CE",
-      s2_ce_desc:
-        "Tous les composants concernés sont conformes au règlement européen sur les produits de construction.",
-      s2_warranty_title: "Garantie standard UE",
-      s2_warranty_desc:
-        "24 mois pour usage privé ; 12 mois pour usage professionnel.",
-      timeline_online: "En ligne",
-      timeline_offer: "Offre",
-      timeline_reservation: "Réservation",
-      timeline_payment10: "10% Paiement",
-      timeline_preproduction: "Pré-production",
-      timeline_payment40: "40% Paiement",
-      timeline_production: "Production",
-      timeline_payment40_2: "40% Paiement",
-      timeline_delivery: "Livraison",
-      timeline_payment10_final: "10% Paiement",
-    },
-  };
 
-  function setLanguage(lang) {
-    currentLang = lang;
-    document.documentElement.lang = lang;
-    document.querySelectorAll("[data-key]").forEach((element) => {
-      const key = element.getAttribute("data-key");
-      if (translations[lang][key]) {
-        element.innerHTML = translations[lang][key];
-      }
-    });
+(function() {
+    // Universal Images
+    let blindsImage = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4341f5b9b2742863461ef_375fa4b4b9988f686d5a21cdfd58a106_Blinds.avif";
+    const ventilationImage = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4379c1a20245ff5d081ea_Ventilation.avif";
+    const yakisugiIconUrl = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6891f60b4a12d16a97258f9e_8090eb60385f013115bc5f0f57d370f7_Yakisugi%20Modular.avif";
+    const lunawoodIconUrl = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6891f60a87823a871ab57392_2ae606770a59238d22e79f8573f47452_Lunawood%20Modular.avif";
+    const osbIconUrl = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/682781bf8f050a99912807bd_8168f669e43e0dce4cc4a44c5e6fa5a9_Raw%2BOSB.avif";
+    const cashmereIconUrl = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/682781fe749314ab971e22b6_a163b084d45d85d3dc6c99c8ccf00203_Cashmere.avif";
+    const hazelnutIconUrl = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6827826189d9a03adacb10fc_0f99c5082da56476985be14a8d96df3d_Hazelnut.avif";
 
-    document.querySelectorAll("#language-selector a").forEach((a) => {
-      a.classList.toggle("active", a.getAttribute("data-lang") === lang);
-    });
+    const yakisugiImageUrl = ""; // This remains empty to use the main model image as a fallback
 
-    updateOffer();
-  }
-
-  // --- DATA STRUCTURES ---
-  const offerData = {
-    models: {
-      "nomad-24": {
-        name: "Nomad",
-        co2Savings: "56.3",
-        passiveImg:
-          "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c6bdf250202676001401d_24m2.png",
-        images: {
-          facade: {
-            yakisugi:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4339236794245a361e6b9_742d4a56b01c157fcfb78d250a5c284b_24m2%20Nomad%204.1.avif",
-            lunawood:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283757ec629f34a599c8_24m2%20Nomad%20Lunawood%204.0.avif",
-          },
-          parquet: {
-            cashmere:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283437fe5ebcf02aa7ab_24m2%20Nomad%20Interior%204.0.avif",
-            hazelnut:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43ad5d75d99a4806d7d4b_24m2%20Nomad%20Interior%20Hazelnut%204.0.avif",
-          },
-          semi_parquet: {
-            osb: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282f0499f53b61b42090_24m2%20Nomad%20OSB%204.0.avif",
-            cashmere:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4388b838ef609a824c885_24m2%20Nomad%20OSB%20%2B%20Cashmere%204.0.avif",
-            hazelnut:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4388ba91d0f79d44ce0d2_24m2%20Nomad%20OSB%20%2B%20Hazelnut%204.0.avif",
-          },
-          floorplan: {
-            a: {
-              name: "Plan A",
-              url: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d2244f5d6be3af87aab_24m2%20Floorplan%20A.avif",
-              details: {
-                totalArea: "24m²",
-                interior: "5.70m x 3.10m x 2.50m",
-                exterior: "6.40m x 3.80m x 3.20m",
-                rooms: {
-                  Dormitor: "14.20m²",
-                  Baie: "2.65m²",
-                  "Depozitare / Chichinetă": "0.80m²",
+    let config = {
+        'nomad-24' : {
+            "image" : "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4339236794245a361e6b9_742d4a56b01c157fcfb78d250a5c284b_24m2%20Nomad%204.1.avif",
+            "name": "Nomad", "energy": 34920, "basePriceText": "De la 39.800 €",
+            "options" : [
+                { 'slug' : 'semi-finished', 'name' : 'Semifinisat', "price" : 39800,
+                    'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4339236794245a361e6b9_742d4a56b01c157fcfb78d250a5c284b_24m2%20Nomad%204.1.avif',
+                    'images': [
+                        { 'src' : 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282f0499f53b61b42090_24m2%20Nomad%20OSB%204.0.avif', 'alt' : 'Nomad Semifinisat Sus'},
+                        { 'src' : 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4339236794245a361e6b9_742d4a56b01c157fcfb78d250a5c284b_24m2%20Nomad%204.1.avif', 'alt' : 'Nomad Semifinisat Jos'}
+                    ],
+                    'upgrades' : [
+                        [ { 'slug' : "parquet-raw-osb", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282f0499f53b61b42090_24m2%20Nomad%20OSB%204.0.avif", 'icon' : osbIconUrl, 'price': 0, 'included': true, 'name': "OSB"},
+                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4388b838ef609a824c885_24m2%20Nomad%20OSB%20%2B%20Cashmere%204.0.avif", 'price': 1800, 'included': false, 'name': "Parchet Cashmere", 'icon' : cashmereIconUrl},
+                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4388ba91d0f79d44ce0d2_24m2%20Nomad%20OSB%20%2B%20Hazelnut%204.0.avif", 'price': 1800, 'included': false, 'name': "Parchet Hazelnut", 'icon' : hazelnutIconUrl} ],
+                        [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
+                            { 'slug' : "facade-lunawood", 'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283757ec629f34a599c8_24m2%20Nomad%20Lunawood%204.0.avif', 'icon' : lunawoodIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Lunawood"} ],
+                        [ { 'slug' : "ventilation-system", 'image': ventilationImage, 'price': 4800, 'included': false, 'name': "Sistem de ventilatie + Tubulatura"} ],
+                        [ { 'slug' : "blinds", 'image': blindsImage, 'price': 2000, 'included': false, 'name': "Jaluzele Smart"} ] ]
                 },
-              },
-            },
-            b: {
-              name: "Plan B",
-              url: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d22e33276e515d43a8f_24m2%20Floorplan%20B.avif",
-              details: {
-                totalArea: "24m²",
-                interior: "5.70m x 3.10m x 2.50m",
-                exterior: "6.40m x 3.80m x 3.20m",
-                rooms: {
-                  Dormitor: "14.20m²",
-                  Baie: "2.65m²",
-                  "Depozitare / Chichinetă": "0.80m²",
+                { 'slug': 'turnkey', 'name': 'La cheie', "price" : 59800,
+                    'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4339236794245a361e6b9_742d4a56b01c157fcfb78d250a5c284b_24m2%20Nomad%204.1.avif',
+                    'images': [
+                        { 'src' : 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283437fe5ebcf02aa7ab_24m2%20Nomad%20Interior%204.0.avif', 'alt' : 'Nomad La cheie Sus'},
+                        { 'src' : 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4339236794245a361e6b9_742d4a56b01c157fcfb78d250a5c284b_24m2%20Nomad%204.1.avif', 'alt' : 'Nomad La cheie Jos'}
+                    ],
+                    'upgrades' : [
+                        [
+                            { 'slug' : "parquet-raw-osb", 'image': "", 'price': 0, 'included': true, 'name': "OSB", 'icon' : osbIconUrl},
+                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283437fe5ebcf02aa7ab_24m2%20Nomad%20Interior%204.0.avif", 'price': 0, 'included': true, 'name': "Parchet Cashmere", 'icon' : cashmereIconUrl},
+                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43ad5d75d99a4806d7d4b_24m2%20Nomad%20Interior%20Hazelnut%204.0.avif", 'price': 0, 'included': false, 'name': "Parchet Hazelnut", 'icon' : hazelnutIconUrl} ],
+                        [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
+                            { 'slug' : "facade-lunawood", 'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283757ec629f34a599c8_24m2%20Nomad%20Lunawood%204.0.avif', 'icon' : lunawoodIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Lunawood"} ],
+                        [ { 'slug' : "ventilation-system", 'image': ventilationImage, 'price': 0, 'included': true, 'name': "Sistem de ventilatie + Tubulatura"} ],
+                        [ { 'slug' : "blinds", 'image': blindsImage, 'price': 0, 'included': true, 'name': "Jaluzele Smart"} ] ]
+                }
+            ],
+            "floorplan" : [
+                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d2244f5d6be3af87aab_24m2%20Floorplan%20A.avif", 'price': 0, 'name': 'Plan A', 'modal': "<h3>24m² Plan A</h3><br><p>Interior: 5.70m x 3.10m x 2.50m</p><p>Exterior: 6.40m x 3.80m x 3.20m</p><h4>Camere</h4><p>Dormitor: 14.20m²</p><p>Baie: 2.65m²</p><p>Depozitare / Chichinetă: 0.80m²</p>" },
+                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d22e33276e515d43a8f_24m2%20Floorplan%20B.avif", 'price': 0, 'name': 'Plan B', 'modal': "<h3>24m² Plan B</h3><br><p>Interior: 5.70m x 3.10m x 2.50m</p><p>Exterior: 6.40m x 3.80m x 3.20m</p><h4>Camere</h4><p>Dormitor: 14.20m²</p><p>Baie: 2.65m²</p><p>Depozitare / Chichinetă: 0.80m²</p>" } ] },
+        'wanderlust-48' : {
+            "image" : "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283782a535d591653c65_48m2%20Wanderlust%204.0.avif",
+            "name": "Wanderlust", "energy": 69840, "basePriceText": "De la 59.800 €",
+            "options" : [
+                { 'slug' : 'semi-finished', 'name' : 'Semifinisat', "price" : 59800,
+                    'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283782a535d591653c65_48m2%20Wanderlust%204.0.avif',
+                    'images': [
+                        {'src':'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42834c118eb9aa4496812_48m2%20Wanderlust%20OSB%204.0.avif', 'alt':'Wanderlust Semifinisat Sus'},
+                        {'src':'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283782a535d591653c65_48m2%20Wanderlust%204.0.avif', 'alt':'Wanderlust Semifinisat Jos'}
+                    ],
+                    'upgrades' : [
+                        [{ 'slug' : "parquet-raw-osb", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42834c118eb9aa4496812_48m2%20Wanderlust%20OSB%204.0.avif", 'price': 0, 'included': true, 'icon' : osbIconUrl, 'name': "OSB"},
+                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42834f6342091f39dfedb_48m2%20Wanderlust%20OSB%20%2B%20Cashmere%204.0.avif", 'price': 3800, 'included': false, 'icon' : cashmereIconUrl, 'name': "Parchet Cashmere"},
+                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283416e5d5e698aa09c6_48m2%20Wanderlust%20OSB%20%2B%20Hazelnut%204.0.avif", 'price': 3800, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}], // NOTE: DUPLICATE LINK for Hazelnut
+                        [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
+                            { 'slug' : "facade-lunawood", 'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428347a78da3d6cd218de_48m2%20Wanderlust%20Lunawood%204.0.avif', 'icon' : lunawoodIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Lunawood"} ],
+                        [{ 'slug' : "ventilation-system", 'image': ventilationImage, 'price': 7800, 'included': false, 'name': "Sistem de ventilatie + Tubulatura"}],
+                        [{ 'slug' : "blinds", 'image': blindsImage, 'price': 4000, 'included': false, 'name': "Jaluzele Smart"}] ]
                 },
-              },
-            },
-          },
-        },
-      },
-      "wanderlust-48": {
-        name: "Wanderlust",
-        co2Savings: "112.7",
-        passiveImg:
-          "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c6be9a17781eb55e6b63f_48m2.png",
-        images: {
-          facade: {
-            yakisugi:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283782a535d591653c65_48m2%20Wanderlust%204.0.avif",
-            lunawood:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428347a78da3d6cd218de_48m2%20Wanderlust%20Lunawood%204.0.avif",
-          },
-          parquet: {
-            cashmere:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282fadd6a68f7235f463_48m2%20Wanderlust%20Interior%20Cashmere%204.0.avif",
-            hazelnut:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282f1a20245ff5ca4510_48m2%20Wanderlust%20Interior%20Hazelnut%204.0.avif",
-          },
-          semi_parquet: {
-            osb: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42834c118eb9aa4496812_48m2%20Wanderlust%20OSB%204.0.avif",
-            cashmere:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42834f6342091f39dfedb_48m2%20Wanderlust%20OSB%20%2B%20Cashmere%204.0.avif",
-            hazelnut:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283416e5d5e698aa09c6_48m2%20Wanderlust%20OSB%20%2B%20Hazelnut%204.0.avif",
-          },
-          floorplan: {
-            a: {
-              name: "Plan A",
-              url: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c525733fc3797a1ea68b6_48m2%20Floorplan%20A.png",
-              details: {
-                totalArea: "48m²",
-                interior: "11.80m x 3.10m x 2.50m",
-                exterior: "12.60m x 3.80m x 3.20m",
-                rooms: {
-                  "Living + Bucătărie": "19.90m²",
-                  Dormitor: "11.80m²",
-                  Baie: "4.50m²",
+                { 'slug': 'turnkey', 'name': 'La cheie', "price" : 109800,
+                    'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283782a535d591653c65_48m2%20Wanderlust%204.0.avif',
+                    'images': [
+                        {'src':'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282fadd6a68f7235f463_48m2%20Wanderlust%20Interior%20Cashmere%204.0.avif', 'alt':'Wanderlust La cheie Sus'},
+                        {'src':'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283782a535d591653c65_48m2%20Wanderlust%204.0.avif', 'alt':'Wanderlust La cheie Jos'}
+                    ],
+                    'upgrades' : [
+                        [{ 'slug' : "parquet-raw-osb", 'image': "", 'price': 0, 'included': true, 'name': "OSB", 'icon' : osbIconUrl, 'name': "OSB"},
+                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282fadd6a68f7235f463_48m2%20Wanderlust%20Interior%20Cashmere%204.0.avif", 'price': 0, 'included': true, 'name': "Parchet Cashmere", 'icon' : cashmereIconUrl, 'name': "Parchet Cashmere"},
+                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282f1a20245ff5ca4510_48m2%20Wanderlust%20Interior%20Hazelnut%204.0.avif", 'price': 0, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
+                        [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
+                            { 'slug' : "facade-lunawood", 'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428347a78da3d6cd218de_48m2%20Wanderlust%20Lunawood%204.0.avif', 'icon' : lunawoodIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Lunawood"} ],
+                        [{ 'slug' : "ventilation-system", 'image': ventilationImage, 'price': 0, 'included': true, 'name': "Sistem de ventilatie + Tubulatura"}],
+                        [{ 'slug' : "blinds", 'image': blindsImage, 'price': 0, 'included': true, 'name': "Jaluzele Smart"}] ]
+                }
+            ],
+            "floorplan" : [
+                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c525733fc3797a1ea68b6_48m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A', 'modal': "<h3>48m² Plan A</h3><br><p>Interior: 11.80m x 3.10m x 2.50m</p><p>Exterior: 12.60m x 3.80m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 19.90m²</p><br><p>1. Dormitor: 11.80m²</p><br><p>1. Baie: 4.50m²</p>"},
+                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f671a54486d036b53_48m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B', 'modal': "<h3>48m² Plan B</h3><br><p>Interior: 11.80m x 3.10m x 2.50m</p><p>Exterior: 12.60m x 3.80m x 3.20m</p><h4>Camere</h4><p>1. Dormitor: 11.80m²</p><p>2. Dormitor: 11.80m²</p><br><p>1. Baie: 4.50m²</p><p>2. Baie: 3.50m²</p><p>Hol: 3.50m²</p>" } ] },
+        'serenity-95' : {
+            "image" : "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428362a03aef0fc05960f_95m2%20Serenity%204.0.avif",
+            "name": "Serenity", "energy": 138225, "basePriceText": "De la 109.800 €",
+            "options" : [
+                { 'slug' : 'semi-finished', 'name' : 'Semifinisat', "price" : 109800,
+                    'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428362a03aef0fc05960f_95m2%20Serenity%204.0.avif',
+                    'images': [
+                        {'src':'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42834cbf67979df378474_95m2%20Serenity%20OSB%204.0.avif', 'alt':'Serenity Semifinisat Sus'},
+                        {'src':'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428362a03aef0fc05960f_95m2%20Serenity%204.0.avif', 'alt':'Serenity Semifinisat Jos'}
+                    ],
+                    'upgrades' : [
+                        [{ 'slug' : "parquet-raw-osb", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42834cbf67979df378474_95m2%20Serenity%20OSB%204.0.avif", 'price': 0, 'included': true, 'icon' : osbIconUrl, 'name': "OSB"},
+                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283456778eb848b0ef0a_95m2%20Serenity%20OSB%20%2B%20Cashmere%204.0.avif", 'price': 7800, 'included': false, 'icon' : cashmereIconUrl, 'name': "Parchet Cashmere"},
+                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428364c8e49bed391084c_95m2%20Serenity%20OSB%20%2B%20Hazelnut%204.0.avif", 'price': 7800, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
+                        [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
+                            { 'slug' : "facade-lunawood", 'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42834c7a50abaf20e6a83_95m2%20Serenity%20Lunawood%204.0.avif', 'icon' : lunawoodIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Lunawood"} ],
+                        [{ 'slug' : "ventilation-system", 'image': ventilationImage, 'price': 9800, 'included': false, 'name': "Sistem de ventilatie + Tubulatura"}],
+                        [{ 'slug' : "blinds", 'image': blindsImage, 'price': 7000, 'included': false, 'name': "Jaluzele Smart"}] ]
                 },
-              },
-            },
-            b: {
-              name: "Plan B",
-              url: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f671a54486d036b53_48m2%20Floorplan%20B.png",
-              details: {
-                totalArea: "48m²",
-                interior: "11.80m x 3.10m x 2.50m",
-                exterior: "12.60m x 3.80m x 3.20m",
-                rooms: {
-                  "Dormitor 1": "11.80m²",
-                  "Dormitor 2": "11.80m²",
-                  "Baie 1": "4.50m²",
-                  "Baie 2": "3.50m²",
-                  Hol: "3.50m²",
+                { 'slug': 'turnkey', 'name': 'La cheie', "price" : 189800,
+                    'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428362a03aef0fc05960f_95m2%20Serenity%204.0.avif',
+                    'images': [
+                        {'src':'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282f9eb780fb3d07ba0f_95m2%20Serenity%20Cashmere%204.0.avif', 'alt':'Serenity La cheie Sus'},
+                        {'src':'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428362a03aef0fc05960f_95m2%20Serenity%204.0.avif', 'alt':'Serenity La cheie Jos'}
+                    ],
+                    'upgrades' : [
+                        [{ 'slug' : "parquet-raw-osb", 'image': "", 'price': 0, 'included': true, 'name': "OSB", 'icon' : osbIconUrl, 'name': "OSB"},
+                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282f9eb780fb3d07ba0f_95m2%20Serenity%20Cashmere%204.0.avif", 'price': 0, 'included': true, 'name': "Parchet Cashmere", 'icon' : cashmereIconUrl, 'name': "Parchet Cashmere"},
+                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282f8de7c20305542612_95m2%20Serenity%20Hazelnut%204.0.avif", 'price': 0, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
+                        [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
+                            { 'slug' : "facade-lunawood", 'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42834c7a50abaf20e6a83_95m2%20Serenity%20Lunawood%204.0.avif', 'icon' : lunawoodIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Lunawood"} ],
+                        [{ 'slug' : "ventilation-system", 'image': ventilationImage, 'price': 0, 'included': true, 'name': "Sistem de ventilatie + Tubulatura"}],
+                        [{ 'slug' : "blinds", 'image': blindsImage, 'price': 0, 'included': true, 'name': "Jaluzele Smart"}] ]
+                }
+            ],
+            "floorplan" : [
+                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514e29f50d2da31e84dc_95m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A', 'modal': "<h3>95m² Plan A</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 19.90m²</p><br><p>1. Dormitor: 11.80m²</p><br><p>1. Baie: 4.50m²</p>"},
+                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fdf7becede16b71e9_95m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B', 'modal': "<h3>95m² Plan B</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Camere</h4><p>1. Dormitor: 11.80m²</p><p>2. Dormitor: 11.80m²</p><br><p>1. Baie: 4.50m²</p><p>2. Baie: 3.50m²</p><p>Hol: 3.50m²</p>"},
+                { 'slug' : "floorplan-c", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff885d32e87f5d5ef_95m2%20Floorplan%20C.png", 'price': 0, 'name': 'Plan C', 'modal': "<h3>95m² Plan C</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 53.70m²</p><br><p>1. Dormitor: 13.10m²</p><br><p>1. Baie: 3.75m²</p><p>2. Baie: 4.35m²</p>"} ] },
+        'sanctuary-142' : {
+            "image" : "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42836759488180078dc28_142m2%20Sanctuary%204.0.avif",
+            "name": "Sanctuary", "energy": 175285, "basePriceText": "De la 159.800 €",
+            "options" : [
+                { 'slug' : 'semi-finished', 'name' : 'Semifinisat', "price" : 159800,
+                    'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42836759488180078dc28_142m2%20Sanctuary%204.0.avif',
+                    'images': [
+                        { 'src':'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c440552e93c6b2b6549f82_142m2%20Sanctuary%20OSB%204.0.avif', 'alt':'Sanctuary Semifinisat Sus'},
+                        { 'src':'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42836759488180078dc28_142m2%20Sanctuary%204.0.avif', 'alt':'Sanctuary La cheie Jos'}
+                    ],
+                    'upgrades' : [
+                        [{ 'slug' : "parquet-raw-osb", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c440552e93c6b2b6549f82_142m2%20Sanctuary%20OSB%204.0.avif", 'price': 0, 'included': true, 'icon' : osbIconUrl, 'name': "OSB"},
+                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c440551ad361e009f1da6e_142m2%20Sanctuary%20OSB%20%2B%20Cashmere%204.0.avif", 'price': 11800, 'included': false, 'icon' : cashmereIconUrl, 'name': "Parchet Cashmere"},
+                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c44055c519f4722b8ef029_142m2%20Sanctuary%20OSB%20%2B%20Hazelnut%204.0.avif", 'price': 11800, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
+                        [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
+                            { 'slug' : "facade-lunawood", 'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428364c5adf6fa2aec1c1_142m2%20Sanctuary%20Lunawood%204.0.avif', 'icon' : lunawoodIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Lunawood"} ],
+                        [{ 'slug' : "ventilation-system", 'image': ventilationImage, 'price': 9800, 'included': false, 'name': "Sistem de ventilatie + Tubulatura"}],
+                        [{ 'slug' : "blinds", 'image': blindsImage, 'price': 9000, 'included': false, 'name': "Jaluzele Smart"}] ]
                 },
-              },
-            },
-          },
-        },
-      },
-      "serenity-95": {
-        name: "Serenity",
-        co2Savings: "225.2",
-        passiveImg:
-          "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c6bf2d847e2b6f5051525_95m2.png",
-        images: {
-          facade: {
-            yakisugi:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428362a03aef0fc05960f_95m2%20Serenity%204.0.avif",
-            lunawood:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42834c7a50abaf20e6a83_95m2%20Serenity%20Lunawood%204.0.avif",
-          },
-          parquet: {
-            cashmere:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282f9eb780fb3d07ba0f_95m2%20Serenity%20Cashmere%204.0.avif",
-            hazelnut:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282f8de7c20305542612_95m2%20Serenity%20Hazelnut%204.0.avif",
-          },
-          semi_parquet: {
-            osb: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42834cbf67979df378474_95m2%20Serenity%20OSB%204.0.avif",
-            cashmere:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283456778eb848b0ef0a_95m2%20Serenity%20OSB%20%2B%20Cashmere%204.0.avif",
-            hazelnut:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428364c8e49bed391084c_95m2%20Serenity%20OSB%20%2B%20Hazelnut%204.0.avif",
-          },
-          floorplan: {
-            a: {
-              name: "Plan A",
-              url: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514e29f50d2da31e84dc_95m2%20Floorplan%20A.png",
-              details: {
-                totalArea: "95m²",
-                interior: "11.80m x 6.80m x 2.50m",
-                exterior: "12.60m x 7.60m x 3.20m",
-                rooms: {
-                  "Living + Bucătărie": "29.10m²",
-                  "Dormitor 1": "12.20m²",
-                  "Dormitor 2": "12.40m²",
-                  "Dormitor 3": "13.10m²",
-                  "Baie 1": "3.75m²",
-                  "Baie 2": "4.35m²",
-                },
-              },
-            },
-            b: {
-              name: "Plan B",
-              url: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fdf7becede16b71e9_95m2%20Floorplan%20B.png",
-              details: {
-                totalArea: "95m²",
-                interior: "11.80m x 6.80m x 2.50m",
-                exterior: "12.60m x 7.60m x 3.20m",
-                rooms: {
-                  "Living + Bucătărie": "41.50m²",
-                  "Dormitor 1": "12.20m²",
-                  "Dormitor 2": "13.10m²",
-                  "Baie 1": "3.75m²",
-                  "Baie 2": "4.35m²",
-                },
-              },
-            },
-            c: {
-              name: "Plan C",
-              url: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff885d32e87f5d5ef_95m2%20Floorplan%20C.png",
-              details: {
-                totalArea: "95m²",
-                interior: "11.80m x 6.80m x 2.50m",
-                exterior: "12.60m x 7.60m x 3.20m",
-                rooms: {
-                  "Living + Bucătărie": "53.70m²",
-                  Dormitor: "13.10m²",
-                  "Baie 1": "3.75m²",
-                  "Baie 2": "4.35m²",
-                },
-              },
-            },
-          },
-        },
-      },
-      "sanctuary-142": {
-        name: "Sanctuary",
-        co2Savings: "337.8",
-        passiveImg:
-          "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c6bf82cbff70a35076e34_142m2.png",
-        images: {
-          facade: {
-            yakisugi:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42836759488180078dc28_142m2%20Sanctuary%204.0.avif",
-            lunawood:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428364c5adf6fa2aec1c1_142m2%20Sanctuary%20Lunawood%204.0.avif",
-          },
-          parquet: {
-            cashmere:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c440551c75cb12af61eff9_142m2%20Sanctuary%20Interior%20Cashmere%204.0.avif",
-            hazelnut:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c44055256a682dd59e9ad7_142m2%20Sanctuary%20Interior%20Hazelnut%204.0.avif",
-          },
-          semi_parquet: {
-            osb: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c440552e93c6b2b6549f82_142m2%20Sanctuary%20OSB%204.0.avif",
-            cashmere:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c440551ad361e009f1da6e_142m2%20Sanctuary%20OSB%20%2B%20Cashmere%204.0.avif",
-            hazelnut:
-              "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c44055c519f4722b8ef029_142m2%20Sanctuary%20OSB%20%2B%20Hazelnut%204.0.avif",
-          },
-          floorplan: {
-            a: {
-              name: "Plan A",
-              url: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff7e14cb1b083351b_142m2%20Floorplan%20A.png",
-              details: {
-                totalArea: "142m²",
-                interior: "11.80m x 10.60m x 2.50m",
-                exterior: "12.60m x 11.30m x 3.20m",
-                rooms: {
-                  "Living + Bucătărie": "62.90m²",
-                  "Dormitor 1": "12.40m²",
-                  "Dormitor 2": "12.20m²",
-                  "Dormitor 3": "12.40m²",
-                  "Dormitor 4": "13.10m²",
-                  "Baie 1": "3.75m²",
-                  "Baie 2": "4.35m²",
-                },
-              },
-            },
-            b: {
-              name: "Plan B",
-              url: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f6966128dbeb27986_142m2%20Floorplan%20B.png",
-              details: {
-                totalArea: "142m²",
-                interior: "11.80m x 10.60m x 2.50m",
-                exterior: "12.60m x 11.30m x 3.20m",
-                rooms: {
-                  "Living + Bucătărie": "75.30m²",
-                  "Dormitor 1": "12.20m²",
-                  "Dormitor 2": "12.40m²",
-                  "Dormitor 3": "13.10m²",
-                  "Baie 1": "3.75m²",
-                  "Baie 2": "4.35m²",
-                },
-              },
-            },
-            c: {
-              name: "Plan C",
-              url: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fd4d57aa8ff3d75e9_142m2%20Floorplan%20C.png",
-              details: {
-                totalArea: "142m²",
-                interior: "11.80m x 10.60m x 2.50m",
-                exterior: "12.60m x 11.30m x 3.20m",
-                rooms: {
-                  "Living + Bucătărie": "87.50m²",
-                  "Dormitor 1": "12.40m²",
-                  "Dormitor 2": "13.10m²",
-                  "Baie 1": "3.75m²",
-                  "Baie 2": "4.35m²",
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-    common: {
-      logos: {
-        passiveHouse:
-          "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/680248132febd7da21dcfe3a_Biobuilds%20Passive%20House%20Clean%20White.avif",
-        epd: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68028d2a23638226fd81a56e_BIOBUILDS%20EPD%20Logo.avif",
-      },
-    },
-  };
-
-  const pricingLogic = {
-    "nomad-24": {
-      base: { "semi-finished": 39800, turnkey: 59800 },
-      upgrades: {
-        parquet: { cashmere: 1800, hazelnut: 1800 },
-        ventilation: 4800,
-        blinds: 2000,
-        solar: 7800,
-      },
-    },
-    "wanderlust-48": {
-      base: { "semi-finished": 59800, turnkey: 109800 },
-      upgrades: {
-        parquet: { cashmere: 3800, hazelnut: 3800 },
-        ventilation: 7800,
-        blinds: 4000,
-        solar: 11800,
-      },
-    },
-    "serenity-95": {
-      base: { "semi-finished": 109800, turnkey: 189800 },
-      upgrades: {
-        parquet: { cashmere: 7800, hazelnut: 7800 },
-        ventilation: 9800,
-        blinds: 7000,
-        solar: 14800,
-      },
-    },
-    "sanctuary-142": {
-      base: { "semi-finished": 159800, turnkey: 279800 },
-      upgrades: {
-        parquet: { cashmere: 11800, hazelnut: 11800 },
-        ventilation: 9800,
-        blinds: 9000,
-        solar: 16800,
-      },
-    },
-  };
-
-  const selectionState = {
-    model: "sanctuary-142",
-    finish: "turnkey",
-    facade: "yakisugi",
-    parquet: "cashmere",
-    floorplan: "a",
-    blinds: true,
-    ventilation: true,
-    solar: false,
-    clientName: "Nume Client",
-    offerNr: null,
-    offerDate: "xx.06.2025",
-    mentions: "",
-    basePriceOverride: null,
-  };
-
-  function formatCurrency(value) {
-    return value.toLocaleString("ro-RO", {
-      style: "currency",
-      currency: "EUR",
-      minimumFractionDigits: 0,
-    });
-  }
-
-  function parseCurrency(text) {
-    if (!text) return 0;
-    const number = parseFloat(
-      String(text)
-        .replace(/[^0-9,-]/g, "")
-        .replace(".", "")
-        .replace(",", "."),
-    );
-    return isNaN(number) ? 0 : number;
-  }
-
-  function createDetailItem(label, value) {
-    return `<div class="detail-item"><span>${label}</span><span>${value}</span></div>`;
-  }
-
-  function formatFinish(finishParam) {
-    return translations[currentLang][finishParam];
-  }
-
-  function generateRandomLetters(length) {
-    let result = "";
-    const characters = "1234567890";
-    const charactersLength = characters.length;
-    for (let i = 0; i < length; i++) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return result;
-  }
-
-  function generateAndSetOfferId() {
-    const modelData = offerData.models[selectionState.model];
-    if (!modelData) return;
-    const modelPrefix = modelData.name.substring(0, 2).toUpperCase();
-    const finishPrefix = selectionState.finish.substring(0, 2).toUpperCase();
-    const randomPart = generateRandomLetters(4);
-    const newId = `${modelPrefix}/${finishPrefix}/${randomPart}`;
-    selectionState.offerNr = newId;
-    document.getElementById("offer-nr").textContent = newId;
-  }
-
-  function recalculateTotals() {
-    const basePriceEl = document.getElementById("base-price-editable");
-    if (!basePriceEl) return;
-    const basePrice = parseCurrency(basePriceEl.textContent);
-    const mentiuniText =
-      document.querySelector(".mentiuni-editable").textContent;
-    const summaryTotalEl = document.getElementById("summary-total");
-    const discountMatch = mentiuniText.match(/-(\d+(\.\d+)?)\s*%/);
-    let finalPrice = basePrice;
-    if (discountMatch) {
-      finalPrice = basePrice * (1 - parseFloat(discountMatch[1]) / 100);
-    }
-    const additionMatches = mentiuniText.matchAll(/\+(\d+)\s*EUR/gi);
-    let additionsTotal = 0;
-    for (const match of additionMatches) {
-      additionsTotal += parseInt(match[1], 10);
-    }
-    finalPrice += additionsTotal;
-    summaryTotalEl.innerHTML = `${translations[currentLang].totalLabel} ${formatCurrency(finalPrice)} ${translations[currentLang].vatLabel}`;
-  }
-
-  // MAIN UPDATE FUNCTION
-  function updateOffer() {
-    const modelId = selectionState.model;
-    const finish = selectionState.finish;
-    const facade = selectionState.facade;
-    const parquet = selectionState.parquet;
-    const floorplan = selectionState.floorplan;
-    const modelData = offerData.models[modelId];
-    const modelPricing = pricingLogic[modelId];
-
-    const co2StatEl = document.getElementById("co2-savings-stat");
-    if (co2StatEl) {
-      co2StatEl.innerHTML = `<strong>${modelData.co2Savings} ${translations[currentLang].co2Saved}</strong> ${translations[currentLang].co2Lifespan}`;
-    }
-
-    updateDynamicOptions();
-
-    const showTurnkeyDetails = finish === "turnkey";
-    document
-      .getElementById("section-3-text")
-      .classList.toggle("page-hidden", !showTurnkeyDetails);
-    document
-      .getElementById("section-3-image")
-      .classList.toggle("page-hidden", !showTurnkeyDetails);
-
-    let price = modelPricing.base[finish];
-    if (finish === "semi-finished") {
-      if (parquet !== "osb")
-        price += modelPricing.upgrades.parquet[parquet] || 0;
-      if (selectionState.blinds) price += modelPricing.upgrades.blinds;
-      if (selectionState.ventilation)
-        price += modelPricing.upgrades.ventilation;
-      if (selectionState.solar) price += modelPricing.upgrades.solar;
-    }
-
-    document.querySelector("#section-1 .content-area").style.backgroundImage =
-      `url('${modelData.images.facade[facade]}')`;
-    document.getElementById("passive-info-image").style.backgroundImage =
-      `url('${modelData.passiveImg}')`;
-    generateSection2Content(document.getElementById("section-2-text"), facade);
-    let section2ImageUrl;
-    if (finish === "semi-finished") {
-      section2ImageUrl = modelData.images.semi_parquet[parquet];
-    } else {
-      section2ImageUrl = modelData.images.facade[facade];
-    }
-    document.getElementById("section-2-image").style.backgroundImage =
-      `url('${section2ImageUrl}')`;
-    if (showTurnkeyDetails) {
-      document.getElementById("section-3-image").style.backgroundImage =
-        `url('${modelData.images.parquet[parquet]}')`;
-    }
-
-    const detailsWrapper = document.getElementById(
-      "floorplan-details-content-wrapper",
-    );
-    const floorplanImage = document.getElementById("floorplan-image");
-    detailsWrapper.style.display = "block";
-    if (floorplan !== "custom") {
-      const floorplanData = modelData.images.floorplan[floorplan];
-      if (floorplanData) {
-        floorplanImage.src = floorplanData.url;
-        let detailsHtml = `<h3>${translations[currentLang].dimensions}</h3>`;
-        detailsHtml += createDetailItem(
-          translations[currentLang].totalArea,
-          floorplanData.details.totalArea,
-        );
-        detailsHtml += createDetailItem(
-          translations[currentLang].interiorDimensions,
-          floorplanData.details.interior,
-        );
-        detailsHtml += createDetailItem(
-          translations[currentLang].exteriorDimensions,
-          floorplanData.details.exterior,
-        );
-        detailsHtml += `<h3>${translations[currentLang].rooms}</h3>`;
-        for (const roomName in floorplanData.details.rooms) {
-          detailsHtml += createDetailItem(
-            translations[currentLang][roomName] || roomName,
-            floorplanData.details.rooms[roomName],
-          );
-        }
-        detailsWrapper.innerHTML = detailsHtml;
-      } else {
-        detailsWrapper.innerHTML = "";
-      }
-    } else {
-      detailsWrapper.style.display = "none";
-    }
-
-    updateOptionHighlights();
-    document.getElementById("summary-model-name").textContent = modelData.name;
-    document.getElementById("summary-finish").textContent =
-      formatFinish(finish);
-    document.getElementById("logo-passive-house").src =
-      offerData.common.logos.passiveHouse;
-    document.getElementById("logo-epd").src = offerData.common.logos.epd;
-
-    const inclusionList = document.getElementById("inclusion-list");
-    inclusionList.innerHTML = "";
-    const firstLi = document.createElement("li");
-    const priceSpan = document.createElement("span");
-    priceSpan.id = "base-price-editable";
-    priceSpan.setAttribute("contenteditable", "true");
-    let displayPrice =
-      selectionState.basePriceOverride !== null
-        ? selectionState.basePriceOverride
-        : price;
-    priceSpan.textContent = formatCurrency(displayPrice);
-    priceSpan.addEventListener("input", () => {
-      const numericValue = parseCurrency(priceSpan.textContent);
-      selectionState.basePriceOverride = numericValue;
-      recalculateTotals();
-      updateUrlParams();
-    });
-    firstLi.append(
-      `- Modular ${modelData.name} ${formatFinish(finish)} - `,
-      priceSpan,
-    );
-    inclusionList.appendChild(firstLi);
-
-    const addInclusion = (text) => {
-      const li = document.createElement("li");
-      li.textContent = text;
-      inclusionList.appendChild(li);
+                { 'slug': 'turnkey', 'name': 'La cheie', "price" : 279800,
+                    'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42836759488180078dc28_142m2%20Sanctuary%204.0.avif',
+                    'images': [
+                        { 'src':'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c440551c75cb12af61eff9_142m2%20Sanctuary%20Interior%20Cashmere%204.0.avif', 'alt':'Sanctuary La cheie Sus'},
+                        { 'src':'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42836759488180078dc28_142m2%20Sanctuary%204.0.avif', 'alt':'Sanctuary La cheie Jos'}
+                    ],
+                    'upgrades' : [
+                        [{ 'slug' : "parquet-raw-osb", 'image': "", 'price': 0, 'included': true, 'name': "OSB", 'icon' : osbIconUrl, 'name': "OSB"},
+                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c440551c75cb12af61eff9_142m2%20Sanctuary%20Interior%20Cashmere%204.0.avif", 'price': 0, 'included': true, 'icon' : cashmereIconUrl, 'name': "Parchet Cashmere"},
+                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c44055256a682dd59e9ad7_142m2%20Sanctuary%20Interior%20Hazelnut%204.0.avif", 'price': 0, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
+                        [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
+                            { 'slug' : "facade-lunawood", 'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428364c5adf6fa2aec1c1_142m2%20Sanctuary%20Lunawood%204.0.avif', 'icon' : lunawoodIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Lunawood"} ],
+                        [{ 'slug' : "ventilation-system", 'image': ventilationImage, 'price': 0, 'included': true, 'name': "Sistem de ventilatie + Tubulatura"}],
+                        [{ 'slug' : "blinds", 'image': blindsImage, 'price': 0, 'included': true, 'name': "Jaluzele Smart"}] ]
+                }
+            ],
+            "floorplan" : [
+                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff7e14cb1b083351b_142m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A', 'modal': "<h3>142m² Plan A</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 62.90m²</p><br><p>1. Dormitor: 12.40m²</p><p>2. Dormitor: 12.20m²</p><p>3. Dormitor: 12.40m²</p><p>4. Dormitor: 13.10m²</p><br><p>1. Baie: 3.75m²</p><p>2. Baie: 4.35m²</p>"},
+                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f6966128dbeb27986_142m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B', 'modal': "<h3>142m² Plan B</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 75.30m²</p><br><p>1. Dormitor: 12.20m²</p><p>2. Dormitor: 12.40m²</p><p>3. Dormitor: 13.10m²</p><br><p>1. Baie: 3.75m²</p><p>2. Baie: 4.35m²</p>"},
+                { 'slug' : "floorplan-c", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fd4d57aa8ff3d75e9_142m2%20Floorplan%20C.png", 'price': 0, 'name': 'Plan C', 'modal': "<h3>142m² Plan C</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Camere</h4><p>Living + Bucătărie: 87.50m²</p><br><p>1. Dormitor: 12.40m²</p><p>2. Dormitor: 13.10m²</p><br><p>1. Baie: 3.75m²</p><p>2. Baie: 4.35m²</p>"} ] }
     };
 
-    const facadeText =
-      selectionState.facade === "yakisugi" ? "Yakisugi" : "Lunawood";
-    const parquetGroup = document.querySelector(
-      '[data-upgrade-type="parquet"] .option-group',
-    );
-    const selectedParquetButton = parquetGroup.querySelector(".selected");
-    const parquetText = selectedParquetButton
-      ? selectedParquetButton.textContent.split("(")[0].trim()
-      : "N/A";
-    addInclusion(`- ${translations[currentLang].facade} ${facadeText}`);
-    addInclusion(
-      `- ${translations[currentLang].parquetUpgradeLabel} ${parquetText}`,
-    );
-    if (selectionState.blinds)
-      addInclusion(
-        `- ${translations[currentLang].smartBlindsTitleUpgrade} ${finish === "turnkey" ? `(${translations[currentLang].included})` : ""}`,
-      );
-    if (selectionState.ventilation)
-      addInclusion(
-        `- ${translations[currentLang].ventilationSystemTitleUpgrade} ${finish === "turnkey" ? `(${translations[currentLang].included})` : ""}`,
-      );
-    if (selectionState.solar)
-      addInclusion(
-        `- ${translations[currentLang].solarPanelsTitleUpgrade} ${finish === "turnkey" ? `(${translations[currentLang].included})` : ""}`,
-      );
+    const turnkeyMaterialItemsRaw = `
+    MODULAR UPGRADE // TITLE
+    Nouă Generație<split>MODULAR, acum perfecționat cu rame din aluminiu certificate Passivhaus, ultra-izolație organică din fibră de lemn, o structură optimizată, mai rezistentă și o selecție exclusivă de finisaje premium. Proiectat pentru confort, durabilitate și eficiență la cel mai înalt nivel.
+    STRUCTURĂ // TITLE
+    Sistemul Structural MODULAR<split>Îmbină rezistența mecanică remarcabilă cu eficiența fără precedent, eliminând complet punțile termice. Certificat pentru eficiență energetică de Passive House Institute (Darmstadt, Germania) la 0.15 W/(m²K) și pentru sustenabilitate de EPD (International).
+    Structură C24 Timber Frame BIOBUILDS<split>Lemn certificat FSC/PEFC, rezistență excepțională la sarcini.
+    Izolație din fibră de lemn STEICO<split>Organic, sustenabil și ultra-eficient (λ ≈ 0,036 W/m·K), certificat CE.
+    Placă ECO OSB 3 (AGEPAN, Germania)<split>Fără formaldehidă și VOC, aprobat Passive House, certificat CE.
+    Placă DWD (AGEPAN, Germania)<split>Permite pereților să „respire”, menținând etanșeitatea la exterior; certificat CE.
+    Membrană inteligentă<split>Asigură etanșeitatea interioară cu difuzie controlată a vaporilor spre exterior.
+    FINISAJE EXTERIOARE // TITLE
+    Fațadă ventilată din lemn Yakisugi/Lunawood<split>Lemn natural termotratat, cu întreținere semnificativ redusă, rezistență excelentă la foc, durabil, cu estetică deosebită și proveniență sustenabilă.
+    Acoperiș plat ventilat<split>Performanță termică superioară, durată de viață extinsă prin prevenirea acumulării de umiditate și supraîncălzire. Acoperișul are o pantă invizibilă (~5°), hidroizolat cu membrană premium, garanție minim 10 ani de producător.
+    Sistem de colectare a apei pluviale integrat<split>Jgheaburi ascunse, integrate discret în fațadă, pregătite pentru colectarea sustenabilă a apei de ploaie.
+    FERESTRE ȘI UȘI EXTERIOARE // TITLE
+    Profile de aluminiu Genesis 90<split>Profile rigide, ultra-eficiente, certificate pentru case pasive (Uwi ≤ 0,85 W/m²K), certificat CE.
+    Geam triplu stratificat, laminat<split>Eficiență și siguranță excepțională (U = 0,50 W/m²K), laminat pentru protecție suplimentară.
+    BUCĂTĂRIE // TITLE
+    Instalații pentru bucătărie<split>Instalații preechipate, gata pentru mobilierul și electrocasnicele tale.
+    INSTALAȚII TEHNICE // TITLE
+    Instalație electrică<split>Tablou electric complet, conform standardelor stricte UE. Comutatoare și protecții conforme normelor locale, inclusiv tehnologie AFDD.
+    Instalație sanitară<split>Țevi și fitinguri de calitate superioară (PPR/PEX), compatibile cu toate reglementările locale și UE.
+    FINISAJE INTERIOARE COMPLETE // TITLE
+    Tavan cu lamele din lemn + fetru<split>Lemn natural și fetru reciclat; absorbție acustică excelentă.
+    Tapet din fibră de sticlă<split>Rezistență foarte mare la tracțiune și uzură; lavabil; aspect modern.
+    Parchet triplustratificat din lemn natural<split>Grosime 9–14 mm; lemn certificat FSC/PEFC; finisaj foarte durabil.
+    Prize Schneider<split>Prize premium produse în Germania; certificate CE/VDE.
+    UȘI INTERIOARE // TITLE
+    Uși interioare S10<split>Certificate CE; Interior solid.
+    FINISAJE COMPLETE BAIE // TITLE
+    Plăci din compozit de piatră<split>Plăci întregi premium de 2.5 × 1.2 m; 100% impermeabile; rezistență foarte mare în timp.
+    Lavoar cu design italian<split>Material compozit premium; ultra-subțire, modern și durabil.
+    WC suspendat Grohe<split>Produs în Germania; design minimalist, modern.
+    Boiler Ariston Velis<split>Design ultra-subțire; eficiență energetică ridicată.
+    Duș walk-in<split>Proiectat în Franța; design minimalist, modern.
+    SISTEME SMART // TITLE
+    Șină de iluminat<split>Configurare flexibilă pentru LED și spoturi; estetică modernă.
+    Iluminat Smart<split>Philips HUE sau IKEA TRÅDFRI; configurare Smart ușoară.
+    Jaluzele exterioare Smart<split>Blochează > 95% din radiația solară; control prin aplicație/manual; certificate de Institutul de Case Pasive din Darmstadt, Germania; certificate CE.
+    Genvex Premium Preheat 250<split>Recuperare de căldură de până la 95%; pompă de căldură integrată pentru încălzire și răcire.
+    CERTIFICĂRI ȘI GARANȚII // TITLE
+    Certificare Passivhaus<split>Emisă de Passive House Institute (Germania), atestă eficiența energetică fără precedent, confort excepțional. Pentru o locuință permanentă construită conform celor mai stricte standarde internaționale.
+    Certificare EPD<split>Emisă de EPD International, confirmă un produs carbon negativ și practici responsabile de construcție.
+    Marcaj CE<split>Toate componentele respectă reglementările UE pentru produse de construcții.
+    Garanție standard UE<split>24 de luni rezidențial. 12 luni comercial. Opțiuni de extindere a garanției disponibile la cerere.
+    Garanții producător<split>Beneficiarii primesc acoperire completă prin garanțiile oferite de furnizorii individuali.
+    DISCLAIMER // TITLE
+    Performanțe Tehnice<split>Performanțele menționate (inclusiv consumul energetic) sunt calculate conform condițiilor standard Passive House. Rezultatele reale pot avea variații în funcție de climă, orientarea casei, dimensiuni și modul de utilizare. Pentru detalii exacte, consultați calculele PHPP (Passive House Planning Package) aferente proiectului.
+    `;
+    const semiTurnkeyMaterialItemsRaw = `
+    MODULAR UPGRADE // TITLE
+    Nouă Generație<split>MODULAR, acum perfecționat cu rame din aluminiu certificate Passivhaus, ultra-izolație organică din fibră de lemn, și o structură optimizată. Proiectat pentru confort, durabilitate și eficiență la cel mai înalt nivel.
+    STRUCTURĂ // TITLE
+    Sistemul Structural MODULAR<split>Îmbină rezistența mecanică remarcabilă cu eficiența fără precedent, eliminând complet punțile termice. Certificat pentru eficiență energetică de Passive House Institute (Darmstadt, Germania) la 0.15 W/(m²K) și pentru sustenabilitate de EPD (International).
+    Structură C24 Timber Frame BIOBUILDS<split>Lemn certificat FSC/PEFC, rezistență excepțională la sarcini.
+    Izolație din fibră de lemn STEICO<split>Organic, sustenabil și ultra-eficient (λ ≈ 0,036 W/m·K), certificat CE.
+    Placă ECO OSB 3 (AGEPAN, Germania)<split>Fără formaldehidă și VOC, aprobat Passive House, certificat CE.
+    Placă DWD (AGEPAN, Germania)<split>Permite pereților să „respire”, menținând etanșeitatea la exterior; certificat CE.
+    Membrană inteligentă<split>Asigură etanșeitatea interioară cu difuzie controlată a vaporilor spre exterior.
+    FINISAJE EXTERIOARE // TITLE
+    Fațadă ventilată din lemn Yakisugi/Lunawood<split>Lemn natural termotratat, cu întreținere semnificativ redusă, rezistență excelentă la foc, durabil, cu estetică deosebită și proveniență sustenabilă.
+    Acoperiș plat ventilat<split>Performanță termică superioară, durată de viață extinsă prin prevenirea acumulării de umiditate și supraîncălzire. Acoperișul are o pantă invizibilă (~5°), hidroizolat cu membrană premium, garanție minim 10 ani de producător.
+    Sistem de colectare a apei pluviale integrat<split>Jgheaburi ascunse, integrate discret în fațadă, pregătite pentru colectarea sustenabilă a apei de ploaie.
+    FERESTRE ȘI UȘI EXTERIOARE // TITLE
+    Profile de aluminiu Genesis 90<split>Profile rigide, ultra-eficiente, certificate pentru case pasive (Uwi ≤ 0,85 W/m²K), certificat CE.
+    Geam triplu stratificat, laminat<split>Eficiență și siguranță excepțională (U = 0,50 W/m²K), laminat pentru protecție suplimentară.
+    BUCĂTĂRIE // TITLE
+    Instalații pentru bucătărie<split>Instalații preechipate, gata pentru mobilierul și electrocasnicele tale.
+    INSTALAȚII TEHNICE // TITLE
+    Instalație electrică<split>Tablou electric complet, conform standardelor stricte UE. Comutatoare și protecții conforme normelor locale, inclusiv tehnologie AFDD.
+    Instalație sanitară<split>Țevi și fitinguri de calitate superioară (PPR/PEX), compatibile cu toate reglementările locale și UE.
+    CERTIFICĂRI ȘI GARANȚII // TITLE
+    Certificare Passivhaus<split>Emisă de Passive House Institute (Germania), atestă eficiența energetică fără precedent, confort excepțional. Pentru o locuință permanentă construită conform celor mai stricte standarde internaționale.
+    Certificare EPD<split>Emisă de EPD International, confirmă un produs carbon negativ și practici responsabile de construcție.
+    Marcaj CE<split>Toate componentele respectă reglementările UE pentru produse de construcții.
+    Garanție standard UE<split>24 de luni rezidențial. 12 luni comercial. Opțiuni de extindere a garanției disponibile la cerere.
+    Garanții producător<split>Beneficiarii primesc acoperire completă prin garanțiile oferite de furnizorii individuali.
+    DISCLAIMER // TITLE
+    Performanțe Tehnice<split>Performanțele menționate (inclusiv consumul energetic) sunt calculate conform condițiilor standard Passive House. Rezultatele reale pot avea variații în funcție de climă, orientarea casei, dimensiuni și modul de utilizare. Pentru detalii exacte, consultați calculele PHPP (Passive House Planning Package) aferente proiectului.
+    `;
 
-    recalculateTotals();
-    updateUrlParams();
-  }
+    function parseItemLine(line) {
+        if (!line || line.trim() === "") return null;
+        const delimiter = "<split>";
+        const delimiterIndex = line.indexOf(delimiter);
 
-  function updateOptionHighlights() {
-    document
-      .querySelectorAll('[data-upgrade-type="facade"] .option-button')
-      .forEach((btn) => {
-        btn.classList.toggle(
-          "selected",
-          btn.dataset.value === selectionState.facade,
-        );
-      });
-    document
-      .querySelectorAll('[data-upgrade-type="parquet"] .option-button')
-      .forEach((btn) => {
-        btn.classList.toggle(
-          "selected",
-          btn.dataset.value === selectionState.parquet,
-        );
-      });
-    document
-      .getElementById("upgrade-blinds")
-      .classList.toggle("selected", selectionState.blinds);
-    document
-      .getElementById("upgrade-ventilation")
-      .classList.toggle("selected", selectionState.ventilation);
-    document
-      .getElementById("upgrade-solar")
-      .classList.toggle("selected", selectionState.solar);
-    document
-      .getElementById("upgrade-blinds")
-      .classList.toggle("disabled", selectionState.finish === "turnkey");
-    document
-      .getElementById("upgrade-ventilation")
-      .classList.toggle("disabled", selectionState.finish === "turnkey");
-    document
-      .getElementById("upgrade-solar")
-      .classList.toggle("disabled", selectionState.finish === "turnkey");
-  }
-
-  function updateUrlParams() {
-    const stateForUrl = { ...selectionState };
-    if (stateForUrl.basePriceOverride === null) {
-      delete stateForUrl.basePriceOverride;
-    }
-    const params = new URLSearchParams(stateForUrl);
-    window.history.pushState(
-      { path: `?${params.toString()}` },
-      "",
-      `?${params.toString()}`,
-    );
-  }
-
-  function generateSection2Content(container, facadeType) {
-    const t = translations[currentLang];
-    let facadeTitle, facadeDescription;
-
-    if (facadeType === "lunawood") {
-      facadeTitle = t.s2_facadeLunawood_title;
-      facadeDescription = t.s2_facadeLunawood_desc;
-    } else {
-      facadeTitle = t.s2_facadeYakisugi_title;
-      facadeDescription = t.s2_facadeYakisugi_desc;
-    }
-
-    container.innerHTML = `
-      <h2>${t.s2_modular}</h2>
-      <div class="flex-wrapper">
-          <div class="column">
-              <h3>${t.s2_structure}</h3>
-              <h4>${t.s2_modularStructure_title}</h4><p>${t.s2_modularStructure_desc}</p>
-              <h4>${t.s2_c24Frame_title}</h4><p>${t.s2_c24Frame_desc}</p>
-              <h4>${t.s2_woodInsulation_title}</h4><p>${t.s2_woodInsulation_desc}</p>
-              <h4>${t.s2_osb_title}</h4><p>${t.s2_osb_desc}</p>
-              <h4>${t.s2_dwd_title}</h4><p>${t.s2_dwd_desc}</p>
-              <h4>${t.s2_smartMembrane_title}</h4><p>${t.s2_smartMembrane_desc}</p>
-          </div>
-          <div class="column">
-              <h3>${t.s2_exteriorFinishes}</h3>
-              <h4>${facadeTitle}</h4><p>${facadeDescription}</p>
-              <h4>${t.s2_ventRoof_title}</h4><p>${t.s2_ventRoof_desc}</p>
-              <h4>${t.s2_epdmMembrane_title}</h4><p>${t.s2_epdmMembrane_desc}</p>
-              <h4>${t.s2_rainwater_title}</h4><p>${t.s2_rainwater_desc}</p>
-              <h3>${t.s2_windowsDoors}</h3>
-              <h4>${t.s2_genesisFrame_title}</h4><p>${t.s2_genesisFrame_desc}</p>
-              <h4>${t.s2_tripleGlazing_title}</h4><p>${t.s2_tripleGlazing_desc}</p>
-          </div>
-          <div class="column">
-              <h3>${t.s2_kitchen}</h3>
-              <h4>${t.s2_kitchenInstall_title}</h4><p>${t.s2_kitchenInstall_desc}</p>
-              <h3>${t.s2_installations}</h3>
-              <h4>${t.s2_electrical_title}</h4><p>${t.s2_electrical_desc}</p>
-              <h4>${t.s2_plumbing_title}</h4><p>${t.s2_plumbing_desc}</p>
-              <h3>${t.s2_certs}</h3>
-              <h4>${t.s2_passivhaus_title}</h4><p>${t.s2_passivhaus_desc}</p>
-              <h4>${t.s2_epd_title}</h4><p>${t.s2_epd_desc}</p>
-              <h4>${t.s2_ce_title}</h4><p>${t.s2_ce_desc}</p>
-              <h4>${t.s2_warranty_title}</h4><p>${t.s2_warranty_desc}</p>
-          </div>
-      </div>`;
-  }
-
-  function updateDynamicOptions() {
-    const parquetContainer = document.querySelector(
-      '[data-upgrade-type="parquet"] .option-group',
-    );
-    const modelPricing = pricingLogic[selectionState.model];
-    let parquetHtml = "";
-    if (selectionState.finish === "turnkey") {
-      parquetHtml = `<div class="option-button" data-value="cashmere">Cashmere ${translations[currentLang].included}</div><div class="option-button" data-value="hazelnut">Hazelnut ${translations[currentLang].included}</div>`;
-    } else {
-      const parquetUpgrades = modelPricing.upgrades.parquet;
-      parquetHtml = `<div class="option-button" data-value="osb">${translations[currentLang].osbStandard}</div><div class="option-button" data-value="cashmere">Cashmere (+${formatCurrency(parquetUpgrades.cashmere)})</div><div class="option-button" data-value="hazelnut">Hazelnut (+${formatCurrency(parquetUpgrades.hazelnut)})</div>`;
-    }
-    parquetContainer.innerHTML = parquetHtml;
-
-    const floorplanSelect = document.getElementById("floorplan-title-select");
-    const floorplans = offerData.models[selectionState.model].images.floorplan;
-    floorplanSelect.innerHTML = "";
-    Object.keys(floorplans).forEach((planId) => {
-      const option = document.createElement("option");
-      option.value = planId;
-      option.textContent = `${translations[currentLang].plan} ${planId.toUpperCase()}`;
-      floorplanSelect.appendChild(option);
-    });
-    const customOption = document.createElement("option");
-    customOption.value = "custom";
-    customOption.textContent = translations[currentLang].customPlan;
-    floorplanSelect.appendChild(customOption);
-    if (
-      !floorplanSelect.querySelector(`[value="${selectionState.floorplan}"]`)
-    ) {
-      if (selectionState.floorplan !== "custom") {
-        selectionState.floorplan = floorplanSelect.options[0].value;
-      }
-    }
-    floorplanSelect.value = selectionState.floorplan;
-  }
-
-  // --- INITIALIZATION ---
-  function initialize() {
-    const params = new URLSearchParams(window.location.search);
-    selectionState.model = params.get("model") || selectionState.model;
-    selectionState.finish = params.get("finish") || selectionState.finish;
-    selectionState.facade = params.get("facade") || selectionState.facade;
-    selectionState.floorplan =
-      params.get("floorplan") || selectionState.floorplan;
-    selectionState.blinds = params.get("blinds") === "false" ? false : true;
-    selectionState.ventilation =
-      params.get("ventilation") === "false" ? false : true;
-    selectionState.solar = params.get("solar") === "true" ? true : false;
-    selectionState.parquet =
-      params.get("parquet") ||
-      (selectionState.finish === "turnkey" ? "cashmere" : "osb");
-    selectionState.clientName =
-      params.get("clientName") || selectionState.clientName;
-    selectionState.offerNr = params.get("offerNr") || null;
-    selectionState.offerDate =
-      params.get("offerDate") || selectionState.offerDate;
-    selectionState.mentions = params.get("mentions") || selectionState.mentions;
-    const urlBasePrice = params.get("basePriceOverride");
-    if (urlBasePrice && urlBasePrice !== "null") {
-      selectionState.basePriceOverride = parseFloat(urlBasePrice);
-    }
-
-    document.getElementById("model-name-select").innerHTML = Object.keys(
-      offerData.models,
-    )
-      .map(
-        (id) => `<option value="${id}">${offerData.models[id].name}</option>`,
-      )
-      .join("");
-
-    const finishSelect = document.getElementById("finish-text");
-    finishSelect.innerHTML = `<option value="turnkey">${translations.ro.turnkey}</option><option value="semi-finished">${translations.ro["semi-finished"]}</option>`;
-
-    document.querySelector(
-      '[data-upgrade-type="facade"] .option-group',
-    ).innerHTML =
-      `<div class="option-button" data-value="yakisugi">Yakisugi</div><div class="option-button" data-value="lunawood">Lunawood</div>`;
-
-    document.getElementById("model-name-select").value = selectionState.model;
-    finishSelect.value = selectionState.finish;
-    document.getElementById("client-name").textContent =
-      selectionState.clientName;
-    if (selectionState.offerNr) {
-      document.getElementById("offer-nr").textContent = selectionState.offerNr;
-    } else {
-      generateAndSetOfferId();
-    }
-    document.getElementById("offer-date").textContent =
-      selectionState.offerDate;
-    document.querySelector(".mentiuni-editable").textContent =
-      selectionState.mentions;
-
-    // --- EVENT LISTENERS ---
-    document.querySelectorAll("#language-selector a").forEach((a) => {
-      a.addEventListener("click", (e) => {
-        e.preventDefault();
-        setLanguage(a.getAttribute("data-lang"));
-
-        finishSelect.querySelector('[value="turnkey"]').textContent =
-          translations[currentLang].turnkey;
-        finishSelect.querySelector('[value="semi-finished"]').textContent =
-          translations[currentLang]["semi-finished"];
-      });
-    });
-
-    const modelSelect = document.getElementById("model-name-select");
-    modelSelect.addEventListener("change", (e) => {
-      selectionState.model = e.target.value;
-      selectionState.basePriceOverride = null;
-      generateAndSetOfferId();
-      updateOffer();
-    });
-
-    finishSelect.addEventListener("change", (e) => {
-      selectionState.finish = e.target.value;
-      selectionState.basePriceOverride = null;
-      if (selectionState.finish === "turnkey") {
-        selectionState.blinds = true;
-        selectionState.ventilation = true;
-        selectionState.solar = false;
-        if (selectionState.parquet === "osb")
-          selectionState.parquet = "cashmere";
-      }
-      generateAndSetOfferId();
-      updateOffer();
-    });
-
-    const floorplanSelect = document.getElementById("floorplan-title-select");
-    const customUploadInput = document.getElementById(
-      "custom-floorplan-upload",
-    );
-    floorplanSelect.addEventListener("change", () => {
-      const selectedValue = floorplanSelect.value;
-      if (selectedValue === "custom") {
-        customUploadInput.setAttribute(
-          "data-previous-plan",
-          selectionState.floorplan,
-        );
-        customUploadInput.click();
-      } else {
-        selectionState.floorplan = selectedValue;
-        updateOffer();
-      }
-    });
-
-    customUploadInput.addEventListener("change", (e) => {
-      const file = e.target.files[0];
-      if (file && file.type.startsWith("image/")) {
-        const reader = new FileReader();
-        reader.onload = (event) => {
-          document.getElementById("floorplan-image").src = event.target.result;
-          selectionState.floorplan = "custom";
-          updateOffer();
-          updateUrlParams();
-        };
-        reader.readAsDataURL(file);
-      } else {
-        const previousPlan =
-          customUploadInput.getAttribute("data-previous-plan") || "a";
-        floorplanSelect.value = previousPlan;
-      }
-      e.target.value = null;
-    });
-
-    document
-      .getElementById("upgrades-column")
-      .addEventListener("click", (e) => {
-        const button = e.target.closest(".option-button");
-        const clickableItem = e.target.closest(".upgrade-item.clickable");
-        let needsUpdate = false;
-        let priceChanged = false;
-
-        if (button) {
-          const parent = button.closest(".upgrade-item");
-          const type = parent.dataset.upgradeType;
-          const value = button.dataset.value;
-          if (selectionState[type] !== value) {
-            selectionState[type] = value;
-            if (type === "parquet" && selectionState.finish === "semi-finished")
-              priceChanged = true;
-            needsUpdate = true;
-          }
-        } else if (clickableItem) {
-          const id = clickableItem.dataset.upgradeId;
-          if (selectionState.finish === "semi-finished") {
-            selectionState[id] = !selectionState[id];
-            priceChanged = true;
-            needsUpdate = true;
-          }
+        if (delimiterIndex !== -1) {
+            const materialPart = line.substring(0, delimiterIndex).trim();
+            const charPart = line.substring(delimiterIndex + delimiter.length).trim().replace(/<end of materials spec>/g, '').trim();
+            if (materialPart) {
+                return { material: materialPart, characteristics: charPart };
+            }
         }
+        const trimmedLine = line.replace(/\s*\/\/ TITLE$/,'').trim().replace(/<end of materials spec>/g, '').trim();
+        if (trimmedLine) {
+            return { material: trimmedLine, characteristics: "" };
+        }
+        return null;
+    }
 
-        if (priceChanged) selectionState.basePriceOverride = null;
-        if (needsUpdate) updateOffer();
-      });
 
-    const addStateUpdateListener = (element, stateKey) => {
-      if (element) {
-        element.addEventListener("input", () => {
-          selectionState[stateKey] = element.textContent;
-          updateUrlParams();
+    function parseMaterialData(rawDataString) {
+        const lines = rawDataString.trim().split('\n');
+        const items = [];
+        let currentSection = "";
+        const sectionOrder = [];
+
+        lines.forEach(line => {
+            const trimmedLine = line.trim();
+            if (trimmedLine.length === 0) return;
+
+            const isAllUpper = trimmedLine === trimmedLine.toUpperCase();
+            const hasTitleComment = /\s*\/\/ TITLE$/.test(line);
+            const cleanPotentialTitle = trimmedLine.replace(/\s*\/\/ TITLE$/,'').trim();
+
+            const isSectionHeader = (isAllUpper && cleanPotentialTitle.length > 3 && !cleanPotentialTitle.includes("<split>") && !/\d/.test(cleanPotentialTitle)) ||
+                                    (hasTitleComment && cleanPotentialTitle.length > 0 && !cleanPotentialTitle.includes("<split>"));
+
+
+            if (isSectionHeader) {
+                currentSection = cleanPotentialTitle;
+                if (!sectionOrder.includes(currentSection)) {
+                    sectionOrder.push(currentSection);
+                }
+            } else if (currentSection || items.length === 0) {
+                const parsedItem = parseItemLine(line);
+                if(parsedItem && parsedItem.material) {
+
+                    let sectionToAssign = currentSection;
+                    if (!sectionToAssign && items.length === 0 && sectionOrder.length === 0 && parsedItem.material.toUpperCase() !== cleanPotentialTitle.toUpperCase()) {
+                    }
+
+                    items.push({
+                        section: sectionToAssign || "General",
+                        material: parsedItem.material,
+                        characteristics: parsedItem.characteristics
+                    });
+                     if ( (sectionToAssign || "General") === "General" && !sectionOrder.includes("General")){
+                         sectionOrder.unshift("General");
+                    }
+                }
+            }
         });
-      }
+        return { items, sectionOrder };
+    }
+
+    const euCountries = ["Austria","Belgia","Bulgaria","Cipru","Croația","Danemarca","Estonia","Finlanda","Franța","Germania","Grecia","Irlanda","Italia","Letonia","Lituania","Luxemburg","Malta","Polonia","Portugalia","Republica Cehă","România","Slovacia","Slovenia","Spania","Suedia","Țările de Jos","Ungaria"];
+
+    let totalPrice = 0;
+    let type = getUrlParameter('SQF_TYPE');
+    if(type === null || !config[type]) {
+        const validTypes = Object.keys(config);
+        type = validTypes.includes('sanctuary-142') ? 'sanctuary-142' : (validTypes.length > 0 ? validTypes[0] : 'nomad-24');
+    }
+
+    let queryArgs = {};
+
+    const stickyImg1 = document.getElementById('stickyImg1');
+    const stickyImg2 = document.getElementById('stickyImg2');
+    let currentStickyImage = stickyImg1;
+
+    const modalInnerContent = document.querySelector("#modalOverlay .modal-inner");
+    const modalOverlay = document.getElementById('modalOverlay');
+    const formTabsNodeList = document.querySelectorAll('.form-tab');
+    const formTabsArray = Array.from(formTabsNodeList);
+    const rightContentElement = document.querySelector('.config .right-content');
+
+    const btn = document.getElementById('finalContinueBtn');
+    const box = document.getElementById('priceBox');
+    let currentScrollTarget;
+
+    let referralDiscountActive = false;
+    const REFERRAL_DISCOUNT_RATE = 0.04;
+    const VALID_REFERRAL_CODES = ["BUHNICI", "MATEUS"];
+
+    function handleStickyBottomAnimation(){
+        if (!btn || !box) return;
+
+        let scrollTop, scrollHeight, clientHeight;
+        const isDesktop = window.innerWidth > 768;
+
+        if (isDesktop && rightContentElement) {
+            scrollTop = rightContentElement.scrollTop;
+            scrollHeight = rightContentElement.scrollHeight;
+            clientHeight = rightContentElement.clientHeight;
+        } else {
+            scrollTop = window.scrollY || document.documentElement.scrollTop;
+            scrollHeight = document.documentElement.scrollHeight;
+            clientHeight = document.documentElement.clientHeight;
+        }
+
+        const scrollableHeight = scrollHeight - clientHeight;
+        const scrollPercent = (scrollableHeight <= 0) ? 100 : (scrollTop / scrollableHeight) * 100;
+
+        if (scrollPercent >= 70) {
+            btn.disabled = false;
+            btn.classList.add('active');
+            box.classList.add('raise');
+        } else {
+            btn.disabled = true;
+            btn.classList.remove('active');
+            box.classList.remove('raise');
+        }
+    }
+
+    function updateScrollProgressBar() {
+        const progressBar = document.getElementById('scroll-progress-bar-bottom');
+        if (!progressBar) return;
+
+        let scrollTop, scrollHeight, clientHeight;
+        const isDesktop = window.innerWidth > 768;
+
+        if (isDesktop && rightContentElement) {
+            scrollTop = rightContentElement.scrollTop;
+            scrollHeight = rightContentElement.scrollHeight;
+            clientHeight = rightContentElement.clientHeight;
+        } else {
+            scrollTop = window.scrollY || document.documentElement.scrollTop;
+            scrollHeight = document.documentElement.scrollHeight;
+            clientHeight = document.documentElement.clientHeight;
+        }
+
+        const scrollableHeight = scrollHeight - clientHeight;
+        if (scrollableHeight <= 0) {
+            progressBar.style.width = '100%';
+            return;
+        }
+
+        const scrollPercent = (scrollTop / scrollableHeight) * 100;
+        const activationThreshold = 85;
+
+        const progressBarWidth = Math.min(100, (scrollPercent / activationThreshold) * 100);
+        progressBar.style.width = `${progressBarWidth}%`;
+    }
+
+    /**
+     * FIX: The unifiedScrollHandler now only manages the button and progress bar.
+     * The call to updateImageBasedOnScrollPercentage() has been removed to prevent
+     * images from reloading on every scroll event, which saves significant bandwidth.
+     */
+    function unifiedScrollHandler() {
+        handleStickyBottomAnimation();
+        updateScrollProgressBar();
+    }
+
+    function setupUnifiedScrollListener() {
+        const newIsDesktop = window.innerWidth > 768;
+        if (currentScrollTarget) {
+            currentScrollTarget.removeEventListener('scroll', unifiedScrollHandler);
+        }
+        currentScrollTarget = (newIsDesktop && rightContentElement) ? rightContentElement : window;
+        currentScrollTarget.addEventListener('scroll', unifiedScrollHandler, { passive: true });
+        setTimeout(unifiedScrollHandler, 250);
+    }
+
+    // REMOVED: All variables and functions related to scroll-based image changes are no longer needed.
+    // let scrollPercentageTriggers = [];
+    // let lastShownImageSrcByPercentage = null;
+    // function initializeScrollPercentageTriggers() { ... }
+    // function updateImageBasedOnScrollPercentage() { ... }
+
+
+    const upgradeRenderConfig = [
+        { groupIndex: 0, queryParam: 'SQF_PARQUET', type: 'parquet', defaultName: 'Parchet' },
+        { groupIndex: 1, queryParam: 'SQF_FACADE', type: 'parquet', defaultName: 'Fatada' },
+        { groupIndex: 2, queryParam: 'SQF_VENTILATION', type: 'checkbox', defaultName: 'Sistem de ventilatie' },
+        { groupIndex: 3, queryParam: 'SQF_BLINDS', type: 'checkbox', defaultName: 'Jaluzele Smart' }
+    ];
+
+    const optionTemplate = (labelClass, inputType, inputName, inputValue, optionName, rawPrice, context = "upgrades", isDisabled = false, isChecked = false, fullOptionObject = null) => {
+        let priceDisplayHTML = '';
+        let effectiveLabelClass = labelClass;
+        let inputAttributes = '';
+
+        const isTurnkey = queryArgs['SQF_FINISH'] === 'turnkey' || (fullOptionObject && fullOptionObject.slug && fullOptionObject.slug.includes('turnkey'));
+        const isVentOrBlinds = (inputValue === 'ventilation-system' || inputValue === 'blinds');
+        let specialPriceText = "";
+
+        if (isTurnkey && isVentOrBlinds && (inputName === 'SQF_VENTILATION' || inputName === 'SQF_BLINDS')) {
+            const upgradeData = findUpgradeInCurrentFinish(inputValue);
+            if (upgradeData && upgradeData.included && upgradeData.price === 0) {
+                specialPriceText = "Inclus La Cheie";
+                isDisabled = true;
+                isChecked = true;
+                if(queryArgs[inputName] !== inputValue) queryArgs[inputName] = inputValue;
+            }
+        }
+
+        if (isDisabled) {
+            effectiveLabelClass += ' disabled-option';
+            inputAttributes += ' disabled';
+        }
+        if (isChecked) {
+            inputAttributes += ' checked';
+        }
+
+        if (specialPriceText) {
+            priceDisplayHTML = `<span class="option-price">${specialPriceText}</span>`;
+        } else if (rawPrice === 0) {
+            priceDisplayHTML = `<span class="option-price">Inclus</span>`;
+        } else {
+            priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} + TVA</span>`;
+        }
+
+        return `
+            <label class="${effectiveLabelClass}">
+                <input type="${inputType}" name="${inputName}" price="${rawPrice}" value="${inputValue}" ${inputAttributes} />
+                <span class="option-name">${optionName}</span>
+                ${priceDisplayHTML}
+            </label>
+        `;
     };
 
-    addStateUpdateListener(
-      document.getElementById("client-name"),
-      "clientName",
-    );
-    addStateUpdateListener(document.getElementById("offer-nr"), "offerNr");
-    addStateUpdateListener(document.getElementById("offer-date"), "offerDate");
+    const optionsWrapper = (content, className) => `<div class="${className}">${content}</div>`;
 
-    const mentionsEl = document.querySelector(".mentiuni-editable");
-    mentionsEl.addEventListener("input", () => {
-      selectionState.mentions = mentionsEl.textContent;
-      recalculateTotals();
-      updateUrlParams();
+    const parquetOption = (inputType, inputName, price, inputValue, displayName, checkboxImage, isCheckedByDefault) => {
+        let displayPriceText;
+        if (price === 0) {
+            displayPriceText = "Inclus";
+        } else {
+            displayPriceText = `${formatCurrency(price)} + TVA`;
+        }
+
+        return `
+        <div class="checkbox-container">
+            <input id="${inputValue}" class="custom-checkbox" type="${inputType}" name="${inputName}" price="${price}" value="${inputValue}"
+                                                 data-display-label="${displayName}" data-display-price="${displayPriceText}" ${isCheckedByDefault ? "checked=\"checked\"" : ""}/>
+            <label for="${inputValue}" class="checkbox-label">
+                <img src="${checkboxImage || ''}" alt="Pictogramă ${displayName}" class="checkbox-image" onerror="this.onerror=null; this.src='';">
+            </label>
+        </div>`;
+    };
+
+    function generateNewDetailedMaterialModalContent(houseTypeKey) {
+        const houseData = config[houseTypeKey];
+        if (!houseData) return "<p>Detalii indisponibile.</p>";
+
+        let modalHtml = `<img src="${houseData.image}" alt="Imagine principală ${houseData.name}" style="width:100%; max-height: 300px; object-fit: cover; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">`;
+
+        let currentFinishSlug = queryArgs['SQF_FINISH'] || (config[type]?.options[0]?.slug);
+        let itemsToUse, sectionOrderToUse;
+        let rawDataString;
+
+        if (currentFinishSlug === 'turnkey') {
+            rawDataString = turnkeyMaterialItemsRaw;
+        } else {
+            rawDataString = semiTurnkeyMaterialItemsRaw;
+        }
+
+        const parsedData = parseMaterialData(rawDataString);
+        itemsToUse = parsedData.items;
+        sectionOrderToUse = parsedData.sectionOrder;
+
+        const categorizedItems = itemsToUse.reduce((acc, item) => {
+            const sectionKey = item.section;
+            if (!acc[sectionKey]) {
+                acc[sectionKey] = [];
+            }
+            acc[sectionKey].push({ material: item.material, characteristics: item.characteristics });
+            return acc;
+        }, {});
+
+
+        sectionOrderToUse.forEach(sectionKey => {
+            if (categorizedItems.hasOwnProperty(sectionKey)) {
+                const items = categorizedItems[sectionKey];
+                if (items.length > 0) {
+                    const sectionTitle = sectionKey.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                    modalHtml += `<h3 class="modal-section-title">${sectionTitle}</h3>`;
+
+                    items.forEach(item => {
+                        modalHtml += '<div class="modal-material-item">';
+                        modalHtml += `<div class="material-name"><p>${item.material}</p></div>`;
+                        modalHtml += `<div class="material-chars"><p>${item.characteristics}</p></div>`;
+                        modalHtml += '</div>';
+                    });
+                }
+            }
+        });
+        return modalHtml;
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        queryArgs['SQF_TYPE'] = type;
+        queryArgs['SQF_SHIPPING_COUNTRY'] = 'Romania';
+
+        const urlParams = new URLSearchParams(window.location.search);
+        urlParams.forEach((value, key) => {
+            if (key !== 'SQF_TYPE') {
+                queryArgs[key] = value;
+            }
+        });
+
+        let houseData = config[type];
+        if (!houseData) {
+            console.error("Configuration for house type '" + type + "' not found. Aborting initialization.");
+            document.body.innerHTML = "<p style='text-align:center;padding:20px;'>Eroare: Configurația pentru modelul selectat nu a putut fi încărcată.</p>";
+            return;
+        }
+
+        const houseModelNameEl = document.getElementById('houseModelName');
+        if (houseModelNameEl) houseModelNameEl.textContent = houseData.name;
+
+        const finalContinueBtn = document.getElementById('finalContinueBtn');
+        if (finalContinueBtn) {
+            finalContinueBtn.disabled = true;
+        }
+
+        generateOptions(houseData.options, 'step-1', 'SQF_FINISH', true, 'radio');
+
+        let effectiveFinishSlug = queryArgs['SQF_FINISH'];
+        let finishRadio = document.querySelector(`.multistep-form input[name="SQF_FINISH"][value="${effectiveFinishSlug}"]`);
+
+        if (!effectiveFinishSlug || !finishRadio) {
+            if (houseData.options && houseData.options.length > 0) {
+                effectiveFinishSlug = houseData.options[0].slug;
+                queryArgs['SQF_FINISH'] = effectiveFinishSlug;
+                finishRadio = document.querySelector(`.multistep-form input[name="SQF_FINISH"][value="${effectiveFinishSlug}"]`);
+            }
+        }
+        if (finishRadio) {
+            finishRadio.checked = true;
+        }
+
+        if (queryArgs['SQF_FINISH'] === 'turnkey') {
+            const turnkeyData = houseData.options.find(opt => opt.slug === 'turnkey');
+            if (turnkeyData && turnkeyData.upgrades) {
+                turnkeyData.upgrades.forEach(group => {
+                    group.forEach(upgrade => {
+                        if ((upgrade.slug === 'ventilation-system' || upgrade.slug === 'blinds') && upgrade.included && upgrade.price === 0) {
+                            if(upgrade.slug === 'ventilation-system') queryArgs['SQF_VENTILATION'] = upgrade.slug;
+                            if(upgrade.slug === 'blinds') queryArgs['SQF_BLINDS'] = upgrade.slug;
+                        }
+                    });
+                });
+            }
+        }
+
+        if (effectiveFinishSlug) {
+            render_upgrades(effectiveFinishSlug);
+        } else {
+            const step3Container = document.getElementById('step-3')?.querySelector('.options-container');
+            if (step3Container) step3Container.innerHTML = '';
+        }
+        render_floorplan();
+        updateModelDescription();
+
+        addSectionSpecificModalButtons();
+        setInitialImage();
+
+        addEventListeners();
+        setTabTitles();
+
+        referralDiscountActive = false;
+        const referralCodeInput = document.getElementById('referral-code-input');
+        const initialReferralCodeFromUrl = getUrlParameter('SQF_REFERRAL_CODE');
+
+        if (initialReferralCodeFromUrl && VALID_REFERRAL_CODES.includes(initialReferralCodeFromUrl.toUpperCase())) {
+            referralDiscountActive = true;
+            if(referralCodeInput) referralCodeInput.value = initialReferralCodeFromUrl;
+        } else {
+            const initialReferralFromInput = referralCodeInput ? referralCodeInput.value.trim().toUpperCase() : "";
+            if (initialReferralFromInput && VALID_REFERRAL_CODES.includes(initialReferralFromInput)) {
+                referralDiscountActive = true;
+            } else if (referralCodeInput && initialReferralFromInput) {
+                referralDiscountActive = false;
+            }
+        }
+
+        applyReferralDiscountAndRender();
+        render_economy_price();
+        updateURL();
+
+        // Setup scroll listeners for UI elements like the button and progress bar
+        setupUnifiedScrollListener();
+
+        window.addEventListener('resize', () => {
+            setupUnifiedScrollListener();
+        }, { passive: true });
+
+        const finalContinueBtnRef = document.getElementById('finalContinueBtn');
+        if(finalContinueBtnRef) finalContinueBtnRef.textContent = "CONTINUĂ";
+        const backBtnElement = document.querySelector('.config .go-back-btn');
+        if (backBtnElement) backBtnElement.remove();
     });
 
-    setLanguage(currentLang);
-  }
+    function updateModelDescription() {
+        const descriptionEl = document.getElementById('modelDescription');
+        if (!descriptionEl) return;
 
-  initialize();
-});
+        const modelDescriptions = {
+            'sanctuary': '142m² - 4 dormitoare',
+            'serenity': '95m² - 3 dormitoare',
+            'wanderlust': '48m² - 1 sau 2 dormitoare',
+            'nomad': '24m² - 1 dormitor'
+        };
+
+        const modelName = type.split('-')[0];
+        const descriptionText = modelDescriptions[modelName] || '';
+        descriptionEl.textContent = descriptionText;
+    }
+
+    function addSectionSpecificModalButtons() {
+        formTabsArray.forEach(tab => {
+            const existingLink = tab.querySelector('.feature-details-link');
+            if (existingLink) existingLink.remove();
+
+            const tabId = tab.id;
+            let buttonText = "";
+            let modalContentProvider = null;
+
+            switch (tabId) {
+                case 'step-1':
+                    const currentFinishSlugForLink = queryArgs['SQF_FINISH'] || (config[type]?.options.length > 0 ? config[type].options[0].slug : null);
+                    const finishDataForLink = currentFinishSlugForLink ? config[type].options.find(o => o.slug === currentFinishSlugForLink) : null;
+                    const finishName = finishDataForLink ? finishDataForLink.name : 'your selection';
+                    buttonText = `Explorează ce este inclus în ${finishName}`;
+                    modalContentProvider = () => generateNewDetailedMaterialModalContent(type);
+                    break;
+                case 'step-2':
+                    const currentFloorplanSlug = queryArgs['SQF_FLOORPLAN'] || (config[type]?.floorplan?.[0]?.slug);
+                    const floorplanData = currentFloorplanSlug ? config[type]?.floorplan?.find(f => f.slug === currentFloorplanSlug) : null;
+                    const planLetter = floorplanData ? floorplanData.name.replace('Plan ','') : 'A';
+                    buttonText = `Vezi detaliile planului ${planLetter}`;
+                    modalContentProvider = () => {
+                        const floorplanSlugForModal = queryArgs['SQF_FLOORPLAN'] || (config[type]?.floorplan?.[0]?.slug);
+                        const floorplanDataForModal = config[type]?.floorplan?.find(f => f.slug === floorplanSlugForModal);
+                        if (!floorplanDataForModal) {
+                             return "<p>Vă rugăm să selectați un plan pentru a vedea detaliile.</p>";
+                        }
+
+                        let modalHtml = `<img src="${floorplanDataForModal.image}" alt="Plan ${floorplanDataForModal.name}" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px; onerror="this.onerror=null; this.src='';">`;
+                        modalHtml += floorplanDataForModal.modal;
+
+                        return modalHtml;
+                    };
+                    break;
+            }
+
+            if (buttonText && modalContentProvider) {
+                const detailsLink = document.createElement('a');
+                detailsLink.href = "#";
+                detailsLink.className = 'feature-details-link';
+                detailsLink.textContent = buttonText;
+                detailsLink.dataset.tabId = tabId;
+
+                detailsLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (!modalInnerContent || !modalOverlay) return;
+
+                    let content = modalContentProvider();
+                    modalInnerContent.innerHTML = content;
+                    modalOverlay.style.display = 'flex';
+                });
+                tab.appendChild(detailsLink);
+            }
+        });
+    }
+
+    function setTabTitles() {
+        let currentHouseData = config[type];
+        if (!currentHouseData) return;
+        setTabTitle('Plan', 'step-2', 'floorplanStepTitle');
+        setTabTitle('Upgrade', 'step-3', 'upgradesStepTitle');
+        setTabTitle('Cod Recomandare', 'step-5-referral', 'referralCodeStepTitle');
+    }
+
+    function switchToSingleImageView() {
+        document.querySelector('.image-wrapper').style.display = 'block';
+        document.querySelector('.stacked-image-container').style.display = 'none';
+    }
+
+    function switchToStackedImageView() {
+        document.querySelector('.image-wrapper').style.display = 'none';
+        document.querySelector('.stacked-image-container').style.display = 'flex';
+    }
+
+    function updateMainDisplayImage() {
+        const houseData = config[type];
+        if (!houseData) return;
+
+        const currentFinishSlug = queryArgs['SQF_FINISH'];
+        const finishData = houseData.options.find(opt => opt.slug === currentFinishSlug);
+
+        const stackedImgTop = document.getElementById('stackedImgTop');
+        const stackedImgBottom = document.getElementById('stackedImgBottom');
+
+        if (finishData && (currentFinishSlug === 'turnkey' || currentFinishSlug === 'semi-finished') && finishData.images && finishData.images.length === 2) {
+            switchToStackedImageView();
+            stackedImgTop.src = finishData.images[0].src;
+            stackedImgTop.alt = finishData.images[0].alt || 'Imagine de sus';
+            stackedImgBottom.src = finishData.images[1].src;
+            stackedImgBottom.alt = finishData.images[1].alt || 'Imagine de jos';
+
+            stickyImg1.classList.remove('active-sticky-image');
+            stickyImg2.classList.remove('active-sticky-image');
+            stickyImg1.classList.remove('object-fit-contain');
+            stickyImg2.classList.remove('object-fit-contain');
+        } else {
+            switchToSingleImageView();
+            let singleImageSrc = finishData?.image || houseData.image;
+            if (singleImageSrc) {
+                crossfadeStickyImage(singleImageSrc, false);
+            } else {
+                crossfadeStickyImage(houseData.image || "", false);
+            }
+        }
+    }
+
+    function crossfadeStickyImage(newSrc, isFloorplan = false) {
+        if (!newSrc || newSrc === "") {
+            newSrc = config[type]?.image;
+            if (!newSrc || newSrc === "") return;
+        }
+
+        if (currentStickyImage.src === newSrc && currentStickyImage.classList.contains('active-sticky-image') &&
+            ((isFloorplan && currentStickyImage.classList.contains('object-fit-contain')) || (!isFloorplan && !currentStickyImage.classList.contains('object-fit-contain')))) {
+            return;
+        }
+
+        const imageToLoad = (currentStickyImage === stickyImg1) ? stickyImg2 : stickyImg1;
+        const imageToFadeOut = currentStickyImage;
+
+        if (isFloorplan) {
+            imageToLoad.classList.add('object-fit-contain');
+        } else {
+            imageToLoad.classList.remove('object-fit-contain');
+        }
+
+        imageToLoad.onload = () => {
+            imageToFadeOut.classList.remove('active-sticky-image');
+            imageToLoad.classList.add('active-sticky-image');
+            currentStickyImage = imageToLoad;
+        };
+        imageToLoad.onerror = function() {
+            this.onerror=null;
+            console.warn("Eroare la încărcarea imaginii:", newSrc, ". Se afișează imaginea implicită.");
+            const width = this.naturalWidth > 0 ? this.naturalWidth : (this.width > 0 ? this.width : 800) ;
+            const height = this.naturalHeight > 0 ? this.naturalHeight : (this.height > 0 ? this.height : 600);
+            this.src = ``;
+            if (isFloorplan) {
+                this.classList.add('object-fit-contain');
+            } else {
+                this.classList.remove('object-fit-contain');
+            }
+        };
+        imageToLoad.src = newSrc;
+    }
+
+    function changeImages(value, context = "unknown") {
+        const house = config[type];
+        if (!house) return;
+
+        if (context === "finish") {
+            updateMainDisplayImage();
+        } else {
+            switchToSingleImageView();
+            let selectedOptionData;
+            let imageToDisplaySrc = "";
+            let applyContainFit = false;
+
+            if (context === "floorplan") {
+                selectedOptionData = house.floorplan.find(option => option.slug === value);
+                imageToDisplaySrc = selectedOptionData?.image;
+                applyContainFit = true;
+            } else {
+                selectedOptionData = findUpgrade(value, queryArgs['SQF_FINISH'] || house.options[0]?.slug);
+                if (value === 'facade-yakisugi') {
+                    imageToDisplaySrc = house.image;
+                } else {
+                    imageToDisplaySrc = selectedOptionData?.image;
+                }
+                applyContainFit = false;
+            }
+
+            let finalImageToDisplay = imageToDisplaySrc;
+            if (!finalImageToDisplay || finalImageToDisplay === "") {
+                finalImageToDisplay = house.image;
+                applyContainFit = false;
+            }
+
+            if (finalImageToDisplay && finalImageToDisplay !== "") {
+                crossfadeStickyImage(finalImageToDisplay, applyContainFit);
+            }
+        }
+    }
+
+    function setInitialImage() {
+        updateMainDisplayImage();
+
+        const currentFinishSlug = queryArgs['SQF_FINISH'];
+        const finishData = config[type]?.options.find(opt => opt.slug === currentFinishSlug);
+
+        if (!(finishData && (currentFinishSlug === 'turnkey' || currentFinishSlug === 'semi-finished') && finishData.images && finishData.images.length === 2)) {
+            let imageToShow = config[type]?.image;
+            let applyContainFit = false;
+
+            const floorplanSlugFromUrl = queryArgs['SQF_FLOORPLAN'];
+            let upgradeImageFromUrl = null;
+            const upgradeImageOrder = ['SQF_PARQUET', 'SQF_FACADE', 'SQF_BLINDS', 'SQF_VENTILATION'];
+
+            for (const paramKey of upgradeImageOrder) {
+                const slug = queryArgs[paramKey];
+                if (slug) {
+                    const finishContextForUpgrade = currentFinishSlug || config[type]?.options[0]?.slug;
+                    let upgradeData = findUpgrade(slug, finishContextForUpgrade);
+                    if (slug === 'facade-yakisugi' && config[type]) {
+                        upgradeImageFromUrl = config[type].image;
+                    } else if (upgradeData && upgradeData.image && upgradeData.image !== "") {
+                        upgradeImageFromUrl = upgradeData.image;
+                    }
+                    if (upgradeImageFromUrl) break;
+                }
+            }
+
+            if (upgradeImageFromUrl) {
+                imageToShow = upgradeImageFromUrl;
+                applyContainFit = false;
+            } else if (floorplanSlugFromUrl) {
+                const floorplanData = config[type]?.floorplan?.find(f => f.slug === floorplanSlugFromUrl);
+                if (floorplanData?.image && floorplanData.image !== "") {
+                    imageToShow = floorplanData.image;
+                    applyContainFit = true;
+                }
+            } else if (finishData?.image && finishData.image !== "") {
+                 imageToShow = finishData.image;
+                 applyContainFit = false;
+            }
+
+            if (imageToShow && imageToShow !== "") {
+                 switchToSingleImageView();
+                 crossfadeStickyImage(imageToShow, applyContainFit);
+            } else {
+                switchToSingleImageView();
+                crossfadeStickyImage(config[type]?.image || "", false);
+            }
+        }
+    }
+
+    function render_upgrades(finishSlugValue){
+        let houseConfig = config[type];
+        let step3Container = document.getElementById('step-3')?.querySelector('.options-container');
+        if (!step3Container || !houseConfig) {
+            if(step3Container) step3Container.innerHTML = ''; return;
+        }
+        step3Container.innerHTML = '';
+        if (!finishSlugValue) return;
+
+        let selectedFinishOption = houseConfig.options.find(obj => obj.slug === finishSlugValue);
+        if (!selectedFinishOption || !selectedFinishOption.upgrades) return;
+
+        const isTurnkeySelected = (finishSlugValue === 'turnkey');
+
+        upgradeRenderConfig.forEach(cfg => {
+            if (selectedFinishOption.upgrades[cfg.groupIndex] && selectedFinishOption.upgrades[cfg.groupIndex].length > 0) {
+                const originalUpgradeGroup = selectedFinishOption.upgrades[cfg.groupIndex];
+                let optionsToRender = JSON.parse(JSON.stringify(originalUpgradeGroup));
+
+                if (isTurnkeySelected && cfg.queryParam === 'SQF_PARQUET') {
+                    optionsToRender = optionsToRender.filter(opt => opt.slug !== 'parquet-raw-osb');
+                }
+                if (!optionsToRender || optionsToRender.length === 0) {
+                    const existingWrapperClass = cfg.queryParam.toLowerCase().replace(/_/g, '-');
+                    const existingSectionWrapper = step3Container.querySelector(`.parquet-section-wrapper.${existingWrapperClass}`);
+                    if (existingSectionWrapper) existingSectionWrapper.remove();
+                    const existingRadioGroup = step3Container.querySelector(`.radio-group.${existingWrapperClass}`);
+                    if(existingRadioGroup) existingRadioGroup.remove();
+                    return;
+                }
+
+                if (cfg.type === 'parquet') {
+                    generateParquetOptions(optionsToRender, 'step-3', cfg.queryParam, true, cfg.defaultName);
+                } else if (cfg.type === 'checkbox' || cfg.type === 'radio') {
+                    generateOptions(optionsToRender, 'step-3', cfg.queryParam, true, cfg.type);
+                }
+
+                if (cfg.type === 'parquet' || cfg.type === 'radio') {
+                    let currentSelection = queryArgs[cfg.queryParam];
+                    let inputToSelect = step3Container.querySelector(`input[name="${cfg.queryParam}"][value="${currentSelection}"]`);
+
+                    if (!inputToSelect || (inputToSelect && inputToSelect.closest('.parquet-section-wrapper, .radio-group').offsetParent === null) ) {
+                        const defaultIncludedFree = optionsToRender.find(opt => opt.included && opt.price === 0);
+                        const firstOption = optionsToRender[0];
+                        let defaultSlug = defaultIncludedFree ? defaultIncludedFree.slug : (firstOption ? firstOption.slug : null);
+
+                        if (defaultSlug) {
+                            inputToSelect = step3Container.querySelector(`input[name="${cfg.queryParam}"][value="${defaultSlug}"]`);
+                            if (inputToSelect && (!currentSelection || !optionsToRender.find(opt => opt.slug === currentSelection)) ) {
+                                queryArgs[cfg.queryParam] = inputToSelect.value;
+                            }
+                        }
+                    }
+                    if (inputToSelect && !inputToSelect.disabled) {
+                        inputToSelect.checked = true;
+                        if (cfg.type === 'parquet') {
+                            updateParquetPriceAndLabel(inputToSelect);
+                        }
+                    } else if (inputToSelect && inputToSelect.disabled && inputToSelect.checked) {
+                        queryArgs[cfg.queryParam] = inputToSelect.value;
+                         if (cfg.type === 'parquet') {
+                            updateParquetPriceAndLabel(inputToSelect);
+                        }
+                    }
+                } else if (cfg.type === 'checkbox') {
+                    const inputElements = step3Container.querySelectorAll(`input[name="${cfg.queryParam}"]`);
+                    inputElements.forEach(inputEl => {
+                        const optionData = optionsToRender.find(opt => opt.slug === inputEl.value);
+                        if (isTurnkeySelected && (cfg.queryParam === 'SQF_VENTILATION' || cfg.queryParam === 'SQF_BLINDS')) {
+                            if (optionData && optionData.included && optionData.price === 0) {
+                                inputEl.checked = true;
+                                inputEl.disabled = true;
+                                queryArgs[cfg.queryParam] = inputEl.value;
+                            } else {
+                                inputEl.checked = queryArgs[cfg.queryParam] === inputEl.value;
+                                inputEl.disabled = false;
+                            }
+                        } else if (queryArgs[cfg.queryParam] === inputEl.value) {
+                            inputEl.checked = true;
+                        } else if (!queryArgs[cfg.queryParam] && optionData && optionData.included && optionData.price === 0 && !isTurnkeySelected) {
+                             inputEl.checked = true;
+                             queryArgs[cfg.queryParam] = inputEl.value;
+                        }
+                        else {
+                            inputEl.checked = false;
+                        }
+                    });
+                }
+            } else {
+                const existingWrapperClass = cfg.queryParam.toLowerCase().replace(/_/g, '-');
+                const existingSectionWrapper = step3Container.querySelector(`.parquet-section-wrapper.${existingWrapperClass}`);
+                if (existingSectionWrapper) existingSectionWrapper.remove();
+                const existingRadioGroup = step3Container.querySelector(`.radio-group.${existingWrapperClass}`);
+                if(existingRadioGroup) existingRadioGroup.remove();
+            }
+        });
+    }
+
+    function render_floorplan() {
+        if (!config[type] || !config[type].floorplan) return;
+        let options = config[type].floorplan;
+        generateOptions(options, 'step-2', "SQF_FLOORPLAN", false, 'radio');
+        const floorplanFromURL = queryArgs['SQF_FLOORPLAN'];
+        let floorplanInput = document.querySelector(`input[name="SQF_FLOORPLAN"][value="${floorplanFromURL}"]`);
+
+        if (floorplanInput) {
+            floorplanInput.checked = true;
+        } else {
+            const firstFloorplanRadio = document.querySelector('#step-2 input[name="SQF_FLOORPLAN"]');
+            if (firstFloorplanRadio) {
+                firstFloorplanRadio.checked = true;
+                queryArgs['SQF_FLOORPLAN'] = firstFloorplanRadio.value;
+            }
+        }
+        const floorplanDetailsLink = document.querySelector('#step-2 .feature-details-link');
+        if(floorplanDetailsLink){
+            const currentFloorplanSlug = queryArgs['SQF_FLOORPLAN'];
+            const floorplanData = config[type]?.floorplan?.find(f => f.slug === currentFloorplanSlug);
+            if (floorplanData && floorplanData.name) {
+                floorplanDetailsLink.textContent = `Vezi detaliile planului ${floorplanData.name.replace('Plan ', '')}`;
+            } else {
+                floorplanDetailsLink.textContent = "Vezi detaliile planului";
+            }
+        }
+    }
+
+    function setTabTitle(tabTitle, tabID, elementId) {
+        const targetElement = elementId ? document.getElementById(elementId) : document.querySelector(`#${tabID} h2`);
+        if (targetElement) targetElement.innerHTML = tabTitle;
+    }
+
+    function render_economy_price(){
+        if (!config[type]) return;
+        let savings = config[type].energy;
+        savings = formatCurrency(savings);
+        const economyWrapper = document.querySelectorAll('.price-box .p2');
+        economyWrapper.forEach(economy => economy.innerHTML = "Economii est. la consum (50 ani): " + savings);
+    }
+
+    function render_price(finalPriceToShow, isDiscounted = false, originalPriceBeforeDiscount = null) {
+        const priceBoxH4 = document.querySelector('.price-box h4');
+        if (!priceBoxH4) return;
+
+        if (!config[type] || !config[type].options || config[type].options.length === 0) {
+            priceBoxH4.innerHTML = "Preț indisponibil <span class='tva-label'> + TVA</span>";
+            return;
+        }
+
+        let displayHTML;
+        const tvaLabelHtml = " <span class='tva-label'>+ TVA</span>";
+
+        if (isDiscounted && originalPriceBeforeDiscount !== null && originalPriceBeforeDiscount > finalPriceToShow) {
+            const formattedOldPrice = formatCurrency(originalPriceBeforeDiscount);
+            const formattedNewPrice = formatCurrency(finalPriceToShow);
+            displayHTML = `<span class="old-price">${formattedOldPrice}</span><span class="new-price">${formattedNewPrice}</span>`;
+        } else {
+            const formattedPrice = formatCurrency(finalPriceToShow);
+            displayHTML = `<span class="new-price">${formattedPrice}</span>`;
+        }
+        priceBoxH4.innerHTML = displayHTML + tvaLabelHtml;
+    }
+
+    function applyReferralDiscountAndRender() {
+        const originalPrice = sumCheckedPrices();
+        const discountMessageEl = document.getElementById('discount-message');
+        let finalPrice = originalPrice;
+        let isDiscounted = false;
+
+        if (referralDiscountActive) {
+            finalPrice = originalPrice * (1 - REFERRAL_DISCOUNT_RATE);
+            isDiscounted = true;
+            if (discountMessageEl) {
+                discountMessageEl.style.display = 'block';
+            }
+        } else {
+            if (discountMessageEl) {
+                discountMessageEl.style.display = 'none';
+            }
+        }
+
+        render_price(finalPrice, isDiscounted, originalPrice);
+
+        queryArgs['SQF_PRICE'] = Math.round(finalPrice);
+    }
+
+
+    function generateOptions(options, tabID, inputName, append = false, inputType = 'radio') {
+        let tab = document.getElementById(tabID);
+        if (!tab) return;
+        let container = tab.querySelector('.options-container');
+        if (!container) return;
+
+        if (!options || options.length === 0 ) {
+                 if (!append) {
+                    const existingGroup = container.querySelector(`.radio-group.${inputName.toLowerCase().replace(/_/g, '-')}`);
+                    if (existingGroup) existingGroup.remove();
+                }
+                return;
+        }
+
+        let optionString = "";
+        const isTurnkey = queryArgs['SQF_FINISH'] === 'turnkey';
+
+        options.forEach(option => {
+            let isDisabled = false;
+            let isChecked = queryArgs[inputName] === option.slug;
+
+            const context = (inputName === "SQF_FINISH") ? "finishes" : (inputName === "SQF_FLOORPLAN" ? "floorplans" : "upgrades");
+
+            if (isTurnkey && (option.slug === 'ventilation-system' || option.slug === 'blinds') &&
+                (inputName === 'SQF_VENTILATION' || inputName === 'SQF_BLINDS')) {
+                const upgradeData = findUpgradeInCurrentFinish(option.slug);
+                if (upgradeData && upgradeData.included && upgradeData.price === 0) {
+                    isDisabled = true;
+                    isChecked = true;
+                }
+            } else if (inputName === 'SQF_VENTILATION' || inputName === 'SQF_BLINDS') {
+                 isChecked = queryArgs[inputName] === option.slug;
+            }
+            optionString += optionTemplate("radio-card", inputType, inputName, option.slug, option.name, option.price, context, isDisabled, isChecked, option);
+        });
+
+        let wrapperClass = 'radio-group ' + inputName.toLowerCase().replace(/_/g, '-') + (inputName === 'SQF_FINISH' ? ' sqf-finish' : '');
+        if (inputType === 'checkbox') wrapperClass += ' checkbox-group';
+
+        let fullGroupHTML = optionsWrapper(optionString, wrapperClass);
+
+        if (optionString.trim() !== "") {
+            if(!append) {
+                const existingGroup = container.querySelector(`div.${inputName.toLowerCase().replace(/_/g, '-')}`);
+                if (existingGroup) {
+                    existingGroup.remove();
+                }
+            }
+            container.insertAdjacentHTML('beforeend', fullGroupHTML);
+        } else if (!append) {
+                 const existingGroup = container.querySelector(`div.${inputName.toLowerCase().replace(/_/g, '-')}`);
+                 if (existingGroup) existingGroup.remove();
+        }
+    }
+
+    function generateParquetOptions(options, tabID, inputName, append = false, groupDefaultName = "Opțiuni"){
+        let tab = document.getElementById(tabID);
+        if (!tab) return;
+        let container = tab.querySelector('.options-container');
+        if (!container) return;
+
+        if (!options || options.length === 0) {
+            const existingWrapperClass = inputName.toLowerCase().replace(/_/g, '-');
+            const existingSectionWrapper = container.querySelector(`.parquet-section-wrapper.${existingWrapperClass}`);
+            if (existingSectionWrapper) {
+                existingSectionWrapper.remove();
+            }
+            return;
+        }
+
+        let optionString = "";
+        let firstName = "", firstPriceText = "";
+        let defaultCheckedSlug = queryArgs[inputName];
+
+        if (!defaultCheckedSlug || !options.find(opt => opt.slug === defaultCheckedSlug)) {
+            const includedFreeOption = options.find(opt => opt.included && opt.price === 0);
+            defaultCheckedSlug = includedFreeOption ? includedFreeOption.slug : (options.length > 0 ? options[0].slug : null);
+        }
+
+        if (defaultCheckedSlug && queryArgs[inputName] !== defaultCheckedSlug) {
+                queryArgs[inputName] = defaultCheckedSlug;
+        }
+
+        options.forEach((option) => {
+            let isDefaultChecked = (option.slug === defaultCheckedSlug);
+            optionString += parquetOption('radio', inputName, option.price, option.slug, option.name, option.icon, isDefaultChecked);
+            if (isDefaultChecked) {
+                firstName = option.name;
+                if (option.price === 0 && option.included) { firstPriceText = "Inclus"; }
+                else if (option.price === 0) { firstPriceText = "Inclus"; }
+                else { firstPriceText = `${formatCurrency(option.price)} + TVA`; }
+            }
+        });
+
+        if(optionString.trim() !== "") {
+            const sectionWrapperClass = 'parquet-section-wrapper ' + inputName.toLowerCase().replace(/_/g, '-');
+            const existingOldWrapper = container.querySelector(`.${sectionWrapperClass.replace(/\s/g,'.')}`);
+            if(existingOldWrapper && !append) {
+                existingOldWrapper.remove();
+            }
+
+            const parquetSectionWrapper = document.createElement('div');
+            parquetSectionWrapper.className = sectionWrapperClass;
+            parquetSectionWrapper.dataset.groupName = inputName;
+
+            const groupTitleElement = document.createElement('h4');
+            groupTitleElement.textContent = groupDefaultName || inputName.replace('SQF_', '').replace(/_/g, ' ');
+            groupTitleElement.style.marginBottom = '10px';
+
+            let parquetIconsGroupHTML = optionsWrapper(optionString, 'radio-group parquet-checkboxes ' + inputName.toLowerCase().replace(/_/g, '-'));
+            let displayLabelId = `display-label-${inputName}`;
+            let displayPriceId = `display-price-${inputName}`;
+            let parquetLabelsHTML = `<div class="p-wrapper"><p id="${displayLabelId}">${firstName}</p><p id="${displayPriceId}" class="option-price">${firstPriceText}</p></div>`;
+
+            parquetSectionWrapper.appendChild(groupTitleElement);
+            parquetSectionWrapper.insertAdjacentHTML('beforeend', parquetIconsGroupHTML + parquetLabelsHTML);
+
+            if (append) {
+                    container.appendChild(parquetSectionWrapper);
+            } else {
+                    container.appendChild(parquetSectionWrapper);
+            }
+        }
+    }
+
+    function updateParquetPriceAndLabel(target) {
+        const displayLabelText = target.getAttribute('data-display-label');
+        const displayPriceText = target.getAttribute('data-display-price');
+        const inputName = target.name;
+        const wrapper = target.closest('.parquet-section-wrapper');
+        if (!wrapper) return;
+        const labelEl = wrapper.querySelector(`#display-label-${inputName}`);
+        const priceEl = wrapper.querySelector(`#display-price-${inputName}`);
+        if(labelEl) labelEl.textContent = displayLabelText || '';
+        if(priceEl) priceEl.textContent = displayPriceText || '';
+    }
+
+    function addEventListeners() {
+        const form = document.querySelector('.multistep-form');
+        if (form) {
+            form.addEventListener('change', (event) => {
+                const target = event.target;
+                if ((target.tagName === 'INPUT' || target.tagName === 'SELECT') && !target.disabled) {
+                    if (target.name === 'SQF_MODEL_SELECT') return;
+
+                    const currentFormTab = target.closest('.form-tab');
+                    if (currentFormTab) removeNotification(currentFormTab);
+
+                    let optionContext = "upgrade";
+                    if (target.name === 'SQF_FINISH') optionContext = "finish";
+                    else if (target.name === 'SQF_FLOORPLAN') optionContext = "floorplan";
+
+                    if (target.name === 'SQF_FINISH') {
+                        queryArgs['SQF_FINISH'] = target.value;
+                        const upgradeParamsToClear = ['SQF_PARQUET', 'SQF_FACADE', 'SQF_VENTILATION', 'SQF_BLINDS'];
+                        upgradeParamsToClear.forEach(key => {
+                            delete queryArgs[key];
+                        });
+                        if (queryArgs['SQF_FINISH'] === 'turnkey') {
+                            const houseData = config[type];
+                            const turnkeyData = houseData.options.find(opt => opt.slug === 'turnkey');
+                            if (turnkeyData && turnkeyData.upgrades) {
+                                turnkeyData.upgrades.forEach(group => {
+                                    group.forEach(upgrade => {
+                                        if ((upgrade.slug === 'ventilation-system' || upgrade.slug === 'blinds') && upgrade.included && upgrade.price === 0) {
+                                            if(upgrade.slug === 'ventilation-system') queryArgs['SQF_VENTILATION'] = upgrade.slug;
+                                            if(upgrade.slug === 'blinds') queryArgs['SQF_BLINDS'] = upgrade.slug;
+                                        }
+                                    });
+                                });
+                            }
+                        }
+                        render_upgrades(target.value);
+
+                        const finishDetailsLink = document.querySelector('#step-1 .feature-details-link');
+                        const newFinishDataForLink = config[type].options.find(o => o.slug === target.value);
+                        if (finishDetailsLink && newFinishDataForLink) {
+                            finishDetailsLink.textContent = `Explorează ce este inclus în ${newFinishDataForLink.name}`;
+                        }
+                    } else if (target.classList.contains('custom-checkbox')) {
+                        updateParquetPriceAndLabel(target);
+                    } else if (target.name === 'SQF_FLOORPLAN') {
+                        const floorplanData = config[type].floorplan.find(f => f.slug === target.value);
+                        const floorplanDetailsLink = document.querySelector('#step-2 .feature-details-link');
+                        if(floorplanDetailsLink && floorplanData && floorplanData.name){
+                            floorplanDetailsLink.textContent = `Vezi detaliile planului ${floorplanData.name.replace('Plan ', '')}`;
+                        } else if (floorplanDetailsLink) {
+                            floorplanDetailsLink.textContent = "Vezi detaliile planului";
+                        }
+                        updateModelDescription();
+                    }
+
+                    if (target.type === 'checkbox' && (target.name === 'SQF_VENTILATION' || target.name === 'SQF_BLINDS')) {
+                        if (target.checked) {
+                            queryArgs[target.name] = target.value;
+                        } else {
+                            const isTurnkey = queryArgs['SQF_FINISH'] === 'turnkey';
+                            const upgradeInfo = findUpgradeInCurrentFinish(target.value);
+                            if (!(isTurnkey && upgradeInfo && upgradeInfo.included && upgradeInfo.price === 0)) {
+                                delete queryArgs[target.name];
+                            }
+                        }
+                    } else if (target.type === 'checkbox') {
+                        if (target.checked) queryArgs[target.name] = target.value;
+                        else delete queryArgs[target.name];
+                    }
+                    else {
+                        queryArgs[target.name] = target.value;
+                    }
+
+                    changeImages(target.value, optionContext);
+                    applyReferralDiscountAndRender();
+                    updateURL();
+                }
+            });
+
+            form.addEventListener('click', (event) => {
+                let target = event.target;
+                let inputElement = null;
+
+                if (target.tagName === 'LABEL') {
+                    const forId = target.getAttribute('for');
+                    if (forId) inputElement = document.getElementById(forId);
+                    else inputElement = target.querySelector('input[type="radio"], input[type="checkbox"]');
+                } else if (target.closest('label')) {
+                    const parentLabel = target.closest('label');
+                    const forId = parentLabel.getAttribute('for');
+                    if (forId) inputElement = document.getElementById(forId);
+                    else inputElement = parentLabel.querySelector('input[type="radio"], input[type="checkbox"]');
+                } else if (target.tagName === 'INPUT' && (target.type === 'radio' || target.type === 'checkbox')) {
+                    inputElement = target;
+                }
+
+                if (inputElement && inputElement.checked && !inputElement.disabled) {
+                    let optionContext = "upgrade";
+                    if (inputElement.name === 'SQF_FINISH') optionContext = "finish";
+                    else if (inputElement.name === 'SQF_FLOORPLAN') optionContext = "floorplan";
+
+                    changeImages(inputElement.value, optionContext);
+                }
+            });
+        }
+
+        const referralInput = document.getElementById('referral-code-input');
+        if (referralInput) {
+            referralInput.addEventListener('input', () => {
+                const enteredCode = referralInput.value.trim().toUpperCase();
+                referralDiscountActive = VALID_REFERRAL_CODES.includes(enteredCode);
+                applyReferralDiscountAndRender();
+                updateURL();
+            });
+        }
+
+        if(modalOverlay) modalOverlay.addEventListener('click', (evt) => { if (evt.target === modalOverlay) modalOverlay.style.display = 'none'; });
+        document.body.addEventListener('click', function(event){ if(event.target && event.target.id === 'closeModal' && modalOverlay) modalOverlay.style.display = 'none'; });
+
+         const finalContinueBtnRef = document.getElementById('finalContinueBtn');
+         if (finalContinueBtnRef) {
+             finalContinueBtnRef.addEventListener('click', () => {
+                 let allValid = true;
+
+                 if (!queryArgs['SQF_FINISH']) {
+                     showNotification(document.getElementById('step-1'), "Vă rugăm să selectați un tip de finisaj.");
+                     allValid = false;
+                 }
+
+                 if (!queryArgs['SQF_FLOORPLAN']) {
+                     showNotification(document.getElementById('step-2'), "Vă rugăm să selectați un plan de etaj.");
+                     allValid = false;
+                 }
+
+                 const upgradeContainer = document.getElementById('step-3');
+                 if (upgradeContainer) {
+                     const visibleRadioUpgradeInputs = upgradeContainer.querySelectorAll('.options-container .radio-group:not([style*="display: none"]) input[type="radio"], .options-container .parquet-checkboxes input[type="radio"]');
+                     const uniqueVisibleRadioNames = new Set();
+
+                     visibleRadioUpgradeInputs.forEach(radio => {
+                         const parentGroup = radio.closest('.radio-group, .parquet-checkboxes');
+                         const sectionWrapper = radio.closest('.parquet-section-wrapper');
+                         if ((parentGroup && parentGroup.offsetParent !== null) || (sectionWrapper && sectionWrapper.offsetParent !== null)) {
+                             if(!radio.name.includes("SQF_VENTILATION") && !radio.name.includes("SQF_BLINDS")){
+                                 uniqueVisibleRadioNames.add(radio.name);
+                             }
+                         }
+                     });
+
+                     uniqueVisibleRadioNames.forEach(name => {
+                         const isRenderedRadioOrParquet = upgradeRenderConfig.some(cfg => cfg.queryParam === name && (cfg.type === 'radio' || cfg.type === 'parquet'));
+                         if (isRenderedRadioOrParquet && !queryArgs[name] && !document.querySelector(`input[name="${name}"]:checked`)) {
+                             const problemGroup = document.querySelector(`input[name="${name}"]`).closest('.parquet-section-wrapper, .radio-group');
+                             const titleElement = problemGroup ? problemGroup.querySelector('h4') : null;
+                             const groupTitle = titleElement ? titleElement.textContent : name.replace('SQF_', '').replace(/_/g, ' ');
+                             showNotification(document.getElementById('step-3'), `Vă rugăm să faceți o selecție pentru ${groupTitle}.`);
+                             allValid = false;
+                         }
+                     });
+                 }
+
+                 if (!allValid) {
+                     const firstInvalid = document.querySelector('.notification')?.closest('.form-tab');
+                     if (firstInvalid) {
+                         if (rightContentElement && window.innerWidth > 768) {
+                             rightContentElement.scrollTo({ top: firstInvalid.offsetTop - 20, behavior: 'smooth' });
+                         } else {
+                             window.scrollTo({ top: firstInvalid.getBoundingClientRect().top + window.scrollY - 70, behavior: 'smooth' });
+                         }
+                     }
+                     return;
+                 }
+
+                 const targetUrlParams = new URLSearchParams();
+                 const targetOrderedKeys = ['SQF_TYPE', 'SQF_FINISH', 'SQF_FLOORPLAN', 'SQF_PARQUET', 'SQF_FACADE', 'SQF_VENTILATION', 'SQF_BLINDS', 'SQF_PRICE'];
+                 targetOrderedKeys.forEach(key => {
+                     if (queryArgs[key] !== null && queryArgs[key] !== undefined && String(queryArgs[key]).trim() !== "") {
+                         targetUrlParams.set(key, queryArgs[key]);
+                     }
+                 });
+
+                 for (const key in queryArgs) {
+                     if (!targetOrderedKeys.includes(key) && queryArgs[key] !== null && queryArgs[key] !== undefined && String(queryArgs[key]).trim() !== "") {
+                         if (key !== 'SQF_REFERRAL_CODE' && key !== 'SQF_REFERRAL_NAME' && key !== 'SQF_REFERRAL_VALID') {
+                             targetUrlParams.set(key, queryArgs[key]);
+                         }
+                     }
+                 }
+
+                 const currentReferralCodeInput = document.getElementById('referral-code-input');
+                 const currentReferralCodeValue = currentReferralCodeInput ? currentReferralCodeInput.value.trim() : "";
+
+                 if (currentReferralCodeValue) {
+                     const enteredCodeUpper = currentReferralCodeValue.toUpperCase();
+                     if (referralDiscountActive && VALID_REFERRAL_CODES.includes(enteredCodeUpper)) {
+                         const capitalizedName = currentReferralCodeValue.charAt(0).toUpperCase() + currentReferralCodeValue.slice(1).toLowerCase();
+                         targetUrlParams.set('SQF_REFERRAL_NAME', capitalizedName);
+                         targetUrlParams.set('SQF_REFERRAL_VALID', 'yes4');
+                     }
+                 }
+
+                 window.location.href = '/ro-ro/design/form/' + (targetUrlParams.toString() ? '?' + targetUrlParams.toString() : '');
+             });
+         }
+
+    const leftImagesPanel = document.querySelector('.config .left-images');
+    if (leftImagesPanel && rightContentElement && window.innerWidth > 768) {
+            leftImagesPanel.addEventListener('wheel', function(event) {
+                if (rightContentElement.scrollHeight > rightContentElement.clientHeight) {
+                    rightContentElement.scrollTop += event.deltaY;
+                    event.preventDefault();
+                }
+            }, { passive: false });
+    }
+}
+
+function showNotification(sectionElementOrId, text = "") {
+    let sectionElement = (typeof sectionElementOrId === 'string') ? document.getElementById(sectionElementOrId) : sectionElementOrId;
+    if (!sectionElement) return;
+    removeNotification(sectionElement);
+    let notification = document.createElement('div');
+    notification.classList.add('notification');
+    notification.textContent = text || 'Vă rugăm să faceți o selecție.';
+
+    const optionsContainer = sectionElement.querySelector('.options-container');
+    if (optionsContainer) {
+        const firstGroup = optionsContainer.querySelector('.radio-group, .parquet-section-wrapper, .checkbox-group, h4, .custom-text-input, .model-select-wrapper');
+        if(firstGroup) {
+            optionsContainer.insertBefore(notification, firstGroup);
+        } else {
+            optionsContainer.prepend(notification);
+        }
+    }
+    else {
+        sectionElement.prepend(notification);
+    }
+}
+
+function removeNotification(sectionElementOrId) {
+    let sectionElement = (typeof sectionElementOrId === 'string') ? document.getElementById(sectionElementOrId) : sectionElementOrId;
+    if (!sectionElement) return;
+    const notification = sectionElement.querySelector('.notification');
+    if (notification) notification.remove();
+}
+
+function getUrlParameter(name) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(name) || null;
+}
+
+function formatCurrency(amount) {
+    if (typeof amount === 'string' && isNaN(parseFloat(amount))) return amount;
+    return new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR', minimumFractionDigits: 0, maximumFractionDigits:0 }).format(amount);
+}
+
+function sumCheckedPrices() {
+    let sum = 0;
+
+    const selectedFinishSlug = queryArgs['SQF_FINISH'];
+    if (selectedFinishSlug && config[type]) {
+        const finishData = config[type].options.find(opt => opt.slug === selectedFinishSlug);
+        if (finishData && typeof finishData.price === 'number') {
+            sum += finishData.price;
+        }
+    }
+
+    const upgradeKeys = ['SQF_PARQUET', 'SQF_FACADE', 'SQF_VENTILATION', 'SQF_BLINDS'];
+    upgradeKeys.forEach(key => {
+        const selectedUpgradeSlug = queryArgs[key];
+        if (selectedUpgradeSlug) {
+            const upgradeData = findUpgradeInCurrentFinish(selectedUpgradeSlug);
+            const inputElement = document.querySelector(`.multistep-form input[name="${key}"][value="${selectedUpgradeSlug}"]`);
+            if (upgradeData && typeof upgradeData.price === 'number' && upgradeData.price > 0 && inputElement && !inputElement.disabled) {
+                sum += upgradeData.price;
+            }
+        }
+    });
+    return sum;
+}
+
+function updateURL() {
+    const params = new URLSearchParams();
+    const orderedKeys = ['SQF_TYPE', 'SQF_FINISH', 'SQF_FLOORPLAN', 'SQF_PARQUET', 'SQF_FACADE', 'SQF_VENTILATION', 'SQF_BLINDS', 'SQF_PRICE'];
+    orderedKeys.forEach(key => {
+        if (queryArgs[key] !== null && queryArgs[key] !== undefined && String(queryArgs[key]).trim() !== "") {
+            params.set(key, queryArgs[key]); }
+    });
+
+    for (const key in queryArgs) {
+        if (!orderedKeys.includes(key) && queryArgs[key] !== null && queryArgs[key] !== undefined && String(queryArgs[key]).trim() !== "") {
+            params.set(key, queryArgs[key]); }
+    }
+
+    const referralCodeInputEl = document.getElementById('referral-code-input');
+    const referralCodeValueFromInput = referralCodeInputEl ? referralCodeInputEl.value.trim() : "";
+
+    if (referralDiscountActive && referralCodeValueFromInput && VALID_REFERRAL_CODES.includes(referralCodeValueFromInput.toUpperCase())) {
+        params.set('SQF_REFERRAL_CODE', referralCodeValueFromInput.toUpperCase());
+    } else {
+        params.delete('SQF_REFERRAL_CODE');
+    }
+
+    const newSearch = params.toString() ? '?' + params.toString() : '';
+    if (window.location.search !== newSearch) {
+        history.replaceState(null, '', window.location.pathname + newSearch);
+    }
+}
+
+function findUpgrade(slug, finishContextSlug) {
+    let finishSlugToSearch = finishContextSlug || queryArgs['SQF_FINISH'];
+    if (!finishSlugToSearch || !config[type] || !config[type].options) return null;
+
+    const currentFinishOption = config[type].options.find(opt => opt.slug === finishSlugToSearch);
+    if (!currentFinishOption || !currentFinishOption.upgrades) return null;
+
+    for (let upgradeGroup of currentFinishOption.upgrades) {
+        if (Array.isArray(upgradeGroup)) {
+            const upgrade = upgradeGroup.find(item => item.slug === slug);
+            if (upgrade) return upgrade;
+        }
+    }
+    return null;
+}
+
+function findUpgradeInCurrentFinish(upgradeSlug) {
+    let currentFinishSlug = queryArgs['SQF_FINISH'] || (config[type] && config[type].options.length > 0 ? config[type].options[0].slug : null);
+    if (!currentFinishSlug) return null;
+
+    const finishData = config[type].options.find(opt => opt.slug === currentFinishSlug);
+
+    if (!finishData || !finishData.upgrades) return null;
+    for (let upgradeGroup of finishData.upgrades) {
+        if (Array.isArray(upgradeGroup)) {
+            const upgrade = upgradeGroup.find(item => item.slug === upgradeSlug);
+            if (upgrade) return upgrade;
+        }
+    }
+
+    return null;
+}
+
+})();
