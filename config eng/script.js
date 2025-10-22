@@ -116,7 +116,7 @@
                 image: solarImage,
                 price: 7800,
                 included: false,
-                name: "Solar Zero Energy Kit",
+                name: "Solar Pannels - Zero Energy",
               },
             ],
           ],
@@ -209,7 +209,7 @@
                 image: solarImage,
                 price: 7800,
                 included: false,
-                name: "Solar Zero Energy Kit",
+                name: "Solar Pannels - Zero Energy",
               },
             ],
           ],
@@ -332,7 +332,7 @@
                 image: solarImage,
                 price: 11800,
                 included: false,
-                name: "Solar Zero Energy Kit",
+                name: "Solar Pannels - Zero Energy",
               },
             ],
           ],
@@ -425,7 +425,7 @@
                 image: solarImage,
                 price: 11800,
                 included: false,
-                name: "Solar Zero Energy Kit",
+                name: "Solar Pannels - Zero Energy",
               },
             ],
           ],
@@ -548,7 +548,7 @@
                 image: solarImage,
                 price: 14800,
                 included: false,
-                name: "Solar Zero Energy Kit",
+                name: "Solar Pannels - Zero Energy",
               },
             ],
           ],
@@ -641,7 +641,7 @@
                 image: solarImage,
                 price: 14800,
                 included: false,
-                name: "Solar Zero Energy Kit",
+                name: "Solar Pannels - Zero Energy",
               },
             ],
           ],
@@ -773,7 +773,7 @@
                 image: solarImage,
                 price: 16800,
                 included: false,
-                name: "Solar Zero Energy Kit",
+                name: "Solar Pannels - Zero Energy",
               },
             ],
           ],
@@ -866,7 +866,7 @@
                 image: solarImage,
                 price: 16800,
                 included: false,
-                name: "Solar Zero Energy Kit",
+                name: "Solar Pannels - Zero Energy",
               },
             ],
           ],
@@ -943,7 +943,7 @@ SMART SYSTEMS // TITLE
 Lighting track<split>Flexible configuration for LEDs and spotlights; modern aesthetic.
 Smart Lighting<split>Philips HUE or IKEA TRÅDFRI; easy Smart configuration.
 Smart exterior blinds<split>Block > 95% of solar radiation; app/manual control; certified by the Passive House Institute in Darmstadt, Germany; CE certified.
-Genvex Premium Preheat 250<split>Up to 95% heat recovery; integrated heat pump for heating and cooling.
+Zhender Ventilation System<split>Up to 95% heat recovery + heat pump for heating and cooling.
 CERTIFICATIONS AND WARRANTIES // TITLE
 Passivhaus Certification<split>Issued by the Passive House Institute (Germany), attests to unprecedented energy efficiency, exceptional comfort. For a permanent home built to the strictest international standards.
 EPD Certification<split>Issued by EPD International, confirms a carbon-negative product and responsible construction practices.
@@ -1289,7 +1289,7 @@ Technical Performance<split>The mentioned performances (including energy consump
       groupIndex: 4,
       queryParam: "SQF_SOLAR",
       type: "checkbox",
-      defaultName: "Solar Zero Energy Kit",
+      defaultName: "Solar Pannels - Zero Energy",
     },
   ];
 
