@@ -943,7 +943,7 @@ Walk-in-Dusche<split>In Frankreich entworfen; minimalistisches, modernes Design.
 SMART-SYSTEME // TITLE
 Stromschiene<split>Flexible Konfiguration für LED und Spots; modernes Erscheinungsbild.
 Smarte Außenjalousien<split>>95 % Sonneneinstrahlung abgeschirmt; App-/manuelle Steuerung; zertifiziert vom Passivhaus Institut Darmstadt; CE-zertifiziert.
-Genvex Premium Preheat 250<split>Bis zu 95 % Wärmerückgewinnung; integrierte Wärmepumpe zum Heizen und Kühlen.
+Zehnder Lüftungssystem<split>Bis zu 95 % Wärmerückgewinnung + Wärmepumpe zum Heizen und Kühlen.
 ZERTIFIKATE UND GARANTIEN // TITLE
 Passivhaus-Zertifizierung<split>Ausgestellt vom Passivhaus Institut (Deutschland); bestätigt höchste Energieeffizienz und Komfort.
 EPD-Zertifizierung<split>Ausgestellt von EPD International; bestätigt CO₂-negative Bilanz und verantwortungsvolles Bauen.
