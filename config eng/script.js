@@ -20,10 +20,10 @@
   const yakisugiImageUrl = ""; // This remains empty to use the main model image as a fallback
 
   let config = {
-    "nomad-24": {
+    "nest-24": {
       image:
         "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4339236794245a361e6b9_742d4a56b01c157fcfb78d250a5c284b_24m2%20Nomad%204.1.avif",
-      name: "Nomad",
+      name: "Nest",
       energy: 34920,
       basePriceText: "From €39,800",
       options: [
@@ -36,11 +36,11 @@
           images: [
             {
               src: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282f0499f53b61b42090_24m2%20Nomad%20OSB%204.0.avif",
-              alt: "Nomad Semi-finished Top",
+              alt: "Nest Semi-finished Top",
             },
             {
               src: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4339236794245a361e6b9_742d4a56b01c157fcfb78d250a5c284b_24m2%20Nomad%204.1.avif",
-              alt: "Nomad Semi-finished Bottom",
+              alt: "Nest Semi-finished Bottom",
             },
           ],
           upgrades: [
@@ -130,11 +130,11 @@
           images: [
             {
               src: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283437fe5ebcf02aa7ab_24m2%20Nomad%20Interior%204.0.avif",
-              alt: "Nomad Turnkey Top",
+              alt: "Nest Turnkey Top",
             },
             {
               src: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4339236794245a361e6b9_742d4a56b01c157fcfb78d250a5c284b_24m2%20Nomad%204.1.avif",
-              alt: "Nomad Turnkey Bottom",
+              alt: "Nest Turnkey Bottom",
             },
           ],
           upgrades: [
@@ -1110,7 +1110,7 @@ Technical Performance<split>The mentioned performances (including energy consump
       ? "sanctuary-142"
       : validTypes.length > 0
         ? validTypes[0]
-        : "nomad-24";
+        : "nest-24";
   }
 
   let queryArgs = {};
@@ -1585,7 +1585,7 @@ Technical Performance<split>The mentioned performances (including energy consump
       sanctuary: "142m² - 4 bedrooms",
       serenity: "95m² - 3 bedrooms",
       wanderlust: "48m² - 1 or 2 bedrooms",
-      nomad: "24m² - 1 bedroom",
+      nest: "24m² - 1 bedroom",
     };
 
     const modelName = type.split("-")[0];
