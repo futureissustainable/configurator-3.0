@@ -21,10 +21,10 @@
   const yakisugiImageUrl = ""; // This remains empty to use the main model image as a fallback
 
   let config = {
-    "nomad-24": {
+    "nest-24": {
       image:
         "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4339236794245a361e6b9_742d4a56b01c157fcfb78d250a5c284b_24m2%20Nomad%204.1.avif",
-      name: "Nomad",
+      name: "Nest",
       energy: 34920,
       basePriceText: "Ab 39.800 €",
       options: [
@@ -37,11 +37,11 @@
           images: [
             {
               src: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282f0499f53b61b42090_24m2%20Nomad%20OSB%204.0.avif",
-              alt: "Nomad Ausbauhaus oben",
+              alt: "Nest Ausbauhaus oben",
             },
             {
               src: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4339236794245a361e6b9_742d4a56b01c157fcfb78d250a5c284b_24m2%20Nomad%204.1.avif",
-              alt: "Nomad Ausbauhaus unten",
+              alt: "Nest Ausbauhaus unten",
             },
           ],
           upgrades: [
@@ -131,11 +131,11 @@
           images: [
             {
               src: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283437fe5ebcf02aa7ab_24m2%20Nomad%20Interior%204.0.avif",
-              alt: "Nomad Schlüsselfertig oben",
+              alt: "Nest Schlüsselfertig oben",
             },
             {
               src: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4339236794245a361e6b9_742d4a56b01c157fcfb78d250a5c284b_24m2%20Nomad%204.1.avif",
-              alt: "Nomad Schlüsselfertig unten",
+              alt: "Nest Schlüsselfertig unten",
             },
           ],
           upgrades: [
@@ -1080,7 +1080,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       ? "sanctuary-142"
       : validTypes.length > 0
         ? validTypes[0]
-        : "nomad-24";
+        : "nest-24";
   }
 
   let queryArgs = {};
@@ -1541,7 +1541,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       sanctuary: "142 m² – 4 Schlafzimmer",
       serenity: "95 m² – 3 Schlafzimmer",
       wanderlust: "48 m² – 1 oder 2 Schlafzimmer",
-      nomad: "24 m² – 1 Schlafzimmer",
+      nest: "24 m² – 1 Schlafzimmer",
     };
 
     const modelName = type.split("-")[0];
