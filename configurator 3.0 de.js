@@ -12,8 +12,8 @@ const yakisugiImageUrl = ""; // This remains empty to use the main model image a
 
 // Price breakdown data
 const priceBreakdowns = {
-    'nomad-24': {
-        title: 'Nomad – 24 m²',
+    'nest-24': {
+        title: 'Nest – 24 m²',
         beforeConstruction: {
             title: 'Vor Baubeginn',
             items: [
@@ -182,7 +182,7 @@ const priceBreakdowns = {
 
 
 let config = {
-    'nomad-24' : {
+    'nest-24' : {
         "image" : "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4339236794245a361e6b9_742d4a56b01c157fcfb78d250a5c284b_24m2%20Nomad%204.1.avif",
         "name": "Nest", "energy": 34920, "basePriceText": "Ab 39.800 €",
         "options" : [
@@ -491,7 +491,7 @@ let totalPrice = 0;
 let type = getUrlParameter('SQF_TYPE');
 if(type === null || !config[type]) {
     const validTypes = Object.keys(config);
-    type = validTypes.includes('sanctuary-142') ? 'sanctuary-142' : (validTypes.length > 0 ? validTypes[0] : 'nomad-24');
+    type = validTypes.includes('sanctuary-142') ? 'sanctuary-142' : (validTypes.length > 0 ? validTypes[0] : 'nest-24');
 }
 
 let queryArgs = {};
@@ -921,7 +921,7 @@ function updateModelDescription() {
         'sanctuary': '142m² - 4 Schlafzimmer',
         'serenity': '95m² - 3 Schlafzimmer',
         'wanderlust': '48m² - 1 oder 2 Schlafzimmer',
-        'nomad': '24m² - 1 Schlafzimmer'
+        'nest': '24m² - 1 Schlafzimmer'
     };
 
     const modelName = type.split('-')[0];
