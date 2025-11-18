@@ -660,7 +660,7 @@
             'sanctuary': '142m² - 4 dormitoare',
             'serenity': '95m² - 3 dormitoare',
             'wanderlust': '48m² - 1 sau 2 dormitoare',
-            'nomad': '24m² - 1 dormitor'
+            'nest': '24m² - 1 dormitor'
         };
 
         const modelName = type.split('-')[0];
