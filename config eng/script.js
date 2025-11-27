@@ -1170,22 +1170,35 @@ Technical Performance<split>The mentioned performances (including energy consump
   function handleStickyBottomAnimation() {
     if (!btn || !box) return;
 
-    let scrollTop, scrollHeight, clientHeight;
     const isDesktop = window.innerWidth > 768;
 
-    if (isDesktop && rightContentElement) {
-      scrollTop = rightContentElement.scrollTop;
-      scrollHeight = rightContentElement.scrollHeight;
-      clientHeight = rightContentElement.clientHeight;
-    } else {
-      scrollTop = window.scrollY || document.documentElement.scrollTop;
-      scrollHeight = document.documentElement.scrollHeight;
-      clientHeight = document.documentElement.clientHeight;
+    // Calculate scroll percentage from both sources and use the maximum
+    let scrollPercent = 0;
+
+    // Check window scroll
+    const windowScrollTop = window.scrollY || document.documentElement.scrollTop;
+    const windowScrollHeight = document.documentElement.scrollHeight;
+    const windowClientHeight = document.documentElement.clientHeight;
+    const windowScrollableHeight = windowScrollHeight - windowClientHeight;
+    if (windowScrollableHeight > 0) {
+      scrollPercent = Math.max(scrollPercent, (windowScrollTop / windowScrollableHeight) * 100);
     }
 
-    const scrollableHeight = scrollHeight - clientHeight;
-    const scrollPercent =
-      scrollableHeight <= 0 ? 100 : (scrollTop / scrollableHeight) * 100;
+    // Check rightContentElement scroll on desktop
+    if (isDesktop && rightContentElement) {
+      const elemScrollTop = rightContentElement.scrollTop;
+      const elemScrollHeight = rightContentElement.scrollHeight;
+      const elemClientHeight = rightContentElement.clientHeight;
+      const elemScrollableHeight = elemScrollHeight - elemClientHeight;
+      if (elemScrollableHeight > 0) {
+        scrollPercent = Math.max(scrollPercent, (elemScrollTop / elemScrollableHeight) * 100);
+      }
+    }
+
+    // If neither is scrollable, assume 100%
+    if (windowScrollableHeight <= 0 && (!rightContentElement || rightContentElement.scrollHeight <= rightContentElement.clientHeight)) {
+      scrollPercent = 100;
+    }
 
     // Get or create the reservation link
     let reservationLink = document.getElementById("reservation-link");
@@ -1226,32 +1239,42 @@ Technical Performance<split>The mentioned performances (including energy consump
     const progressBar = document.getElementById("scroll-progress-bar-bottom");
     if (!progressBar) return;
 
-    let scrollTop, scrollHeight, clientHeight;
     const isDesktop = window.innerWidth > 768;
 
-    if (isDesktop && rightContentElement) {
-      scrollTop = rightContentElement.scrollTop;
-      scrollHeight = rightContentElement.scrollHeight;
-      clientHeight = rightContentElement.clientHeight;
-    } else {
-      scrollTop = window.scrollY || document.documentElement.scrollTop;
-      scrollHeight = document.documentElement.scrollHeight;
-      clientHeight = document.documentElement.clientHeight;
+    // Calculate scroll percentage from both sources and use the maximum
+    let scrollPercent = 0;
+    let hasScrollableContent = false;
+
+    // Check window scroll
+    const windowScrollTop = window.scrollY || document.documentElement.scrollTop;
+    const windowScrollHeight = document.documentElement.scrollHeight;
+    const windowClientHeight = document.documentElement.clientHeight;
+    const windowScrollableHeight = windowScrollHeight - windowClientHeight;
+    if (windowScrollableHeight > 0) {
+      hasScrollableContent = true;
+      scrollPercent = Math.max(scrollPercent, (windowScrollTop / windowScrollableHeight) * 100);
     }
 
-    const scrollableHeight = scrollHeight - clientHeight;
-    if (scrollableHeight <= 0) {
+    // Check rightContentElement scroll on desktop
+    if (isDesktop && rightContentElement) {
+      const elemScrollTop = rightContentElement.scrollTop;
+      const elemScrollHeight = rightContentElement.scrollHeight;
+      const elemClientHeight = rightContentElement.clientHeight;
+      const elemScrollableHeight = elemScrollHeight - elemClientHeight;
+      if (elemScrollableHeight > 0) {
+        hasScrollableContent = true;
+        scrollPercent = Math.max(scrollPercent, (elemScrollTop / elemScrollableHeight) * 100);
+      }
+    }
+
+    // If no scrollable content, show 100%
+    if (!hasScrollableContent) {
       progressBar.style.width = "100%";
       return;
     }
 
-    const scrollPercent = (scrollTop / scrollableHeight) * 100;
     const activationThreshold = 85;
-
-    const progressBarWidth = Math.min(
-      100,
-      (scrollPercent / activationThreshold) * 100,
-    );
+    const progressBarWidth = Math.min(100, (scrollPercent / activationThreshold) * 100);
     progressBar.style.width = `${progressBarWidth}%`;
   }
 
@@ -1266,16 +1289,29 @@ Technical Performance<split>The mentioned performances (including energy consump
   }
 
   function setupUnifiedScrollListener() {
-    const newIsDesktop = window.innerWidth > 768;
-    if (currentScrollTarget) {
+    // Remove previous listeners
+    if (currentScrollTarget && currentScrollTarget !== window) {
       currentScrollTarget.removeEventListener("scroll", unifiedScrollHandler);
     }
-    currentScrollTarget =
-      newIsDesktop && rightContentElement ? rightContentElement : window;
-    currentScrollTarget.addEventListener("scroll", unifiedScrollHandler, {
-      passive: true,
-    });
+    window.removeEventListener("scroll", unifiedScrollHandler);
+
+    const isDesktop = window.innerWidth > 768;
+
+    // Always listen on window
+    window.addEventListener("scroll", unifiedScrollHandler, { passive: true });
+
+    // Also listen on rightContentElement for desktop
+    if (isDesktop && rightContentElement) {
+      rightContentElement.addEventListener("scroll", unifiedScrollHandler, { passive: true });
+      currentScrollTarget = rightContentElement;
+    } else {
+      currentScrollTarget = window;
+    }
+
+    // Run immediately and after a delay
+    unifiedScrollHandler();
     setTimeout(unifiedScrollHandler, 250);
+    setTimeout(unifiedScrollHandler, 500);
   }
 
   // REMOVED: All variables and functions related to scroll-based image changes are no longer needed.
