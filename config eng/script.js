@@ -3075,7 +3075,11 @@ Technical Performance<split>The mentioned performances (including energy consump
 
     const newSearch = params.toString() ? "?" + params.toString() : "";
     if (window.location.search !== newSearch) {
-      history.replaceState(null, "", window.location.pathname + newSearch);
+      try {
+        history.replaceState(null, "", window.location.pathname + newSearch);
+      } catch (e) {
+        // Cross-origin restriction - ignore silently
+      }
     }
   }
 
