@@ -1187,14 +1187,38 @@ Technical Performance<split>The mentioned performances (including energy consump
     const scrollPercent =
       scrollableHeight <= 0 ? 100 : (scrollTop / scrollableHeight) * 100;
 
+    // Get or create the reservation link
+    let reservationLink = document.getElementById("reservation-link");
+
     if (scrollPercent >= 70) {
       btn.disabled = false;
       btn.classList.add("active");
       box.classList.add("raise");
+
+      // Show reservation link when button is active
+      if (!reservationLink) {
+        const buttonRow = document.querySelector(".button-row");
+        if (buttonRow) {
+          reservationLink = document.createElement("a");
+          reservationLink.id = "reservation-link";
+          reservationLink.href = "#";
+          reservationLink.textContent = "Or reserve your 2026 production slot now (€50, fully refundable)";
+          reservationLink.style.cssText = "display: block; text-align: center; margin-top: 12px; font-size: 0.85rem; color: #737579; text-decoration: underline; font-weight: 300;";
+          buttonRow.parentNode.insertBefore(reservationLink, buttonRow.nextSibling);
+        }
+      }
+      if (reservationLink) {
+        reservationLink.style.display = "block";
+      }
     } else {
       btn.disabled = true;
       btn.classList.remove("active");
       box.classList.remove("raise");
+
+      // Hide reservation link when button is not active
+      if (reservationLink) {
+        reservationLink.style.display = "none";
+      }
     }
   }
 
@@ -1308,6 +1332,8 @@ Technical Performance<split>The mentioned performances (including energy consump
     let priceDisplayHTML = "";
     let effectiveLabelClass = labelClass;
     let inputAttributes = "";
+    let taglineHTML = "";
+    let badgeHTML = "";
 
     const isTurnkey =
       queryArgs["SQF_FINISH"] === "turnkey" ||
@@ -1318,6 +1344,7 @@ Technical Performance<split>The mentioned performances (including energy consump
       inputValue === "ventilation-system" || inputValue === "blinds";
     let specialPriceText = "";
 
+    // Handle ventilation/blinds included in turnkey with checkmark
     if (
       isTurnkey &&
       isVentOrBlinds &&
@@ -1325,7 +1352,7 @@ Technical Performance<split>The mentioned performances (including energy consump
     ) {
       const upgradeData = findUpgradeInCurrentFinish(inputValue);
       if (upgradeData && upgradeData.included && upgradeData.price === 0) {
-        specialPriceText = "Included in Turnkey";
+        specialPriceText = "✓ Already included in your Turnkey package";
         isDisabled = true;
         isChecked = true;
         if (queryArgs[inputName] !== inputValue)
@@ -1341,25 +1368,73 @@ Technical Performance<split>The mentioned performances (including energy consump
       inputAttributes += " checked";
     }
 
-    if (specialPriceText) {
-      priceDisplayHTML = `<span class="option-price">${specialPriceText}</span>`;
+    // Handle finish option price display with savings/difference
+    if (context === "finishes" && inputName === "SQF_FINISH") {
+      const houseData = config[type];
+      if (houseData && houseData.options) {
+        const turnkeyOpt = houseData.options.find(opt => opt.slug === "turnkey");
+        const semiFinishedOpt = houseData.options.find(opt => opt.slug === "semi-finished");
+
+        if (turnkeyOpt && semiFinishedOpt) {
+          const priceDiff = turnkeyOpt.price - semiFinishedOpt.price;
+          const currentSelectedFinish = queryArgs["SQF_FINISH"] || "turnkey";
+
+          if (inputValue === "turnkey") {
+            // When showing turnkey option
+            if (currentSelectedFinish === "turnkey") {
+              // Turnkey is selected - show turnkey price, semi-finished shows "Save X"
+              priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} + VAT</span>`;
+            } else {
+              // Semi-turnkey is selected - turnkey shows "+X"
+              priceDisplayHTML = `<span class="option-price">+${formatCurrency(priceDiff)}</span>`;
+            }
+            // Add tagline and badge for turnkey
+            taglineHTML = '<div style="font-size: 0.8rem; color: #737579; margin-top: 4px; font-weight: 300; width: 100%;">Move-in tomorrow.</div>';
+            badgeHTML = '<div style="font-size: 0.7rem; color: #14171c; font-weight: 500; text-transform: uppercase; margin-top: 4px; width: 100%;">MOST POPULAR</div>';
+          } else if (inputValue === "semi-finished") {
+            // When showing semi-finished option
+            if (currentSelectedFinish === "turnkey") {
+              // Turnkey is selected - semi-finished shows "Save X"
+              priceDisplayHTML = `<span class="option-price" style="color: #28a745;">Save ${formatCurrency(priceDiff)}</span>`;
+            } else {
+              // Semi-turnkey is selected - show semi-turnkey price
+              priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} + VAT</span>`;
+            }
+            // Add tagline for semi-finished
+            taglineHTML = '<div style="font-size: 0.8rem; color: #737579; margin-top: 4px; font-weight: 300; width: 100%;">Be your own interior designer.</div>';
+          }
+        } else {
+          // Fallback if options not found
+          priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} + VAT</span>`;
+        }
+      }
+    } else if (specialPriceText) {
+      priceDisplayHTML = `<span class="option-price" style="color: #28a745;">${specialPriceText}</span>`;
     } else if (rawPrice === 0) {
       priceDisplayHTML = `<span class="option-price">Included</span>`;
     } else {
       priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} + VAT</span>`;
     }
 
-    // ADD THIS CODE HERE - right after the priceDisplayHTML is set:
+    // Solar panel description
     if (inputValue === "solar-kit") {
       priceDisplayHTML +=
-        '<div style="font-size: 0.8rem; color: #737579; margin-top: 4px; font-weight: 300;">Produces 60% more energy than your home consumes annually</div>';
+        '<div style="font-size: 0.8rem; color: #737579; margin-top: 4px; font-weight: 300;">Be energy-independent. Produce 160% of the energy your home consumes.</div>';
+    }
+
+    // Update option name for turnkey
+    let displayName = optionName;
+    if (inputValue === "turnkey") {
+      displayName = "Full Turnkey";
     }
 
     return `
           <label class="${effectiveLabelClass}">
               <input type="${inputType}" name="${inputName}" price="${rawPrice}" value="${inputValue}" ${inputAttributes} />
-              <span class="option-name">${optionName}</span>
+              <span class="option-name">${displayName}</span>
               ${priceDisplayHTML}
+              ${taglineHTML}
+              ${badgeHTML}
           </label>
       `;
   };
@@ -1380,10 +1455,6 @@ Technical Performance<split>The mentioned performances (including energy consump
       displayPriceText = "Included";
     } else {
       displayPriceText = `${formatCurrency(price)} + VAT`;
-    }
-    if (inputValue === "solar-kit") {
-      priceDisplayHTML +=
-        '<div style="font-size: 0.8rem; color: #999; margin-top: 4px; font-weight: 300;">Produces 60% more energy than your home consumes annually</div>';
     }
     return `
     <div class="checkbox-container">
@@ -1480,7 +1551,9 @@ Technical Performance<split>The mentioned performances (including energy consump
 
     if (!effectiveFinishSlug || !finishRadio) {
       if (houseData.options && houseData.options.length > 0) {
-        effectiveFinishSlug = houseData.options[0].slug;
+        // Default to turnkey if available, otherwise first option
+        const turnkeyOption = houseData.options.find(opt => opt.slug === "turnkey");
+        effectiveFinishSlug = turnkeyOption ? turnkeyOption.slug : houseData.options[0].slug;
         queryArgs["SQF_FINISH"] = effectiveFinishSlug;
         finishRadio = document.querySelector(
           `.multistep-form input[name="SQF_FINISH"][value="${effectiveFinishSlug}"]`,
@@ -1572,7 +1645,7 @@ Technical Performance<split>The mentioned performances (including energy consump
     );
 
     const finalContinueBtnRef = document.getElementById("finalContinueBtn");
-    if (finalContinueBtnRef) finalContinueBtnRef.textContent = "CONTINUE";
+    if (finalContinueBtnRef) finalContinueBtnRef.textContent = "REVIEW CONFIGURATION";
     const backBtnElement = document.querySelector(".config .go-back-btn");
     if (backBtnElement) backBtnElement.remove();
   });
@@ -1614,7 +1687,7 @@ Technical Performance<split>The mentioned performances (including energy consump
               )
             : null;
           const finishName = finishDataForLink
-            ? finishDataForLink.name
+            ? (finishDataForLink.name === "Turnkey" ? "Full Turnkey" : finishDataForLink.name)
             : "your selection";
           buttonText = `Explore what's included in ${finishName}`;
           modalContentProvider = () =>
@@ -1671,7 +1744,8 @@ Technical Performance<split>The mentioned performances (including energy consump
     let currentHouseData = config[type];
     if (!currentHouseData) return;
     setTabTitle("Floorplan", "step-2", "floorplanStepTitle");
-    setTabTitle("Upgrades", "step-3", "upgradesStepTitle");
+    setTabTitle("Personalize", "step-3", "upgradesStepTitle");
+    setTabTitle("Delivery to Your Land", "step-4-shipping", "shippingStepTitle");
     setTabTitle("Referral Code", "step-5-referral", "referralCodeStepTitle");
   }
 
@@ -2185,6 +2259,50 @@ Technical Performance<split>The mentioned performances (including energy consump
     queryArgs["SQF_PRICE"] = Math.round(finalPrice);
   }
 
+  function updateFinishPriceDisplay() {
+    const houseData = config[type];
+    if (!houseData || !houseData.options) return;
+
+    const turnkeyOpt = houseData.options.find(opt => opt.slug === "turnkey");
+    const semiFinishedOpt = houseData.options.find(opt => opt.slug === "semi-finished");
+    if (!turnkeyOpt || !semiFinishedOpt) return;
+
+    const priceDiff = turnkeyOpt.price - semiFinishedOpt.price;
+    const currentSelectedFinish = queryArgs["SQF_FINISH"] || "turnkey";
+
+    // Update turnkey price display
+    const turnkeyInput = document.querySelector('input[name="SQF_FINISH"][value="turnkey"]');
+    if (turnkeyInput) {
+      const turnkeyLabel = turnkeyInput.closest('label');
+      const turnkeyPriceSpan = turnkeyLabel?.querySelector('.option-price');
+      if (turnkeyPriceSpan) {
+        if (currentSelectedFinish === "turnkey") {
+          turnkeyPriceSpan.textContent = `${formatCurrency(turnkeyOpt.price)} + VAT`;
+          turnkeyPriceSpan.style.color = "";
+        } else {
+          turnkeyPriceSpan.textContent = `+${formatCurrency(priceDiff)}`;
+          turnkeyPriceSpan.style.color = "";
+        }
+      }
+    }
+
+    // Update semi-finished price display
+    const semiFinishedInput = document.querySelector('input[name="SQF_FINISH"][value="semi-finished"]');
+    if (semiFinishedInput) {
+      const semiFinishedLabel = semiFinishedInput.closest('label');
+      const semiFinishedPriceSpan = semiFinishedLabel?.querySelector('.option-price');
+      if (semiFinishedPriceSpan) {
+        if (currentSelectedFinish === "turnkey") {
+          semiFinishedPriceSpan.textContent = `Save ${formatCurrency(priceDiff)}`;
+          semiFinishedPriceSpan.style.color = "#28a745";
+        } else {
+          semiFinishedPriceSpan.textContent = `${formatCurrency(semiFinishedOpt.price)} + VAT`;
+          semiFinishedPriceSpan.style.color = "";
+        }
+      }
+    }
+  }
+
   function generateOptions(
     options,
     tabID,
@@ -2454,6 +2572,9 @@ Technical Performance<split>The mentioned performances (including energy consump
             }
             render_upgrades(target.value);
 
+            // Update finish option price displays
+            updateFinishPriceDisplay();
+
             const finishDetailsLink = document.querySelector(
               "#step-1 .feature-details-link",
             );
@@ -2461,7 +2582,7 @@ Technical Performance<split>The mentioned performances (including energy consump
               (o) => o.slug === target.value,
             );
             if (finishDetailsLink && newFinishDataForLink) {
-              finishDetailsLink.textContent = `Explore what's included in ${newFinishDataForLink.name}`;
+              finishDetailsLink.textContent = `Explore what's included in ${newFinishDataForLink.name === "Turnkey" ? "Full Turnkey" : newFinishDataForLink.name}`;
             }
           } else if (target.classList.contains("custom-checkbox")) {
             updateParquetPriceAndLabel(target);
