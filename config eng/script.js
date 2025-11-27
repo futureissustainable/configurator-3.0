@@ -1,7 +1,7 @@
 (function () {
   // Universal Images
   let blindsImage =
-    "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4341f5b9b2742863461ef_375fa4b4b9988f686d5a21cdfd58a106_Blinds.avif";
+    "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c8f3a05d31e358a262f2f_b377fa85acb0af7122188efe4e1c06c6_Modular%20Blinds.avif";
   const ventilationImage =
     "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4379c1a20245ff5d081ea_Ventilation.avif";
   const solarImage =
@@ -1399,7 +1399,7 @@ Technical Performance<split>The mentioned performances (including energy consump
     ) {
       const upgradeData = findUpgradeInCurrentFinish(inputValue);
       if (upgradeData && upgradeData.included && upgradeData.price === 0) {
-        specialPriceText = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align: middle; margin-right: 4px;"><polyline points="20 6 9 17 4 12"></polyline></svg>Already included in your Turnkey package';
+        specialPriceText = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align: middle; margin-right: 4px;"><polyline points="20 6 9 17 4 12"></polyline></svg>Already included in Turnkey';
         isDisabled = true;
         isChecked = true;
         if (queryArgs[inputName] !== inputValue)
@@ -1449,10 +1449,10 @@ Technical Performance<split>The mentioned performances (including energy consump
     // Add descriptions for specific upgrades
     if (inputValue === "solar-kit") {
       priceDisplayHTML +=
-        '<div class="option-description">Be a prosumer. Covers 160% of your home\'s energy needs.</div>';
+        '<div class="option-description">Covers 160% of your home\'s energy needs.</div>';
     } else if (inputValue === "ventilation-system") {
       priceDisplayHTML +=
-        '<div class="option-description">Passivhaus certified. Medical grade FILTERS. ERV core</div>';
+        '<div class="option-description">Passivhaus certified. Medical grade filters.</div>';
     } else if (inputValue === "blinds") {
       priceDisplayHTML +=
         '<div class="option-description">Blocks over 99% of UV. Smart. Passivhaus standard.</div>';
@@ -1682,7 +1682,7 @@ Technical Performance<split>The mentioned performances (including energy consump
     );
 
     const finalContinueBtnRef = document.getElementById("finalContinueBtn");
-    if (finalContinueBtnRef) finalContinueBtnRef.textContent = "CONTINUE →";
+    if (finalContinueBtnRef) finalContinueBtnRef.innerHTML = 'CONTINUE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align: middle; margin-left: 4px;"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>';
     const backBtnElement = document.querySelector(".config .go-back-btn");
     if (backBtnElement) backBtnElement.remove();
   });

@@ -2,7 +2,7 @@
 (function () {
   // Universal Images
   let blindsImage =
-    "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4341f5b9b2742863461ef_375fa4b4b9988f686d5a21cdfd58a106_Blinds.avif";
+    "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c8f3a05d31e358a262f2f_b377fa85acb0af7122188efe4e1c06c6_Modular%20Blinds.avif";
   const ventilationImage =
     "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4379c1a20245ff5d081ea_Ventilation.avif";
   const solarImage =
@@ -1138,33 +1138,75 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
   };
 
   function handleStickyBottomAnimation() {
+    // Query elements dynamically to ensure they exist
+    const btn = document.getElementById("finalContinueBtn");
+    const box = document.getElementById("priceBox");
+    const rightContent = document.querySelector(".config .right-content");
+
     if (!btn || !box) return;
 
-    let scrollTop, scrollHeight, clientHeight;
     const isDesktop = window.innerWidth > 768;
 
-    if (isDesktop && rightContentElement) {
-      scrollTop = rightContentElement.scrollTop;
-      scrollHeight = rightContentElement.scrollHeight;
-      clientHeight = rightContentElement.clientHeight;
-    } else {
-      scrollTop = window.scrollY || document.documentElement.scrollTop;
-      scrollHeight = document.documentElement.scrollHeight;
-      clientHeight = document.documentElement.clientHeight;
+    // Calculate scroll percentage from both sources and use the maximum
+    let scrollPercent = 0;
+
+    // Check window scroll
+    const windowScrollTop = window.scrollY || document.documentElement.scrollTop;
+    const windowScrollHeight = document.documentElement.scrollHeight;
+    const windowClientHeight = document.documentElement.clientHeight;
+    const windowScrollableHeight = windowScrollHeight - windowClientHeight;
+    if (windowScrollableHeight > 0) {
+      scrollPercent = Math.max(scrollPercent, (windowScrollTop / windowScrollableHeight) * 100);
     }
 
-    const scrollableHeight = scrollHeight - clientHeight;
-    const scrollPercent =
-      scrollableHeight <= 0 ? 100 : (scrollTop / scrollableHeight) * 100;
+    // Check rightContent scroll on desktop
+    if (isDesktop && rightContent) {
+      const elemScrollTop = rightContent.scrollTop;
+      const elemScrollHeight = rightContent.scrollHeight;
+      const elemClientHeight = rightContent.clientHeight;
+      const elemScrollableHeight = elemScrollHeight - elemClientHeight;
+      if (elemScrollableHeight > 0) {
+        scrollPercent = Math.max(scrollPercent, (elemScrollTop / elemScrollableHeight) * 100);
+      }
+    }
+
+    // If neither is scrollable, assume 100%
+    if (windowScrollableHeight <= 0 && (!rightContent || rightContent.scrollHeight <= rightContent.clientHeight)) {
+      scrollPercent = 100;
+    }
+
+    // Get or create the reservation link
+    let reservationLink = document.getElementById("reservation-link");
 
     if (scrollPercent >= 70) {
       btn.disabled = false;
       btn.classList.add("active");
       box.classList.add("raise");
+
+      // Show reservation link when button is active
+      if (!reservationLink) {
+        const buttonRow = document.querySelector(".button-row");
+        if (buttonRow) {
+          reservationLink = document.createElement("a");
+          reservationLink.id = "reservation-link";
+          reservationLink.className = "reservation-link";
+          reservationLink.href = "https://buy.stripe.com/5kQfZh0KDgKDeXB3gubZe00";
+          reservationLink.textContent = "Oder reservieren Sie Ihren 2026-Platz - 250€ vollständig erstattbar";
+          buttonRow.parentNode.insertBefore(reservationLink, buttonRow.nextSibling);
+        }
+      }
+      if (reservationLink) {
+        reservationLink.style.display = "block";
+      }
     } else {
       btn.disabled = true;
       btn.classList.remove("active");
       box.classList.remove("raise");
+
+      // Hide reservation link when button is not active
+      if (reservationLink) {
+        reservationLink.style.display = "none";
+      }
     }
   }
 
@@ -1172,32 +1214,44 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     const progressBar = document.getElementById("scroll-progress-bar-bottom");
     if (!progressBar) return;
 
-    let scrollTop, scrollHeight, clientHeight;
+    // Query dynamically
+    const rightContent = document.querySelector(".config .right-content");
     const isDesktop = window.innerWidth > 768;
 
-    if (isDesktop && rightContentElement) {
-      scrollTop = rightContentElement.scrollTop;
-      scrollHeight = rightContentElement.scrollHeight;
-      clientHeight = rightContentElement.clientHeight;
-    } else {
-      scrollTop = window.scrollY || document.documentElement.scrollTop;
-      scrollHeight = document.documentElement.scrollHeight;
-      clientHeight = document.documentElement.clientHeight;
+    // Calculate scroll percentage from both sources and use the maximum
+    let scrollPercent = 0;
+    let hasScrollableContent = false;
+
+    // Check window scroll
+    const windowScrollTop = window.scrollY || document.documentElement.scrollTop;
+    const windowScrollHeight = document.documentElement.scrollHeight;
+    const windowClientHeight = document.documentElement.clientHeight;
+    const windowScrollableHeight = windowScrollHeight - windowClientHeight;
+    if (windowScrollableHeight > 0) {
+      hasScrollableContent = true;
+      scrollPercent = Math.max(scrollPercent, (windowScrollTop / windowScrollableHeight) * 100);
     }
 
-    const scrollableHeight = scrollHeight - clientHeight;
-    if (scrollableHeight <= 0) {
+    // Check rightContent scroll on desktop
+    if (isDesktop && rightContent) {
+      const elemScrollTop = rightContent.scrollTop;
+      const elemScrollHeight = rightContent.scrollHeight;
+      const elemClientHeight = rightContent.clientHeight;
+      const elemScrollableHeight = elemScrollHeight - elemClientHeight;
+      if (elemScrollableHeight > 0) {
+        hasScrollableContent = true;
+        scrollPercent = Math.max(scrollPercent, (elemScrollTop / elemScrollableHeight) * 100);
+      }
+    }
+
+    // If no scrollable content, show 100%
+    if (!hasScrollableContent) {
       progressBar.style.width = "100%";
       return;
     }
 
-    const scrollPercent = (scrollTop / scrollableHeight) * 100;
     const activationThreshold = 85;
-
-    const progressBarWidth = Math.min(
-      100,
-      (scrollPercent / activationThreshold) * 100,
-    );
+    const progressBarWidth = Math.min(100, (scrollPercent / activationThreshold) * 100);
     progressBar.style.width = `${progressBarWidth}%`;
   }
 
@@ -1207,16 +1261,34 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
   }
 
   function setupUnifiedScrollListener() {
-    const newIsDesktop = window.innerWidth > 768;
-    if (currentScrollTarget) {
+    // Query element dynamically
+    const rightContent = document.querySelector(".config .right-content");
+
+    // Remove previous listeners
+    if (currentScrollTarget && currentScrollTarget !== window) {
       currentScrollTarget.removeEventListener("scroll", unifiedScrollHandler);
     }
-    currentScrollTarget =
-      newIsDesktop && rightContentElement ? rightContentElement : window;
-    currentScrollTarget.addEventListener("scroll", unifiedScrollHandler, {
-      passive: true,
-    });
-    setTimeout(unifiedScrollHandler, 250);
+    window.removeEventListener("scroll", unifiedScrollHandler);
+
+    const isDesktop = window.innerWidth > 768;
+
+    // Always listen on window
+    window.addEventListener("scroll", unifiedScrollHandler, { passive: true });
+
+    // Also listen on rightContent for desktop
+    if (isDesktop && rightContent) {
+      rightContent.addEventListener("scroll", unifiedScrollHandler, { passive: true });
+      currentScrollTarget = rightContent;
+    } else {
+      currentScrollTarget = window;
+    }
+
+    // Run immediately and after delays to ensure it catches initial state
+    unifiedScrollHandler();
+    setTimeout(unifiedScrollHandler, 100);
+    setTimeout(unifiedScrollHandler, 300);
+    setTimeout(unifiedScrollHandler, 500);
+    setTimeout(unifiedScrollHandler, 1000);
   }
 
   const upgradeRenderConfig = [
@@ -1267,6 +1339,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     let priceDisplayHTML = "";
     let effectiveLabelClass = labelClass;
     let inputAttributes = "";
+    let taglineHTML = "";
 
     const isTurnkey =
       queryArgs["SQF_FINISH"] === "turnkey" ||
@@ -1277,6 +1350,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       inputValue === "ventilation-system" || inputValue === "blinds";
     let specialPriceText = "";
 
+    // Handle ventilation/blinds included in turnkey with checkmark
     if (
       isTurnkey &&
       isVentOrBlinds &&
@@ -1284,7 +1358,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     ) {
       const upgradeData = findUpgradeInCurrentFinish(inputValue);
       if (upgradeData && upgradeData.included && upgradeData.price === 0) {
-        specialPriceText = "In Schlüsselfertig enthalten";
+        specialPriceText = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align: middle; margin-right: 4px;"><polyline points="20 6 9 17 4 12"></polyline></svg>In Schlüsselfertig enthalten';
         isDisabled = true;
         isChecked = true;
         if (queryArgs[inputName] !== inputValue)
@@ -1300,24 +1374,49 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       inputAttributes += " checked";
     }
 
-    if (specialPriceText) {
-      priceDisplayHTML = `<span class="option-price">${specialPriceText}</span>`;
+    // Handle finish option price display with taglines
+    if (context === "finishes" && inputName === "SQF_FINISH") {
+      if (inputValue === "turnkey") {
+        priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ MwSt.</span></span>`;
+        taglineHTML = '<div class="option-tagline">Sofort einziehen.</div>';
+      } else if (inputValue === "semi-finished") {
+        priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ MwSt.</span></span>`;
+        taglineHTML = '<div class="option-tagline">Gestalten Sie Ihr eigenes Interieur.</div>';
+      }
+    } else if (specialPriceText) {
+      priceDisplayHTML = `<span class="option-price price-included-turnkey">${specialPriceText}</span>`;
     } else if (rawPrice === 0) {
       priceDisplayHTML = `<span class="option-price">Inbegriffen</span>`;
     } else {
-      priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} + MwSt.</span>`;
+      priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ MwSt.</span></span>`;
     }
 
+    // Add descriptions for specific upgrades
     if (inputValue === "solar-kit") {
       priceDisplayHTML +=
-        '<div style="font-size: 0.8rem; color: #737579; margin-top: 4px; font-weight: 300;">Erzeugt jährlich 60 % mehr Energie, als Ihr Haus verbraucht</div>';
+        '<div class="option-description">Deckt 160% des Energiebedarfs Ihres Hauses.</div>';
+    } else if (inputValue === "ventilation-system") {
+      priceDisplayHTML +=
+        '<div class="option-description">Passivhaus-zertifiziert. Filter in medizinischer Qualität.</div>';
+    } else if (inputValue === "blinds") {
+      priceDisplayHTML +=
+        '<div class="option-description">Blockiert über 99% der UV. Smart. Passivhaus-Standard.</div>';
+    }
+
+    // Update option names
+    let displayName = optionName;
+    if (inputValue === "turnkey") {
+      displayName = "Voll Schlüsselfertig";
+    } else if (inputValue === "ventilation-system") {
+      displayName = "Zehnder Lüftungssystem";
     }
 
     return `
           <label class="${effectiveLabelClass}">
               <input type="${inputType}" name="${inputName}" price="${rawPrice}" value="${inputValue}" ${inputAttributes} />
-              <span class="option-name">${optionName}</span>
+              <span class="option-name">${displayName}</span>
               ${priceDisplayHTML}
+              ${taglineHTML}
           </label>
       `;
   };
@@ -1426,7 +1525,8 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     const finalContinueBtn = document.getElementById("finalContinueBtn");
     if (finalContinueBtn) {
       finalContinueBtn.disabled = false;  // Enable immediately
-  finalContinueBtn.classList.add("active");
+      finalContinueBtn.classList.add("active");
+      finalContinueBtn.innerHTML = 'FORTFAHREN <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align: middle; margin-left: 4px;"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>';
     }
 
     generateOptions(houseData.options, "step-1", "SQF_FINISH", true, "radio");
@@ -1538,10 +1638,10 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     if (!descriptionEl) return;
 
     const modelDescriptions = {
-      sanctuary: "142 m² – 4 Schlafzimmer",
-      serenity: "95 m² – 3 Schlafzimmer",
-      wanderlust: "48 m² – 1 oder 2 Schlafzimmer",
-      nest: "24 m² – 1 Schlafzimmer",
+      sanctuary: "142qm · 4 Schlafzimmer · Passivhaus",
+      serenity: "95qm · 3 Schlafzimmer · Passivhaus",
+      wanderlust: "48qm · 1 oder 2 Schlafzimmer · Passivhaus",
+      nest: "24qm · 1 Schlafzimmer · Passivhaus",
     };
 
     const modelName = type.split("-")[0];
@@ -2924,7 +3024,11 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
 
     const newSearch = params.toString() ? "?" + params.toString() : "";
     if (window.location.search !== newSearch) {
-      history.replaceState(null, "", window.location.pathname + newSearch);
+      try {
+        history.replaceState(null, "", window.location.pathname + newSearch);
+      } catch (e) {
+        // Cross-origin restriction - ignore silently
+      }
     }
   }
 
