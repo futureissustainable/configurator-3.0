@@ -1193,7 +1193,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
           reservationLink.id = "reservation-link";
           reservationLink.className = "reservation-link";
           reservationLink.href = "https://buy.stripe.com/5kQfZh0KDgKDeXB3gubZe00";
-          reservationLink.textContent = "Oder reservieren Sie Ihren 2026-Platz - 250€ vollständig erstattbar";
+          reservationLink.textContent = "2026 reservieren - 250€ erstattbar";
           buttonRow.parentNode.insertBefore(reservationLink, buttonRow.nextSibling);
         }
       }
@@ -1386,15 +1386,13 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
         priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ MwSt.</span></span>`;
         taglineHTML = '<div class="option-tagline">Gestalten Sie Ihr eigenes Interieur.</div>';
       }
-    } else if (specialPriceText) {
-      priceDisplayHTML = `<span class="option-price price-included-turnkey">${specialPriceText}</span>`;
-    } else if (rawPrice === 0) {
+    } else if (rawPrice === 0 && !specialPriceText) {
       priceDisplayHTML = `<span class="option-price">Inbegriffen</span>`;
-    } else {
+    } else if (!specialPriceText) {
       priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ MwSt.</span></span>`;
     }
 
-    // Add descriptions for specific upgrades
+    // Add descriptions for specific upgrades (before "included" text)
     if (inputValue === "solar-kit") {
       priceDisplayHTML +=
         '<div class="option-description">Deckt 160% des Energiebedarfs Ihres Hauses.</div>';
@@ -1404,6 +1402,11 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     } else if (inputValue === "blinds") {
       priceDisplayHTML +=
         '<div class="option-description">Blockiert über 99% der UV. Smart. Passivhaus-Standard.</div>';
+    }
+
+    // Add "included in turnkey" text after description
+    if (specialPriceText) {
+      priceDisplayHTML += `<span class="option-price price-included-turnkey">${specialPriceText}</span>`;
     }
 
     // Update option names

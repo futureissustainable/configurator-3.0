@@ -1441,15 +1441,13 @@ Technical Performance<split>The mentioned performances (including energy consump
           priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ VAT</span></span>`;
         }
       }
-    } else if (specialPriceText) {
-      priceDisplayHTML = `<span class="option-price price-included-turnkey">${specialPriceText}</span>`;
-    } else if (rawPrice === 0) {
+    } else if (rawPrice === 0 && !specialPriceText) {
       priceDisplayHTML = `<span class="option-price">Included</span>`;
-    } else {
+    } else if (!specialPriceText) {
       priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ VAT</span></span>`;
     }
 
-    // Add descriptions for specific upgrades
+    // Add descriptions for specific upgrades (before "included" text)
     if (inputValue === "solar-kit") {
       priceDisplayHTML +=
         '<div class="option-description">Covers 160% of your home\'s energy needs.</div>';
@@ -1459,6 +1457,11 @@ Technical Performance<split>The mentioned performances (including energy consump
     } else if (inputValue === "blinds") {
       priceDisplayHTML +=
         '<div class="option-description">Blocks over 99% of UV. Smart. Passivhaus standard.</div>';
+    }
+
+    // Add "included in turnkey" text after description
+    if (specialPriceText) {
+      priceDisplayHTML += `<span class="option-price price-included-turnkey">${specialPriceText}</span>`;
     }
 
     // Update option names
