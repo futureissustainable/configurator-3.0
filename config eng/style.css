@@ -844,6 +844,21 @@ p {
     font-weight: 300;
 }
 
+.option-price-diff {
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-top: 2px;
+    width: 100%;
+}
+
+.option-price-diff.price-diff-less {
+    color: #28a745;
+}
+
+.option-price-diff.price-diff-more {
+    color: #737579;
+}
+
 .option-description {
     font-size: 0.8rem;
     color: #737579;

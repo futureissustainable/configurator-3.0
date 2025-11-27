@@ -1379,24 +1379,20 @@ Technical Performance<split>The mentioned performances (including energy consump
           const currentSelectedFinish = queryArgs["SQF_FINISH"] || "turnkey";
 
           if (inputValue === "turnkey") {
-            // When showing turnkey option
-            if (currentSelectedFinish === "turnkey") {
-              // Turnkey is selected - show turnkey price
-              priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ VAT</span></span>`;
-            } else {
-              // Semi-turnkey is selected - turnkey shows "+X"
-              priceDisplayHTML = `<span class="option-price">+${formatCurrency(priceDiff)}</span>`;
+            // Always show actual turnkey price
+            priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ VAT</span></span>`;
+            // When semi-turnkey is selected, show how much more turnkey costs
+            if (currentSelectedFinish !== "turnkey") {
+              priceDisplayHTML += `<div class="option-price-diff price-diff-more">€${priceDiff.toLocaleString('de-DE')} more than Semi-Turnkey</div>`;
             }
             // Add tagline for turnkey
             taglineHTML = '<div class="option-tagline">Move-in tomorrow.</div>';
           } else if (inputValue === "semi-finished") {
-            // When showing semi-finished option
+            // Always show actual semi-finished price
+            priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ VAT</span></span>`;
+            // When turnkey is selected, show how much less semi-turnkey costs
             if (currentSelectedFinish === "turnkey") {
-              // Turnkey is selected - semi-finished shows "Save X"
-              priceDisplayHTML = `<span class="option-price">Save ${formatCurrency(priceDiff)}</span>`;
-            } else {
-              // Semi-turnkey is selected - show semi-turnkey price
-              priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ VAT</span></span>`;
+              priceDisplayHTML += `<div class="option-price-diff price-diff-less">€${priceDiff.toLocaleString('de-DE')} less than Full Turnkey</div>`;
             }
             // Add tagline for semi-finished
             taglineHTML = '<div class="option-tagline">Be your own interior designer.</div>';
@@ -2280,12 +2276,24 @@ Technical Performance<split>The mentioned performances (including energy consump
     if (turnkeyInput) {
       const turnkeyLabel = turnkeyInput.closest('label');
       const turnkeyPriceSpan = turnkeyLabel?.querySelector('.option-price');
+      let turnkeyDiffEl = turnkeyLabel?.querySelector('.option-price-diff');
+
       if (turnkeyPriceSpan) {
-        if (currentSelectedFinish === "turnkey") {
-          turnkeyPriceSpan.innerHTML = `${formatCurrency(turnkeyOpt.price)} <span class="vat-label">+ VAT</span>`;
-        } else {
-          turnkeyPriceSpan.innerHTML = `+${formatCurrency(priceDiff)}`;
+        // Always show actual price
+        turnkeyPriceSpan.innerHTML = `${formatCurrency(turnkeyOpt.price)} <span class="vat-label">+ VAT</span>`;
+      }
+
+      // Handle price difference display
+      if (currentSelectedFinish !== "turnkey") {
+        if (!turnkeyDiffEl) {
+          turnkeyDiffEl = document.createElement('div');
+          turnkeyDiffEl.className = 'option-price-diff price-diff-more';
+          turnkeyPriceSpan?.parentNode?.insertBefore(turnkeyDiffEl, turnkeyPriceSpan.nextSibling);
         }
+        turnkeyDiffEl.textContent = `€${priceDiff.toLocaleString('de-DE')} more than Semi-Turnkey`;
+        turnkeyDiffEl.style.display = 'block';
+      } else if (turnkeyDiffEl) {
+        turnkeyDiffEl.style.display = 'none';
       }
     }
 
@@ -2294,12 +2302,24 @@ Technical Performance<split>The mentioned performances (including energy consump
     if (semiFinishedInput) {
       const semiFinishedLabel = semiFinishedInput.closest('label');
       const semiFinishedPriceSpan = semiFinishedLabel?.querySelector('.option-price');
+      let semiFinishedDiffEl = semiFinishedLabel?.querySelector('.option-price-diff');
+
       if (semiFinishedPriceSpan) {
-        if (currentSelectedFinish === "turnkey") {
-          semiFinishedPriceSpan.innerHTML = `Save ${formatCurrency(priceDiff)}`;
-        } else {
-          semiFinishedPriceSpan.innerHTML = `${formatCurrency(semiFinishedOpt.price)} <span class="vat-label">+ VAT</span>`;
+        // Always show actual price
+        semiFinishedPriceSpan.innerHTML = `${formatCurrency(semiFinishedOpt.price)} <span class="vat-label">+ VAT</span>`;
+      }
+
+      // Handle price difference display
+      if (currentSelectedFinish === "turnkey") {
+        if (!semiFinishedDiffEl) {
+          semiFinishedDiffEl = document.createElement('div');
+          semiFinishedDiffEl.className = 'option-price-diff price-diff-less';
+          semiFinishedPriceSpan?.parentNode?.insertBefore(semiFinishedDiffEl, semiFinishedPriceSpan.nextSibling);
         }
+        semiFinishedDiffEl.textContent = `€${priceDiff.toLocaleString('de-DE')} less than Full Turnkey`;
+        semiFinishedDiffEl.style.display = 'block';
+      } else if (semiFinishedDiffEl) {
+        semiFinishedDiffEl.style.display = 'none';
       }
     }
   }
