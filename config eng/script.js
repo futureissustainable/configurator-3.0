@@ -1202,7 +1202,7 @@ Technical Performance<split>The mentioned performances (including energy consump
           reservationLink = document.createElement("a");
           reservationLink.id = "reservation-link";
           reservationLink.className = "reservation-link";
-          reservationLink.href = "/design/reserve";
+          reservationLink.href = "https://buy.stripe.com/5kQfZh0KDgKDeXB3gubZe00";
           reservationLink.textContent = "Or reserve your 2026 slot - 250€ fully refundable";
           buttonRow.parentNode.insertBefore(reservationLink, buttonRow.nextSibling);
         }
@@ -1351,7 +1351,7 @@ Technical Performance<split>The mentioned performances (including energy consump
     ) {
       const upgradeData = findUpgradeInCurrentFinish(inputValue);
       if (upgradeData && upgradeData.included && upgradeData.price === 0) {
-        specialPriceText = "✓ Already included in your Turnkey package";
+        specialPriceText = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align: middle; margin-right: 4px;"><polyline points="20 6 9 17 4 12"></polyline></svg>Already included in your Turnkey package';
         isDisabled = true;
         isChecked = true;
         if (queryArgs[inputName] !== inputValue)
@@ -1644,10 +1644,10 @@ Technical Performance<split>The mentioned performances (including energy consump
     if (!descriptionEl) return;
 
     const modelDescriptions = {
-      sanctuary: "142m² - 4 bedrooms",
-      serenity: "95m² - 3 bedrooms",
-      wanderlust: "48m² - 1 or 2 bedrooms",
-      nest: "24m² - 1 bedroom",
+      sanctuary: "142sqm · 4 bedrooms · Passivhaus",
+      serenity: "95sqm · 3 bedrooms · Passivhaus",
+      wanderlust: "48sqm · 1 or 2 bedrooms · Passivhaus",
+      nest: "24sqm · 1 bedroom · Passivhaus",
     };
 
     const modelName = type.split("-")[0];
