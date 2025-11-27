@@ -811,3 +811,51 @@ p {
     background-color: #f8f8f8;
     border-color: #999;
 }
+
+/* === FINISH OPTION STYLES === */
+.option-tagline {
+    font-size: 0.8rem;
+    color: #737579;
+    margin-top: 4px;
+    font-weight: 300;
+    width: 100%;
+}
+
+.option-badge {
+    font-size: 0.7rem;
+    color: #14171c;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 4px;
+    width: 100%;
+}
+
+.option-price.price-savings {
+    color: #28a745;
+}
+
+.option-price.price-included-turnkey {
+    color: #28a745;
+}
+
+.option-description {
+    font-size: 0.8rem;
+    color: #737579;
+    margin-top: 4px;
+    font-weight: 300;
+}
+
+/* === RESERVATION LINK === */
+.reservation-link {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: #737579;
+    text-decoration: underline;
+    font-weight: 300;
+}
+
+.reservation-link:hover {
+    color: #14171c;
+}

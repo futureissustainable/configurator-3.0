@@ -1201,9 +1201,9 @@ Technical Performance<split>The mentioned performances (including energy consump
         if (buttonRow) {
           reservationLink = document.createElement("a");
           reservationLink.id = "reservation-link";
+          reservationLink.className = "reservation-link";
           reservationLink.href = "#";
           reservationLink.textContent = "Or reserve your 2026 production slot now (€50, fully refundable)";
-          reservationLink.style.cssText = "display: block; text-align: center; margin-top: 12px; font-size: 0.85rem; color: #737579; text-decoration: underline; font-weight: 300;";
           buttonRow.parentNode.insertBefore(reservationLink, buttonRow.nextSibling);
         }
       }
@@ -1389,19 +1389,19 @@ Technical Performance<split>The mentioned performances (including energy consump
               priceDisplayHTML = `<span class="option-price">+${formatCurrency(priceDiff)}</span>`;
             }
             // Add tagline and badge for turnkey
-            taglineHTML = '<div style="font-size: 0.8rem; color: #737579; margin-top: 4px; font-weight: 300; width: 100%;">Move-in tomorrow.</div>';
-            badgeHTML = '<div style="font-size: 0.7rem; color: #14171c; font-weight: 500; text-transform: uppercase; margin-top: 4px; width: 100%;">MOST POPULAR</div>';
+            taglineHTML = '<div class="option-tagline">Move-in tomorrow.</div>';
+            badgeHTML = '<div class="option-badge">MOST POPULAR</div>';
           } else if (inputValue === "semi-finished") {
             // When showing semi-finished option
             if (currentSelectedFinish === "turnkey") {
               // Turnkey is selected - semi-finished shows "Save X"
-              priceDisplayHTML = `<span class="option-price" style="color: #28a745;">Save ${formatCurrency(priceDiff)}</span>`;
+              priceDisplayHTML = `<span class="option-price price-savings">Save ${formatCurrency(priceDiff)}</span>`;
             } else {
               // Semi-turnkey is selected - show semi-turnkey price
               priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} + VAT</span>`;
             }
             // Add tagline for semi-finished
-            taglineHTML = '<div style="font-size: 0.8rem; color: #737579; margin-top: 4px; font-weight: 300; width: 100%;">Be your own interior designer.</div>';
+            taglineHTML = '<div class="option-tagline">Be your own interior designer.</div>';
           }
         } else {
           // Fallback if options not found
@@ -1409,7 +1409,7 @@ Technical Performance<split>The mentioned performances (including energy consump
         }
       }
     } else if (specialPriceText) {
-      priceDisplayHTML = `<span class="option-price" style="color: #28a745;">${specialPriceText}</span>`;
+      priceDisplayHTML = `<span class="option-price price-included-turnkey">${specialPriceText}</span>`;
     } else if (rawPrice === 0) {
       priceDisplayHTML = `<span class="option-price">Included</span>`;
     } else {
@@ -1419,7 +1419,7 @@ Technical Performance<split>The mentioned performances (including energy consump
     // Solar panel description
     if (inputValue === "solar-kit") {
       priceDisplayHTML +=
-        '<div style="font-size: 0.8rem; color: #737579; margin-top: 4px; font-weight: 300;">Be energy-independent. Produce 160% of the energy your home consumes.</div>';
+        '<div class="option-description">Be energy-independent. Produce 160% of the energy your home consumes.</div>';
     }
 
     // Update option name for turnkey
@@ -2276,12 +2276,11 @@ Technical Performance<split>The mentioned performances (including energy consump
       const turnkeyLabel = turnkeyInput.closest('label');
       const turnkeyPriceSpan = turnkeyLabel?.querySelector('.option-price');
       if (turnkeyPriceSpan) {
+        turnkeyPriceSpan.classList.remove('price-savings');
         if (currentSelectedFinish === "turnkey") {
           turnkeyPriceSpan.textContent = `${formatCurrency(turnkeyOpt.price)} + VAT`;
-          turnkeyPriceSpan.style.color = "";
         } else {
           turnkeyPriceSpan.textContent = `+${formatCurrency(priceDiff)}`;
-          turnkeyPriceSpan.style.color = "";
         }
       }
     }
@@ -2294,10 +2293,10 @@ Technical Performance<split>The mentioned performances (including energy consump
       if (semiFinishedPriceSpan) {
         if (currentSelectedFinish === "turnkey") {
           semiFinishedPriceSpan.textContent = `Save ${formatCurrency(priceDiff)}`;
-          semiFinishedPriceSpan.style.color = "#28a745";
+          semiFinishedPriceSpan.classList.add('price-savings');
         } else {
           semiFinishedPriceSpan.textContent = `${formatCurrency(semiFinishedOpt.price)} + VAT`;
-          semiFinishedPriceSpan.style.color = "";
+          semiFinishedPriceSpan.classList.remove('price-savings');
         }
       }
     }
