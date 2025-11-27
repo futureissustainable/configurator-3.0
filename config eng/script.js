@@ -1379,26 +1379,10 @@ Technical Performance<split>The mentioned performances (including energy consump
           const currentSelectedFinish = queryArgs["SQF_FINISH"] || "turnkey";
 
           if (inputValue === "turnkey") {
-            // When showing turnkey option
-            if (currentSelectedFinish === "turnkey") {
-              // Turnkey is selected - show turnkey price
-              priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ VAT</span></span>`;
-            } else {
-              // Semi-turnkey is selected - turnkey shows "+X"
-              priceDisplayHTML = `<span class="option-price">+${formatCurrency(priceDiff)}</span>`;
-            }
-            // Add tagline for turnkey
+            priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ VAT</span></span>`;
             taglineHTML = '<div class="option-tagline">Move-in tomorrow.</div>';
           } else if (inputValue === "semi-finished") {
-            // When showing semi-finished option
-            if (currentSelectedFinish === "turnkey") {
-              // Turnkey is selected - semi-finished shows "Save X"
-              priceDisplayHTML = `<span class="option-price">Save ${formatCurrency(priceDiff)}</span>`;
-            } else {
-              // Semi-turnkey is selected - show semi-turnkey price
-              priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ VAT</span></span>`;
-            }
-            // Add tagline for semi-finished
+            priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ VAT</span></span>`;
             taglineHTML = '<div class="option-tagline">Be your own interior designer.</div>';
           }
         } else {
@@ -2265,43 +2249,7 @@ Technical Performance<split>The mentioned performances (including energy consump
   }
 
   function updateFinishPriceDisplay() {
-    const houseData = config[type];
-    if (!houseData || !houseData.options) return;
-
-    const turnkeyOpt = houseData.options.find(opt => opt.slug === "turnkey");
-    const semiFinishedOpt = houseData.options.find(opt => opt.slug === "semi-finished");
-    if (!turnkeyOpt || !semiFinishedOpt) return;
-
-    const priceDiff = turnkeyOpt.price - semiFinishedOpt.price;
-    const currentSelectedFinish = queryArgs["SQF_FINISH"] || "turnkey";
-
-    // Update turnkey price display
-    const turnkeyInput = document.querySelector('input[name="SQF_FINISH"][value="turnkey"]');
-    if (turnkeyInput) {
-      const turnkeyLabel = turnkeyInput.closest('label');
-      const turnkeyPriceSpan = turnkeyLabel?.querySelector('.option-price');
-      if (turnkeyPriceSpan) {
-        if (currentSelectedFinish === "turnkey") {
-          turnkeyPriceSpan.innerHTML = `${formatCurrency(turnkeyOpt.price)} <span class="vat-label">+ VAT</span>`;
-        } else {
-          turnkeyPriceSpan.innerHTML = `+${formatCurrency(priceDiff)}`;
-        }
-      }
-    }
-
-    // Update semi-finished price display
-    const semiFinishedInput = document.querySelector('input[name="SQF_FINISH"][value="semi-finished"]');
-    if (semiFinishedInput) {
-      const semiFinishedLabel = semiFinishedInput.closest('label');
-      const semiFinishedPriceSpan = semiFinishedLabel?.querySelector('.option-price');
-      if (semiFinishedPriceSpan) {
-        if (currentSelectedFinish === "turnkey") {
-          semiFinishedPriceSpan.innerHTML = `Save ${formatCurrency(priceDiff)}`;
-        } else {
-          semiFinishedPriceSpan.innerHTML = `${formatCurrency(semiFinishedOpt.price)} <span class="vat-label">+ VAT</span>`;
-        }
-      }
-    }
+    // Prices are static, no dynamic updates needed
   }
 
   function generateOptions(
