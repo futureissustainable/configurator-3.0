@@ -117,7 +117,7 @@
                 image: solarImage,
                 price: 7800,
                 included: false,
-                name: "Solarpaneele - Nullenergie-Paket",
+                name: "Solar Nullenergie-Paket",
               },
             ],
           ],
@@ -210,7 +210,7 @@
                 image: solarImage,
                 price: 7800,
                 included: false,
-                name: "Solarpaneele - Nullenergie-Paket",
+                name: "Solar Nullenergie-Paket",
               },
             ],
           ],
@@ -333,7 +333,7 @@
                 image: solarImage,
                 price: 11800,
                 included: false,
-                name: "Solarpaneele - Nullenergie-Paket",
+                name: "Solar Nullenergie-Paket",
               },
             ],
           ],
@@ -426,7 +426,7 @@
                 image: solarImage,
                 price: 11800,
                 included: false,
-                name: "Solarpaneele - Nullenergie-Paket",
+                name: "Solar Nullenergie-Paket",
               },
             ],
           ],
@@ -549,7 +549,7 @@
                 image: solarImage,
                 price: 14800,
                 included: false,
-                name: "Solarpaneele - Nullenergie-Paket",
+                name: "Solar Nullenergie-Paket",
               },
             ],
           ],
@@ -642,7 +642,7 @@
                 image: solarImage,
                 price: 14800,
                 included: false,
-                name: "Solarpaneele - Nullenergie-Paket",
+                name: "Solar Nullenergie-Paket",
               },
             ],
           ],
@@ -774,7 +774,7 @@
                 image: solarImage,
                 price: 16800,
                 included: false,
-                name: "Solarpaneele - Nullenergie-Paket",
+                name: "Solar Nullenergie-Paket",
               },
             ],
           ],
@@ -867,7 +867,7 @@
                 image: solarImage,
                 price: 16800,
                 included: false,
-                name: "Solarpaneele - Nullenergie-Paket",
+                name: "Solar Nullenergie-Paket",
               },
             ],
           ],
@@ -1436,7 +1436,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     if (price === 0) {
       displayPriceText = "Inbegriffen";
     } else {
-      displayPriceText = `${formatCurrency(price)} + MwSt.`;
+      displayPriceText = `${formatCurrency(price)} <span class="vat-label">+ MwSt.</span>`;
     }
     if (inputValue === "solar-kit") {
       priceDisplayHTML +=
@@ -2197,12 +2197,12 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       config[type].options.length === 0
     ) {
       priceBoxH4.innerHTML =
-        "Preis nicht verfügbar <span class='tva-label'>+ MwSt.</span>";
+        "Preis nicht verfügbar <span class='vat-label'>+ MwSt.</span>";
       return;
     }
 
     let displayHTML;
-    const tvaLabelHtml = " <span class='tva-label'>+ MwSt.</span>";
+    const tvaLabelHtml = " <span class='vat-label'>+ MwSt.</span>";
 
     if (
       isDiscounted &&
@@ -2398,7 +2398,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
         } else if (option.price === 0) {
           firstPriceText = "Inbegriffen";
         } else {
-          firstPriceText = `${formatCurrency(option.price)} + MwSt.`;
+          firstPriceText = `${formatCurrency(option.price)} <span class="vat-label">+ MwSt.</span>`;
         }
       }
     });
