@@ -1168,6 +1168,11 @@ Technical Performance<split>The mentioned performances (including energy consump
   };
 
   function handleStickyBottomAnimation() {
+    // Query elements dynamically to ensure they exist
+    const btn = document.getElementById("finalContinueBtn");
+    const box = document.getElementById("priceBox");
+    const rightContent = document.querySelector(".config .right-content");
+
     if (!btn || !box) return;
 
     const isDesktop = window.innerWidth > 768;
@@ -1184,11 +1189,11 @@ Technical Performance<split>The mentioned performances (including energy consump
       scrollPercent = Math.max(scrollPercent, (windowScrollTop / windowScrollableHeight) * 100);
     }
 
-    // Check rightContentElement scroll on desktop
-    if (isDesktop && rightContentElement) {
-      const elemScrollTop = rightContentElement.scrollTop;
-      const elemScrollHeight = rightContentElement.scrollHeight;
-      const elemClientHeight = rightContentElement.clientHeight;
+    // Check rightContent scroll on desktop
+    if (isDesktop && rightContent) {
+      const elemScrollTop = rightContent.scrollTop;
+      const elemScrollHeight = rightContent.scrollHeight;
+      const elemClientHeight = rightContent.clientHeight;
       const elemScrollableHeight = elemScrollHeight - elemClientHeight;
       if (elemScrollableHeight > 0) {
         scrollPercent = Math.max(scrollPercent, (elemScrollTop / elemScrollableHeight) * 100);
@@ -1196,7 +1201,7 @@ Technical Performance<split>The mentioned performances (including energy consump
     }
 
     // If neither is scrollable, assume 100%
-    if (windowScrollableHeight <= 0 && (!rightContentElement || rightContentElement.scrollHeight <= rightContentElement.clientHeight)) {
+    if (windowScrollableHeight <= 0 && (!rightContent || rightContent.scrollHeight <= rightContent.clientHeight)) {
       scrollPercent = 100;
     }
 
@@ -1239,6 +1244,8 @@ Technical Performance<split>The mentioned performances (including energy consump
     const progressBar = document.getElementById("scroll-progress-bar-bottom");
     if (!progressBar) return;
 
+    // Query dynamically
+    const rightContent = document.querySelector(".config .right-content");
     const isDesktop = window.innerWidth > 768;
 
     // Calculate scroll percentage from both sources and use the maximum
@@ -1255,11 +1262,11 @@ Technical Performance<split>The mentioned performances (including energy consump
       scrollPercent = Math.max(scrollPercent, (windowScrollTop / windowScrollableHeight) * 100);
     }
 
-    // Check rightContentElement scroll on desktop
-    if (isDesktop && rightContentElement) {
-      const elemScrollTop = rightContentElement.scrollTop;
-      const elemScrollHeight = rightContentElement.scrollHeight;
-      const elemClientHeight = rightContentElement.clientHeight;
+    // Check rightContent scroll on desktop
+    if (isDesktop && rightContent) {
+      const elemScrollTop = rightContent.scrollTop;
+      const elemScrollHeight = rightContent.scrollHeight;
+      const elemClientHeight = rightContent.clientHeight;
       const elemScrollableHeight = elemScrollHeight - elemClientHeight;
       if (elemScrollableHeight > 0) {
         hasScrollableContent = true;
@@ -1289,6 +1296,9 @@ Technical Performance<split>The mentioned performances (including energy consump
   }
 
   function setupUnifiedScrollListener() {
+    // Query element dynamically
+    const rightContent = document.querySelector(".config .right-content");
+
     // Remove previous listeners
     if (currentScrollTarget && currentScrollTarget !== window) {
       currentScrollTarget.removeEventListener("scroll", unifiedScrollHandler);
@@ -1300,18 +1310,20 @@ Technical Performance<split>The mentioned performances (including energy consump
     // Always listen on window
     window.addEventListener("scroll", unifiedScrollHandler, { passive: true });
 
-    // Also listen on rightContentElement for desktop
-    if (isDesktop && rightContentElement) {
-      rightContentElement.addEventListener("scroll", unifiedScrollHandler, { passive: true });
-      currentScrollTarget = rightContentElement;
+    // Also listen on rightContent for desktop
+    if (isDesktop && rightContent) {
+      rightContent.addEventListener("scroll", unifiedScrollHandler, { passive: true });
+      currentScrollTarget = rightContent;
     } else {
       currentScrollTarget = window;
     }
 
-    // Run immediately and after a delay
+    // Run immediately and after delays to ensure it catches initial state
     unifiedScrollHandler();
-    setTimeout(unifiedScrollHandler, 250);
+    setTimeout(unifiedScrollHandler, 100);
+    setTimeout(unifiedScrollHandler, 300);
     setTimeout(unifiedScrollHandler, 500);
+    setTimeout(unifiedScrollHandler, 1000);
   }
 
   // REMOVED: All variables and functions related to scroll-based image changes are no longer needed.
