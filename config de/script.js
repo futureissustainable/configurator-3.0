@@ -1178,14 +1178,16 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     // Get or create the reservation link
     let reservationLink = document.getElementById("reservation-link");
 
+    const buttonRow = document.querySelector(".button-row");
+
     if (scrollPercent >= 70) {
       btn.disabled = false;
       btn.classList.add("active");
       box.classList.add("raise");
+      if (buttonRow) buttonRow.classList.add("ready");
 
       // Show reservation link when button is active
       if (!reservationLink) {
-        const buttonRow = document.querySelector(".button-row");
         if (buttonRow) {
           reservationLink = document.createElement("a");
           reservationLink.id = "reservation-link";
@@ -1202,6 +1204,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       btn.disabled = true;
       btn.classList.remove("active");
       box.classList.remove("raise");
+      if (buttonRow) buttonRow.classList.remove("ready");
 
       // Hide reservation link when button is not active
       if (reservationLink) {
@@ -1436,11 +1439,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     if (price === 0) {
       displayPriceText = "Inbegriffen";
     } else {
-      displayPriceText = `${formatCurrency(price)} <span class="vat-label">+ MwSt.</span>`;
-    }
-    if (inputValue === "solar-kit") {
-      priceDisplayHTML +=
-        '<div style="font-size: 0.8rem; color: #999; margin-top: 4px; font-weight: 300;">Erzeugt jährlich 60 % mehr Energie, als Ihr Haus verbraucht</div>';
+      displayPriceText = `${formatCurrency(price)} + MwSt.`;
     }
     return `
     <div class="checkbox-container">

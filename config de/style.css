@@ -415,12 +415,17 @@ p {
 
 .config .button-row {
     width: 100%;
-    height: auto;
+    height: 10px;
     position: relative;
     background-color: #f0f0f0;
     border-radius: 5px;
     overflow: hidden;
-    margin-top: 5px;
+    margin-top: 0;
+    transition: height 0.3s ease-out;
+}
+
+.config .button-row.ready {
+    height: auto;
 }
 
 #scroll-progress-bar-bottom {
@@ -433,7 +438,7 @@ p {
     border-radius: 5px;
     transition:
         width 0.1s ease-out,
-        opacity 0.4s;
+        opacity 0.3s;
     opacity: 1;
 }
 
@@ -451,15 +456,18 @@ p {
     line-height: 1.25;
     text-align: center;
     cursor: not-allowed;
+    opacity: 0;
     transition:
-        background-color 0.4s,
-        color 0.4s;
+        background-color 0.3s,
+        color 0.3s,
+        opacity 0.3s;
 }
 
 .config .continue-button.active {
     background-color: #333;
     color: #fff;
     cursor: pointer;
+    opacity: 1;
 }
 
 .config .continue-button.active + #scroll-progress-bar-bottom {

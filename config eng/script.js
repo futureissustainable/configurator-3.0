@@ -1208,14 +1208,16 @@ Technical Performance<split>The mentioned performances (including energy consump
     // Get or create the reservation link
     let reservationLink = document.getElementById("reservation-link");
 
+    const buttonRow = document.querySelector(".button-row");
+
     if (scrollPercent >= 70) {
       btn.disabled = false;
       btn.classList.add("active");
       box.classList.add("raise");
+      if (buttonRow) buttonRow.classList.add("ready");
 
       // Show reservation link when button is active
       if (!reservationLink) {
-        const buttonRow = document.querySelector(".button-row");
         if (buttonRow) {
           reservationLink = document.createElement("a");
           reservationLink.id = "reservation-link";
@@ -1232,6 +1234,7 @@ Technical Performance<split>The mentioned performances (including energy consump
       btn.disabled = true;
       btn.classList.remove("active");
       box.classList.remove("raise");
+      if (buttonRow) buttonRow.classList.remove("ready");
 
       // Hide reservation link when button is not active
       if (reservationLink) {
