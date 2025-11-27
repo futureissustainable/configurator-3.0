@@ -1394,13 +1394,13 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     // Add descriptions for specific upgrades
     if (inputValue === "solar-kit") {
       priceDisplayHTML +=
-        '<div class="option-description">Prosumer werden. Deckt 160% des Energiebedarfs Ihres Hauses.</div>';
+        '<div class="option-description">Deckt 160% des Energiebedarfs Ihres Hauses.</div>';
     } else if (inputValue === "ventilation-system") {
       priceDisplayHTML +=
-        '<div class="option-description">Passivhaus-zertifiziert. Filter in medizinischer Qualität. ERV-Kern</div>';
+        '<div class="option-description">Passivhaus-zertifiziert. Filter in medizinischer Qualität.</div>';
     } else if (inputValue === "blinds") {
       priceDisplayHTML +=
-        '<div class="option-description">Blockiert über 99% der UV-Strahlung. Smart. Passivhaus-Standard.</div>';
+        '<div class="option-description">Blockiert über 99% der UV. Smart. Passivhaus-Standard.</div>';
     }
 
     // Update option names

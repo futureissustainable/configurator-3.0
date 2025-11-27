@@ -1449,10 +1449,10 @@ Technical Performance<split>The mentioned performances (including energy consump
     // Add descriptions for specific upgrades
     if (inputValue === "solar-kit") {
       priceDisplayHTML +=
-        '<div class="option-description">Be a prosumer. Covers 160% of your home\'s energy needs.</div>';
+        '<div class="option-description">Covers 160% of your home\'s energy needs.</div>';
     } else if (inputValue === "ventilation-system") {
       priceDisplayHTML +=
-        '<div class="option-description">Passivhaus certified. Medical grade FILTERS. ERV core</div>';
+        '<div class="option-description">Passivhaus certified. Medical grade filters.</div>';
     } else if (inputValue === "blinds") {
       priceDisplayHTML +=
         '<div class="option-description">Blocks over 99% of UV. Smart. Passivhaus standard.</div>';
