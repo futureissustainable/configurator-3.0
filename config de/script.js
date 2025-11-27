@@ -1339,6 +1339,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     let priceDisplayHTML = "";
     let effectiveLabelClass = labelClass;
     let inputAttributes = "";
+    let taglineHTML = "";
 
     const isTurnkey =
       queryArgs["SQF_FINISH"] === "turnkey" ||
@@ -1349,6 +1350,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       inputValue === "ventilation-system" || inputValue === "blinds";
     let specialPriceText = "";
 
+    // Handle ventilation/blinds included in turnkey with checkmark
     if (
       isTurnkey &&
       isVentOrBlinds &&
@@ -1356,7 +1358,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     ) {
       const upgradeData = findUpgradeInCurrentFinish(inputValue);
       if (upgradeData && upgradeData.included && upgradeData.price === 0) {
-        specialPriceText = "In Schlüsselfertig enthalten";
+        specialPriceText = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align: middle; margin-right: 4px;"><polyline points="20 6 9 17 4 12"></polyline></svg>In Schlüsselfertig enthalten';
         isDisabled = true;
         isChecked = true;
         if (queryArgs[inputName] !== inputValue)
@@ -1372,24 +1374,49 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       inputAttributes += " checked";
     }
 
-    if (specialPriceText) {
-      priceDisplayHTML = `<span class="option-price">${specialPriceText}</span>`;
+    // Handle finish option price display with taglines
+    if (context === "finishes" && inputName === "SQF_FINISH") {
+      if (inputValue === "turnkey") {
+        priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ MwSt.</span></span>`;
+        taglineHTML = '<div class="option-tagline">Sofort einziehen.</div>';
+      } else if (inputValue === "semi-finished") {
+        priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ MwSt.</span></span>`;
+        taglineHTML = '<div class="option-tagline">Gestalten Sie Ihr eigenes Interieur.</div>';
+      }
+    } else if (specialPriceText) {
+      priceDisplayHTML = `<span class="option-price price-included-turnkey">${specialPriceText}</span>`;
     } else if (rawPrice === 0) {
       priceDisplayHTML = `<span class="option-price">Inbegriffen</span>`;
     } else {
-      priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} + MwSt.</span>`;
+      priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ MwSt.</span></span>`;
     }
 
+    // Add descriptions for specific upgrades
     if (inputValue === "solar-kit") {
       priceDisplayHTML +=
-        '<div style="font-size: 0.8rem; color: #737579; margin-top: 4px; font-weight: 300;">Erzeugt jährlich 60 % mehr Energie, als Ihr Haus verbraucht</div>';
+        '<div class="option-description">Prosumer werden. Deckt 160% des Energiebedarfs Ihres Hauses.</div>';
+    } else if (inputValue === "ventilation-system") {
+      priceDisplayHTML +=
+        '<div class="option-description">Passivhaus-zertifiziert. Filter in medizinischer Qualität. ERV-Kern</div>';
+    } else if (inputValue === "blinds") {
+      priceDisplayHTML +=
+        '<div class="option-description">Blockiert über 99% der UV-Strahlung. Smart. Passivhaus-Standard.</div>';
+    }
+
+    // Update option names
+    let displayName = optionName;
+    if (inputValue === "turnkey") {
+      displayName = "Voll Schlüsselfertig";
+    } else if (inputValue === "ventilation-system") {
+      displayName = "Zehnder Lüftungssystem";
     }
 
     return `
           <label class="${effectiveLabelClass}">
               <input type="${inputType}" name="${inputName}" price="${rawPrice}" value="${inputValue}" ${inputAttributes} />
-              <span class="option-name">${optionName}</span>
+              <span class="option-name">${displayName}</span>
               ${priceDisplayHTML}
+              ${taglineHTML}
           </label>
       `;
   };
@@ -1498,7 +1525,8 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     const finalContinueBtn = document.getElementById("finalContinueBtn");
     if (finalContinueBtn) {
       finalContinueBtn.disabled = false;  // Enable immediately
-  finalContinueBtn.classList.add("active");
+      finalContinueBtn.classList.add("active");
+      finalContinueBtn.innerHTML = 'FORTFAHREN <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align: middle; margin-left: 4px;"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>';
     }
 
     generateOptions(houseData.options, "step-1", "SQF_FINISH", true, "radio");
