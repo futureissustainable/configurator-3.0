@@ -98,7 +98,7 @@
                 image: ventilationImage,
                 price: 4800,
                 included: false,
-                name: "Ventilation system + Ducting",
+                name: "Zehnder Ventilation System",
               },
             ],
             [
@@ -191,7 +191,7 @@
                 image: ventilationImage,
                 price: 0,
                 included: true,
-                name: "Ventilation system + Ducting",
+                name: "Zehnder Ventilation System",
               },
             ],
             [
@@ -314,7 +314,7 @@
                 image: ventilationImage,
                 price: 7800,
                 included: false,
-                name: "Ventilation system + Ducting",
+                name: "Zehnder Ventilation System",
               },
             ],
             [
@@ -407,7 +407,7 @@
                 image: ventilationImage,
                 price: 0,
                 included: true,
-                name: "Ventilation system + Ducting",
+                name: "Zehnder Ventilation System",
               },
             ],
             [
@@ -530,7 +530,7 @@
                 image: ventilationImage,
                 price: 9800,
                 included: false,
-                name: "Ventilation system + Ducting",
+                name: "Zehnder Ventilation System",
               },
             ],
             [
@@ -623,7 +623,7 @@
                 image: ventilationImage,
                 price: 0,
                 included: true,
-                name: "Ventilation system + Ducting",
+                name: "Zehnder Ventilation System",
               },
             ],
             [
@@ -755,7 +755,7 @@
                 image: ventilationImage,
                 price: 9800,
                 included: false,
-                name: "Ventilation system + Ducting",
+                name: "Zehnder Ventilation System",
               },
             ],
             [
@@ -848,7 +848,7 @@
                 image: ventilationImage,
                 price: 0,
                 included: true,
-                name: "Ventilation system + Ducting",
+                name: "Zehnder Ventilation System",
               },
             ],
             [
@@ -943,7 +943,7 @@ SMART SYSTEMS // TITLE
 Lighting track<split>Flexible configuration for LEDs and spotlights; modern aesthetic.
 Smart Lighting<split>Philips HUE or IKEA TRÅDFRI; easy Smart configuration.
 Smart exterior blinds<split>Block > 95% of solar radiation; app/manual control; certified by the Passive House Institute in Darmstadt, Germany; CE certified.
-Zhender Ventilation System<split>Up to 95% heat recovery + heat pump for heating and cooling.
+Zehnder Ventilation System<split>Up to 95% heat recovery + heat pump for heating and cooling.
 CERTIFICATIONS AND WARRANTIES // TITLE
 Passivhaus Certification<split>Issued by the Passive House Institute (Germany), attests to unprecedented energy efficiency, exceptional comfort. For a permanent home built to the strictest international standards.
 EPD Certification<split>Issued by EPD International, confirms a carbon-negative product and responsible construction practices.
@@ -1202,8 +1202,8 @@ Technical Performance<split>The mentioned performances (including energy consump
           reservationLink = document.createElement("a");
           reservationLink.id = "reservation-link";
           reservationLink.className = "reservation-link";
-          reservationLink.href = "#";
-          reservationLink.textContent = "Or reserve your 2026 production slot now (€50, fully refundable)";
+          reservationLink.href = "/design/reserve";
+          reservationLink.textContent = "Or reserve your 2026 slot - 100€ fully refundable";
           buttonRow.parentNode.insertBefore(reservationLink, buttonRow.nextSibling);
         }
       }
@@ -1301,7 +1301,7 @@ Technical Performance<split>The mentioned performances (including energy consump
       groupIndex: 2,
       queryParam: "SQF_VENTILATION",
       type: "checkbox",
-      defaultName: "Ventilation System",
+      defaultName: "Zehnder Ventilation System",
     },
     {
       groupIndex: 3,
@@ -1333,7 +1333,6 @@ Technical Performance<split>The mentioned performances (including energy consump
     let effectiveLabelClass = labelClass;
     let inputAttributes = "";
     let taglineHTML = "";
-    let badgeHTML = "";
 
     const isTurnkey =
       queryArgs["SQF_FINISH"] === "turnkey" ||
@@ -1382,30 +1381,29 @@ Technical Performance<split>The mentioned performances (including energy consump
           if (inputValue === "turnkey") {
             // When showing turnkey option
             if (currentSelectedFinish === "turnkey") {
-              // Turnkey is selected - show turnkey price, semi-finished shows "Save X"
-              priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} + VAT</span>`;
+              // Turnkey is selected - show turnkey price
+              priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ VAT</span></span>`;
             } else {
               // Semi-turnkey is selected - turnkey shows "+X"
               priceDisplayHTML = `<span class="option-price">+${formatCurrency(priceDiff)}</span>`;
             }
-            // Add tagline and badge for turnkey
+            // Add tagline for turnkey
             taglineHTML = '<div class="option-tagline">Move-in tomorrow.</div>';
-            badgeHTML = '<div class="option-badge">MOST POPULAR</div>';
           } else if (inputValue === "semi-finished") {
             // When showing semi-finished option
             if (currentSelectedFinish === "turnkey") {
               // Turnkey is selected - semi-finished shows "Save X"
-              priceDisplayHTML = `<span class="option-price price-savings">Save ${formatCurrency(priceDiff)}</span>`;
+              priceDisplayHTML = `<span class="option-price">Save ${formatCurrency(priceDiff)}</span>`;
             } else {
               // Semi-turnkey is selected - show semi-turnkey price
-              priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} + VAT</span>`;
+              priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ VAT</span></span>`;
             }
             // Add tagline for semi-finished
             taglineHTML = '<div class="option-tagline">Be your own interior designer.</div>';
           }
         } else {
           // Fallback if options not found
-          priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} + VAT</span>`;
+          priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ VAT</span></span>`;
         }
       }
     } else if (specialPriceText) {
@@ -1413,19 +1411,27 @@ Technical Performance<split>The mentioned performances (including energy consump
     } else if (rawPrice === 0) {
       priceDisplayHTML = `<span class="option-price">Included</span>`;
     } else {
-      priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} + VAT</span>`;
+      priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ VAT</span></span>`;
     }
 
-    // Solar panel description
+    // Add descriptions for specific upgrades
     if (inputValue === "solar-kit") {
       priceDisplayHTML +=
-        '<div class="option-description">Be energy-independent. Produce 160% of the energy your home consumes.</div>';
+        '<div class="option-description">Be a prosumer. Covers 160% of your home\'s energy needs.</div>';
+    } else if (inputValue === "ventilation-system") {
+      priceDisplayHTML +=
+        '<div class="option-description">Passivhaus certified. Medical grade FILTERS. ERV core</div>';
+    } else if (inputValue === "blinds") {
+      priceDisplayHTML +=
+        '<div class="option-description">Blocks over 99% of UV. Smart. Passivhaus standard.</div>';
     }
 
-    // Update option name for turnkey
+    // Update option names
     let displayName = optionName;
     if (inputValue === "turnkey") {
       displayName = "Full Turnkey";
+    } else if (inputValue === "ventilation-system") {
+      displayName = "Zehnder Ventilation System";
     }
 
     return `
@@ -1434,7 +1440,6 @@ Technical Performance<split>The mentioned performances (including energy consump
               <span class="option-name">${displayName}</span>
               ${priceDisplayHTML}
               ${taglineHTML}
-              ${badgeHTML}
           </label>
       `;
   };
@@ -1645,7 +1650,7 @@ Technical Performance<split>The mentioned performances (including energy consump
     );
 
     const finalContinueBtnRef = document.getElementById("finalContinueBtn");
-    if (finalContinueBtnRef) finalContinueBtnRef.textContent = "REVIEW CONFIGURATION";
+    if (finalContinueBtnRef) finalContinueBtnRef.textContent = "CONTINUE →";
     const backBtnElement = document.querySelector(".config .go-back-btn");
     if (backBtnElement) backBtnElement.remove();
   });
@@ -1745,8 +1750,8 @@ Technical Performance<split>The mentioned performances (including energy consump
     if (!currentHouseData) return;
     setTabTitle("Floorplan", "step-2", "floorplanStepTitle");
     setTabTitle("Personalize", "step-3", "upgradesStepTitle");
-    setTabTitle("Delivery to Your Land", "step-4-shipping", "shippingStepTitle");
-    setTabTitle("Referral Code", "step-5-referral", "referralCodeStepTitle");
+    setTabTitle("Delivery", "step-4-shipping", "shippingStepTitle");
+    setTabTitle("Referral", "step-5-referral", "referralCodeStepTitle");
   }
 
   function switchToSingleImageView() {
@@ -2276,11 +2281,10 @@ Technical Performance<split>The mentioned performances (including energy consump
       const turnkeyLabel = turnkeyInput.closest('label');
       const turnkeyPriceSpan = turnkeyLabel?.querySelector('.option-price');
       if (turnkeyPriceSpan) {
-        turnkeyPriceSpan.classList.remove('price-savings');
         if (currentSelectedFinish === "turnkey") {
-          turnkeyPriceSpan.textContent = `${formatCurrency(turnkeyOpt.price)} + VAT`;
+          turnkeyPriceSpan.innerHTML = `${formatCurrency(turnkeyOpt.price)} <span class="vat-label">+ VAT</span>`;
         } else {
-          turnkeyPriceSpan.textContent = `+${formatCurrency(priceDiff)}`;
+          turnkeyPriceSpan.innerHTML = `+${formatCurrency(priceDiff)}`;
         }
       }
     }
@@ -2292,11 +2296,9 @@ Technical Performance<split>The mentioned performances (including energy consump
       const semiFinishedPriceSpan = semiFinishedLabel?.querySelector('.option-price');
       if (semiFinishedPriceSpan) {
         if (currentSelectedFinish === "turnkey") {
-          semiFinishedPriceSpan.textContent = `Save ${formatCurrency(priceDiff)}`;
-          semiFinishedPriceSpan.classList.add('price-savings');
+          semiFinishedPriceSpan.innerHTML = `Save ${formatCurrency(priceDiff)}`;
         } else {
-          semiFinishedPriceSpan.textContent = `${formatCurrency(semiFinishedOpt.price)} + VAT`;
-          semiFinishedPriceSpan.classList.remove('price-savings');
+          semiFinishedPriceSpan.innerHTML = `${formatCurrency(semiFinishedOpt.price)} <span class="vat-label">+ VAT</span>`;
         }
       }
     }
