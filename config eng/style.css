@@ -344,6 +344,9 @@ p {
     margin-left: auto;
     color: #14171c; /* UPDATED COLOR */
 }
+.config .radio-card br + .option-price {
+    margin-left: 0;
+}
 
 .feature-details-link {
     display: inline-block !important;
