@@ -505,7 +505,7 @@
         const houseData = config[houseTypeKey];
         if (!houseData) return "<p>Detalii indisponibile.</p>";
 
-        let modalHtml = `<img src="https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69303cdf299025f5b7e0e219_95%20Wall%20Section.avif" alt="Wall Section" style="width:100%; max-height: 300px; object-fit: cover; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">`;
+        let modalHtml = `<img src="https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69303cdf299025f5b7e0e219_95%20Wall%20Section.avif" alt="Wall Section" style="width:100%; max-height: 300px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">`;
 
         let currentFinishSlug = queryArgs['SQF_FINISH'] || (config[type]?.options[0]?.slug);
         let itemsToUse, sectionOrderToUse;
