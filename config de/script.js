@@ -1418,6 +1418,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
           <label class="${effectiveLabelClass}">
               <input type="${inputType}" name="${inputName}" price="${rawPrice}" value="${inputValue}" ${inputAttributes} />
               <span class="option-name">${displayName}</span>
+              <br>
               ${priceDisplayHTML}
               ${taglineHTML}
           </label>

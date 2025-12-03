@@ -475,6 +475,7 @@
             <label class="${effectiveLabelClass}">
                 <input type="${inputType}" name="${inputName}" price="${rawPrice}" value="${inputValue}" ${inputAttributes} />
                 <span class="option-name">${optionName}</span>
+                <br>
                 ${priceDisplayHTML}
             </label>
         `;
