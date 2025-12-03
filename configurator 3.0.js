@@ -1,6 +1,6 @@
 (function() {
     // Universal Images
-    let blindsImage = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4341f5b9b2742863461ef_375fa4b4b9988f686d5a21cdfd58a106_Blinds.avif";
+    let blindsImage = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c8f3a05d31e358a262f2f_b377fa85acb0af7122188efe4e1c06c6_Modular%20Blinds.avif";
     const ventilationImage = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4379c1a20245ff5d081ea_Ventilation.avif";
     const yakisugiIconUrl = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6891f60b4a12d16a97258f9e_8090eb60385f013115bc5f0f57d370f7_Yakisugi%20Modular.avif";
     const lunawoodIconUrl = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6891f60a87823a871ab57392_2ae606770a59238d22e79f8573f47452_Lunawood%20Modular.avif";
@@ -505,7 +505,7 @@
         const houseData = config[houseTypeKey];
         if (!houseData) return "<p>Detalii indisponibile.</p>";
 
-        let modalHtml = `<img src="${houseData.image}" alt="Imagine principală ${houseData.name}" style="width:100%; max-height: 300px; object-fit: cover; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">`;
+        let modalHtml = `<img src="https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69303cdf299025f5b7e0e219_95%20Wall%20Section.avif" alt="Wall Section" style="width:100%; max-height: 300px; object-fit: cover; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">`;
 
         let currentFinishSlug = queryArgs['SQF_FINISH'] || (config[type]?.options[0]?.slug);
         let itemsToUse, sectionOrderToUse;
