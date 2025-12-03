@@ -1418,6 +1418,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
           <label class="${effectiveLabelClass}">
               <input type="${inputType}" name="${inputName}" price="${rawPrice}" value="${inputValue}" ${inputAttributes} />
               <span class="option-name">${displayName}</span>
+              <br>
               ${priceDisplayHTML}
               ${taglineHTML}
           </label>
@@ -1476,7 +1477,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
 
     const { items, sectionOrder } = parseMaterialData(rawMaterialData);
 
-    let html = `<img src="${houseData.image}" alt="${houseData.name}" style="width:100%; max-height: 400px; object-fit: cover; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">`;
+    let html = `<img src="https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69303cdf299025f5b7e0e219_95%20Wall%20Section.avif" alt="Wall Section" style="width:100%; max-height: 400px; object-fit: cover; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">`;
 
     sectionOrder.forEach((sectionName) => {
       const sectionItems = items.filter((item) => item.section === sectionName);
