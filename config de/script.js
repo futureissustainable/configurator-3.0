@@ -1192,7 +1192,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
           reservationLink = document.createElement("a");
           reservationLink.id = "reservation-link";
           reservationLink.className = "reservation-link";
-          reservationLink.href = "https://buy.stripe.com/5kQfZh0KDgKDeXB3gubZe00";
+          reservationLink.href = "/design/reserve";
           reservationLink.textContent = "Oder reservieren Sie Ihren 2026-Platz - 250€ vollständig erstattbar";
           buttonRow.parentNode.insertBefore(reservationLink, buttonRow.nextSibling);
         }

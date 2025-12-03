@@ -1222,7 +1222,7 @@ Technical Performance<split>The mentioned performances (including energy consump
           reservationLink = document.createElement("a");
           reservationLink.id = "reservation-link";
           reservationLink.className = "reservation-link";
-          reservationLink.href = "https://buy.stripe.com/5kQfZh0KDgKDeXB3gubZe00";
+          reservationLink.href = "/design/reserve";
           reservationLink.textContent = "Or reserve your 2026 slot - 250€ fully refundable";
           buttonRow.parentNode.insertBefore(reservationLink, buttonRow.nextSibling);
         }
