@@ -23,8 +23,8 @@
                     ],
                     'upgrades' : [
                         [ { 'slug' : "parquet-raw-osb", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2de2f5f16c2ddd166de_24%20INT%20SEMI.avif", 'icon' : osbIconUrl, 'price': 0, 'included': true, 'name': "OSB"},
-                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4388b838ef609a824c885_24m2%20Nomad%20OSB%20%2B%20Cashmere%204.0.avif", 'price': 1800, 'included': false, 'name': "Parchet Cashmere", 'icon' : cashmereIconUrl},
-                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4388ba91d0f79d44ce0d2_24m2%20Nomad%20OSB%20%2B%20Hazelnut%204.0.avif", 'price': 1800, 'included': false, 'name': "Parchet Hazelnut", 'icon' : hazelnutIconUrl} ],
+                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9e626baf48e649fa6f_24%20INT%20SEMI%20CASHMERE.avif", 'price': 1800, 'included': false, 'name': "Parchet Cashmere", 'icon' : cashmereIconUrl},
+                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9ded2f00c9544f77e8_24%20INT%20SEMI%20HAZELNUT.avif", 'price': 1800, 'included': false, 'name': "Parchet Hazelnut", 'icon' : hazelnutIconUrl} ],
                         [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
                             { 'slug' : "facade-lunawood", 'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2db5bc300eaac8d8d34_24%20EXT%20LUNA.avif', 'icon' : lunawoodIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Lunawood"} ],
                         [ { 'slug' : "ventilation-system", 'image': ventilationImage, 'price': 4800, 'included': false, 'name': "Sistem de ventilatie + Tubulatura"} ],
@@ -40,7 +40,7 @@
                         [
                             { 'slug' : "parquet-raw-osb", 'image': "", 'price': 0, 'included': true, 'name': "OSB", 'icon' : osbIconUrl},
                             { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2d5825431c8de2a4647_24%20INT.avif", 'price': 0, 'included': true, 'name': "Parchet Cashmere", 'icon' : cashmereIconUrl},
-                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43ad5d75d99a4806d7d4b_24m2%20Nomad%20Interior%20Hazelnut%204.0.avif", 'price': 0, 'included': false, 'name': "Parchet Hazelnut", 'icon' : hazelnutIconUrl} ],
+                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c999e84b323b4840928_24%20INT%20TURNKEY%20HAZELNUT.avif", 'price': 0, 'included': false, 'name': "Parchet Hazelnut", 'icon' : hazelnutIconUrl} ],
                         [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
                             { 'slug' : "facade-lunawood", 'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2db5bc300eaac8d8d34_24%20EXT%20LUNA.avif', 'icon' : lunawoodIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Lunawood"} ],
                         [ { 'slug' : "ventilation-system", 'image': ventilationImage, 'price': 0, 'included': true, 'name': "Sistem de ventilatie + Tubulatura"} ],
@@ -64,8 +64,8 @@
                     ],
                     'upgrades' : [
                         [{ 'slug' : "parquet-raw-osb", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2dbc3983bc6c1db37d5_48%20INT%20SEMI.avif", 'price': 0, 'included': true, 'icon' : osbIconUrl, 'name': "OSB"},
-                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42834f6342091f39dfedb_48m2%20Wanderlust%20OSB%20%2B%20Cashmere%204.0.avif", 'price': 3800, 'included': false, 'icon' : cashmereIconUrl, 'name': "Parchet Cashmere"},
-                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283416e5d5e698aa09c6_48m2%20Wanderlust%20OSB%20%2B%20Hazelnut%204.0.avif", 'price': 3800, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
+                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9d58a01418fbcb2041_48%20INT%20SEMI%20CASHMERE.avif", 'price': 3800, 'included': false, 'icon' : cashmereIconUrl, 'name': "Parchet Cashmere"},
+                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9fdc93278ac1ebcb15_48%20INT%20SEMI%20HAZELNUT.avif", 'price': 3800, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
                         [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
                             { 'slug' : "facade-lunawood", 'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2de138a2e743e8b46a5_48%20EXT%20LUNA.avif', 'icon' : lunawoodIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Lunawood"} ],
                         [{ 'slug' : "ventilation-system", 'image': ventilationImage, 'price': 7800, 'included': false, 'name': "Sistem de ventilatie + Tubulatura"}],
@@ -80,7 +80,7 @@
                     'upgrades' : [
                         [{ 'slug' : "parquet-raw-osb", 'image': "", 'price': 0, 'included': true, 'name': "OSB", 'icon' : osbIconUrl},
                             { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2d4c4987465f99fdb83_48%20INT.avif", 'price': 0, 'included': true, 'name': "Parchet Cashmere", 'icon' : cashmereIconUrl},
-                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282f1a20245ff5ca4510_48m2%20Wanderlust%20Interior%20Hazelnut%204.0.avif", 'price': 0, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
+                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9c67b49cdd4284575f_48%20INT%20TURNKEY%20HAZELNUT.avif", 'price': 0, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
                         [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
                             { 'slug' : "facade-lunawood", 'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2de138a2e743e8b46a5_48%20EXT%20LUNA.avif', 'icon' : lunawoodIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Lunawood"} ],
                         [{ 'slug' : "ventilation-system", 'image': ventilationImage, 'price': 0, 'included': true, 'name': "Sistem de ventilatie + Tubulatura"}],
@@ -104,8 +104,8 @@
                     ],
                     'upgrades' : [
                         [{ 'slug' : "parquet-raw-osb", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2d570c656a121f2f894_95%20INT%20SEMI.avif", 'price': 0, 'included': true, 'icon' : osbIconUrl, 'name': "OSB"},
-                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283456778eb848b0ef0a_95m2%20Serenity%20OSB%20%2B%20Cashmere%204.0.avif", 'price': 7800, 'included': false, 'icon' : cashmereIconUrl, 'name': "Parchet Cashmere"},
-                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428364c8e49bed391084c_95m2%20Serenity%20OSB%20%2B%20Hazelnut%204.0.avif", 'price': 7800, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
+                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9d2329a1114c0b4a71_95%20INT%20SEMI%20CASHMERE.avif", 'price': 7800, 'included': false, 'icon' : cashmereIconUrl, 'name': "Parchet Cashmere"},
+                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9fa6475a26839192bd_95%20INT%20SEMI%20HAZELNUT.avif", 'price': 7800, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
                         [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
                             { 'slug' : "facade-lunawood", 'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2de42d32a56c177baee_95%20EXT%20LUNA.avif', 'icon' : lunawoodIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Lunawood"} ],
                         [{ 'slug' : "ventilation-system", 'image': ventilationImage, 'price': 9800, 'included': false, 'name': "Sistem de ventilatie + Tubulatura"}],
@@ -114,13 +114,13 @@
                 { 'slug': 'turnkey', 'name': 'La cheie', "price" : 189800,
                     'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2def577675af1e0311b_95%20EXT.avif',
                     'images': [
-                        {'src':'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2e1032083199a0f6c91_95%20INT.avif', 'alt':'Serenity La cheie Sus'},
+                        {'src':'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2e1032083199a0f6c91_b01fd90d9516b5947a7ebf431c594038_95%20INT.avif', 'alt':'Serenity La cheie Sus'},
                         {'src':'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2def577675af1e0311b_95%20EXT.avif', 'alt':'Serenity La cheie Jos'}
                     ],
                     'upgrades' : [
                         [{ 'slug' : "parquet-raw-osb", 'image': "", 'price': 0, 'included': true, 'name': "OSB", 'icon' : osbIconUrl},
-                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2e1032083199a0f6c91_95%20INT.avif", 'price': 0, 'included': true, 'name': "Parchet Cashmere", 'icon' : cashmereIconUrl},
-                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282f8de7c20305542612_95m2%20Serenity%20Hazelnut%204.0.avif", 'price': 0, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
+                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2e1032083199a0f6c91_b01fd90d9516b5947a7ebf431c594038_95%20INT.avif", 'price': 0, 'included': true, 'name': "Parchet Cashmere", 'icon' : cashmereIconUrl},
+                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301ca4896ae35084ea4c8a_95%20INT%20TURNKEY%20HAZELNUT.avif", 'price': 0, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
                         [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
                             { 'slug' : "facade-lunawood", 'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2de42d32a56c177baee_95%20EXT%20LUNA.avif', 'icon' : lunawoodIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Lunawood"} ],
                         [{ 'slug' : "ventilation-system", 'image': ventilationImage, 'price': 0, 'included': true, 'name': "Sistem de ventilatie + Tubulatura"}],
@@ -145,8 +145,8 @@
                     ],
                     'upgrades' : [
                         [{ 'slug' : "parquet-raw-osb", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2e013c0363b4b84943c_142%20INT%20SEMI.avif", 'price': 0, 'included': true, 'icon' : osbIconUrl, 'name': "OSB"},
-                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c440551ad361e009f1da6e_142m2%20Sanctuary%20OSB%20%2B%20Cashmere%204.0.avif", 'price': 11800, 'included': false, 'icon' : cashmereIconUrl, 'name': "Parchet Cashmere"},
-                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c44055c519f4722b8ef029_142m2%20Sanctuary%20OSB%20%2B%20Hazelnut%204.0.avif", 'price': 11800, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
+                            { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301ca3e171b36af9268036_142%20INT%20SEMI%20CASHMERE.avif", 'price': 11800, 'included': false, 'icon' : cashmereIconUrl, 'name': "Parchet Cashmere"},
+                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301ca4d06d247c753b592b_142%20INT%20SEMI%20HAZELNUT.avif", 'price': 11800, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
                         [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
                             { 'slug' : "facade-lunawood", 'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2d4db512d9db681f6e6_142%20EXT%20LUNA.avif', 'icon' : lunawoodIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Lunawood"} ],
                         [{ 'slug' : "ventilation-system", 'image': ventilationImage, 'price': 9800, 'included': false, 'name': "Sistem de ventilatie + Tubulatura"}],
@@ -161,7 +161,7 @@
                     'upgrades' : [
                         [{ 'slug' : "parquet-raw-osb", 'image': "", 'price': 0, 'included': true, 'name': "OSB", 'icon' : osbIconUrl},
                             { 'slug' : "parquet-cashmere", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2def7f9aedcdd1efa47_142%20INT.avif", 'price': 0, 'included': true, 'icon' : cashmereIconUrl, 'name': "Parchet Cashmere"},
-                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c44055256a682dd59e9ad7_142m2%20Sanctuary%20Interior%20Hazelnut%204.0.avif", 'price': 0, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
+                            { 'slug' : "parquet-hazelnut", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9d43a6473248399be6_142%20INT%20TURNKEY%20HAZELNUT.avif", 'price': 0, 'included': false, 'icon' : hazelnutIconUrl, 'name': "Parchet Hazelnut"}],
                         [ { 'slug' : "facade-yakisugi", 'image': yakisugiImageUrl, 'icon' : yakisugiIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Yakisugi"},
                             { 'slug' : "facade-lunawood", 'image': 'https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2d4db512d9db681f6e6_142%20EXT%20LUNA.avif', 'icon' : lunawoodIconUrl, 'price': 0, 'included': true, 'name': "Fatada exterioara Lunawood"} ],
                         [{ 'slug' : "ventilation-system", 'image': ventilationImage, 'price': 0, 'included': true, 'name': "Sistem de ventilatie + Tubulatura"}],
@@ -1439,6 +1439,17 @@
                          targetUrlParams.set('SQF_REFERRAL_VALID', `yes${discountPercentage}`);
                      }
                  }
+
+                 // Build the SQF_OFFER URL with configuration parameters
+                 const offerParams = new URLSearchParams();
+                 const offerKeys = ['SQF_TYPE', 'SQF_FINISH', 'SQF_FLOORPLAN', 'SQF_PARQUET', 'SQF_FACADE', 'SQF_VENTILATION', 'SQF_BLINDS', 'SQF_PRICE'];
+                 offerKeys.forEach(key => {
+                     if (queryArgs[key] !== null && queryArgs[key] !== undefined && String(queryArgs[key]).trim() !== "") {
+                         offerParams.set(key, queryArgs[key]);
+                     }
+                 });
+                 const offerUrl = 'biobuilds.com/design/ofertare' + (offerParams.toString() ? '?' + offerParams.toString() : '');
+                 targetUrlParams.set('SQF_OFFER', offerUrl);
 
                  window.location.href = '/ro-ro/design/form/' + (targetUrlParams.toString() ? '?' + targetUrlParams.toString() : '');
              });

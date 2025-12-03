@@ -58,7 +58,7 @@
               {
                 slug: "parquet-cashmere",
                 image:
-                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4388b838ef609a824c885_24m2%20Nomad%20OSB%20%2B%20Cashmere%204.0.avif",
+                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9e626baf48e649fa6f_24%20INT%20SEMI%20CASHMERE.avif",
                 price: 1800,
                 included: false,
                 name: "Cashmere-Parkett",
@@ -67,7 +67,7 @@
               {
                 slug: "parquet-hazelnut",
                 image:
-                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4388ba91d0f79d44ce0d2_24m2%20Nomad%20OSB%20%2B%20Hazelnut%204.0.avif",
+                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9ded2f00c9544f77e8_24%20INT%20SEMI%20HAZELNUT.avif",
                 price: 1800,
                 included: false,
                 name: "Haselnuss-Parkett",
@@ -160,7 +160,7 @@
               {
                 slug: "parquet-hazelnut",
                 image:
-                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43ad5d75d99a4806d7d4b_24m2%20Nomad%20Interior%20Hazelnut%204.0.avif",
+                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c999e84b323b4840928_24%20INT%20TURNKEY%20HAZELNUT.avif",
                 price: 0,
                 included: false,
                 name: "Haselnuss-Parkett",
@@ -274,7 +274,7 @@
               {
                 slug: "parquet-cashmere",
                 image:
-                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c42834f6342091f39dfedb_48m2%20Wanderlust%20OSB%20%2B%20Cashmere%204.0.avif",
+                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9d58a01418fbcb2041_48%20INT%20SEMI%20CASHMERE.avif",
                 price: 3800,
                 included: false,
                 icon: cashmereIconUrl,
@@ -283,7 +283,7 @@
               {
                 slug: "parquet-hazelnut",
                 image:
-                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283416e5d5e698aa09c6_48m2%20Wanderlust%20OSB%20%2B%20Hazelnut%204.0.avif",
+                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9fdc93278ac1ebcb15_48%20INT%20SEMI%20HAZELNUT.avif",
                 price: 3800,
                 included: false,
                 icon: hazelnutIconUrl,
@@ -376,7 +376,7 @@
               {
                 slug: "parquet-hazelnut",
                 image:
-                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282f1a20245ff5ca4510_48m2%20Wanderlust%20Interior%20Hazelnut%204.0.avif",
+                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9c67b49cdd4284575f_48%20INT%20TURNKEY%20HAZELNUT.avif",
                 price: 0,
                 included: false,
                 icon: hazelnutIconUrl,
@@ -490,7 +490,7 @@
               {
                 slug: "parquet-cashmere",
                 image:
-                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4283456778eb848b0ef0a_95m2%20Serenity%20OSB%20%2B%20Cashmere%204.0.avif",
+                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9d2329a1114c0b4a71_95%20INT%20SEMI%20CASHMERE.avif",
                 price: 7800,
                 included: false,
                 icon: cashmereIconUrl,
@@ -499,7 +499,7 @@
               {
                 slug: "parquet-hazelnut",
                 image:
-                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c428364c8e49bed391084c_95m2%20Serenity%20OSB%20%2B%20Hazelnut%204.0.avif",
+                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9fa6475a26839192bd_95%20INT%20SEMI%20HAZELNUT.avif",
                 price: 7800,
                 included: false,
                 icon: hazelnutIconUrl,
@@ -562,7 +562,7 @@
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2def577675af1e0311b_95%20EXT.avif",
           images: [
             {
-              src: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2e1032083199a0f6c91_95%20INT.avif",
+              src: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2e1032083199a0f6c91_b01fd90d9516b5947a7ebf431c594038_95%20INT.avif",
               alt: "Serenity Schlüsselfertig oben",
             },
             {
@@ -583,7 +583,7 @@
               {
                 slug: "parquet-cashmere",
                 image:
-                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2e1032083199a0f6c91_95%20INT.avif",
+                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2e1032083199a0f6c91_b01fd90d9516b5947a7ebf431c594038_95%20INT.avif",
                 price: 0,
                 included: true,
                 name: "Cashmere-Parkett",
@@ -592,7 +592,7 @@
               {
                 slug: "parquet-hazelnut",
                 image:
-                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4282f8de7c20305542612_95m2%20Serenity%20Hazelnut%204.0.avif",
+                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301ca4896ae35084ea4c8a_95%20INT%20TURNKEY%20HAZELNUT.avif",
                 price: 0,
                 included: false,
                 icon: hazelnutIconUrl,
@@ -715,7 +715,7 @@
               {
                 slug: "parquet-cashmere",
                 image:
-                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c440551ad361e009f1da6e_142m2%20Sanctuary%20OSB%20%2B%20Cashmere%204.0.avif",
+                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301ca3e171b36af9268036_142%20INT%20SEMI%20CASHMERE.avif",
                 price: 11800,
                 included: false,
                 icon: cashmereIconUrl,
@@ -724,7 +724,7 @@
               {
                 slug: "parquet-hazelnut",
                 image:
-                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c44055c519f4722b8ef029_142m2%20Sanctuary%20OSB%20%2B%20Hazelnut%204.0.avif",
+                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301ca4d06d247c753b592b_142%20INT%20SEMI%20HAZELNUT.avif",
                 price: 11800,
                 included: false,
                 icon: hazelnutIconUrl,
@@ -817,7 +817,7 @@
               {
                 slug: "parquet-hazelnut",
                 image:
-                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c44055256a682dd59e9ad7_142m2%20Sanctuary%20Interior%20Hazelnut%204.0.avif",
+                  "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9d43a6473248399be6_142%20INT%20TURNKEY%20HAZELNUT.avif",
                 price: 0,
                 included: false,
                 icon: hazelnutIconUrl,
@@ -2859,6 +2859,17 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
             targetUrlParams.set("SQF_REFERRAL_VALID", "yes4");
           }
         }
+
+        // Build the SQF_OFFER URL with configuration parameters
+        const offerParams = new URLSearchParams();
+        const offerKeys = ["SQF_TYPE", "SQF_FINISH", "SQF_FLOORPLAN", "SQF_PARQUET", "SQF_FACADE", "SQF_VENTILATION", "SQF_BLINDS", "SQF_PRICE"];
+        offerKeys.forEach((key) => {
+          if (queryArgs[key] !== null && queryArgs[key] !== undefined && String(queryArgs[key]).trim() !== "") {
+            offerParams.set(key, queryArgs[key]);
+          }
+        });
+        const offerUrl = "biobuilds.com/design/ofertare" + (offerParams.toString() ? "?" + offerParams.toString() : "");
+        targetUrlParams.set("SQF_OFFER", offerUrl);
 
         window.location.href =
           "/de-de/design/form/" +
