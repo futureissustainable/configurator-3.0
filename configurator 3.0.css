@@ -422,6 +422,25 @@ p {
     margin-top: 5px;
 }
 
+.config .button-row.ready {
+    height: auto;
+}
+
+/* === RESERVATION LINK === */
+.reservation-link {
+    display: block;
+    text-align: left;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: #737579;
+    text-decoration: underline;
+    font-weight: 300;
+}
+
+.reservation-link:hover {
+    color: #14171c;
+}
+
 #scroll-progress-bar-bottom {
     position: absolute;
     top: 0;
