@@ -467,13 +467,18 @@ p {
     line-height: 1.25;
     text-align: center;
     cursor: not-allowed;
-    transition: background-color .4s, color .4s;
+    opacity: 0;
+    transition:
+        background-color 0.3s,
+        color 0.3s,
+        opacity 0.3s;
 }
 
 .config .continue-button.active {
     background-color: #333;
     color: #fff;
     cursor: pointer;
+    opacity: 1;
 }
 
 .config .continue-button.active + #scroll-progress-bar-bottom {
