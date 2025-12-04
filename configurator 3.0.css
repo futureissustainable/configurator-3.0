@@ -414,12 +414,13 @@ p {
 
 .config .button-row {
     width: 100%;
-    height: auto;
+    height: 10px;
     position: relative;
     background-color: #f0f0f0;
     border-radius: 5px;
     overflow: hidden;
-    margin-top: 5px;
+    margin-top: 0;
+    transition: height 0.3s ease-out;
 }
 
 .config .button-row.ready {
