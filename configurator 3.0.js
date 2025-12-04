@@ -1449,7 +1449,7 @@
                          offerParams.set(key, queryArgs[key]);
                      }
                  });
-                 const offerUrl = 'biobuilds.com/design/ofertare' + (offerParams.toString() ? '?' + offerParams.toString() : '');
+                 const offerUrl = 'biobuilds.com/design/ofertare' + (offerParams.toString() ? '?' + offerParams.toString() : '') + '#edit';
                  targetUrlParams.set('SQF_OFFER', offerUrl);
 
                  window.location.href = '/ro-ro/design/form/' + (targetUrlParams.toString() ? '?' + targetUrlParams.toString() : '');
