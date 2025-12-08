@@ -1105,6 +1105,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
   const REFERRAL_CODES = {
     "BUHNICI": 0.04,  // 4% discount
     "MATEUS": 0.04,   // 4% discount
+    "FOREST": 0.05,   // 5% discount
     "CHRISTMAS": 0.05, // 5% discount
     "TURISM": 0.05    // 5% discount
   };

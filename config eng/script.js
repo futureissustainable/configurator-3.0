@@ -1135,6 +1135,7 @@ Technical Performance<split>The mentioned performances (including energy consump
   const REFERRAL_CODES = {
     "BUHNICI": 0.04,  // 4% discount
     "MATEUS": 0.04,   // 4% discount
+    "FOREST": 0.05,   // 5% discount
     "CHRISTMAS": 0.05, // 5% discount
     "TURISM": 0.05    // 5% discount
   };
