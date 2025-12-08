@@ -3,8 +3,12 @@
   // Universal Images
   let blindsImage =
     "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c8f3a05d31e358a262f2f_b377fa85acb0af7122188efe4e1c06c6_Modular%20Blinds.avif";
+  const ventilationImage24 =
+    "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6936c855d0d77fec69cd6914_Zehnder24.avif";
+  const ventilationImage48 =
+    "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6936c855653c5fcdcf119a96_Zehnder48.avif";
   const ventilationImage =
-    "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6936b830fa02720e1f98b355_Zehnder.avif";
+    "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6936c8569d218b1d3c2ac007_Zehnder.avif";
   const solarImage =
     "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68e35fa1ebd21311eeb0f8ac_Solar%20Pannels.avif";
   const yakisugiIconUrl =
@@ -96,7 +100,7 @@
             [
               {
                 slug: "ventilation-system",
-                image: ventilationImage,
+                image: ventilationImage24,
                 price: 4800,
                 included: false,
                 name: "Lüftungsanlage + Luftkanäle",
@@ -189,7 +193,7 @@
             [
               {
                 slug: "ventilation-system",
-                image: ventilationImage,
+                image: ventilationImage24,
                 price: 0,
                 included: true,
                 name: "Lüftungsanlage + Luftkanäle",
@@ -312,7 +316,7 @@
             [
               {
                 slug: "ventilation-system",
-                image: ventilationImage,
+                image: ventilationImage48,
                 price: 7800,
                 included: false,
                 name: "Lüftungsanlage + Luftkanäle",
@@ -405,7 +409,7 @@
             [
               {
                 slug: "ventilation-system",
-                image: ventilationImage,
+                image: ventilationImage48,
                 price: 0,
                 included: true,
                 name: "Lüftungsanlage + Luftkanäle",
