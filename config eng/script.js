@@ -3,7 +3,7 @@
   let blindsImage =
     "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c8f3a05d31e358a262f2f_b377fa85acb0af7122188efe4e1c06c6_Modular%20Blinds.avif";
   const ventilationImage =
-    "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c4379c1a20245ff5d081ea_Ventilation.avif";
+    "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6936b830fa02720e1f98b355_Zehnder.avif";
   const solarImage =
     "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68e35fa1ebd21311eeb0f8ac_Solar%20Pannels.avif";
   const yakisugiIconUrl =
