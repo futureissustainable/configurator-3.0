@@ -1102,8 +1102,12 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
   let currentScrollTarget;
 
   let referralDiscountActive = false;
-  const REFERRAL_DISCOUNT_RATE = 0.04;
-  const VALID_REFERRAL_CODES = ["BUHNICI", "MATEUS"];
+  const REFERRAL_CODES = {
+    "BUHNICI": 0.04,  // 4% discount
+    "MATEUS": 0.04,   // 4% discount
+    "CHRISTMAS": 0.05, // 5% discount
+    "TURISM": 0.05    // 5% discount
+  };
 
   const SHIPPING_PRICES = {
     "Ex Works": 0,
@@ -1595,7 +1599,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
 
     if (
       initialReferralCodeFromUrl &&
-      VALID_REFERRAL_CODES.includes(initialReferralCodeFromUrl.toUpperCase())
+      REFERRAL_CODES.hasOwnProperty(initialReferralCodeFromUrl.toUpperCase())
     ) {
       referralDiscountActive = true;
       if (referralCodeInput)
@@ -1606,7 +1610,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
         : "";
       if (
         initialReferralFromInput &&
-        VALID_REFERRAL_CODES.includes(initialReferralFromInput)
+        REFERRAL_CODES.hasOwnProperty(initialReferralFromInput)
       ) {
         referralDiscountActive = true;
       } else if (referralCodeInput && initialReferralFromInput) {
@@ -2224,12 +2228,22 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     const discountMessageEl = document.getElementById("discount-message");
     let finalPrice = originalPrice;
     let isDiscounted = false;
+    let discountRate = 0;
 
     if (referralDiscountActive) {
-      finalPrice = originalPrice * (1 - REFERRAL_DISCOUNT_RATE);
-      isDiscounted = true;
-      if (discountMessageEl) {
-        discountMessageEl.style.display = "block";
+      const referralCodeInput = document.getElementById("referral-code-input");
+      const currentCode = referralCodeInput ? referralCodeInput.value.trim().toUpperCase() : "";
+
+      if (currentCode && REFERRAL_CODES[currentCode]) {
+        discountRate = REFERRAL_CODES[currentCode];
+        finalPrice = originalPrice * (1 - discountRate);
+        isDiscounted = true;
+
+        if (discountMessageEl) {
+          const percentageText = (discountRate * 100).toFixed(0);
+          discountMessageEl.textContent = `${percentageText} % Rabatt angewendet`;
+          discountMessageEl.style.display = "block";
+        }
       }
     } else {
       if (discountMessageEl) {
@@ -2611,7 +2625,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     if (referralInput) {
       referralInput.addEventListener("input", () => {
         const enteredCode = referralInput.value.trim().toUpperCase();
-        referralDiscountActive = VALID_REFERRAL_CODES.includes(enteredCode);
+        referralDiscountActive = REFERRAL_CODES.hasOwnProperty(enteredCode);
         applyReferralDiscountAndRender();
         updateURL();
       });
@@ -2851,13 +2865,15 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
           const enteredCodeUpper = currentReferralCodeValue.toUpperCase();
           if (
             referralDiscountActive &&
-            VALID_REFERRAL_CODES.includes(enteredCodeUpper)
+            REFERRAL_CODES.hasOwnProperty(enteredCodeUpper)
           ) {
             const capitalizedName =
               currentReferralCodeValue.charAt(0).toUpperCase() +
               currentReferralCodeValue.slice(1).toLowerCase();
+            const discountRate = REFERRAL_CODES[enteredCodeUpper];
+            const discountPercentage = (discountRate * 100).toFixed(0);
             targetUrlParams.set("SQF_REFERRAL_NAME", capitalizedName);
-            targetUrlParams.set("SQF_REFERRAL_VALID", "yes4");
+            targetUrlParams.set("SQF_REFERRAL_VALID", `yes${discountPercentage}`);
           }
         }
 
@@ -3026,7 +3042,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     if (
       referralDiscountActive &&
       referralCodeValueFromInput &&
-      VALID_REFERRAL_CODES.includes(referralCodeValueFromInput.toUpperCase())
+      REFERRAL_CODES.hasOwnProperty(referralCodeValueFromInput.toUpperCase())
     ) {
       params.set("SQF_REFERRAL_CODE", referralCodeValueFromInput.toUpperCase());
     } else {
