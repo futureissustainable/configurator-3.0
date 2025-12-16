@@ -2890,7 +2890,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
             offerParams.set(key, queryArgs[key]);
           }
         });
-        const offerUrl = "biobuilds.com/design/ofertare" + (offerParams.toString() ? "?" + offerParams.toString() : "") + "#edit";
+        const offerUrl = "biobuilds.com/design/ofertare" + (offerParams.toString() ? "?" + offerParams.toString() : "");
         targetUrlParams.set("SQF_OFFER", offerUrl);
 
         window.location.href =
