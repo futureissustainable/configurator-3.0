@@ -2945,7 +2945,7 @@ Technical Performance<split>The mentioned performances (including energy consump
             offerParams.set(key, queryArgs[key]);
           }
         });
-        const offerUrl = "biobuilds.com/design/ofertare" + (offerParams.toString() ? "?" + offerParams.toString() : "") + "#edit";
+        const offerUrl = "biobuilds.com/design/ofertare" + (offerParams.toString() ? "?" + offerParams.toString() : "");
         targetUrlParams.set("SQF_OFFER", offerUrl);
 
         window.location.href =
