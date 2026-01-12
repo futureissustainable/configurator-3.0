@@ -1,10 +1,11 @@
-css
 html {
     box-sizing: border-box;
     -webkit-text-size-adjust: 100%;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 body {
@@ -12,7 +13,10 @@ body {
 }
 
 /* === NEW TYPOGRAPHY & COLOR STYLES === */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-weight: 500;
     color: #14171c; /* NEW Title color */
 }
@@ -46,7 +50,6 @@ p {
     margin-bottom: 2rem;
     font-weight: 300;
 }
-
 
 .config {
     width: 100%;
@@ -120,7 +123,6 @@ p {
     margin-bottom: 1vh;
 }
 
-
 .config .right-content {
     width: 30vw;
     display: flex;
@@ -169,7 +171,6 @@ p {
     margin-bottom: 10px;
 }
 
-
 .form-tab:last-child {
     padding-bottom: 180px;
 }
@@ -197,9 +198,13 @@ p {
     background-color: #fff;
     padding: 0.9rem;
     cursor: pointer;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s, border-width 0.2s;
+    transition:
+        background-color 0.2s,
+        border-color 0.2s,
+        box-shadow 0.2s,
+        border-width 0.2s;
     gap: 10px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 .config .radio-card input[type="radio"],
 .config .radio-card input[type="checkbox"] {
@@ -219,7 +224,7 @@ p {
 
 .finish-option-description {
     font-weight: 300;
-    color: #aaa; 
+    color: #aaa;
     margin-top: 10px;
     font-size: 0.9rem;
     line-height: 1.4;
@@ -227,15 +232,14 @@ p {
     padding: 0 5px;
 }
 
-
-.config input[type="checkbox"]{
+.config input[type="checkbox"] {
     visibility: hidden;
     position: absolute;
 }
-.notification{
+.notification {
     text-align: left;
     margin-top: 10px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
     padding: 5px 0;
     color: #cc4b37;
     font-size: 0.9rem;
@@ -246,9 +250,9 @@ p {
 .custom-checkbox {
     display: none;
 }
-:root{
+:root {
     --img-width: 70px;
-    --bg-with: 80px;
+    --bg-width: 80px;
 }
 .checkbox-label {
     display: inline-block;
@@ -272,13 +276,13 @@ p {
     z-index: 1;
 }
 
-.custom-checkbox:checked + .checkbox-label:after{
-    width: var(--bg-with);
-    height: var(--bg-with);
-    background-color: #E0E0E0;
+.custom-checkbox:checked + .checkbox-label:after {
+    width: var(--bg-width);
+    height: var(--bg-width);
+    background-color: #e0e0e0;
     border-radius: 50%;
     border: 1.5px solid #333333;
-    box-shadow: 0 0 6px rgba(0,0,0,0.075);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.075);
     position: absolute;
     content: "";
     left: 50%;
@@ -292,7 +296,7 @@ p {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap:20px;
+    gap: 20px;
     width: 100%;
     margin-top: 0;
     padding: 5px 0;
@@ -321,11 +325,8 @@ p {
     font-weight: 500;
 }
 
-
-.radio-group:not(.persist-group):not(:first-child):not(:has(.radio-card)){display: none}
-
-.config .radio-card:hover {
-    background-color: #f8f8f8;
+.radio-group:not(.persist-group):not(:first-child):not(:has(.radio-card)) {
+    display: none;
 }
 
 .config .option-name {
@@ -343,15 +344,15 @@ p {
     margin-left: 0;
 }
 
-.feature-details-link{
-    display:inline-block !important;
-    margin-top:1rem;
+.feature-details-link {
+    display: inline-block !important;
+    margin-top: 1rem;
     margin-bottom: 1rem;
-    background:none;
-    border:none;
-    box-shadow:none;
-    color:#000;
-    text-decoration:underline;
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: #737579;
+    text-decoration: underline;
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: 300;
@@ -359,15 +360,15 @@ p {
     text-align: left;
 }
 .feature-details-link:hover {
-    color: #444;
+    color: #14171c;
 }
 
-.config .bottom-section{
-    position:sticky;
-    bottom:0;
-    box-shadow:none !important;
-    transform:none !important;
-    transition:none !important;
+.config .bottom-section {
+    position: sticky;
+    bottom: 0;
+    box-shadow: none !important;
+    transform: none !important;
+    transition: none !important;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -385,13 +386,12 @@ p {
     padding: 1rem 1.5rem;
     box-sizing: border-box;
     margin: 0 0 0.5rem 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,.1);
-    transition: transform .4s cubic-bezier(.4,0,.2,1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.config .price-box.raise{
-    transform:translateY(-8px);
+.config .price-box.raise {
+    transform: translateY(-8px);
 }
-
 
 .config .price-box h4 {
     margin: 0 0 0.5rem 0;
@@ -412,6 +412,34 @@ p {
     margin-left: 0.5ch;
 }
 
+/* Built in EU Badge */
+.built-in-eu-badge {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    padding: 8px 0;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.built-in-eu-badge:hover {
+    opacity: 1;
+}
+
+.built-in-eu-badge .eu-flag {
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.built-in-eu-badge .eu-text {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #737579;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
 .config .button-row {
     width: 100%;
     height: 10px;
@@ -427,21 +455,6 @@ p {
     height: auto;
 }
 
-/* === RESERVATION LINK === */
-.reservation-link {
-    display: block;
-    text-align: left;
-    margin-top: 12px;
-    font-size: 0.85rem;
-    color: #737579;
-    text-decoration: underline;
-    font-weight: 300;
-}
-
-.reservation-link:hover {
-    color: #14171c;
-}
-
 #scroll-progress-bar-bottom {
     position: absolute;
     top: 0;
@@ -450,7 +463,9 @@ p {
     height: 100%;
     background-color: #333;
     border-radius: 5px;
-    transition: width 0.1s ease-out, opacity 0.4s;
+    transition:
+        width 0.1s ease-out,
+        opacity 0.3s;
     opacity: 1;
 }
 
@@ -491,22 +506,21 @@ p {
     color: #fff;
 }
 .modal-overlay {
-position: fixed;
-top: 0;
-left: 0;
-width: 100vw;
-height: 100vh;
-background-color: rgba(0,0,0,0.5);
-display: none;
-align-items: center;
-justify-content: center;
-z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
 
-/* Background blur for all browsers */
-backdrop-filter: blur(8px);
--webkit-backdrop-filter: blur(8px);
+    /* Background blur for all browsers */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
-
 
 .modal-content {
     background: #fff;
@@ -527,8 +541,8 @@ backdrop-filter: blur(8px);
     font-size: 1.15rem;
     font-weight: 500;
     color: #14171c; /* UPDATED COLOR */
-    margin-top:3rem;
-    margin-bottom:1rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #e0e0e0;
 }
@@ -551,7 +565,7 @@ backdrop-filter: blur(8px);
 
 .modal-content .material-name p,
 .modal-content .material-chars p {
-    margin:0;
+    margin: 0;
     font-size: 0.9rem;
     line-height: 1.5;
     color: #737579; /* UPDATED COLOR */
@@ -577,12 +591,21 @@ backdrop-filter: blur(8px);
     color: #000;
     background-color: transparent;
 }
-.modal-inner{
+
+.modal-inner {
     overflow-y: auto;
     max-height: calc(85vh - 4rem);
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
 }
-.multistep-form{width: 100%;}
-.options-container{
+.modal-inner::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.multistep-form {
+    width: 100%;
+}
+.options-container {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -629,7 +652,6 @@ backdrop-filter: blur(8px);
     font-size: 0.9rem;
     font-weight: 500;
 }
-
 
 .config .radio-card.disabled-option {
     background-color: #e9ecef;
@@ -682,14 +704,13 @@ backdrop-filter: blur(8px);
     .parquet-section-wrapper .p-wrapper p,
     .modal-content .material-name p,
     .modal-content .material-chars p {
-         font-size: 0.9rem;
-         line-height: 1.5;
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
     .config .right-content .p2 {
         font-size: 0.9rem;
         line-height: 1.3;
     }
-
 
     .config {
         display: flex;
@@ -715,9 +736,8 @@ backdrop-filter: blur(8px);
         height: 100%;
     }
     .config .left-images .stacked-image-container img {
-         height: calc((100% - 1vh) / 2);
+        height: calc((100% - 1vh) / 2);
     }
-
 
     .config .right-content {
         width: 100% !important;
@@ -734,7 +754,7 @@ backdrop-filter: blur(8px);
         min-height: 150px;
         padding-bottom: 20px;
     }
-         #step-3.form-tab {
+    #step-3.form-tab {
         min-height: 50px;
         padding-bottom: 10px;
     }
@@ -744,15 +764,17 @@ backdrop-filter: blur(8px);
     }
 
     .config .bottom-section {
-        position:fixed;
-        left:0; bottom:0; width:100vw;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
         padding: 15px 5vw;
         z-index: 1000;
         display: flex;
         flex-direction: column;
         align-items: stretch;
     }
-    
+
     .config .price-box {
         margin-bottom: 0.75rem;
     }
@@ -777,7 +799,7 @@ backdrop-filter: blur(8px);
         width: 50px;
         height: 50px;
     }
-    .custom-checkbox:checked + .checkbox-label:after{
+    .custom-checkbox:checked + .checkbox-label:after {
         width: 60px;
         height: 60px;
     }
@@ -803,4 +825,93 @@ backdrop-filter: blur(8px);
         right: 0.5rem;
         font-size: 1.5rem;
     }
+}
+
+.transparency-button {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.75rem;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.transparency-button:hover {
+    background-color: #f8f8f8;
+    border-color: #999;
+}
+
+/* === FINISH OPTION STYLES === */
+.option-tagline {
+    font-size: 0.8rem;
+    color: #737579;
+    margin-top: 4px;
+    font-weight: 300;
+    width: 100%;
+}
+
+.option-badge {
+    font-size: 0.7rem;
+    color: #14171c;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 4px;
+    width: 100%;
+}
+
+.option-price.price-savings {
+    color: #28a745;
+}
+
+.option-price.price-included-turnkey {
+    color: #28a745;
+}
+
+.option-price .vat-label {
+    font-size: 0.75em;
+    color: #737579;
+    font-weight: 300;
+}
+
+.option-price-diff {
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-top: 2px;
+    width: 100%;
+}
+
+.option-price-diff.price-diff-less {
+    color: #28a745;
+}
+
+.option-price-diff.price-diff-more {
+    color: #737579;
+}
+
+.option-description {
+    font-size: 0.8rem;
+    color: #737579;
+    margin-top: 4px;
+    font-weight: 300;
+}
+
+/* === RESERVATION LINK === */
+.reservation-link {
+    display: block;
+    text-align: left;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: #737579;
+    text-decoration: underline;
+    font-weight: 300;
+}
+
+.reservation-link:hover {
+    color: #14171c;
 }

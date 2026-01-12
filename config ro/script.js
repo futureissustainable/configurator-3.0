@@ -1,6 +1,6 @@
 (function() {
     // Universal Images
-    let blindsImage = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c8f3a05d31e358a262f2f_b377fa85acb0af7122188efe4e1c06c6_Modular%20Blinds.avif";
+    const blindsImage = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c8f3a05d31e358a262f2f_b377fa85acb0af7122188efe4e1c06c6_Modular%20Blinds.avif";
     const ventilationImage24 = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6936c855d0d77fec69cd6914_Zehnder24.avif";
     const ventilationImage48 = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6936c855653c5fcdcf119a96_Zehnder48.avif";
     const ventilationImage = "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6936c8569d218b1d3c2ac007_Zehnder.avif";
@@ -12,7 +12,7 @@
 
     const yakisugiImageUrl = "";
 
-    let config = {
+    const config = {
         'nest-24' : {
             "image" : "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2de1073da9af1229b5a_24%20EXT.avif",
             "name": "Nest", "energy": 34920, "basePriceText": "De la 39.800 €",
@@ -217,7 +217,7 @@
     Șină de iluminat<split>Configurare flexibilă pentru LED și spoturi; estetică modernă.
     Iluminat Smart<split>Philips HUE sau IKEA TRÅDFRI; configurare Smart ușoară.
     Jaluzele exterioare Smart<split>Blochează > 95% din radiația solară; control prin aplicație/manual; certificate de Institutul de Case Pasive din Darmstadt, Germania; certificate CE.
-    Genvex Premium Preheat 250<split>Recuperare de căldură de până la 95%; pompă de căldură integrată pentru încălzire și răcire.
+    {{VENTILATION_SPECS}}
     CERTIFICĂRI ȘI GARANȚII // TITLE
     Certificare Passivhaus<split>Emisă de Passive House Institute (Germania), atestă eficiența energetică fără precedent, confort excepțional. Pentru o locuință permanentă construită conform celor mai stricte standarde internaționale.
     Certificare EPD<split>Emisă de EPD International, confirmă un produs carbon negativ și practici responsabile de construcție.
@@ -249,6 +249,8 @@
     INSTALAȚII TEHNICE // TITLE
     Instalație electrică<split>Tablou electric complet, conform standardelor stricte UE. Comutatoare și protecții conforme normelor locale, inclusiv tehnologie AFDD.
     Instalație sanitară<split>Țevi și fitinguri de calitate superioară (PPR/PEX), compatibile cu toate reglementările locale și UE.
+    BAIE // TITLE
+    Băi impermeabilizate<split>Băi complet hidroizolate cu instalații pregătite pentru montaj final.
     CERTIFICĂRI ȘI GARANȚII // TITLE
     Certificare Passivhaus<split>Emisă de Passive House Institute (Germania), atestă eficiența energetică fără precedent, confort excepțional. Pentru o locuință permanentă construită conform celor mai stricte standarde internaționale.
     Certificare EPD<split>Emisă de EPD International, confirmă un produs carbon negativ și practici responsabile de construcție.
@@ -306,7 +308,7 @@
                 const parsedItem = parseItemLine(line);
                 if(parsedItem && parsedItem.material) {
 
-                    let sectionToAssign = currentSection;
+                    const sectionToAssign = currentSection;
                     if (!sectionToAssign && items.length === 0 && sectionOrder.length === 0 && parsedItem.material.toUpperCase() !== cleanPotentialTitle.toUpperCase()) {
                     }
 
@@ -326,14 +328,14 @@
 
     const euCountries = ["Austria","Belgia","Bulgaria","Cipru","Croația","Danemarca","Estonia","Finlanda","Franța","Germania","Grecia","Irlanda","Italia","Letonia","Lituania","Luxemburg","Malta","Polonia","Portugalia","Republica Cehă","România","Slovacia","Slovenia","Spania","Suedia","Țările de Jos","Ungaria"];
 
-    let totalPrice = 0;
+    const totalPrice = 0;
     let type = getUrlParameter('SQF_TYPE');
     if(type === null || !config[type]) {
         const validTypes = Object.keys(config);
         type = validTypes.includes('sanctuary-142') ? 'sanctuary-142' : (validTypes.length > 0 ? validTypes[0] : 'nest-24');
     }
 
-    let queryArgs = {};
+    const queryArgs = {};
 
     const stickyImg1 = document.getElementById('stickyImg1');
     const stickyImg2 = document.getElementById('stickyImg2');
@@ -537,14 +539,26 @@
 
         let modalHtml = `<img src="https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69303cdf299025f5b7e0e219_95%20Wall%20Section.avif" alt="Wall Section" style="width:100%; max-height: 300px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">`;
 
-        let currentFinishSlug = queryArgs['SQF_FINISH'] || (config[type]?.options[0]?.slug);
-        let itemsToUse, sectionOrderToUse;
+        const currentFinishSlug = queryArgs['SQF_FINISH'] || (config[type]?.options[0]?.slug);
+        let itemsToUse; let sectionOrderToUse;
         let rawDataString;
 
         if (currentFinishSlug === 'turnkey') {
             rawDataString = turnkeyMaterialItemsRaw;
         } else {
             rawDataString = semiTurnkeyMaterialItemsRaw;
+        }
+
+        // Replace ventilation placeholder with model-specific specs for turnkey
+        if (currentFinishSlug === 'turnkey') {
+            const ventilationSpecs = {
+                "nest-24": "Zehnder ComfoAir 70<split>Recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea P-MOZ25IC5-E pentru încălzire și răcire.",
+                "wanderlust-48": "Zehnder ComfoAir 100<split>Recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea P-MOZ25IC5-E pentru încălzire și răcire.",
+                "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24<split>Recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea P-MOZ30IC5-E pentru încălzire și răcire.",
+                "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24<split>Recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea P-MOZ30IC5-E pentru încălzire și răcire.",
+            };
+            const specs = ventilationSpecs[houseTypeKey] || "Genvex Premium Preheat 250<split>Recuperare de căldură de până la 95%; pompă de căldură integrată pentru încălzire și răcire.";
+            rawDataString = rawDataString.replace("{{VENTILATION_SPECS}}", specs);
         }
 
         const parsedData = parseMaterialData(rawDataString);
@@ -562,7 +576,7 @@
 
 
         sectionOrderToUse.forEach(sectionKey => {
-            if (categorizedItems.hasOwnProperty(sectionKey)) {
+            if (Object.prototype.hasOwnProperty.call(categorizedItems, sectionKey)) {
                 const items = categorizedItems[sectionKey];
                 if (items.length > 0) {
                     const sectionTitle = sectionKey.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
@@ -591,7 +605,7 @@
             }
         });
 
-        let houseData = config[type];
+        const houseData = config[type];
         if (!houseData) {
             console.error("Configuration for house type '" + type + "' not found. Aborting initialization.");
             document.body.innerHTML = "<p style='text-align:center;padding:20px;'>Eroare: Configurația pentru modelul selectat nu a putut fi încărcată.</p>";
@@ -709,14 +723,15 @@
             let modalContentProvider = null;
 
             switch (tabId) {
-                case 'step-1':
+                case 'step-1': {
                     const currentFinishSlugForLink = queryArgs['SQF_FINISH'] || (config[type]?.options.length > 0 ? config[type].options[0].slug : null);
                     const finishDataForLink = currentFinishSlugForLink ? config[type].options.find(o => o.slug === currentFinishSlugForLink) : null;
                     const finishName = finishDataForLink ? finishDataForLink.name : 'your selection';
                     buttonText = `Explorează ce este inclus în ${finishName}`;
                     modalContentProvider = () => generateNewDetailedMaterialModalContent(type);
                     break;
-                case 'step-2':
+                }
+                case 'step-2': {
                     const currentFloorplanSlug = queryArgs['SQF_FLOORPLAN'] || (config[type]?.floorplan?.[0]?.slug);
                     const floorplanData = currentFloorplanSlug ? config[type]?.floorplan?.find(f => f.slug === currentFloorplanSlug) : null;
                     const planLetter = floorplanData ? floorplanData.name.replace('Plan ','') : 'A';
@@ -734,6 +749,7 @@
                         return modalHtml;
                     };
                     break;
+                }
             }
 
             if (buttonText && modalContentProvider) {
@@ -747,7 +763,7 @@
                     e.preventDefault();
                     if (!modalInnerContent || !modalOverlay) return;
 
-                    let content = modalContentProvider();
+                    const content = modalContentProvider();
                     modalInnerContent.innerHTML = content;
                     modalOverlay.style.display = 'flex';
                 });
@@ -757,7 +773,7 @@
     }
 
     function setTabTitles() {
-        let currentHouseData = config[type];
+        const currentHouseData = config[type];
         if (!currentHouseData) return;
         setTabTitle('Plan', 'step-2', 'floorplanStepTitle');
         setTabTitle('Upgrade', 'step-3', 'upgradesStepTitle');
@@ -797,7 +813,7 @@
             stickyImg2.classList.remove('object-fit-contain');
         } else {
             switchToSingleImageView();
-            let singleImageSrc = finishData?.image || houseData.image;
+            const singleImageSrc = finishData?.image || houseData.image;
             if (singleImageSrc) {
                 crossfadeStickyImage(singleImageSrc, false);
             } else {
@@ -902,7 +918,7 @@
                 const slug = queryArgs[paramKey];
                 if (slug) {
                     const finishContextForUpgrade = currentFinishSlug || config[type]?.options[0]?.slug;
-                    let upgradeData = findUpgrade(slug, finishContextForUpgrade);
+                    const upgradeData = findUpgrade(slug, finishContextForUpgrade);
                     if (slug === 'facade-yakisugi' && config[type]) {
                         upgradeImageFromUrl = config[type].image;
                     } else if (upgradeData && upgradeData.image && upgradeData.image !== "") {
@@ -937,15 +953,15 @@
     }
 
     function render_upgrades(finishSlugValue){
-        let houseConfig = config[type];
-        let step3Container = document.getElementById('step-3')?.querySelector('.options-container');
+        const houseConfig = config[type];
+        const step3Container = document.getElementById('step-3')?.querySelector('.options-container');
         if (!step3Container || !houseConfig) {
             if(step3Container) step3Container.innerHTML = ''; return;
         }
         step3Container.innerHTML = '';
         if (!finishSlugValue) return;
 
-        let selectedFinishOption = houseConfig.options.find(obj => obj.slug === finishSlugValue);
+        const selectedFinishOption = houseConfig.options.find(obj => obj.slug === finishSlugValue);
         if (!selectedFinishOption || !selectedFinishOption.upgrades) return;
 
         const isTurnkeySelected = (finishSlugValue === 'turnkey');
@@ -974,13 +990,13 @@
                 }
 
                 if (cfg.type === 'parquet' || cfg.type === 'radio') {
-                    let currentSelection = queryArgs[cfg.queryParam];
+                    const currentSelection = queryArgs[cfg.queryParam];
                     let inputToSelect = step3Container.querySelector(`input[name="${cfg.queryParam}"][value="${currentSelection}"]`);
 
                     if (!inputToSelect || (inputToSelect && inputToSelect.closest('.parquet-section-wrapper, .radio-group').offsetParent === null) ) {
                         const defaultIncludedFree = optionsToRender.find(opt => opt.included && opt.price === 0);
                         const firstOption = optionsToRender[0];
-                        let defaultSlug = defaultIncludedFree ? defaultIncludedFree.slug : (firstOption ? firstOption.slug : null);
+                        const defaultSlug = defaultIncludedFree ? defaultIncludedFree.slug : (firstOption ? firstOption.slug : null);
 
                         if (defaultSlug) {
                             inputToSelect = step3Container.querySelector(`input[name="${cfg.queryParam}"][value="${defaultSlug}"]`);
@@ -1036,10 +1052,10 @@
 
     function render_floorplan() {
         if (!config[type] || !config[type].floorplan) return;
-        let options = config[type].floorplan;
+        const options = config[type].floorplan;
         generateOptions(options, 'step-2', "SQF_FLOORPLAN", false, 'radio');
         const floorplanFromURL = queryArgs['SQF_FLOORPLAN'];
-        let floorplanInput = document.querySelector(`input[name="SQF_FLOORPLAN"][value="${floorplanFromURL}"]`);
+        const floorplanInput = document.querySelector(`input[name="SQF_FLOORPLAN"][value="${floorplanFromURL}"]`);
 
         if (floorplanInput) {
             floorplanInput.checked = true;
@@ -1132,9 +1148,9 @@
 
 
     function generateOptions(options, tabID, inputName, append = false, inputType = 'radio') {
-        let tab = document.getElementById(tabID);
+        const tab = document.getElementById(tabID);
         if (!tab) return;
-        let container = tab.querySelector('.options-container');
+        const container = tab.querySelector('.options-container');
         if (!container) return;
 
         if (!options || options.length === 0 ) {
@@ -1170,7 +1186,7 @@
         let wrapperClass = 'radio-group ' + inputName.toLowerCase().replace(/_/g, '-') + (inputName === 'SQF_FINISH' ? ' sqf-finish' : '');
         if (inputType === 'checkbox') wrapperClass += ' checkbox-group';
 
-        let fullGroupHTML = optionsWrapper(optionString, wrapperClass);
+        const fullGroupHTML = optionsWrapper(optionString, wrapperClass);
 
         if (optionString.trim() !== "") {
             if(!append) {
@@ -1187,9 +1203,9 @@
     }
 
     function generateParquetOptions(options, tabID, inputName, append = false, groupDefaultName = "Opțiuni"){
-        let tab = document.getElementById(tabID);
+        const tab = document.getElementById(tabID);
         if (!tab) return;
-        let container = tab.querySelector('.options-container');
+        const container = tab.querySelector('.options-container');
         if (!container) return;
 
         if (!options || options.length === 0) {
@@ -1202,7 +1218,8 @@
         }
 
         let optionString = "";
-        let firstName = "", firstPriceText = "";
+        let firstName = "";
+        let firstPriceText = "";
         let defaultCheckedSlug = queryArgs[inputName];
 
         if (!defaultCheckedSlug || !options.find(opt => opt.slug === defaultCheckedSlug)) {
@@ -1215,13 +1232,11 @@
         }
 
         options.forEach((option) => {
-            let isDefaultChecked = (option.slug === defaultCheckedSlug);
+            const isDefaultChecked = (option.slug === defaultCheckedSlug);
             optionString += parquetOption('radio', inputName, option.price, option.slug, option.name, option.icon, isDefaultChecked);
             if (isDefaultChecked) {
                 firstName = option.name;
-                if (option.price === 0 && option.included) { firstPriceText = "Inclus"; }
-                else if (option.price === 0) { firstPriceText = "Inclus"; }
-                else { firstPriceText = `${formatCurrency(option.price)} + TVA`; }
+                firstPriceText = option.price === 0 ? "Inclus" : `${formatCurrency(option.price)} + TVA`;
             }
         });
 
@@ -1240,19 +1255,15 @@
             groupTitleElement.textContent = groupDefaultName || inputName.replace('SQF_', '').replace(/_/g, ' ');
             groupTitleElement.style.marginBottom = '10px';
 
-            let parquetIconsGroupHTML = optionsWrapper(optionString, 'radio-group parquet-checkboxes ' + inputName.toLowerCase().replace(/_/g, '-'));
-            let displayLabelId = `display-label-${inputName}`;
-            let displayPriceId = `display-price-${inputName}`;
-            let parquetLabelsHTML = `<div class="p-wrapper"><p id="${displayLabelId}">${firstName}</p><p id="${displayPriceId}" class="option-price">${firstPriceText}</p></div>`;
+            const parquetIconsGroupHTML = optionsWrapper(optionString, 'radio-group parquet-checkboxes ' + inputName.toLowerCase().replace(/_/g, '-'));
+            const displayLabelId = `display-label-${inputName}`;
+            const displayPriceId = `display-price-${inputName}`;
+            const parquetLabelsHTML = `<div class="p-wrapper"><p id="${displayLabelId}">${firstName}</p><p id="${displayPriceId}" class="option-price">${firstPriceText}</p></div>`;
 
             parquetSectionWrapper.appendChild(groupTitleElement);
             parquetSectionWrapper.insertAdjacentHTML('beforeend', parquetIconsGroupHTML + parquetLabelsHTML);
 
-            if (append) {
-                    container.appendChild(parquetSectionWrapper);
-            } else {
-                    container.appendChild(parquetSectionWrapper);
-            }
+            container.appendChild(parquetSectionWrapper);
         }
     }
 
@@ -1348,7 +1359,7 @@
             });
 
             form.addEventListener('click', (event) => {
-                let target = event.target;
+                const target = event.target;
                 let inputElement = null;
 
                 if (target.tagName === 'LABEL') {
@@ -1378,7 +1389,7 @@
         if (referralInput) {
             referralInput.addEventListener('input', () => {
                 const enteredCode = referralInput.value.trim().toUpperCase();
-                referralDiscountActive = REFERRAL_CODES.hasOwnProperty(enteredCode);
+                referralDiscountActive = Object.prototype.hasOwnProperty.call(REFERRAL_CODES, enteredCode);
                 applyReferralDiscountAndRender();
                 updateURL();
             });
@@ -1498,10 +1509,10 @@
 }
 
 function showNotification(sectionElementOrId, text = "") {
-    let sectionElement = (typeof sectionElementOrId === 'string') ? document.getElementById(sectionElementOrId) : sectionElementOrId;
+    const sectionElement = (typeof sectionElementOrId === 'string') ? document.getElementById(sectionElementOrId) : sectionElementOrId;
     if (!sectionElement) return;
     removeNotification(sectionElement);
-    let notification = document.createElement('div');
+    const notification = document.createElement('div');
     notification.classList.add('notification');
     notification.textContent = text || 'Vă rugăm să faceți o selecție.';
 
@@ -1520,7 +1531,7 @@ function showNotification(sectionElementOrId, text = "") {
 }
 
 function removeNotification(sectionElementOrId) {
-    let sectionElement = (typeof sectionElementOrId === 'string') ? document.getElementById(sectionElementOrId) : sectionElementOrId;
+    const sectionElement = (typeof sectionElementOrId === 'string') ? document.getElementById(sectionElementOrId) : sectionElementOrId;
     if (!sectionElement) return;
     const notification = sectionElement.querySelector('.notification');
     if (notification) notification.remove();
@@ -1590,13 +1601,13 @@ function updateURL() {
 }
 
 function findUpgrade(slug, finishContextSlug) {
-    let finishSlugToSearch = finishContextSlug || queryArgs['SQF_FINISH'];
+    const finishSlugToSearch = finishContextSlug || queryArgs['SQF_FINISH'];
     if (!finishSlugToSearch || !config[type] || !config[type].options) return null;
 
     const currentFinishOption = config[type].options.find(opt => opt.slug === finishSlugToSearch);
     if (!currentFinishOption || !currentFinishOption.upgrades) return null;
 
-    for (let upgradeGroup of currentFinishOption.upgrades) {
+    for (const upgradeGroup of currentFinishOption.upgrades) {
         if (Array.isArray(upgradeGroup)) {
             const upgrade = upgradeGroup.find(item => item.slug === slug);
             if (upgrade) return upgrade;
@@ -1606,13 +1617,13 @@ function findUpgrade(slug, finishContextSlug) {
 }
 
 function findUpgradeInCurrentFinish(upgradeSlug) {
-    let currentFinishSlug = queryArgs['SQF_FINISH'] || (config[type] && config[type].options.length > 0 ? config[type].options[0].slug : null);
+    const currentFinishSlug = queryArgs['SQF_FINISH'] || (config[type] && config[type].options.length > 0 ? config[type].options[0].slug : null);
     if (!currentFinishSlug) return null;
 
     const finishData = config[type].options.find(opt => opt.slug === currentFinishSlug);
 
     if (!finishData || !finishData.upgrades) return null;
-    for (let upgradeGroup of finishData.upgrades) {
+    for (const upgradeGroup of finishData.upgrades) {
         if (Array.isArray(upgradeGroup)) {
             const upgrade = upgradeGroup.find(item => item.slug === upgradeSlug);
             if (upgrade) return upgrade;
