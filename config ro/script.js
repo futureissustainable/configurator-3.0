@@ -217,7 +217,7 @@
     Șină de iluminat<split>Configurare flexibilă pentru LED și spoturi; estetică modernă.
     Iluminat Smart<split>Philips HUE sau IKEA TRÅDFRI; configurare Smart ușoară.
     Jaluzele exterioare Smart<split>Blochează > 95% din radiația solară; control prin aplicație/manual; certificate de Institutul de Case Pasive din Darmstadt, Germania; certificate CE.
-    {{VENTILATION_SPECS}}
+    Sistem de Ventilație Zehnder<split>{{VENTILATION_SPECS}}
     CERTIFICĂRI ȘI GARANȚII // TITLE
     Certificare Passivhaus<split>Emisă de Passive House Institute (Germania), atestă eficiența energetică fără precedent, confort excepțional. Pentru o locuință permanentă construită conform celor mai stricte standarde internaționale.
     Certificare EPD<split>Emisă de EPD International, confirmă un produs carbon negativ și practici responsabile de construcție.
@@ -552,12 +552,12 @@
         // Replace ventilation placeholder with model-specific specs for turnkey
         if (currentFinishSlug === 'turnkey') {
             const ventilationSpecs = {
-                "nest-24": "Zehnder ComfoAir 70<split>Recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea P-MOZ25IC5-E pentru încălzire și răcire.",
-                "wanderlust-48": "Zehnder ComfoAir 100<split>Recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea P-MOZ25IC5-E pentru încălzire și răcire.",
-                "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24<split>Recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea P-MOZ30IC5-E pentru încălzire și răcire.",
-                "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24<split>Recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea P-MOZ30IC5-E pentru încălzire și răcire.",
+                "nest-24": "Zehnder ComfoAir 70 cu recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea pentru încălzire și răcire.",
+                "wanderlust-48": "Zehnder ComfoAir 100 cu recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea pentru încălzire și răcire.",
+                "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 cu recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea pentru încălzire și răcire.",
+                "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 cu recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea pentru încălzire și răcire.",
             };
-            const specs = ventilationSpecs[houseTypeKey] || "Genvex Premium Preheat 250<split>Recuperare de căldură de până la 95%; pompă de căldură integrată pentru încălzire și răcire.";
+            const specs = ventilationSpecs[houseTypeKey] || "Recuperare de căldură de până la 95% + pompă de căldură pentru încălzire și răcire.";
             rawDataString = rawDataString.replace("{{VENTILATION_SPECS}}", specs);
         }
 

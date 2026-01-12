@@ -1491,10 +1491,10 @@ Technical Performance<split>The mentioned performances (including energy consump
     // Replace ventilation placeholder with model-specific specs for turnkey
     if (currentFinishSlug === "turnkey") {
       const ventilationSpecs = {
-        "nest-24": "Zehnder ComfoAir 70 with up to 95% heat recovery + Panasonic Aquarea P-MOZ25IC5-E Heat Pump for heating and cooling.",
-        "wanderlust-48": "Zehnder ComfoAir 100 with up to 95% heat recovery + Panasonic Aquarea P-MOZ25IC5-E Heat Pump for heating and cooling.",
-        "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 with up to 95% heat recovery + Panasonic Aquarea P-MOZ30IC5-E Heat Pump for heating and cooling.",
-        "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 with up to 95% heat recovery + Panasonic Aquarea P-MOZ30IC5-E Heat Pump for heating and cooling.",
+        "nest-24": "Zehnder ComfoAir 70 with up to 95% heat recovery + Panasonic Aquarea Heat Pump for heating and cooling.",
+        "wanderlust-48": "Zehnder ComfoAir 100 with up to 95% heat recovery + Panasonic Aquarea Heat Pump for heating and cooling.",
+        "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 with up to 95% heat recovery + Panasonic Aquarea Heat Pump for heating and cooling.",
+        "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 with up to 95% heat recovery + Panasonic Aquarea Heat Pump for heating and cooling.",
       };
       const specs = ventilationSpecs[houseTypeKey] || "Up to 95% heat recovery + heat pump for heating and cooling.";
       rawMaterialData = rawMaterialData.replace("{{VENTILATION_SPECS}}", specs);

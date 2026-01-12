@@ -1475,10 +1475,10 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     // Replace ventilation placeholder with model-specific specs for turnkey
     if (currentFinishSlug === "turnkey") {
       const ventilationSpecs = {
-        "nest-24": "Zehnder ComfoAir 70 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea P-MOZ25IC5-E Wärmepumpe zum Heizen und Kühlen.",
-        "wanderlust-48": "Zehnder ComfoAir 100 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea P-MOZ25IC5-E Wärmepumpe zum Heizen und Kühlen.",
-        "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea P-MOZ30IC5-E Wärmepumpe zum Heizen und Kühlen.",
-        "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea P-MOZ30IC5-E Wärmepumpe zum Heizen und Kühlen.",
+        "nest-24": "Zehnder ComfoAir 70 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea Wärmepumpe zum Heizen und Kühlen.",
+        "wanderlust-48": "Zehnder ComfoAir 100 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea Wärmepumpe zum Heizen und Kühlen.",
+        "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea Wärmepumpe zum Heizen und Kühlen.",
+        "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea Wärmepumpe zum Heizen und Kühlen.",
       };
       const specs = ventilationSpecs[houseTypeKey] || "Bis zu 95 % Wärmerückgewinnung + Wärmepumpe zum Heizen und Kühlen.";
       rawMaterialData = rawMaterialData.replace("{{VENTILATION_SPECS}}", specs);
