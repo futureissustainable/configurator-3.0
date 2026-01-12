@@ -252,7 +252,7 @@ p {
 }
 :root {
     --img-width: 70px;
-    --bg-with: 80px;
+    --bg-width: 80px;
 }
 .checkbox-label {
     display: inline-block;
@@ -277,8 +277,8 @@ p {
 }
 
 .custom-checkbox:checked + .checkbox-label:after {
-    width: var(--bg-with);
-    height: var(--bg-with);
+    width: var(--bg-width);
+    height: var(--bg-width);
     background-color: #e0e0e0;
     border-radius: 50%;
     border: 1.5px solid #333333;
@@ -327,10 +327,6 @@ p {
 
 .radio-group:not(.persist-group):not(:first-child):not(:has(.radio-card)) {
     display: none;
-}
-
-.config .radio-card:hover {
-    background-color: #f8f8f8;
 }
 
 .config .option-name {
@@ -414,6 +410,34 @@ p {
 }
 .tva-label {
     margin-left: 0.5ch;
+}
+
+/* Built in EU Badge */
+.built-in-eu-badge {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    padding: 8px 0;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.built-in-eu-badge:hover {
+    opacity: 1;
+}
+
+.built-in-eu-badge .eu-flag {
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.built-in-eu-badge .eu-text {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #737579;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
 }
 
 .config .button-row {

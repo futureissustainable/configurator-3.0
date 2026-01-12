@@ -1,6 +1,6 @@
 (function () {
   // Universal Images
-  let blindsImage =
+  const blindsImage =
     "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c8f3a05d31e358a262f2f_b377fa85acb0af7122188efe4e1c06c6_Modular%20Blinds.avif";
   const ventilationImage24 =
     "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6936c855d0d77fec69cd6914_Zehnder24.avif";
@@ -23,7 +23,7 @@
 
   const yakisugiImageUrl = ""; // This remains empty to use the main model image as a fallback
 
-  let config = {
+  const config = {
     "nest-24": {
       image:
         "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2de1073da9af1229b5a_24%20EXT.avif",
@@ -120,7 +120,7 @@
                 image: solarImage,
                 price: 7800,
                 included: false,
-                name: "Solar Pannels - Zero Energy",
+                name: "Solar Panels - Zero Energy",
               },
             ],
           ],
@@ -213,7 +213,7 @@
                 image: solarImage,
                 price: 7800,
                 included: false,
-                name: "Solar Pannels - Zero Energy",
+                name: "Solar Panels - Zero Energy",
               },
             ],
           ],
@@ -336,7 +336,7 @@
                 image: solarImage,
                 price: 11800,
                 included: false,
-                name: "Solar Pannels - Zero Energy",
+                name: "Solar Panels - Zero Energy",
               },
             ],
           ],
@@ -429,7 +429,7 @@
                 image: solarImage,
                 price: 11800,
                 included: false,
-                name: "Solar Pannels - Zero Energy",
+                name: "Solar Panels - Zero Energy",
               },
             ],
           ],
@@ -552,7 +552,7 @@
                 image: solarImage,
                 price: 14800,
                 included: false,
-                name: "Solar Pannels - Zero Energy",
+                name: "Solar Panels - Zero Energy",
               },
             ],
           ],
@@ -645,7 +645,7 @@
                 image: solarImage,
                 price: 14800,
                 included: false,
-                name: "Solar Pannels - Zero Energy",
+                name: "Solar Panels - Zero Energy",
               },
             ],
           ],
@@ -777,7 +777,7 @@
                 image: solarImage,
                 price: 16800,
                 included: false,
-                name: "Solar Pannels - Zero Energy",
+                name: "Solar Panels - Zero Energy",
               },
             ],
           ],
@@ -870,7 +870,7 @@
                 image: solarImage,
                 price: 16800,
                 included: false,
-                name: "Solar Pannels - Zero Energy",
+                name: "Solar Panels - Zero Energy",
               },
             ],
           ],
@@ -947,7 +947,7 @@ SMART SYSTEMS // TITLE
 Lighting track<split>Flexible configuration for LEDs and spotlights; modern aesthetic.
 Smart Lighting<split>Philips HUE or IKEA TRÅDFRI; easy Smart configuration.
 Smart exterior blinds<split>Block > 95% of solar radiation; app/manual control; certified by the Passive House Institute in Darmstadt, Germany; CE certified.
-Zehnder Ventilation System<split>Up to 95% heat recovery + heat pump for heating and cooling.
+Zehnder Ventilation System<split>{{VENTILATION_SPECS}}
 CERTIFICATIONS AND WARRANTIES // TITLE
 Passivhaus Certification<split>Issued by the Passive House Institute (Germany), attests to unprecedented energy efficiency, exceptional comfort. For a permanent home built to the strictest international standards.
 EPD Certification<split>Issued by EPD International, confirms a carbon-negative product and responsible construction practices.
@@ -979,6 +979,8 @@ Kitchen installations<split>Pre-equipped installations, ready for your furniture
 TECHNICAL INSTALLATIONS // TITLE
 Electrical installation<split>Complete electrical panel, compliant with strict EU standards. Switches and protections compliant with local regulations, including AFDD technology.
 Plumbing installation<split>High-quality pipes and fittings (PPR/PEX), compatible with all local and EU regulations.
+BATHROOM // TITLE
+Waterproofed bathrooms<split>Fully waterproofed bathroom areas with all plumbing installations in place, ready for your finishes.
 CERTIFICATIONS AND WARRANTIES // TITLE
 Passivhaus Certification<split>Issued by the Passive House Institute (Germany), attests to unprecedented energy efficiency, exceptional comfort. For a permanent home built to the strictest international standards.
 EPD Certification<split>Issued by EPD International, confirms a carbon-negative product and responsible construction practices.
@@ -1049,15 +1051,7 @@ Technical Performance<split>The mentioned performances (including energy consump
       } else if (currentSection || items.length === 0) {
         const parsedItem = parseItemLine(line);
         if (parsedItem && parsedItem.material) {
-          let sectionToAssign = currentSection;
-          if (
-            !sectionToAssign &&
-            items.length === 0 &&
-            sectionOrder.length === 0 &&
-            parsedItem.material.toUpperCase() !==
-              cleanPotentialTitle.toUpperCase()
-          ) {
-          }
+          const sectionToAssign = currentSection;
 
           items.push({
             section: sectionToAssign || "General",
@@ -1076,37 +1070,6 @@ Technical Performance<split>The mentioned performances (including energy consump
     return { items, sectionOrder };
   }
 
-  const euCountries = [
-    "Austria",
-    "Belgium",
-    "Bulgaria",
-    "Croatia",
-    "Cyprus",
-    "Czech Republic",
-    "Denmark",
-    "Estonia",
-    "Finland",
-    "France",
-    "Germany",
-    "Greece",
-    "Hungary",
-    "Ireland",
-    "Italy",
-    "Latvia",
-    "Lithuania",
-    "Luxembourg",
-    "Malta",
-    "Netherlands",
-    "Poland",
-    "Portugal",
-    "Romania",
-    "Slovakia",
-    "Slovenia",
-    "Spain",
-    "Sweden",
-  ];
-
-  let totalPrice = 0;
   let type = getUrlParameter("SQF_TYPE");
   if (type === null || !config[type]) {
     const validTypes = Object.keys(config);
@@ -1117,7 +1080,7 @@ Technical Performance<split>The mentioned performances (including energy consump
         : "nest-24";
   }
 
-  let queryArgs = {};
+  const queryArgs = {};
 
   const stickyImg1 = document.getElementById("stickyImg1");
   const stickyImg2 = document.getElementById("stickyImg2");
@@ -1131,8 +1094,6 @@ Technical Performance<split>The mentioned performances (including energy consump
   const formTabsArray = Array.from(formTabsNodeList);
   const rightContentElement = document.querySelector(".config .right-content");
 
-  const btn = document.getElementById("finalContinueBtn");
-  const box = document.getElementById("priceBox");
   let currentScrollTarget;
 
   let referralDiscountActive = false;
@@ -1330,19 +1291,10 @@ Technical Performance<split>The mentioned performances (including energy consump
       currentScrollTarget = window;
     }
 
-    // Run immediately and after delays to ensure it catches initial state
+    // Run immediately and after a short delay to ensure DOM is ready
     unifiedScrollHandler();
-    setTimeout(unifiedScrollHandler, 100);
-    setTimeout(unifiedScrollHandler, 300);
-    setTimeout(unifiedScrollHandler, 500);
-    setTimeout(unifiedScrollHandler, 1000);
+    setTimeout(unifiedScrollHandler, 150);
   }
-
-  // REMOVED: All variables and functions related to scroll-based image changes are no longer needed.
-  // let scrollPercentageTriggers = [];
-  // let lastShownImageSrcByPercentage = null;
-  // function initializeScrollPercentageTriggers() { ... }
-  // function updateImageBasedOnScrollPercentage() { ... }
 
   const upgradeRenderConfig = [
     {
@@ -1373,7 +1325,7 @@ Technical Performance<split>The mentioned performances (including energy consump
       groupIndex: 4,
       queryParam: "SQF_SOLAR",
       type: "checkbox",
-      defaultName: "Solar Pannels - Zero Energy",
+      defaultName: "Solar Panels - Zero Energy",
     },
   ];
 
@@ -1435,9 +1387,6 @@ Technical Performance<split>The mentioned performances (including energy consump
         const semiFinishedOpt = houseData.options.find(opt => opt.slug === "semi-finished");
 
         if (turnkeyOpt && semiFinishedOpt) {
-          const priceDiff = turnkeyOpt.price - semiFinishedOpt.price;
-          const currentSelectedFinish = queryArgs["SQF_FINISH"] || "turnkey";
-
           if (inputValue === "turnkey") {
             priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ VAT</span></span>`;
             taglineHTML = '<div class="option-tagline">Move-in tomorrow.</div>';
@@ -1534,10 +1483,22 @@ Technical Performance<split>The mentioned performances (including energy consump
       return "<p>Finish details not available.</p>";
     }
 
-    const rawMaterialData =
+    let rawMaterialData =
       currentFinishSlug === "turnkey"
         ? turnkeyMaterialItemsRaw
         : semiTurnkeyMaterialItemsRaw;
+
+    // Replace ventilation placeholder with model-specific specs for turnkey
+    if (currentFinishSlug === "turnkey") {
+      const ventilationSpecs = {
+        "nest-24": "Zehnder ComfoAir 70 with up to 95% heat recovery + Panasonic Aquarea P-MOZ25IC5-E Heat Pump for heating and cooling.",
+        "wanderlust-48": "Zehnder ComfoAir 100 with up to 95% heat recovery + Panasonic Aquarea P-MOZ25IC5-E Heat Pump for heating and cooling.",
+        "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 with up to 95% heat recovery + Panasonic Aquarea P-MOZ30IC5-E Heat Pump for heating and cooling.",
+        "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 with up to 95% heat recovery + Panasonic Aquarea P-MOZ30IC5-E Heat Pump for heating and cooling.",
+      };
+      const specs = ventilationSpecs[houseTypeKey] || "Up to 95% heat recovery + heat pump for heating and cooling.";
+      rawMaterialData = rawMaterialData.replace("{{VENTILATION_SPECS}}", specs);
+    }
 
     const { items, sectionOrder } = parseMaterialData(rawMaterialData);
 
@@ -1572,7 +1533,7 @@ Technical Performance<split>The mentioned performances (including energy consump
       }
     });
 
-    let houseData = config[type];
+    const houseData = config[type];
     if (!houseData) {
       console.error(
         "Configuration for house type '" +
@@ -1660,7 +1621,7 @@ Technical Performance<split>The mentioned performances (including energy consump
 
     if (
       initialReferralCodeFromUrl &&
-      REFERRAL_CODES.hasOwnProperty(initialReferralCodeFromUrl.toUpperCase())
+      Object.hasOwn(REFERRAL_CODES,initialReferralCodeFromUrl.toUpperCase())
     ) {
       referralDiscountActive = true;
       if (referralCodeInput)
@@ -1671,7 +1632,7 @@ Technical Performance<split>The mentioned performances (including energy consump
         : "";
       if (
         initialReferralFromInput &&
-        REFERRAL_CODES.hasOwnProperty(initialReferralFromInput)
+        Object.hasOwn(REFERRAL_CODES,initialReferralFromInput)
       ) {
         referralDiscountActive = true;
       } else if (referralCodeInput && initialReferralFromInput) {
@@ -1725,7 +1686,7 @@ Technical Performance<split>The mentioned performances (including energy consump
       let buttonText = "";
       let modalContentProvider = null;
       switch (tabId) {
-        case "step-1":
+        case "step-1": {
           const currentFinishSlugForLink =
             queryArgs["SQF_FINISH"] ||
             (config[type]?.options.length > 0
@@ -1743,7 +1704,8 @@ Technical Performance<split>The mentioned performances (including energy consump
           modalContentProvider = () =>
             generateNewDetailedMaterialModalContent(type);
           break;
-        case "step-2":
+        }
+        case "step-2": {
           const currentFloorplanSlug =
             queryArgs["SQF_FLOORPLAN"] || config[type]?.floorplan?.[0]?.slug;
           const floorplanData = currentFloorplanSlug
@@ -1764,11 +1726,11 @@ Technical Performance<split>The mentioned performances (including energy consump
             if (!floorplanDataForModal) {
               return "<p>Please select a floorplan to see the details.</p>";
             }
-            let modalHtml = `<img src="${floorplanDataForModal.image}" alt="Floorplan ${floorplanDataForModal.name}" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px; onerror="this.onerror=null; this.src='';">`;
-            modalHtml += floorplanDataForModal.modal;
+            const modalHtml = `<img src="${floorplanDataForModal.image}" alt="Floorplan ${floorplanDataForModal.name}" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">` + floorplanDataForModal.modal;
             return modalHtml;
           };
           break;
+        }
       }
       if (buttonText && modalContentProvider) {
         const detailsLink = document.createElement("a");
@@ -1781,7 +1743,7 @@ Technical Performance<split>The mentioned performances (including energy consump
           e.preventDefault();
           if (!modalInnerContent || !modalOverlay) return;
 
-          let content = modalContentProvider();
+          const content = modalContentProvider();
           modalInnerContent.innerHTML = content;
           modalOverlay.style.display = "flex";
         });
@@ -1791,8 +1753,7 @@ Technical Performance<split>The mentioned performances (including energy consump
   }
 
   function setTabTitles() {
-    let currentHouseData = config[type];
-    if (!currentHouseData) return;
+    if (!config[type]) return;
     setTabTitle("Floorplan", "step-2", "floorplanStepTitle");
     setTabTitle("Personalize", "step-3", "upgradesStepTitle");
     setTabTitle("Delivery", "step-4-shipping", "shippingStepTitle");
@@ -1840,7 +1801,7 @@ Technical Performance<split>The mentioned performances (including energy consump
       stickyImg2.classList.remove("object-fit-contain");
     } else {
       switchToSingleImageView();
-      let singleImageSrc = finishData?.image || houseData.image;
+      const singleImageSrc = finishData?.image || houseData.image;
       if (singleImageSrc) {
         crossfadeStickyImage(singleImageSrc, false);
       } else {
@@ -1888,19 +1849,7 @@ Technical Performance<split>The mentioned performances (including energy consump
         newSrc,
         ". Displaying default image.",
       );
-      const width =
-        this.naturalWidth > 0
-          ? this.naturalWidth
-          : this.width > 0
-            ? this.width
-            : 800;
-      const height =
-        this.naturalHeight > 0
-          ? this.naturalHeight
-          : this.height > 0
-            ? this.height
-            : 600;
-      this.src = ``;
+      this.src = "";
       if (isFloorplan) {
         this.classList.add("object-fit-contain");
       } else {
@@ -1987,7 +1936,7 @@ Technical Performance<split>The mentioned performances (including energy consump
         if (slug) {
           const finishContextForUpgrade =
             currentFinishSlug || config[type]?.options[0]?.slug;
-          let upgradeData = findUpgrade(slug, finishContextForUpgrade);
+          const upgradeData = findUpgrade(slug, finishContextForUpgrade);
           if (slug === "facade-yakisugi" && config[type]) {
             upgradeImageFromUrl = config[type].image;
           } else if (
@@ -2028,8 +1977,8 @@ Technical Performance<split>The mentioned performances (including energy consump
   }
 
   function render_upgrades(finishSlugValue) {
-    let houseConfig = config[type];
-    let step3Container = document
+    const houseConfig = config[type];
+    const step3Container = document
       .getElementById("step-3")
       ?.querySelector(".options-container");
     if (!step3Container || !houseConfig) {
@@ -2039,7 +1988,7 @@ Technical Performance<split>The mentioned performances (including energy consump
     step3Container.innerHTML = "";
     if (!finishSlugValue) return;
 
-    let selectedFinishOption = houseConfig.options.find(
+    const selectedFinishOption = houseConfig.options.find(
       (obj) => obj.slug === finishSlugValue,
     );
     if (!selectedFinishOption || !selectedFinishOption.upgrades) return;
@@ -2094,7 +2043,7 @@ Technical Performance<split>The mentioned performances (including energy consump
         }
 
         if (cfg.type === "parquet" || cfg.type === "radio") {
-          let currentSelection = queryArgs[cfg.queryParam];
+          const currentSelection = queryArgs[cfg.queryParam];
           let inputToSelect = step3Container.querySelector(
             `input[name="${cfg.queryParam}"][value="${currentSelection}"]`,
           );
@@ -2109,7 +2058,7 @@ Technical Performance<split>The mentioned performances (including energy consump
               (opt) => opt.included && opt.price === 0,
             );
             const firstOption = optionsToRender[0];
-            let defaultSlug = defaultIncludedFree
+            const defaultSlug = defaultIncludedFree
               ? defaultIncludedFree.slug
               : firstOption
                 ? firstOption.slug
@@ -2198,10 +2147,10 @@ Technical Performance<split>The mentioned performances (including energy consump
 
   function render_floorplan() {
     if (!config[type] || !config[type].floorplan) return;
-    let options = config[type].floorplan;
+    const options = config[type].floorplan;
     generateOptions(options, "step-2", "SQF_FLOORPLAN", false, "radio");
     const floorplanFromURL = queryArgs["SQF_FLOORPLAN"];
-    let floorplanInput = document.querySelector(
+    const floorplanInput = document.querySelector(
       `input[name="SQF_FLOORPLAN"][value="${floorplanFromURL}"]`,
     );
 
@@ -2319,9 +2268,6 @@ Technical Performance<split>The mentioned performances (including energy consump
     queryArgs["SQF_PRICE"] = Math.round(finalPrice);
   }
 
-  function updateFinishPriceDisplay() {
-    // Prices are static, no dynamic updates needed
-  }
 
   function generateOptions(
     options,
@@ -2330,9 +2276,9 @@ Technical Performance<split>The mentioned performances (including energy consump
     append = false,
     inputType = "radio",
   ) {
-    let tab = document.getElementById(tabID);
+    const tab = document.getElementById(tabID);
     if (!tab) return;
-    let container = tab.querySelector(".options-container");
+    const container = tab.querySelector(".options-container");
     if (!container) return;
 
     if (!options || options.length === 0) {
@@ -2395,7 +2341,7 @@ Technical Performance<split>The mentioned performances (including energy consump
       (inputName === "SQF_FINISH" ? " sqf-finish" : "");
     if (inputType === "checkbox") wrapperClass += " checkbox-group";
 
-    let fullGroupHTML = optionsWrapper(optionString, wrapperClass);
+    const fullGroupHTML = optionsWrapper(optionString, wrapperClass);
 
     if (optionString.trim() !== "") {
       if (!append) {
@@ -2422,9 +2368,9 @@ Technical Performance<split>The mentioned performances (including energy consump
     append = false,
     groupDefaultName = "Options",
   ) {
-    let tab = document.getElementById(tabID);
+    const tab = document.getElementById(tabID);
     if (!tab) return;
-    let container = tab.querySelector(".options-container");
+    const container = tab.querySelector(".options-container");
     if (!container) return;
 
     if (!options || options.length === 0) {
@@ -2439,8 +2385,8 @@ Technical Performance<split>The mentioned performances (including energy consump
     }
 
     let optionString = "";
-    let firstName = "",
-      firstPriceText = "";
+    let firstName = "";
+    let firstPriceText = "";
     let defaultCheckedSlug = queryArgs[inputName];
 
     if (
@@ -2462,7 +2408,7 @@ Technical Performance<split>The mentioned performances (including energy consump
     }
 
     options.forEach((option) => {
-      let isDefaultChecked = option.slug === defaultCheckedSlug;
+      const isDefaultChecked = option.slug === defaultCheckedSlug;
       optionString += parquetOption(
         "radio",
         inputName,
@@ -2474,13 +2420,9 @@ Technical Performance<split>The mentioned performances (including energy consump
       );
       if (isDefaultChecked) {
         firstName = option.name;
-        if (option.price === 0 && option.included) {
-          firstPriceText = "Included";
-        } else if (option.price === 0) {
-          firstPriceText = "Included";
-        } else {
-          firstPriceText = `${formatCurrency(option.price)} + VAT`;
-        }
+        firstPriceText = option.price === 0
+          ? "Included"
+          : `${formatCurrency(option.price)} + VAT`;
       }
     });
 
@@ -2503,14 +2445,14 @@ Technical Performance<split>The mentioned performances (including energy consump
         groupDefaultName || inputName.replace("SQF_", "").replace(/_/g, " ");
       groupTitleElement.style.marginBottom = "10px";
 
-      let parquetIconsGroupHTML = optionsWrapper(
+      const parquetIconsGroupHTML = optionsWrapper(
         optionString,
         "radio-group parquet-checkboxes " +
           inputName.toLowerCase().replace(/_/g, "-"),
       );
-      let displayLabelId = `display-label-${inputName}`;
-      let displayPriceId = `display-price-${inputName}`;
-      let parquetLabelsHTML = `<div class="p-wrapper"><p id="${displayLabelId}">${firstName}</p><p id="${displayPriceId}" class="option-price">${firstPriceText}</p></div>`;
+      const displayLabelId = `display-label-${inputName}`;
+      const displayPriceId = `display-price-${inputName}`;
+      const parquetLabelsHTML = `<div class="p-wrapper"><p id="${displayLabelId}">${firstName}</p><p id="${displayPriceId}" class="option-price">${firstPriceText}</p></div>`;
 
       parquetSectionWrapper.appendChild(groupTitleElement);
       parquetSectionWrapper.insertAdjacentHTML(
@@ -2518,11 +2460,7 @@ Technical Performance<split>The mentioned performances (including energy consump
         parquetIconsGroupHTML + parquetLabelsHTML,
       );
 
-      if (append) {
-        container.appendChild(parquetSectionWrapper);
-      } else {
-        container.appendChild(parquetSectionWrapper);
-      }
+      container.appendChild(parquetSectionWrapper);
     }
   }
 
@@ -2592,9 +2530,6 @@ Technical Performance<split>The mentioned performances (including energy consump
             }
             render_upgrades(target.value);
 
-            // Update finish option price displays
-            updateFinishPriceDisplay();
-
             const finishDetailsLink = document.querySelector(
               "#step-1 .feature-details-link",
             );
@@ -2655,7 +2590,7 @@ Technical Performance<split>The mentioned performances (including energy consump
       });
 
       form.addEventListener("click", (event) => {
-        let target = event.target;
+        const target = event.target;
         let inputElement = null;
 
         if (target.tagName === "LABEL") {
@@ -2695,7 +2630,7 @@ Technical Performance<split>The mentioned performances (including energy consump
     if (referralInput) {
       referralInput.addEventListener("input", () => {
         const enteredCode = referralInput.value.trim().toUpperCase();
-        referralDiscountActive = REFERRAL_CODES.hasOwnProperty(enteredCode);
+        referralDiscountActive = Object.hasOwn(REFERRAL_CODES,enteredCode);
         applyReferralDiscountAndRender();
         updateURL();
       });
@@ -2742,7 +2677,7 @@ Technical Performance<split>The mentioned performances (including energy consump
           selectedCountry &&
           SHIPPING_PRICES[selectedCountry] !== undefined
         ) {
-          let basePrice = SHIPPING_PRICES[selectedCountry];
+          const basePrice = SHIPPING_PRICES[selectedCountry];
 
           if (basePrice === "Offer") {
             shippingPriceDisplay.textContent = "Est. in Offer";
@@ -2925,7 +2860,7 @@ Technical Performance<split>The mentioned performances (including energy consump
           const enteredCodeUpper = currentReferralCodeValue.toUpperCase();
           if (
             referralDiscountActive &&
-            REFERRAL_CODES.hasOwnProperty(enteredCodeUpper)
+            Object.hasOwn(REFERRAL_CODES,enteredCodeUpper)
           ) {
             const capitalizedName =
               currentReferralCodeValue.charAt(0).toUpperCase() +
@@ -2972,13 +2907,13 @@ Technical Performance<split>The mentioned performances (including energy consump
   }
 
   function showNotification(sectionElementOrId, text = "") {
-    let sectionElement =
+    const sectionElement =
       typeof sectionElementOrId === "string"
         ? document.getElementById(sectionElementOrId)
         : sectionElementOrId;
     if (!sectionElement) return;
     removeNotification(sectionElement);
-    let notification = document.createElement("div");
+    const notification = document.createElement("div");
     notification.classList.add("notification");
     notification.textContent = text || "Please make a selection.";
 
@@ -2998,7 +2933,7 @@ Technical Performance<split>The mentioned performances (including energy consump
   }
 
   function removeNotification(sectionElementOrId) {
-    let sectionElement =
+    const sectionElement =
       typeof sectionElementOrId === "string"
         ? document.getElementById(sectionElementOrId)
         : sectionElementOrId;
@@ -3102,7 +3037,7 @@ Technical Performance<split>The mentioned performances (including energy consump
     if (
       referralDiscountActive &&
       referralCodeValueFromInput &&
-      REFERRAL_CODES.hasOwnProperty(referralCodeValueFromInput.toUpperCase())
+      Object.hasOwn(REFERRAL_CODES,referralCodeValueFromInput.toUpperCase())
     ) {
       params.set("SQF_REFERRAL_CODE", referralCodeValueFromInput.toUpperCase());
     } else {
@@ -3113,14 +3048,14 @@ Technical Performance<split>The mentioned performances (including energy consump
     if (window.location.search !== newSearch) {
       try {
         history.replaceState(null, "", window.location.pathname + newSearch);
-      } catch (e) {
+      } catch {
         // Cross-origin restriction - ignore silently
       }
     }
   }
 
   function findUpgrade(slug, finishContextSlug) {
-    let finishSlugToSearch = finishContextSlug || queryArgs["SQF_FINISH"];
+    const finishSlugToSearch = finishContextSlug || queryArgs["SQF_FINISH"];
     if (!finishSlugToSearch || !config[type] || !config[type].options)
       return null;
     const currentFinishOption = config[type].options.find(
@@ -3128,7 +3063,7 @@ Technical Performance<split>The mentioned performances (including energy consump
     );
     if (!currentFinishOption || !currentFinishOption.upgrades) return null;
 
-    for (let upgradeGroup of currentFinishOption.upgrades) {
+    for (const upgradeGroup of currentFinishOption.upgrades) {
       if (Array.isArray(upgradeGroup)) {
         const upgrade = upgradeGroup.find((item) => item.slug === slug);
         if (upgrade) return upgrade;
@@ -3138,7 +3073,7 @@ Technical Performance<split>The mentioned performances (including energy consump
   }
 
   function findUpgradeInCurrentFinish(upgradeSlug) {
-    let currentFinishSlug =
+    const currentFinishSlug =
       queryArgs["SQF_FINISH"] ||
       (config[type] && config[type].options.length > 0
         ? config[type].options[0].slug
@@ -3149,7 +3084,7 @@ Technical Performance<split>The mentioned performances (including energy consump
     );
 
     if (!finishData || !finishData.upgrades) return null;
-    for (let upgradeGroup of finishData.upgrades) {
+    for (const upgradeGroup of finishData.upgrades) {
       if (Array.isArray(upgradeGroup)) {
         const upgrade = upgradeGroup.find((item) => item.slug === upgradeSlug);
         if (upgrade) return upgrade;

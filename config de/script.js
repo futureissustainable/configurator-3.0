@@ -1,7 +1,7 @@
 
 (function () {
   // Universal Images
-  let blindsImage =
+  const blindsImage =
     "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c8f3a05d31e358a262f2f_b377fa85acb0af7122188efe4e1c06c6_Modular%20Blinds.avif";
   const ventilationImage24 =
     "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6936c855d0d77fec69cd6914_Zehnder24.avif";
@@ -24,7 +24,7 @@
 
   const yakisugiImageUrl = ""; // This remains empty to use the main model image as a fallback
 
-  let config = {
+  const config = {
     "nest-24": {
       image:
         "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2de1073da9af1229b5a_24%20EXT.avif",
@@ -947,7 +947,7 @@ Walk-in-Dusche<split>In Frankreich entworfen; minimalistisches, modernes Design.
 SMART-SYSTEME // TITLE
 Stromschiene<split>Flexible Konfiguration für LED und Spots; modernes Erscheinungsbild.
 Smarte Außenjalousien<split>>95 % Sonneneinstrahlung abgeschirmt; App-/manuelle Steuerung; zertifiziert vom Passivhaus Institut Darmstadt; CE-zertifiziert.
-Zehnder Lüftungssystem<split>Bis zu 95 % Wärmerückgewinnung + Wärmepumpe zum Heizen und Kühlen.
+Zehnder Lüftungssystem<split>{{VENTILATION_SPECS}}
 ZERTIFIKATE UND GARANTIEN // TITLE
 Passivhaus-Zertifizierung<split>Ausgestellt vom Passivhaus Institut (Deutschland); bestätigt höchste Energieeffizienz und Komfort.
 EPD-Zertifizierung<split>Ausgestellt von EPD International; bestätigt CO₂-negative Bilanz und verantwortungsvolles Bauen.
@@ -979,6 +979,8 @@ Kücheninstallationen<split>Vorgerüstete Anschlüsse, bereit für Ihre Möbel u
 TECHNISCHE INSTALLATIONEN // TITLE
 Elektrische Installation<split>Vollständiger Verteiler nach strengen EU-Normen. Schalter und Schutzorgane gemäß lokalen Vorschriften, inkl. AFDD-Technologie.
 Sanitärinstallation<split>Hochwertige Rohrsysteme und Fittings (PPR/PEX), konform mit lokalen und EU-Vorgaben.
+BADEZIMMER // TITLE
+Wasserdichte Badezimmer<split>Vollständig abgedichtete Badezimmerbereiche mit allen Sanitärinstallationen, fertig für Ihre Oberflächen.
 ZERTIFIKATE UND GARANTIEN // TITLE
 Passivhaus-Zertifizierung<split>Ausgestellt vom Passivhaus Institut (Deutschland); bestätigt höchste Energieeffizienz und Komfort.
 EPD-Zertifizierung<split>Ausgestellt von EPD International; bestätigt CO₂-negative Bilanz und verantwortungsvolles Bauen.
@@ -1049,15 +1051,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       } else if (currentSection || items.length === 0) {
         const parsedItem = parseItemLine(line);
         if (parsedItem && parsedItem.material) {
-          let sectionToAssign = currentSection;
-          if (
-            !sectionToAssign &&
-            items.length === 0 &&
-            sectionOrder.length === 0 &&
-            parsedItem.material.toUpperCase() !==
-              cleanPotentialTitle.toUpperCase()
-          ) {
-          }
+          const sectionToAssign = currentSection;
 
           items.push({
             section: sectionToAssign || "General",
@@ -1076,7 +1070,6 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     return { items, sectionOrder };
   }
 
-  let totalPrice = 0;
   let type = getUrlParameter("SQF_TYPE");
   if (type === null || !config[type]) {
     const validTypes = Object.keys(config);
@@ -1087,7 +1080,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
         : "nest-24";
   }
 
-  let queryArgs = {};
+  const queryArgs = {};
 
   const stickyImg1 = document.getElementById("stickyImg1");
   const stickyImg2 = document.getElementById("stickyImg2");
@@ -1101,8 +1094,6 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
   const formTabsArray = Array.from(formTabsNodeList);
   const rightContentElement = document.querySelector(".config .right-content");
 
-  const btn = document.getElementById("finalContinueBtn");
-  const box = document.getElementById("priceBox");
   let currentScrollTarget;
 
   let referralDiscountActive = false;
@@ -1295,12 +1286,9 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       currentScrollTarget = window;
     }
 
-    // Run immediately and after delays to ensure it catches initial state
+    // Run immediately and after a short delay to ensure DOM is ready
     unifiedScrollHandler();
-    setTimeout(unifiedScrollHandler, 100);
-    setTimeout(unifiedScrollHandler, 300);
-    setTimeout(unifiedScrollHandler, 500);
-    setTimeout(unifiedScrollHandler, 1000);
+    setTimeout(unifiedScrollHandler, 150);
   }
 
   const upgradeRenderConfig = [
@@ -1479,10 +1467,22 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       return "<p>Details zum Ausbaustandard nicht verfügbar.</p>";
     }
 
-    const rawMaterialData =
+    let rawMaterialData =
       currentFinishSlug === "turnkey"
         ? turnkeyMaterialItemsRaw
         : semiTurnkeyMaterialItemsRaw;
+
+    // Replace ventilation placeholder with model-specific specs for turnkey
+    if (currentFinishSlug === "turnkey") {
+      const ventilationSpecs = {
+        "nest-24": "Zehnder ComfoAir 70 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea P-MOZ25IC5-E Wärmepumpe zum Heizen und Kühlen.",
+        "wanderlust-48": "Zehnder ComfoAir 100 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea P-MOZ25IC5-E Wärmepumpe zum Heizen und Kühlen.",
+        "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea P-MOZ30IC5-E Wärmepumpe zum Heizen und Kühlen.",
+        "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea P-MOZ30IC5-E Wärmepumpe zum Heizen und Kühlen.",
+      };
+      const specs = ventilationSpecs[houseTypeKey] || "Bis zu 95 % Wärmerückgewinnung + Wärmepumpe zum Heizen und Kühlen.";
+      rawMaterialData = rawMaterialData.replace("{{VENTILATION_SPECS}}", specs);
+    }
 
     const { items, sectionOrder } = parseMaterialData(rawMaterialData);
 
@@ -1516,7 +1516,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       }
     });
 
-    let houseData = config[type];
+    const houseData = config[type];
     if (!houseData) {
       console.error(
         "Configuration for house type '" +
@@ -1604,7 +1604,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
 
     if (
       initialReferralCodeFromUrl &&
-      REFERRAL_CODES.hasOwnProperty(initialReferralCodeFromUrl.toUpperCase())
+      Object.hasOwn(REFERRAL_CODES,initialReferralCodeFromUrl.toUpperCase())
     ) {
       referralDiscountActive = true;
       if (referralCodeInput)
@@ -1615,7 +1615,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
         : "";
       if (
         initialReferralFromInput &&
-        REFERRAL_CODES.hasOwnProperty(initialReferralFromInput)
+        Object.hasOwn(REFERRAL_CODES,initialReferralFromInput)
       ) {
         referralDiscountActive = true;
       } else if (referralCodeInput && initialReferralFromInput) {
@@ -1667,7 +1667,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       let buttonText = "";
       let modalContentProvider = null;
       switch (tabId) {
-        case "step-1":
+        case "step-1": {
           const currentFinishSlugForLink =
             queryArgs["SQF_FINISH"] ||
             (config[type]?.options.length > 0
@@ -1685,7 +1685,8 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
           modalContentProvider = () =>
             generateNewDetailedMaterialModalContent(type);
           break;
-        case "step-2":
+        }
+        case "step-2": {
           const currentFloorplanSlug =
             queryArgs["SQF_FLOORPLAN"] || config[type]?.floorplan?.[0]?.slug;
           const floorplanData = currentFloorplanSlug
@@ -1706,11 +1707,11 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
             if (!floorplanDataForModal) {
               return "<p>Bitte einen Grundriss auswählen, um Details zu sehen.</p>";
             }
-            let modalHtml = `<img src="${floorplanDataForModal.image}" alt="Grundriss ${floorplanDataForModal.name}" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px; onerror="this.onerror=null; this.src='';">`;
-            modalHtml += floorplanDataForModal.modal;
+            const modalHtml = `<img src="${floorplanDataForModal.image}" alt="Grundriss ${floorplanDataForModal.name}" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">` + floorplanDataForModal.modal;
             return modalHtml;
           };
           break;
+        }
       }
       if (buttonText && modalContentProvider) {
         const detailsLink = document.createElement("a");
@@ -1723,7 +1724,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
           e.preventDefault();
           if (!modalInnerContent || !modalOverlay) return;
 
-          let content = modalContentProvider();
+          const content = modalContentProvider();
           modalInnerContent.innerHTML = content;
           modalOverlay.style.display = "flex";
         });
@@ -1733,8 +1734,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
   }
 
   function setTabTitles() {
-    let currentHouseData = config[type];
-    if (!currentHouseData) return;
+    if (!config[type]) return;
     setTabTitle("Grundriss", "step-2", "floorplanStepTitle");
     setTabTitle("Upgrades", "step-3", "upgradesStepTitle");
     setTabTitle("Empfehlungscode", "step-5-referral", "referralCodeStepTitle");
@@ -1781,7 +1781,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       stickyImg2.classList.remove("object-fit-contain");
     } else {
       switchToSingleImageView();
-      let singleImageSrc = finishData?.image || houseData.image;
+      const singleImageSrc = finishData?.image || houseData.image;
       if (singleImageSrc) {
         crossfadeStickyImage(singleImageSrc, false);
       } else {
@@ -1829,19 +1829,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
         newSrc,
         ". Displaying default image.",
       );
-      const width =
-        this.naturalWidth > 0
-          ? this.naturalWidth
-          : this.width > 0
-            ? this.width
-            : 800;
-      const height =
-        this.naturalHeight > 0
-          ? this.naturalHeight
-          : this.height > 0
-            ? this.height
-            : 600;
-      this.src = ``;
+      this.src = "";
       if (isFloorplan) {
         this.classList.add("object-fit-contain");
       } else {
@@ -1928,7 +1916,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
         if (slug) {
           const finishContextForUpgrade =
             currentFinishSlug || config[type]?.options[0]?.slug;
-          let upgradeData = findUpgrade(slug, finishContextForUpgrade);
+          const upgradeData = findUpgrade(slug, finishContextForUpgrade);
           if (slug === "facade-yakisugi" && config[type]) {
             upgradeImageFromUrl = config[type].image;
           } else if (
@@ -1969,8 +1957,8 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
   }
 
   function render_upgrades(finishSlugValue) {
-    let houseConfig = config[type];
-    let step3Container = document
+    const houseConfig = config[type];
+    const step3Container = document
       .getElementById("step-3")
       ?.querySelector(".options-container");
     if (!step3Container || !houseConfig) {
@@ -1980,7 +1968,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     step3Container.innerHTML = "";
     if (!finishSlugValue) return;
 
-    let selectedFinishOption = houseConfig.options.find(
+    const selectedFinishOption = houseConfig.options.find(
       (obj) => obj.slug === finishSlugValue,
     );
     if (!selectedFinishOption || !selectedFinishOption.upgrades) return;
@@ -2035,7 +2023,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
         }
 
         if (cfg.type === "parquet" || cfg.type === "radio") {
-          let currentSelection = queryArgs[cfg.queryParam];
+          const currentSelection = queryArgs[cfg.queryParam];
           let inputToSelect = step3Container.querySelector(
             `input[name="${cfg.queryParam}"][value="${currentSelection}"]`,
           );
@@ -2050,7 +2038,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
               (opt) => opt.included && opt.price === 0,
             );
             const firstOption = optionsToRender[0];
-            let defaultSlug = defaultIncludedFree
+            const defaultSlug = defaultIncludedFree
               ? defaultIncludedFree.slug
               : firstOption
                 ? firstOption.slug
@@ -2139,10 +2127,10 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
 
   function render_floorplan() {
     if (!config[type] || !config[type].floorplan) return;
-    let options = config[type].floorplan;
+    const options = config[type].floorplan;
     generateOptions(options, "step-2", "SQF_FLOORPLAN", false, "radio");
     const floorplanFromURL = queryArgs["SQF_FLOORPLAN"];
-    let floorplanInput = document.querySelector(
+    const floorplanInput = document.querySelector(
       `input[name="SQF_FLOORPLAN"][value="${floorplanFromURL}"]`,
     );
 
@@ -2268,9 +2256,9 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     append = false,
     inputType = "radio",
   ) {
-    let tab = document.getElementById(tabID);
+    const tab = document.getElementById(tabID);
     if (!tab) return;
-    let container = tab.querySelector(".options-container");
+    const container = tab.querySelector(".options-container");
     if (!container) return;
 
     if (!options || options.length === 0) {
@@ -2333,7 +2321,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       (inputName === "SQF_FINISH" ? " sqf-finish" : "");
     if (inputType === "checkbox") wrapperClass += " checkbox-group";
 
-    let fullGroupHTML = optionsWrapper(optionString, wrapperClass);
+    const fullGroupHTML = optionsWrapper(optionString, wrapperClass);
 
     if (optionString.trim() !== "") {
       if (!append) {
@@ -2360,9 +2348,9 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     append = false,
     groupDefaultName = "Options",
   ) {
-    let tab = document.getElementById(tabID);
+    const tab = document.getElementById(tabID);
     if (!tab) return;
-    let container = tab.querySelector(".options-container");
+    const container = tab.querySelector(".options-container");
     if (!container) return;
 
     if (!options || options.length === 0) {
@@ -2377,8 +2365,8 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     }
 
     let optionString = "";
-    let firstName = "",
-      firstPriceText = "";
+    let firstName = "";
+    let firstPriceText = "";
     let defaultCheckedSlug = queryArgs[inputName];
 
     if (
@@ -2400,7 +2388,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     }
 
     options.forEach((option) => {
-      let isDefaultChecked = option.slug === defaultCheckedSlug;
+      const isDefaultChecked = option.slug === defaultCheckedSlug;
       optionString += parquetOption(
         "radio",
         inputName,
@@ -2412,13 +2400,9 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       );
       if (isDefaultChecked) {
         firstName = option.name;
-        if (option.price === 0 && option.included) {
-          firstPriceText = "Inbegriffen";
-        } else if (option.price === 0) {
-          firstPriceText = "Inbegriffen";
-        } else {
-          firstPriceText = `${formatCurrency(option.price)} <span class="vat-label">+ MwSt.</span>`;
-        }
+        firstPriceText = option.price === 0
+          ? "Inbegriffen"
+          : `${formatCurrency(option.price)} <span class="vat-label">+ MwSt.</span>`;
       }
     });
 
@@ -2441,14 +2425,14 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
         groupDefaultName || inputName.replace("SQF_", "").replace(/_/g, " ");
       groupTitleElement.style.marginBottom = "10px";
 
-      let parquetIconsGroupHTML = optionsWrapper(
+      const parquetIconsGroupHTML = optionsWrapper(
         optionString,
         "radio-group parquet-checkboxes " +
           inputName.toLowerCase().replace(/_/g, "-"),
       );
-      let displayLabelId = `display-label-${inputName}`;
-      let displayPriceId = `display-price-${inputName}`;
-      let parquetLabelsHTML = `<div class="p-wrapper"><p id="${displayLabelId}">${firstName}</p><p id="${displayPriceId}" class="option-price">${firstPriceText}</p></div>`;
+      const displayLabelId = `display-label-${inputName}`;
+      const displayPriceId = `display-price-${inputName}`;
+      const parquetLabelsHTML = `<div class="p-wrapper"><p id="${displayLabelId}">${firstName}</p><p id="${displayPriceId}" class="option-price">${firstPriceText}</p></div>`;
 
       parquetSectionWrapper.appendChild(groupTitleElement);
       parquetSectionWrapper.insertAdjacentHTML(
@@ -2456,11 +2440,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
         parquetIconsGroupHTML + parquetLabelsHTML,
       );
 
-      if (append) {
-        container.appendChild(parquetSectionWrapper);
-      } else {
-        container.appendChild(parquetSectionWrapper);
-      }
+      container.appendChild(parquetSectionWrapper);
     }
   }
 
@@ -2590,7 +2570,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       });
 
       form.addEventListener("click", (event) => {
-        let target = event.target;
+        const target = event.target;
         let inputElement = null;
 
         if (target.tagName === "LABEL") {
@@ -2630,7 +2610,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     if (referralInput) {
       referralInput.addEventListener("input", () => {
         const enteredCode = referralInput.value.trim().toUpperCase();
-        referralDiscountActive = REFERRAL_CODES.hasOwnProperty(enteredCode);
+        referralDiscountActive = Object.hasOwn(REFERRAL_CODES,enteredCode);
         applyReferralDiscountAndRender();
         updateURL();
       });
@@ -2687,7 +2667,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
           selectedCountry &&
           SHIPPING_PRICES[selectedCountry] !== undefined
         ) {
-          let basePrice = SHIPPING_PRICES[selectedCountry];
+          const basePrice = SHIPPING_PRICES[selectedCountry];
 
           if (basePrice === "Angebot") {
             shippingPriceDisplay.textContent = "Geschätzt im Angebot";
@@ -2870,7 +2850,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
           const enteredCodeUpper = currentReferralCodeValue.toUpperCase();
           if (
             referralDiscountActive &&
-            REFERRAL_CODES.hasOwnProperty(enteredCodeUpper)
+            Object.hasOwn(REFERRAL_CODES,enteredCodeUpper)
           ) {
             const capitalizedName =
               currentReferralCodeValue.charAt(0).toUpperCase() +
@@ -2917,13 +2897,13 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
   }
 
   function showNotification(sectionElementOrId, text = "") {
-    let sectionElement =
+    const sectionElement =
       typeof sectionElementOrId === "string"
         ? document.getElementById(sectionElementOrId)
         : sectionElementOrId;
     if (!sectionElement) return;
     removeNotification(sectionElement);
-    let notification = document.createElement("div");
+    const notification = document.createElement("div");
     notification.classList.add("notification");
     notification.textContent = text || "Bitte eine Auswahl treffen.";
 
@@ -2943,7 +2923,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
   }
 
   function removeNotification(sectionElementOrId) {
-    let sectionElement =
+    const sectionElement =
       typeof sectionElementOrId === "string"
         ? document.getElementById(sectionElementOrId)
         : sectionElementOrId;
@@ -3047,7 +3027,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     if (
       referralDiscountActive &&
       referralCodeValueFromInput &&
-      REFERRAL_CODES.hasOwnProperty(referralCodeValueFromInput.toUpperCase())
+      Object.hasOwn(REFERRAL_CODES,referralCodeValueFromInput.toUpperCase())
     ) {
       params.set("SQF_REFERRAL_CODE", referralCodeValueFromInput.toUpperCase());
     } else {
@@ -3058,14 +3038,14 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     if (window.location.search !== newSearch) {
       try {
         history.replaceState(null, "", window.location.pathname + newSearch);
-      } catch (e) {
+      } catch {
         // Cross-origin restriction - ignore silently
       }
     }
   }
 
   function findUpgrade(slug, finishContextSlug) {
-    let finishSlugToSearch = finishContextSlug || queryArgs["SQF_FINISH"];
+    const finishSlugToSearch = finishContextSlug || queryArgs["SQF_FINISH"];
     if (!finishSlugToSearch || !config[type] || !config[type].options)
       return null;
     const currentFinishOption = config[type].options.find(
@@ -3073,7 +3053,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     );
     if (!currentFinishOption || !currentFinishOption.upgrades) return null;
 
-    for (let upgradeGroup of currentFinishOption.upgrades) {
+    for (const upgradeGroup of currentFinishOption.upgrades) {
       if (Array.isArray(upgradeGroup)) {
         const upgrade = upgradeGroup.find((item) => item.slug === slug);
         if (upgrade) return upgrade;
@@ -3083,7 +3063,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
   }
 
   function findUpgradeInCurrentFinish(upgradeSlug) {
-    let currentFinishSlug =
+    const currentFinishSlug =
       queryArgs["SQF_FINISH"] ||
       (config[type] && config[type].options.length > 0
         ? config[type].options[0].slug
@@ -3094,7 +3074,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     );
 
     if (!finishData || !finishData.upgrades) return null;
-    for (let upgradeGroup of finishData.upgrades) {
+    for (const upgradeGroup of finishData.upgrades) {
       if (Array.isArray(upgradeGroup)) {
         const upgrade = upgradeGroup.find((item) => item.slug === upgradeSlug);
         if (upgrade) return upgrade;
