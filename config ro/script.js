@@ -191,7 +191,7 @@
     MODULAR UPGRADE // TITLE
     Nouă Generație<split>MODULAR, acum perfecționat cu rame din aluminiu certificate Passivhaus, ultra-izolație organică din fibră de lemn, o structură optimizată, mai rezistentă și o selecție exclusivă de finisaje premium. Proiectat pentru confort, durabilitate și eficiență la cel mai înalt nivel.
     STRUCTURĂ // TITLE
-    Sistemul Structural MODULAR<split>Îmbină rezistența mecanică remarcabilă cu eficiența fără precedent, eliminând complet punțile termice. Certificat pentru eficiență energetică de Passive House Institute (Darmstadt, Germania) la 0.15 W/(m²K) și pentru sustenabilitate de EPD (International).
+    Sistemul Structural MODULAR<split>Structură MODULAR™ de ~35 cm, certificată Passivhaus / EPD. Fără punți termice. Rezistență mecanică excepțională. Complet etanșă. Construită într-un sistem volumetric timber-frame.
     Structură C24 Timber Frame BIOBUILDS<split>Lemn certificat FSC/PEFC, rezistență excepțională la sarcini.
     Izolație din fibră de lemn STEICO<split>Organic, sustenabil și ultra-eficient (λ ≈ 0,036 W/m·K), certificat CE.
     Placă ECO OSB 3 (AGEPAN, Germania)<split>Fără formaldehidă și VOC, aprobat Passive House, certificat CE.
@@ -240,7 +240,7 @@
     MODULAR UPGRADE // TITLE
     Nouă Generație<split>MODULAR, acum perfecționat cu rame din aluminiu certificate Passivhaus, ultra-izolație organică din fibră de lemn, și o structură optimizată. Proiectat pentru confort, durabilitate și eficiență la cel mai înalt nivel.
     STRUCTURĂ // TITLE
-    Sistemul Structural MODULAR<split>Îmbină rezistența mecanică remarcabilă cu eficiența fără precedent, eliminând complet punțile termice. Certificat pentru eficiență energetică de Passive House Institute (Darmstadt, Germania) la 0.15 W/(m²K) și pentru sustenabilitate de EPD (International).
+    Sistemul Structural MODULAR<split>Structură MODULAR™ de ~35 cm, certificată Passivhaus / EPD. Fără punți termice. Rezistență mecanică excepțională. Complet etanșă. Construită într-un sistem volumetric timber-frame.
     Structură C24 Timber Frame BIOBUILDS<split>Lemn certificat FSC/PEFC, rezistență excepțională la sarcini.
     Izolație din fibră de lemn STEICO<split>Organic, sustenabil și ultra-eficient (λ ≈ 0,036 W/m·K), certificat CE.
     Placă ECO OSB 3 (AGEPAN, Germania)<split>Fără formaldehidă și VOC, aprobat Passive House, certificat CE.

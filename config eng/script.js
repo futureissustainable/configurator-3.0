@@ -912,7 +912,7 @@
 MODULAR UPGRADE // TITLE
 New Generation<split>MODULAR, now perfected with Passivhaus certified aluminum frames, ultra-organic wood fiber insulation, an optimized, more resilient structure, and an exclusive selection of premium finishes. Designed for comfort, durability, and efficiency at the highest level.
 STRUCTURE // TITLE
-The MODULAR Structural System<split>Combines remarkable mechanical strength with unprecedented efficiency, completely eliminating thermal bridges. Certified for energy efficiency by the Passive House Institute (Darmstadt, Germany) at 0.15 W/(m²K) and for sustainability by EPD (International).
+The MODULAR Structural System<split>MODULAR™ ~35 cm structure, Passivhaus / EPD certified. No thermal bridges. Exceptional structural strength. Fully airtight.
 C24 Timber Frame BIOBUILDS Structure<split>FSC/PEFC certified wood, exceptional load resistance.
 STEICO wood fiber insulation<split>Organic, sustainable, and ultra-efficient (λ ≈ 0.036 W/m·K), CE certified.
 ECO OSB 3 Board (AGEPAN, Germany)<split>Formaldehyde and VOC-free, Passive House approved, CE certified.
@@ -961,7 +961,7 @@ Technical Performance<split>The mentioned performances (including energy consump
 MODULAR UPGRADE // TITLE
 New Generation<split>MODULAR, now perfected with Passivhaus certified aluminum frames, ultra-organic wood fiber insulation, and an optimized structure. Designed for comfort, durability, and efficiency at the highest level.
 STRUCTURE // TITLE
-The MODULAR Structural System<split>Combines remarkable mechanical strength with unprecedented efficiency, completely eliminating thermal bridges. Certified for energy efficiency by the Passive House Institute (Darmstadt, Germany) at 0.15 W/(m²K) and for sustainability by EPD (International).
+The MODULAR Structural System<split>MODULAR™ ~35 cm structure, Passivhaus / EPD certified. No thermal bridges. Exceptional structural strength. Fully airtight.
 C24 Timber Frame BIOBUILDS Structure<split>FSC/PEFC certified wood, exceptional load resistance.
 STEICO wood fiber insulation<split>Organic, sustainable, and ultra-efficient (λ ≈ 0.036 W/m·K), CE certified.
 ECO OSB 3 Board (AGEPAN, Germany)<split>Formaldehyde and VOC-free, Passive House approved, CE certified.

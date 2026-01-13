@@ -913,7 +913,7 @@
 MODULAR-UPGRADE // TITLE
 Neue Generation<split>MODULAR, jetzt perfektioniert mit Passivhaus-zertifizierten Aluminiumrahmen, ultra-organischer Holzfaser-Dämmung, optimiertem und robusterem Tragwerk sowie einer exklusiven Auswahl hochwertiger Oberflächen. Für Komfort, Langlebigkeit und Effizienz auf höchstem Niveau.
 TRAGWERK // TITLE
-Das MODULAR-Tragwerk<split>Vereint hohe mechanische Festigkeit mit außergewöhnlicher Effizienz und eliminiert Wärmebrücken. Energieeffizienz zertifiziert durch das Passivhaus Institut (Darmstadt) bei 0,15 W/(m²K) und Nachhaltigkeit durch EPD (International).
+Das MODULAR-Tragwerk<split>MODULAR™ Struktur mit ~35 cm Wandstärke, Passivhaus / EPD zertifiziert. Keine Wärmebrücken. Außergewöhnliche strukturelle Festigkeit. Vollständig luftdicht.
 C24-Holzrahmen BIOBUILDS<split>FSC/PEFC-zertifiziertes Holz, hohe Tragfähigkeit.
 300 mm STEICO Holzfaser-Dämmung<split>Organisch, nachhaltig und hocheffizient (λ ≈ 0,036 W/(m·K)), CE-zertifiziert.
 ECO OSB 3 Platte (AGEPAN, Deutschland)<split>Frei von Formaldehyd und VOC, Passivhaus-geeignet, CE-zertifiziert.
@@ -961,7 +961,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
 MODULAR-UPGRADE // TITLE
 Neue Generation<split>MODULAR, jetzt perfektioniert mit Passivhaus-zertifizierten Aluminiumrahmen, ultra-organischer Holzfaser-Dämmung und optimiertem Tragwerk. Für Komfort, Langlebigkeit und Effizienz auf höchstem Niveau.
 TRAGWERK // TITLE
-Das MODULAR-Tragwerk<split>Vereint hohe mechanische Festigkeit mit außergewöhnlicher Effizienz und eliminiert Wärmebrücken. Energieeffizienz zertifiziert durch das Passivhaus Institut (Darmstadt) bei 0,15 W/(m²K) und Nachhaltigkeit durch EPD (International).
+Das MODULAR-Tragwerk<split>MODULAR™ Struktur mit ~35 cm Wandstärke, Passivhaus / EPD zertifiziert. Keine Wärmebrücken. Außergewöhnliche strukturelle Festigkeit. Vollständig luftdicht.
 C24-Holzrahmen BIOBUILDS<split>FSC/PEFC-zertifiziertes Holz, hohe Tragfähigkeit.
 300 mm STEICO Holzfaser-Dämmung<split>Organisch, nachhaltig und hocheffizient (λ ≈ 0,036 W/(m·K)), CE-zertifiziert.
 ECO OSB 3 Platte (AGEPAN, Deutschland)<split>Frei von Formaldehyd und VOC, Passivhaus-geeignet, CE-zertifiziert.
