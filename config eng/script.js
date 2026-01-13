@@ -1666,10 +1666,10 @@ Technical Performance<split>The mentioned performances (including energy consump
     if (!descriptionEl) return;
 
     const modelDescriptions = {
-      sanctuary: "142m² · Passivhaus · EU Built",
-      serenity: "95m² · Passivhaus · EU Built",
-      wanderlust: "48m² · Passivhaus · EU Built",
-      nest: "24m² · Passivhaus · EU Built",
+      sanctuary: "142m² · Passivhaus · Built in EU",
+      serenity: "95m² · Passivhaus · Built in EU",
+      wanderlust: "48m² · Passivhaus · Built in EU",
+      nest: "24m² · Passivhaus · Built in EU",
     };
 
     const modelName = type.split("-")[0];
