@@ -226,7 +226,7 @@
           image:
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d2244f5d6be3af87aab_24m2%20Floorplan%20A.avif",
           price: 0,
-          name: "Grundriss A",
+          name: "Grundriss A · 1 Schlafzimmer",
           modal:
             "<h3>24 m² Grundriss A</h3><br><p>Innen: 5,70 m × 3,10 m × 2,50 m</p><p>Außen: 6,40 m × 3,80 m × 3,20 m</p><h4>Räume</h4><p>Schlafzimmer: 14,20 m²</p><p>Bad: 2,65 m²</p><p>Abstellraum / Pantryküche: 0,80 m²</p>",
         },
@@ -235,7 +235,7 @@
           image:
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d22e33276e515d43a8f_24m2%20Floorplan%20B.avif",
           price: 0,
-          name: "Grundriss B",
+          name: "Grundriss B · 1 Schlafzimmer",
           modal:
             "<h3>24 m² Grundriss B</h3><br><p>Innen: 5,70 m × 3,10 m × 2,50 m</p><p>Außen: 6,40 m × 3,80 m × 3,20 m</p><h4>Räume</h4><p>Schlafzimmer: 14,20 m²</p><p>Bad: 2,65 m²</p><p>Abstellraum / Pantryküche: 0,80 m²</p>",
         },
@@ -442,7 +442,7 @@
           image:
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c525733fc3797a1ea68b6_48m2%20Floorplan%20A.png",
           price: 0,
-          name: "Grundriss A",
+          name: "Grundriss A · 1 Schlafzimmer",
           modal:
             "<h3>48 m² Grundriss A</h3><br><p>Innen: 11,80 m × 3,10 m × 2,50 m</p><p>Außen: 12,60 m × 3,80 m × 3,20 m</p><h4>Räume</h4><p>Wohnen + Küche: 19,90 m²</p><br><p>1. Schlafzimmer: 11,80 m²</p><br><p>1. Bad: 4,50 m²</p>",
         },
@@ -451,7 +451,7 @@
           image:
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f671a54486d036b53_48m2%20Floorplan%20B.png",
           price: 0,
-          name: "Grundriss B",
+          name: "Grundriss B · 2 Schlafzimmer",
           modal:
             "<h3>48 m² Grundriss B</h3><br><p>Innen: 11,80 m × 3,10 m × 2,50 m</p><p>Außen: 12,60 m × 3,80 m × 3,20 m</p><h4>Räume</h4><p>1. Schlafzimmer: 11,80 m²</p><p>2. Schlafzimmer: 11,80 m²</p><br><p>1. Bad: 4,50 m²</p><p>2. Bad: 3,50 m²</p><p>Flur: 3,50 m²</p>",
         },
@@ -658,7 +658,7 @@
           image:
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514e29f50d2da31e84dc_95m2%20Floorplan%20A.png",
           price: 0,
-          name: "Grundriss A",
+          name: "Grundriss A · 3 Schlafzimmer",
           modal:
             "<h3>95 m² Grundriss A</h3><br><p>Innen: 11,80 m × 6,80 m × 2,50 m</p><p>Außen: 12,60 m × 7,60 m × 3,20 m</p><h4>Räume</h4><p>Wohnen + Küche: 19,90 m²</p><br><p>1. Schlafzimmer: 11,80 m²</p><br><p>1. Bad: 4,50 m²</p>",
         },
@@ -667,7 +667,7 @@
           image:
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fdf7becede16b71e9_95m2%20Floorplan%20B.png",
           price: 0,
-          name: "Grundriss B",
+          name: "Grundriss B · 2 Schlafzimmer",
           modal:
             "<h3>95 m² Grundriss B</h3><br><p>Innen: 11,80 m × 6,80 m × 2,50 m</p><p>Außen: 12,60 m × 7,60 m × 3,20 m</p><h4>Räume</h4><p>1. Schlafzimmer: 11,80 m²</p><p>2. Schlafzimmer: 11,80 m²</p><br><p>1. Bad: 4,50 m²</p><p>2. Bad: 3,50 m²</p><p>Flur: 3,50 m²</p>",
         },
@@ -676,7 +676,7 @@
           image:
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff885d32e87f5d5ef_95m2%20Floorplan%20C.png",
           price: 0,
-          name: "Grundriss C",
+          name: "Grundriss C · 1 Schlafzimmer",
           modal:
             "<h3>95 m² Grundriss C</h3><br><p>Innen: 11,80 m × 6,80 m × 2,50 m</p><p>Außen: 12,60 m × 7,60 m × 3,20 m</p><h4>Räume</h4><p>Wohnen + Küche: 53,70 m²</p><br><p>1. Schlafzimmer: 13,10 m²</p><br><p>1. Bad: 3,75 m²</p><p>2. Bad: 4,35 m²</p>",
         },
@@ -883,7 +883,7 @@
           image:
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff7e14cb1b083351b_142m2%20Floorplan%20A.png",
           price: 0,
-          name: "Grundriss A",
+          name: "Grundriss A · 4 Schlafzimmer",
           modal:
             "<h3>142 m² Grundriss A</h3><br><p>Innen: 11,80 m × 10,60 m × 2,50 m</p><p>Außen: 12,60 m × 11,30 m × 3,20 m</p><h4>Räume</h4><p>Wohnen + Küche: 62,90 m²</p><br><p>1. Schlafzimmer: 12,40 m²</p><p>2. Schlafzimmer: 12,20 m²</p><p>3. Schlafzimmer: 12,40 m²</p><p>4. Schlafzimmer: 13,10 m²</p><br><p>1. Bad: 3,75 m²</p><p>2. Bad: 4,35 m²</p>",
         },
@@ -892,7 +892,7 @@
           image:
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f6966128dbeb27986_142m2%20Floorplan%20B.png",
           price: 0,
-          name: "Grundriss B",
+          name: "Grundriss B · 3 Schlafzimmer",
           modal:
             "<h3>142 m² Grundriss B</h3><br><p>Innen: 11,80 m × 10,60 m × 2,50 m</p><p>Außen: 12,60 m × 11,30 m × 3,20 m</p><h4>Räume</h4><p>Wohnen + Küche: 75,30 m²</p><br><p>1. Schlafzimmer: 12,20 m²</p><p>2. Schlafzimmer: 12,40 m²</p><p>3. Schlafzimmer: 13,10 m²</p><br><p>1. Bad: 3,75 m²</p><p>2. Bad: 4,35 m²</p>",
         },
@@ -901,7 +901,7 @@
           image:
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fd4d57aa8ff3d75e9_142m2%20Floorplan%20C.png",
           price: 0,
-          name: "Grundriss C",
+          name: "Grundriss C · 2 Schlafzimmer",
           modal:
             "<h3>142 m² Grundriss C</h3><br><p>Innen: 11,80 m × 10,60 m × 2,50 m</p><p>Außen: 12,60 m × 11,30 m × 3,20 m</p><h4>Räume</h4><p>Wohnen + Küche: 87,50 m²</p><br><p>1. Schlafzimmer: 12,40 m²</p><p>2. Schlafzimmer: 13,10 m²</p><br><p>1. Bad: 3,75 m²</p><p>2. Bad: 4,35 m²</p>",
         },
@@ -1647,10 +1647,10 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     if (!descriptionEl) return;
 
     const modelDescriptions = {
-      sanctuary: "142qm · 4 Schlafzimmer · Passivhaus",
-      serenity: "95qm · 3 Schlafzimmer · Passivhaus",
-      wanderlust: "48qm · 1 oder 2 Schlafzimmer · Passivhaus",
-      nest: "24qm · 1 Schlafzimmer · Passivhaus",
+      sanctuary: "142m² · Passivhaus · EU-gefertigt",
+      serenity: "95m² · Passivhaus · EU-gefertigt",
+      wanderlust: "48m² · Passivhaus · EU-gefertigt",
+      nest: "24m² · Passivhaus · EU-gefertigt",
     };
 
     const modelName = type.split("-")[0];

@@ -225,7 +225,7 @@
           image:
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d2244f5d6be3af87aab_24m2%20Floorplan%20A.avif",
           price: 0,
-          name: "Floorplan A",
+          name: "Floorplan A · 1 Bedroom",
           modal:
             "<h3>24m² Floorplan A</h3><br><p>Interior: 5.70m x 3.10m x 2.50m</p><p>Exterior: 6.40m x 3.80m x 3.20m</p><h4>Rooms</h4><p>Bedroom: 14.20m²</p><p>Bathroom: 2.65m²</p><p>Storage / Kitchenette: 0.80m²</p>",
         },
@@ -234,7 +234,7 @@
           image:
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d22e33276e515d43a8f_24m2%20Floorplan%20B.avif",
           price: 0,
-          name: "Floorplan B",
+          name: "Floorplan B · 1 Bedroom",
           modal:
             "<h3>24m² Floorplan B</h3><br><p>Interior: 5.70m x 3.10m x 2.50m</p><p>Exterior: 6.40m x 3.80m x 3.20m</p><h4>Rooms</h4><p>Bedroom: 14.20m²</p><p>Bathroom: 2.65m²</p><p>Storage / Kitchenette: 0.80m²</p>",
         },
@@ -441,7 +441,7 @@
           image:
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c525733fc3797a1ea68b6_48m2%20Floorplan%20A.png",
           price: 0,
-          name: "Floorplan A",
+          name: "Floorplan A · 1 Bedroom",
           modal:
             "<h3>48m² Floorplan A</h3><br><p>Interior: 11.80m x 3.10m x 2.50m</p><p>Exterior: 12.60m x 3.80m x 3.20m</p><h4>Rooms</h4><p>Living + Kitchen: 19.90m²</p><br><p>1. Bedroom: 11.80m²</p><br><p>1. Bathroom: 4.50m²</p>",
         },
@@ -450,7 +450,7 @@
           image:
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f671a54486d036b53_48m2%20Floorplan%20B.png",
           price: 0,
-          name: "Floorplan B",
+          name: "Floorplan B · 2 Bedrooms",
           modal:
             "<h3>48m² Floorplan B</h3><br><p>Interior: 11.80m x 3.10m x 2.50m</p><p>Exterior: 12.60m x 3.80m x 3.20m</p><h4>Rooms</h4><p>1. Bedroom: 11.80m²</p><p>2. Bedroom: 11.80m²</p><br><p>1. Bathroom: 4.50m²</p><p>2. Bathroom: 3.50m²</p><p>Hallway: 3.50m²</p>",
         },
@@ -657,7 +657,7 @@
           image:
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514e29f50d2da31e84dc_95m2%20Floorplan%20A.png",
           price: 0,
-          name: "Floorplan A",
+          name: "Floorplan A · 3 Bedrooms",
           modal:
             "<h3>95m² Floorplan A</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Rooms</h4><p>Living + Kitchen: 19.90m²</p><br><p>1. Bedroom: 11.80m²</p><br><p>1. Bathroom: 4.50m²</p>",
         },
@@ -666,7 +666,7 @@
           image:
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fdf7becede16b71e9_95m2%20Floorplan%20B.png",
           price: 0,
-          name: "Floorplan B",
+          name: "Floorplan B · 2 Bedrooms",
           modal:
             "<h3>95m² Floorplan B</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Rooms</h4><p>1. Bedroom: 11.80m²</p><p>2. Bedroom: 11.80m²</p><br><p>1. Bathroom: 4.50m²</p><p>2. Bathroom: 3.50m²</p><p>Hallway: 3.50m²</p>",
         },
@@ -675,7 +675,7 @@
           image:
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff885d32e87f5d5ef_95m2%20Floorplan%20C.png",
           price: 0,
-          name: "Floorplan C",
+          name: "Floorplan C · 1 Bedroom",
           modal:
             "<h3>95m² Floorplan C</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Rooms</h4><p>Living + Kitchen: 53.70m²</p><br><p>1. Bedroom: 13.10m²</p><br><p>1. Bathroom: 3.75m²</p><p>2. Bathroom: 4.35m²</p>",
         },
@@ -882,7 +882,7 @@
           image:
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff7e14cb1b083351b_142m2%20Floorplan%20A.png",
           price: 0,
-          name: "Floorplan A",
+          name: "Floorplan A · 4 Bedrooms",
           modal:
             "<h3>142m² Floorplan A</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Rooms</h4><p>Living + Kitchen: 62.90m²</p><br><p>1. Bedroom: 12.40m²</p><p>2. Bedroom: 12.20m²</p><p>3. Bedroom: 12.40m²</p><p>4. Bedroom: 13.10m²</p><br><p>1. Bathroom: 3.75m²</p><p>2. Bathroom: 4.35m²</p>",
         },
@@ -891,7 +891,7 @@
           image:
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f6966128dbeb27986_142m2%20Floorplan%20B.png",
           price: 0,
-          name: "Floorplan B",
+          name: "Floorplan B · 3 Bedrooms",
           modal:
             "<h3>142m² Floorplan B</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Rooms</h4><p>Living + Kitchen: 75.30m²</p><br><p>1. Bedroom: 12.20m²</p><p>2. Bedroom: 12.40m²</p><p>3. Bedroom: 13.10m²</p><br><p>1. Bathroom: 3.75m²</p><p>2. Bathroom: 4.35m²</p>",
         },
@@ -900,7 +900,7 @@
           image:
             "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fd4d57aa8ff3d75e9_142m2%20Floorplan%20C.png",
           price: 0,
-          name: "Floorplan C",
+          name: "Floorplan C · 2 Bedrooms",
           modal:
             "<h3>142m² Floorplan C</h3><br><p>Interior: 11.80m x 10.60m x 2.50m</p><p>Exterior: 12.60m x 11.30m x 3.20m</p><h4>Rooms</h4><p>Living + Kitchen: 87.50m²</p><br><p>1. Bedroom: 12.40m²</p><p>2. Bedroom: 13.10m²</p><br><p>1. Bathroom: 3.75m²</p><p>2. Bathroom: 4.35m²</p>",
         },
@@ -1666,10 +1666,10 @@ Technical Performance<split>The mentioned performances (including energy consump
     if (!descriptionEl) return;
 
     const modelDescriptions = {
-      sanctuary: "142sqm · 4 bedrooms · Passivhaus",
-      serenity: "95sqm · 3 bedrooms · Passivhaus",
-      wanderlust: "48sqm · 1 or 2 bedrooms · Passivhaus",
-      nest: "24sqm · 1 bedroom · Passivhaus",
+      sanctuary: "142m² · Passivhaus · EU Built",
+      serenity: "95m² · Passivhaus · EU Built",
+      wanderlust: "48m² · Passivhaus · EU Built",
+      nest: "24m² · Passivhaus · EU Built",
     };
 
     const modelName = type.split("-")[0];
