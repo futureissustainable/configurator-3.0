@@ -702,10 +702,10 @@
         if (!descriptionEl) return;
 
         const modelDescriptions = {
-            'sanctuary': '142m² · Passivhaus · Fabricat în România',
-            'serenity': '95m² · Passivhaus · Fabricat în România',
-            'wanderlust': '48m² · Passivhaus · Fabricat în România',
-            'nest': '24m² · Passivhaus · Fabricat în România'
+            'sanctuary': '142m² · Passivhaus · Fabricat în RO 🇷🇴',
+            'serenity': '95m² · Passivhaus · Fabricat în RO 🇷🇴',
+            'wanderlust': '48m² · Passivhaus · Fabricat în RO 🇷🇴',
+            'nest': '24m² · Passivhaus · Fabricat în RO 🇷🇴'
         };
 
         const modelName = type.split('-')[0];

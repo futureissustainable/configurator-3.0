@@ -1647,10 +1647,10 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     if (!descriptionEl) return;
 
     const modelDescriptions = {
-      sanctuary: "142m² · Passivhaus · EU-gefertigt",
-      serenity: "95m² · Passivhaus · EU-gefertigt",
-      wanderlust: "48m² · Passivhaus · EU-gefertigt",
-      nest: "24m² · Passivhaus · EU-gefertigt",
+      sanctuary: "142m² · Passivhaus · EU-gefertigt 🇪🇺",
+      serenity: "95m² · Passivhaus · EU-gefertigt 🇪🇺",
+      wanderlust: "48m² · Passivhaus · EU-gefertigt 🇪🇺",
+      nest: "24m² · Passivhaus · EU-gefertigt 🇪🇺",
     };
 
     const modelName = type.split("-")[0];
