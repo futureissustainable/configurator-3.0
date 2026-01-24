@@ -660,7 +660,7 @@
           price: 0,
           name: "Grundriss A · 3 Schlafzimmer",
           modal:
-            "<h3>95 m² Grundriss A</h3><br><p>Innen: 11,80 m × 6,80 m × 2,50 m</p><p>Außen: 12,60 m × 7,60 m × 3,20 m</p><h4>Räume</h4><p>Wohnen + Küche: 19,90 m²</p><br><p>1. Schlafzimmer: 11,80 m²</p><br><p>1. Bad: 4,50 m²</p>",
+            "<h3>95 m² Grundriss A</h3><br><p>Innen: 11,80 m × 6,80 m × 2,50 m</p><p>Außen: 12,60 m × 7,60 m × 3,20 m</p><h4>Räume</h4><p>Wohnen + Küche: 32,61 m²</p><br><p>1. Schlafzimmer: 12,33 m²</p><p>2. Schlafzimmer: 11,82 m²</p><p>3. Schlafzimmer: 11,82 m²</p><br><p>1. Bad: 4,63 m²</p><p>2. Bad: 3,77 m²</p>",
         },
         {
           slug: "floorplan-b",

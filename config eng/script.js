@@ -659,7 +659,7 @@
           price: 0,
           name: "Floorplan A · 3 Bedrooms",
           modal:
-            "<h3>95m² Floorplan A</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Rooms</h4><p>Living + Kitchen: 19.90m²</p><br><p>1. Bedroom: 11.80m²</p><br><p>1. Bathroom: 4.50m²</p>",
+            "<h3>95m² Floorplan A</h3><br><p>Interior: 11.80m x 6.80m x 2.50m</p><p>Exterior: 12.60m x 7.60m x 3.20m</p><h4>Rooms</h4><p>Living + Kitchen: 32.61m²</p><br><p>1. Bedroom: 12.33m²</p><p>2. Bedroom: 11.82m²</p><p>3. Bedroom: 11.82m²</p><br><p>1. Bathroom: 4.63m²</p><p>2. Bathroom: 3.77m²</p>",
         },
         {
           slug: "floorplan-b",
