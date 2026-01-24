@@ -228,7 +228,7 @@
           price: 0,
           name: "Grundriss A · 1 Schlafzimmer",
           modal:
-            "<h3>24 m² Grundriss A</h3><br><p>Innen: 5,70 m × 3,10 m × 2,50 m</p><p>Außen: 6,40 m × 3,80 m × 3,20 m</p><h4>Räume</h4><p>Schlafzimmer: 14,20 m²</p><p>Bad: 2,65 m²</p><p>Abstellraum / Pantryküche: 0,80 m²</p>",
+            "<h3>24 m² Grundriss A</h3><br><p>Innen: 5,70 m × 3,10 m × 2,50 m</p><p>Außen: 6,40 m × 3,80 m × 3,20 m</p><h4>Räume</h4><p>Schlafzimmer: 13,26 m²</p><p>Bad: 2,71 m²</p>",
         },
         {
           slug: "floorplan-b",
@@ -237,7 +237,7 @@
           price: 0,
           name: "Grundriss B · 1 Schlafzimmer",
           modal:
-            "<h3>24 m² Grundriss B</h3><br><p>Innen: 5,70 m × 3,10 m × 2,50 m</p><p>Außen: 6,40 m × 3,80 m × 3,20 m</p><h4>Räume</h4><p>Schlafzimmer: 14,20 m²</p><p>Bad: 2,65 m²</p><p>Abstellraum / Pantryküche: 0,80 m²</p>",
+            "<h3>24 m² Grundriss B</h3><br><p>Innen: 5,70 m × 3,10 m × 2,50 m</p><p>Außen: 6,40 m × 3,80 m × 3,20 m</p><h4>Räume</h4><p>Schlafzimmer: 13,26 m²</p><p>Bad: 2,71 m²</p>",
         },
       ],
     },
@@ -444,7 +444,7 @@
           price: 0,
           name: "Grundriss A · 1 Schlafzimmer",
           modal:
-            "<h3>48 m² Grundriss A</h3><br><p>Innen: 11,80 m × 3,10 m × 2,50 m</p><p>Außen: 12,60 m × 3,80 m × 3,20 m</p><h4>Räume</h4><p>Wohnen + Küche: 19,90 m²</p><br><p>1. Schlafzimmer: 11,80 m²</p><br><p>1. Bad: 4,50 m²</p>",
+            "<h3>48 m² Grundriss A</h3><br><p>Innen: 11,80 m × 3,10 m × 2,50 m</p><p>Außen: 12,60 m × 3,80 m × 3,20 m</p><h4>Räume</h4><p>Wohnen + Küche: 19,54 m²</p><p>Schlafzimmer: 11,43 m²</p><p>Bad: 4,23 m²</p>",
         },
         {
           slug: "floorplan-b",
@@ -453,7 +453,7 @@
           price: 0,
           name: "Grundriss B · 2 Schlafzimmer",
           modal:
-            "<h3>48 m² Grundriss B</h3><br><p>Innen: 11,80 m × 3,10 m × 2,50 m</p><p>Außen: 12,60 m × 3,80 m × 3,20 m</p><h4>Räume</h4><p>1. Schlafzimmer: 11,80 m²</p><p>2. Schlafzimmer: 11,80 m²</p><br><p>1. Bad: 4,50 m²</p><p>2. Bad: 3,50 m²</p><p>Flur: 3,50 m²</p>",
+            "<h3>48 m² Grundriss B</h3><br><p>Innen: 11,80 m × 3,10 m × 2,50 m</p><p>Außen: 12,60 m × 3,80 m × 3,20 m</p><h4>Räume</h4><p>Flur: 4,23 m²</p><p>Schlafzimmer 1: 11,43 m²</p><p>Bad 1: 4,23 m²</p><p>Schlafzimmer 2: 11,37 m²</p><p>Bad 2: 3,44 m²</p>",
         },
       ],
     },
@@ -669,7 +669,7 @@
           price: 0,
           name: "Grundriss B · 2 Schlafzimmer",
           modal:
-            "<h3>95 m² Grundriss B</h3><br><p>Innen: 11,80 m × 6,80 m × 2,50 m</p><p>Außen: 12,60 m × 7,60 m × 3,20 m</p><h4>Räume</h4><p>1. Schlafzimmer: 11,80 m²</p><p>2. Schlafzimmer: 11,80 m²</p><br><p>1. Bad: 4,50 m²</p><p>2. Bad: 3,50 m²</p><p>Flur: 3,50 m²</p>",
+            "<h3>95 m² Grundriss B</h3><br><p>Innen: 11,80 m × 6,80 m × 2,50 m</p><p>Außen: 12,60 m × 7,60 m × 3,20 m</p><h4>Räume</h4><p>Wohnen + Küche: 45,10 m²</p><p>Schlafzimmer 1: 12,33 m²</p><p>Schlafzimmer 2: 11,82 m²</p><p>Bad 1: 4,63 m²</p><p>Bad 2: 3,77 m²</p>",
         },
         {
           slug: "floorplan-c",
@@ -678,7 +678,7 @@
           price: 0,
           name: "Grundriss C · 1 Schlafzimmer",
           modal:
-            "<h3>95 m² Grundriss C</h3><br><p>Innen: 11,80 m × 6,80 m × 2,50 m</p><p>Außen: 12,60 m × 7,60 m × 3,20 m</p><h4>Räume</h4><p>Wohnen + Küche: 53,70 m²</p><br><p>1. Schlafzimmer: 13,10 m²</p><br><p>1. Bad: 3,75 m²</p><p>2. Bad: 4,35 m²</p>",
+            "<h3>95 m² Grundriss C</h3><br><p>Innen: 11,80 m × 6,80 m × 2,50 m</p><p>Außen: 12,60 m × 7,60 m × 3,20 m</p><h4>Räume</h4><p>Wohnen + Küche: 57,91 m²</p><p>Schlafzimmer: 11,82 m²</p><p>Bad 1: 4,63 m²</p><p>Bad 2: 3,77 m²</p>",
         },
       ],
     },
@@ -885,7 +885,7 @@
           price: 0,
           name: "Grundriss A · 4 Schlafzimmer",
           modal:
-            "<h3>142 m² Grundriss A</h3><br><p>Innen: 11,80 m × 10,60 m × 2,50 m</p><p>Außen: 12,60 m × 11,30 m × 3,20 m</p><h4>Räume</h4><p>Wohnen + Küche: 62,90 m²</p><br><p>1. Schlafzimmer: 12,40 m²</p><p>2. Schlafzimmer: 12,20 m²</p><p>3. Schlafzimmer: 12,40 m²</p><p>4. Schlafzimmer: 13,10 m²</p><br><p>1. Bad: 3,75 m²</p><p>2. Bad: 4,35 m²</p>",
+            "<h3>142 m² Grundriss A</h3><br><p>Innen: 11,80 m × 10,60 m × 2,50 m</p><p>Außen: 12,60 m × 11,30 m × 3,20 m</p><h4>Räume</h4><p>Wohnen + Küche: 62,94 m²</p><p>Schlafzimmer 1: 11,82 m²</p><p>Schlafzimmer 2: 13,53 m²</p><p>Schlafzimmer 3: 11,82 m²</p><p>Schlafzimmer 4: 11,82 m²</p><p>Bad 1: 4,63 m²</p><p>Bad 2: 3,77 m²</p>",
         },
         {
           slug: "floorplan-b",
@@ -894,7 +894,7 @@
           price: 0,
           name: "Grundriss B · 3 Schlafzimmer",
           modal:
-            "<h3>142 m² Grundriss B</h3><br><p>Innen: 11,80 m × 10,60 m × 2,50 m</p><p>Außen: 12,60 m × 11,30 m × 3,20 m</p><h4>Räume</h4><p>Wohnen + Küche: 75,30 m²</p><br><p>1. Schlafzimmer: 12,20 m²</p><p>2. Schlafzimmer: 12,40 m²</p><p>3. Schlafzimmer: 13,10 m²</p><br><p>1. Bad: 3,75 m²</p><p>2. Bad: 4,35 m²</p>",
+            "<h3>142 m² Grundriss B</h3><br><p>Innen: 11,80 m × 10,60 m × 2,50 m</p><p>Außen: 12,60 m × 11,30 m × 3,20 m</p><h4>Räume</h4><p>Wohnen + Küche: 75,22 m²</p><p>Schlafzimmer 1: 13,53 m²</p><p>Schlafzimmer 2: 11,82 m²</p><p>Schlafzimmer 3: 11,82 m²</p><p>Bad 1: 4,63 m²</p><p>Bad 2: 3,77 m²</p>",
         },
         {
           slug: "floorplan-c",
@@ -903,7 +903,7 @@
           price: 0,
           name: "Grundriss C · 2 Schlafzimmer",
           modal:
-            "<h3>142 m² Grundriss C</h3><br><p>Innen: 11,80 m × 10,60 m × 2,50 m</p><p>Außen: 12,60 m × 11,30 m × 3,20 m</p><h4>Räume</h4><p>Wohnen + Küche: 87,50 m²</p><br><p>1. Schlafzimmer: 12,40 m²</p><p>2. Schlafzimmer: 13,10 m²</p><br><p>1. Bad: 3,75 m²</p><p>2. Bad: 4,35 m²</p>",
+            "<h3>142 m² Grundriss C</h3><br><p>Innen: 11,80 m × 10,60 m × 2,50 m</p><p>Außen: 12,60 m × 11,30 m × 3,20 m</p><h4>Räume</h4><p>Wohnen + Küche: 87,71 m²</p><p>Schlafzimmer 1: 13,53 m²</p><p>Schlafzimmer 2: 11,82 m²</p><p>Bad 1: 4,63 m²</p><p>Bad 2: 3,77 m²</p>",
         },
       ],
     },
