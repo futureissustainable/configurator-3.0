@@ -309,7 +309,7 @@
           price: 0,
           name: "Floorplan A · 1 Bedroom",
           modal:
-            "<h3>24m² Floorplan A</h3><h4>Rooms</h4><p>Bedroom: 13.26m²</p><p>Bathroom: 2.71m²</p><p><strong>Total Interior: 15.97m²</strong></p>",
+            "<h3>24m² Floorplan A</h3><h4>Rooms</h4><p>Bedroom: 13.26m²</p><p>Bathroom: 2.71m²</p><div class="floorplan-total">Total Interior: 15.97m²</div>",
         },
         {
           slug: "floorplan-b",
@@ -318,7 +318,7 @@
           price: 0,
           name: "Floorplan B · 1 Bedroom",
           modal:
-            "<h3>24m² Floorplan B</h3><h4>Rooms</h4><p>Bedroom: 13.26m²</p><p>Bathroom: 2.71m²</p><p><strong>Total Interior: 15.97m²</strong></p>",
+            "<h3>24m² Floorplan B</h3><h4>Rooms</h4><p>Bedroom: 13.26m²</p><p>Bathroom: 2.71m²</p><div class="floorplan-total">Total Interior: 15.97m²</div>",
         },
       ],
     },
@@ -525,7 +525,7 @@
           price: 0,
           name: "Floorplan A · 1 Bedroom",
           modal:
-            "<h3>48m² Floorplan A</h3><h4>Rooms</h4><p>Living + Kitchen: 19.54m²</p><p>Bedroom: 11.43m²</p><p>Bathroom: 4.23m²</p><p><strong>Total Interior: 35.20m²</strong></p>",
+            "<h3>48m² Floorplan A</h3><h4>Rooms</h4><p>Living + Kitchen: 19.54m²</p><p>Bedroom: 11.43m²</p><p>Bathroom: 4.23m²</p><div class="floorplan-total">Total Interior: 35.20m²</div>",
         },
         {
           slug: "floorplan-b",
@@ -534,7 +534,7 @@
           price: 0,
           name: "Floorplan B · 2 Bedrooms",
           modal:
-            "<h3>48m² Floorplan B</h3><h4>Rooms</h4><p>Hallway: 4.23m²</p><p>Bedroom 1: 11.43m²</p><p>Bathroom 1: 4.23m²</p><p>Bedroom 2: 11.37m²</p><p>Bathroom 2: 3.44m²</p><p><strong>Total Interior: 34.70m²</strong></p>",
+            "<h3>48m² Floorplan B</h3><h4>Rooms</h4><p>Hallway: 4.23m²</p><p>Bedroom 1: 11.43m²</p><p>Bathroom 1: 4.23m²</p><p>Bedroom 2: 11.37m²</p><p>Bathroom 2: 3.44m²</p><div class="floorplan-total">Total Interior: 34.70m²</div>",
         },
       ],
     },
@@ -741,7 +741,7 @@
           price: 0,
           name: "Floorplan A · 3 Bedrooms",
           modal:
-            "<h3>95m² Floorplan A</h3><h4>Rooms</h4><p>Living + Kitchen: 32.61m²</p><p>Bedroom 1: 12.33m²</p><p>Bedroom 2: 11.82m²</p><p>Bedroom 3: 11.82m²</p><p>Bathroom 1: 4.63m²</p><p>Bathroom 2: 3.77m²</p><p><strong>Total Interior: 76.98m²</strong></p>",
+            "<h3>95m² Floorplan A</h3><h4>Rooms</h4><p>Living + Kitchen: 32.61m²</p><p>Bedroom 1: 12.33m²</p><p>Bedroom 2: 11.82m²</p><p>Bedroom 3: 11.82m²</p><p>Bathroom 1: 4.63m²</p><p>Bathroom 2: 3.77m²</p><div class="floorplan-total">Total Interior: 76.98m²</div>",
         },
         {
           slug: "floorplan-b",
@@ -750,7 +750,7 @@
           price: 0,
           name: "Floorplan B · 2 Bedrooms",
           modal:
-            "<h3>95m² Floorplan B</h3><h4>Rooms</h4><p>Living + Kitchen: 45.10m²</p><p>Bedroom 1: 12.33m²</p><p>Bedroom 2: 11.82m²</p><p>Bathroom 1: 4.63m²</p><p>Bathroom 2: 3.77m²</p><p><strong>Total Interior: 77.65m²</strong></p>",
+            "<h3>95m² Floorplan B</h3><h4>Rooms</h4><p>Living + Kitchen: 45.10m²</p><p>Bedroom 1: 12.33m²</p><p>Bedroom 2: 11.82m²</p><p>Bathroom 1: 4.63m²</p><p>Bathroom 2: 3.77m²</p><div class="floorplan-total">Total Interior: 77.65m²</div>",
         },
         {
           slug: "floorplan-c",
@@ -759,7 +759,7 @@
           price: 0,
           name: "Floorplan C · 1 Bedroom",
           modal:
-            "<h3>95m² Floorplan C</h3><h4>Rooms</h4><p>Living + Kitchen: 57.91m²</p><p>Bedroom: 11.82m²</p><p>Bathroom 1: 4.63m²</p><p>Bathroom 2: 3.77m²</p><p><strong>Total Interior: 78.13m²</strong></p>",
+            "<h3>95m² Floorplan C</h3><h4>Rooms</h4><p>Living + Kitchen: 57.91m²</p><p>Bedroom: 11.82m²</p><p>Bathroom 1: 4.63m²</p><p>Bathroom 2: 3.77m²</p><div class="floorplan-total">Total Interior: 78.13m²</div>",
         },
       ],
     },
@@ -966,7 +966,7 @@
           price: 0,
           name: "Floorplan A · 4 Bedrooms",
           modal:
-            "<h3>142m² Floorplan A</h3><h4>Rooms</h4><p>Living + Kitchen: 62.94m²</p><p>Bedroom 1: 11.82m²</p><p>Bedroom 2: 13.53m²</p><p>Bedroom 3: 11.82m²</p><p>Bedroom 4: 11.82m²</p><p>Bathroom 1: 4.63m²</p><p>Bathroom 2: 3.77m²</p><p><strong>Total Interior: 120.33m²</strong></p>",
+            "<h3>142m² Floorplan A</h3><h4>Rooms</h4><p>Living + Kitchen: 62.94m²</p><p>Bedroom 1: 11.82m²</p><p>Bedroom 2: 13.53m²</p><p>Bedroom 3: 11.82m²</p><p>Bedroom 4: 11.82m²</p><p>Bathroom 1: 4.63m²</p><p>Bathroom 2: 3.77m²</p><div class="floorplan-total">Total Interior: 120.33m²</div>",
         },
         {
           slug: "floorplan-b",
@@ -975,7 +975,7 @@
           price: 0,
           name: "Floorplan B · 3 Bedrooms",
           modal:
-            "<h3>142m² Floorplan B</h3><h4>Rooms</h4><p>Living + Kitchen: 75.22m²</p><p>Bedroom 1: 13.53m²</p><p>Bedroom 2: 11.82m²</p><p>Bedroom 3: 11.82m²</p><p>Bathroom 1: 4.63m²</p><p>Bathroom 2: 3.77m²</p><p><strong>Total Interior: 120.79m²</strong></p>",
+            "<h3>142m² Floorplan B</h3><h4>Rooms</h4><p>Living + Kitchen: 75.22m²</p><p>Bedroom 1: 13.53m²</p><p>Bedroom 2: 11.82m²</p><p>Bedroom 3: 11.82m²</p><p>Bathroom 1: 4.63m²</p><p>Bathroom 2: 3.77m²</p><div class="floorplan-total">Total Interior: 120.79m²</div>",
         },
         {
           slug: "floorplan-c",
@@ -984,7 +984,7 @@
           price: 0,
           name: "Floorplan C · 2 Bedrooms",
           modal:
-            "<h3>142m² Floorplan C</h3><h4>Rooms</h4><p>Living + Kitchen: 87.71m²</p><p>Bedroom 1: 13.53m²</p><p>Bedroom 2: 11.82m²</p><p>Bathroom 1: 4.63m²</p><p>Bathroom 2: 3.77m²</p><p><strong>Total Interior: 121.46m²</strong></p>",
+            "<h3>142m² Floorplan C</h3><h4>Rooms</h4><p>Living + Kitchen: 87.71m²</p><p>Bedroom 1: 13.53m²</p><p>Bedroom 2: 11.82m²</p><p>Bathroom 1: 4.63m²</p><p>Bathroom 2: 3.77m²</p><div class="floorplan-total">Total Interior: 121.46m²</div>",
         },
       ],
     },
