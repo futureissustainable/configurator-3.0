@@ -164,9 +164,11 @@
                     <div class="options-container"></div>
                 </div>
                 <div class="form-tab" id="step-5-referral">
-                    <h2 id="referralCodeStepTitle">Cod Recomandare</h2>
-                    <div class="options-container">
-                        <input type="text" id="referral-code-input" class="custom-text-input" placeholder="Opțional">
+                    <a href="#" class="referral-toggle" id="referralToggle" onclick="event.preventDefault(); document.getElementById('referralContent').classList.toggle('hidden'); this.classList.toggle('open');">
+                        <span class="toggle-icon">+</span> Ai un cod de recomandare?
+                    </a>
+                    <div class="options-container hidden" id="referralContent">
+                        <input type="text" id="referral-code-input" class="custom-text-input" placeholder="Introdu codul">
                         <div id="discount-message" style="display: none;">Reducere de 4% aplicată</div>
                     </div>
                 </div>
