@@ -135,8 +135,8 @@
                 }
             ],
             "floorplan" : [
-                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d2244f5d6be3af87aab_24m2%20Floorplan%20A.avif", 'price': 0, 'name': 'Plan A · 1 Dormitor', 'modal': "<h3>24m² Plan A</h3><h4>Camere</h4><p>Dormitor: 13.26m²</p><p>Baie: 2.71m²</p><div class="floorplan-total">Total Interior: 15.97m²</div>" },
-                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d22e33276e515d43a8f_24m2%20Floorplan%20B.avif", 'price': 0, 'name': 'Plan B · 1 Dormitor', 'modal': "<h3>24m² Plan B</h3><h4>Camere</h4><p>Dormitor: 13.26m²</p><p>Baie: 2.71m²</p><div class="floorplan-total">Total Interior: 15.97m²</div>" }
+                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d2244f5d6be3af87aab_24m2%20Floorplan%20A.avif", 'price': 0, 'name': 'Plan A · 1 Dormitor', 'modal': "<h3>24m² Plan A</h3><h4>Camere</h4><p>Dormitor: 13.26m²</p><p>Baie: 2.71m²</p><p><strong>Total Interior: 15.97m²</strong></p>" },
+                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d22e33276e515d43a8f_24m2%20Floorplan%20B.avif", 'price': 0, 'name': 'Plan B · 1 Dormitor', 'modal': "<h3>24m² Plan B</h3><h4>Camere</h4><p>Dormitor: 13.26m²</p><p>Baie: 2.71m²</p><p><strong>Total Interior: 15.97m²</strong></p>" }
             ]
         },
         'wanderlust-48' : {
@@ -177,8 +177,8 @@
                 }
             ],
             "floorplan" : [
-                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c525733fc3797a1ea68b6_48m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A · 1 Dormitor', 'modal': "<h3>48m² Plan A</h3><h4>Camere</h4><p>Living + Bucătărie: 19.54m²</p><p>Dormitor: 11.43m²</p><p>Baie: 4.23m²</p><div class="floorplan-total">Total Interior: 35.20m²</div>"},
-                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f671a54486d036b53_48m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B · 2 Dormitoare', 'modal': "<h3>48m² Plan B</h3><h4>Camere</h4><p>Hol: 4.23m²</p><p>Dormitor 1: 11.43m²</p><p>Baie 1: 4.23m²</p><p>Dormitor 2: 11.37m²</p><p>Baie 2: 3.44m²</p><div class="floorplan-total">Total Interior: 34.70m²</div>" }
+                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c525733fc3797a1ea68b6_48m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A · 1 Dormitor', 'modal': "<h3>48m² Plan A</h3><h4>Camere</h4><p>Living + Bucătărie: 19.54m²</p><p>Dormitor: 11.43m²</p><p>Baie: 4.23m²</p><p><strong>Total Interior: 35.20m²</strong></p>"},
+                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f671a54486d036b53_48m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B · 2 Dormitoare', 'modal': "<h3>48m² Plan B</h3><h4>Camere</h4><p>Hol: 4.23m²</p><p>Dormitor 1: 11.43m²</p><p>Baie 1: 4.23m²</p><p>Dormitor 2: 11.37m²</p><p>Baie 2: 3.44m²</p><p><strong>Total Interior: 34.70m²</strong></p>" }
             ]
         },
         'serenity-95' : {
@@ -219,9 +219,9 @@
                 }
             ],
             "floorplan" : [
-                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514e29f50d2da31e84dc_95m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A · 3 Dormitoare', 'modal': "<h3>95m² Plan A</h3><h4>Camere</h4><p>Living + Bucătărie: 32.61m²</p><p>Dormitor 1: 12.33m²</p><p>Dormitor 2: 11.82m²</p><p>Dormitor 3: 11.82m²</p><p>Baie 1: 4.63m²</p><p>Baie 2: 3.77m²</p><div class="floorplan-total">Total Interior: 76.98m²</div>"},
-                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fdf7becede16b71e9_95m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B · 2 Dormitoare', 'modal': "<h3>95m² Plan B</h3><h4>Camere</h4><p>Living + Bucătărie: 45.10m²</p><p>Dormitor 1: 12.33m²</p><p>Dormitor 2: 11.82m²</p><p>Baie 1: 4.63m²</p><p>Baie 2: 3.77m²</p><div class="floorplan-total">Total Interior: 77.65m²</div>"},
-                { 'slug' : "floorplan-c", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff885d32e87f5d5ef_95m2%20Floorplan%20C.png", 'price': 0, 'name': 'Plan C · 1 Dormitor', 'modal': "<h3>95m² Plan C</h3><h4>Camere</h4><p>Living + Bucătărie: 57.91m²</p><p>Dormitor: 11.82m²</p><p>Baie 1: 4.63m²</p><p>Baie 2: 3.77m²</p><div class="floorplan-total">Total Interior: 78.13m²</div>" }
+                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514e29f50d2da31e84dc_95m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A · 3 Dormitoare', 'modal': "<h3>95m² Plan A</h3><h4>Camere</h4><p>Living + Bucătărie: 32.61m²</p><p>Dormitor 1: 12.33m²</p><p>Dormitor 2: 11.82m²</p><p>Dormitor 3: 11.82m²</p><p>Baie 1: 4.63m²</p><p>Baie 2: 3.77m²</p><p><strong>Total Interior: 76.98m²</strong></p>"},
+                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fdf7becede16b71e9_95m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B · 2 Dormitoare', 'modal': "<h3>95m² Plan B</h3><h4>Camere</h4><p>Living + Bucătărie: 45.10m²</p><p>Dormitor 1: 12.33m²</p><p>Dormitor 2: 11.82m²</p><p>Baie 1: 4.63m²</p><p>Baie 2: 3.77m²</p><p><strong>Total Interior: 77.65m²</strong></p>"},
+                { 'slug' : "floorplan-c", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff885d32e87f5d5ef_95m2%20Floorplan%20C.png", 'price': 0, 'name': 'Plan C · 1 Dormitor', 'modal': "<h3>95m² Plan C</h3><h4>Camere</h4><p>Living + Bucătărie: 57.91m²</p><p>Dormitor: 11.82m²</p><p>Baie 1: 4.63m²</p><p>Baie 2: 3.77m²</p><p><strong>Total Interior: 78.13m²</strong></p>" }
             ]
         },
         'sanctuary-142' : {
@@ -262,9 +262,9 @@
                 }
             ],
             "floorplan" : [
-                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff7e14cb1b083351b_142m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A · 4 Dormitoare', 'modal': "<h3>142m² Plan A</h3><h4>Camere</h4><p>Living + Bucătărie: 62.94m²</p><p>Dormitor 1: 11.82m²</p><p>Dormitor 2: 13.53m²</p><p>Dormitor 3: 11.82m²</p><p>Dormitor 4: 11.82m²</p><p>Baie 1: 4.63m²</p><p>Baie 2: 3.77m²</p><div class="floorplan-total">Total Interior: 120.33m²</div>"},
-                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f6966128dbeb27986_142m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B · 3 Dormitoare', 'modal': "<h3>142m² Plan B</h3><h4>Camere</h4><p>Living + Bucătărie: 75.22m²</p><p>Dormitor 1: 13.53m²</p><p>Dormitor 2: 11.82m²</p><p>Dormitor 3: 11.82m²</p><p>Baie 1: 4.63m²</p><p>Baie 2: 3.77m²</p><div class="floorplan-total">Total Interior: 120.79m²</div>"},
-                { 'slug' : "floorplan-c", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fd4d57aa8ff3d75e9_142m2%20Floorplan%20C.png", 'price': 0, 'name': 'Plan C · 2 Dormitoare', 'modal': "<h3>142m² Plan C</h3><h4>Camere</h4><p>Living + Bucătărie: 87.71m²</p><p>Dormitor 1: 13.53m²</p><p>Dormitor 2: 11.82m²</p><p>Baie 1: 4.63m²</p><p>Baie 2: 3.77m²</p><div class="floorplan-total">Total Interior: 121.46m²</div>" }
+                { 'slug' : "floorplan-a", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff7e14cb1b083351b_142m2%20Floorplan%20A.png", 'price': 0, 'name': 'Plan A · 4 Dormitoare', 'modal': "<h3>142m² Plan A</h3><h4>Camere</h4><p>Living + Bucătărie: 62.94m²</p><p>Dormitor 1: 11.82m²</p><p>Dormitor 2: 13.53m²</p><p>Dormitor 3: 11.82m²</p><p>Dormitor 4: 11.82m²</p><p>Baie 1: 4.63m²</p><p>Baie 2: 3.77m²</p><p><strong>Total Interior: 120.33m²</strong></p>"},
+                { 'slug' : "floorplan-b", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f6966128dbeb27986_142m2%20Floorplan%20B.png", 'price': 0, 'name': 'Plan B · 3 Dormitoare', 'modal': "<h3>142m² Plan B</h3><h4>Camere</h4><p>Living + Bucătărie: 75.22m²</p><p>Dormitor 1: 13.53m²</p><p>Dormitor 2: 11.82m²</p><p>Dormitor 3: 11.82m²</p><p>Baie 1: 4.63m²</p><p>Baie 2: 3.77m²</p><p><strong>Total Interior: 120.79m²</strong></p>"},
+                { 'slug' : "floorplan-c", 'image': "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fd4d57aa8ff3d75e9_142m2%20Floorplan%20C.png", 'price': 0, 'name': 'Plan C · 2 Dormitoare', 'modal': "<h3>142m² Plan C</h3><h4>Camere</h4><p>Living + Bucătărie: 87.71m²</p><p>Dormitor 1: 13.53m²</p><p>Dormitor 2: 11.82m²</p><p>Baie 1: 4.63m²</p><p>Baie 2: 3.77m²</p><p><strong>Total Interior: 121.46m²</strong></p>" }
             ]
         }
     };
