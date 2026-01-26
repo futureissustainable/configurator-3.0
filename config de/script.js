@@ -1440,7 +1440,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
     ) {
       const upgradeData = findUpgradeInCurrentFinish(inputValue);
       if (upgradeData && upgradeData.included && upgradeData.price === 0) {
-        specialPriceText = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align: middle; margin-right: 4px;"><polyline points="20 6 9 17 4 12"></polyline></svg>Inklusive';
+        specialPriceText = 'Inklusive';
         isDisabled = true;
         isChecked = true;
         if (queryArgs[inputName] !== inputValue)
@@ -1467,8 +1467,10 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       }
     } else if (specialPriceText) {
       priceDisplayHTML = `<span class="option-price price-included-turnkey">${specialPriceText}</span>`;
-    } else if (rawPrice === 0) {
+    } else if (rawPrice === 0 && context !== "floorplan") {
       priceDisplayHTML = `<span class="option-price">Inbegriffen</span>`;
+    } else if (rawPrice === 0 && context === "floorplan") {
+      priceDisplayHTML = '';
     } else {
       priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ MwSt.</span></span>`;
     }
