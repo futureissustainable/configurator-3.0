@@ -936,3 +936,45 @@ p {
     font-size: 0.8rem;
     font-weight: 300;
 }
+
+/* === REFERRAL CODE TOGGLE === */
+.referral-toggle {
+    display: inline-block;
+    color: #737579;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.referral-toggle:hover {
+    color: #14171c;
+}
+
+.referral-toggle .toggle-icon {
+    display: inline-block;
+    transition: transform 0.2s ease;
+    margin-right: 4px;
+}
+
+.referral-toggle.open .toggle-icon {
+    transform: rotate(45deg);
+}
+
+#step-5-referral .options-container.hidden {
+    display: none;
+}
+
+#step-5-referral .options-container {
+    margin-top: 12px;
+}
+
+/* === FLOORPLAN MODAL TOTAL === */
+.floorplan-total {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #e0e0e0;
+    font-weight: 400;
+    color: #14171c;
+}
