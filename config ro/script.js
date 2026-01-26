@@ -1724,14 +1724,6 @@ function generateSolarSpecsModalContent() {
                     <td class="spec-value">${specs.kWp} kWp</td>
                 </tr>
                 <tr>
-                    <td class="spec-label">Preț</td>
-                    <td class="spec-value">${formatCurrency(specs.price)} <span class="vat-label">+ TVA</span></td>
-                </tr>
-                <tr>
-                    <td class="spec-label">Eficiență cost</td>
-                    <td class="spec-value">${formatCurrency(specs.pricePerKWp)}/kWp</td>
-                </tr>
-                <tr>
                     <td class="spec-label">Putere panou</td>
                     <td class="spec-value">${specs.panelPower} W</td>
                 </tr>

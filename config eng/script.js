@@ -3166,14 +3166,6 @@ Technical Performance<split>The mentioned performances (including energy consump
             <td class="spec-value">${specs.kWp} kWp</td>
           </tr>
           <tr>
-            <td class="spec-label">Price</td>
-            <td class="spec-value">${formatCurrency(specs.price)} <span class="vat-label">+ VAT</span></td>
-          </tr>
-          <tr>
-            <td class="spec-label">Cost Efficiency</td>
-            <td class="spec-value">${formatCurrency(specs.pricePerKWp)}/kWp</td>
-          </tr>
-          <tr>
             <td class="spec-label">Panel Power</td>
             <td class="spec-value">${specs.panelPower} W</td>
           </tr>
