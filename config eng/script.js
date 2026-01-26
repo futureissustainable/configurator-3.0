@@ -3156,6 +3156,7 @@ Technical Performance<split>The mentioned performances (including energy consump
     const houseName = config[type]?.name || type;
 
     return `
+      <img src="${solarImage}" alt="Solar Panels" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">
       <h3>Solar Kit Specifications</h3>
       <p style="color: #737579; margin-bottom: 1.5rem;">Zero Energy solar kit for ${houseName}</p>
       <table class="solar-specs-table">

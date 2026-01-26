@@ -1714,6 +1714,7 @@ function generateSolarSpecsModalContent() {
     const houseName = config[type]?.name || type;
 
     return `
+        <img src="${solarImage}" alt="Panouri Solare" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">
         <h3>Specificații Kit Solar</h3>
         <p style="color: #737579; margin-bottom: 1.5rem;">Kit solar Zero Energy pentru ${houseName}</p>
         <table class="solar-specs-table">
