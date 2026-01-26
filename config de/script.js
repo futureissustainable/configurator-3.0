@@ -1378,13 +1378,13 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       groupIndex: 0,
       queryParam: "SQF_PARQUET",
       type: "parquet",
-      defaultName: "Parkett",
+      defaultName: "Boden",
     },
     {
       groupIndex: 1,
       queryParam: "SQF_FACADE",
       type: "parquet",
-      defaultName: "Fassade",
+      defaultName: "Außenfassade",
     },
     {
       groupIndex: 2,
