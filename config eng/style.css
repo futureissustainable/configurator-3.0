@@ -887,3 +887,52 @@ p {
 .reservation-link:hover {
     color: #14171c;
 }
+
+/* === SOLAR SPECS === */
+.solar-specs-link {
+    color: #14171c;
+    text-decoration: underline;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.solar-specs-link:hover {
+    color: #000;
+}
+
+.solar-specs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.solar-specs-table tr {
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.solar-specs-table tr:last-child {
+    border-bottom: none;
+}
+
+.solar-specs-table td {
+    padding: 12px 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.solar-specs-table .spec-label {
+    color: #737579;
+    font-weight: 300;
+    width: 45%;
+}
+
+.solar-specs-table .spec-value {
+    color: #14171c;
+    font-weight: 400;
+    text-align: right;
+}
+
+.solar-specs-table .spec-value .vat-label {
+    color: #737579;
+    font-size: 0.8rem;
+    font-weight: 300;
+}

@@ -13,6 +13,58 @@
 
     const yakisugiImageUrl = "";
 
+    // Solar Kit Specifications
+    const solarKits = {
+        "nest-24": {
+            kWp: 4,
+            price: 7800,
+            pricePerKWp: 1950,
+            panelPower: 500,
+            panelCount: 8,
+            minRoofArea: 16,
+            inverter: "SUN2000-4KTL-L1",
+            phase: 1,
+            phaseLabel: "Monofazat",
+            stringConfig: "1×8 sau 2×4"
+        },
+        "wanderlust-48": {
+            kWp: 6,
+            price: 11800,
+            pricePerKWp: 1967,
+            panelPower: 500,
+            panelCount: 12,
+            minRoofArea: 24,
+            inverter: "SUN2000-6KTL-M1",
+            phase: 3,
+            phaseLabel: "Trifazat",
+            stringConfig: "2×6"
+        },
+        "serenity-95": {
+            kWp: 8,
+            price: 14800,
+            pricePerKWp: 1850,
+            panelPower: 500,
+            panelCount: 16,
+            minRoofArea: 32,
+            inverter: "SUN2000-8KTL-M1",
+            phase: 3,
+            phaseLabel: "Trifazat",
+            stringConfig: "2×8"
+        },
+        "sanctuary-142": {
+            kWp: 10,
+            price: 16800,
+            pricePerKWp: 1680,
+            panelPower: 500,
+            panelCount: 20,
+            minRoofArea: 40,
+            inverter: "SUN2000-10KTL-M1",
+            phase: 3,
+            phaseLabel: "Trifazat",
+            stringConfig: "2×10"
+        }
+    };
+
     const config = {
         'nest-24' : {
             "image" : "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2de1073da9af1229b5a_24%20EXT.avif",
@@ -511,6 +563,15 @@
             priceDisplayHTML = `<span class="option-price">Inclus</span>`;
         } else {
             priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} + TVA</span>`;
+        }
+
+        // Add descriptions for specific upgrades
+        if (inputValue === "solar-kit") {
+            priceDisplayHTML += '<div class="option-description">Acoperă 160% din necesarul energetic al casei. <a href="#" class="solar-specs-link" onclick="event.preventDefault(); event.stopPropagation(); window.openSolarSpecsModal();">Vezi specificații</a></div>';
+        } else if (inputValue === "ventilation-system") {
+            priceDisplayHTML += '<div class="option-description">Certificat Passivhaus. Filtre de calitate medicală.</div>';
+        } else if (inputValue === "blinds") {
+            priceDisplayHTML += '<div class="option-description">Blochează peste 99% din UV. Smart. Standard Passivhaus.</div>';
         }
 
         return `
@@ -1642,5 +1703,72 @@ function findUpgradeInCurrentFinish(upgradeSlug) {
 
     return null;
 }
+
+// Solar Specs Modal
+function generateSolarSpecsModalContent() {
+    const specs = solarKits[type];
+    if (!specs) {
+        return "<p>Specificațiile kitului solar nu sunt disponibile pentru acest model.</p>";
+    }
+
+    const houseName = config[type]?.name || type;
+
+    return `
+        <h3>Specificații Kit Solar</h3>
+        <p style="color: #737579; margin-bottom: 1.5rem;">Kit solar Zero Energy pentru ${houseName}</p>
+        <table class="solar-specs-table">
+            <tbody>
+                <tr>
+                    <td class="spec-label">Putere DC</td>
+                    <td class="spec-value">${specs.kWp} kWp</td>
+                </tr>
+                <tr>
+                    <td class="spec-label">Preț</td>
+                    <td class="spec-value">${formatCurrency(specs.price)} <span class="vat-label">+ TVA</span></td>
+                </tr>
+                <tr>
+                    <td class="spec-label">Eficiență cost</td>
+                    <td class="spec-value">${formatCurrency(specs.pricePerKWp)}/kWp</td>
+                </tr>
+                <tr>
+                    <td class="spec-label">Putere panou</td>
+                    <td class="spec-value">${specs.panelPower} W</td>
+                </tr>
+                <tr>
+                    <td class="spec-label">Număr panouri</td>
+                    <td class="spec-value">${specs.panelCount}</td>
+                </tr>
+                <tr>
+                    <td class="spec-label">Suprafață min. acoperiș</td>
+                    <td class="spec-value">~${specs.minRoofArea} m&sup2;</td>
+                </tr>
+                <tr>
+                    <td class="spec-label">Invertor</td>
+                    <td class="spec-value">Huawei ${specs.inverter}</td>
+                </tr>
+                <tr>
+                    <td class="spec-label">Fază</td>
+                    <td class="spec-value">${specs.phaseLabel}</td>
+                </tr>
+                <tr>
+                    <td class="spec-label">Configurație stringuri</td>
+                    <td class="spec-value">${specs.stringConfig}</td>
+                </tr>
+            </tbody>
+        </table>
+    `;
+}
+
+function openSolarSpecsModal() {
+    const modalInner = document.querySelector("#modalOverlay .modal-inner");
+    const modalOverlay = document.getElementById("modalOverlay");
+    if (!modalInner || !modalOverlay) return;
+
+    modalInner.innerHTML = generateSolarSpecsModalContent();
+    modalOverlay.style.display = "flex";
+}
+
+// Expose to window for onclick handler
+window.openSolarSpecsModal = openSolarSpecsModal;
 
 })();

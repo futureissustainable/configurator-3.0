@@ -23,6 +23,58 @@
 
   const yakisugiImageUrl = ""; // This remains empty to use the main model image as a fallback
 
+  // Solar Kit Specifications
+  const solarKits = {
+    "nest-24": {
+      kWp: 4,
+      price: 7800,
+      pricePerKWp: 1950,
+      panelPower: 500,
+      panelCount: 8,
+      minRoofArea: 16,
+      inverter: "SUN2000-4KTL-L1",
+      phase: 1,
+      phaseLabel: "Single-phase",
+      stringConfig: "1×8 or 2×4"
+    },
+    "wanderlust-48": {
+      kWp: 6,
+      price: 11800,
+      pricePerKWp: 1967,
+      panelPower: 500,
+      panelCount: 12,
+      minRoofArea: 24,
+      inverter: "SUN2000-6KTL-M1",
+      phase: 3,
+      phaseLabel: "Three-phase",
+      stringConfig: "2×6"
+    },
+    "serenity-95": {
+      kWp: 8,
+      price: 14800,
+      pricePerKWp: 1850,
+      panelPower: 500,
+      panelCount: 16,
+      minRoofArea: 32,
+      inverter: "SUN2000-8KTL-M1",
+      phase: 3,
+      phaseLabel: "Three-phase",
+      stringConfig: "2×8"
+    },
+    "sanctuary-142": {
+      kWp: 10,
+      price: 16800,
+      pricePerKWp: 1680,
+      panelPower: 500,
+      panelCount: 20,
+      minRoofArea: 40,
+      inverter: "SUN2000-10KTL-M1",
+      phase: 3,
+      phaseLabel: "Three-phase",
+      stringConfig: "2×10"
+    }
+  };
+
   const config = {
     "nest-24": {
       image:
@@ -1410,7 +1462,7 @@ Technical Performance<split>The mentioned performances (including energy consump
     // Add descriptions for specific upgrades
     if (inputValue === "solar-kit") {
       priceDisplayHTML +=
-        '<div class="option-description">Covers 160% of your home\'s energy needs.</div>';
+        '<div class="option-description">Covers 160% of your home\'s energy needs. <a href="#" class="solar-specs-link" onclick="event.preventDefault(); event.stopPropagation(); window.openSolarSpecsModal();">View specs</a></div>';
     } else if (inputValue === "ventilation-system") {
       priceDisplayHTML +=
         '<div class="option-description">Passivhaus certified. Medical grade filters.</div>';
@@ -3093,4 +3145,71 @@ Technical Performance<split>The mentioned performances (including energy consump
 
     return null;
   }
+
+  // Solar Specs Modal
+  function generateSolarSpecsModalContent() {
+    const specs = solarKits[type];
+    if (!specs) {
+      return "<p>Solar kit specifications not available for this model.</p>";
+    }
+
+    const houseName = config[type]?.name || type;
+
+    return `
+      <h3>Solar Kit Specifications</h3>
+      <p style="color: #737579; margin-bottom: 1.5rem;">Zero Energy solar kit for ${houseName}</p>
+      <table class="solar-specs-table">
+        <tbody>
+          <tr>
+            <td class="spec-label">DC Power</td>
+            <td class="spec-value">${specs.kWp} kWp</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Price</td>
+            <td class="spec-value">${formatCurrency(specs.price)} <span class="vat-label">+ VAT</span></td>
+          </tr>
+          <tr>
+            <td class="spec-label">Cost Efficiency</td>
+            <td class="spec-value">${formatCurrency(specs.pricePerKWp)}/kWp</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Panel Power</td>
+            <td class="spec-value">${specs.panelPower} W</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Number of Panels</td>
+            <td class="spec-value">${specs.panelCount}</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Min. Roof Area</td>
+            <td class="spec-value">~${specs.minRoofArea} m&sup2;</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Inverter</td>
+            <td class="spec-value">Huawei ${specs.inverter}</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Phase</td>
+            <td class="spec-value">${specs.phaseLabel}</td>
+          </tr>
+          <tr>
+            <td class="spec-label">String Configuration</td>
+            <td class="spec-value">${specs.stringConfig}</td>
+          </tr>
+        </tbody>
+      </table>
+    `;
+  }
+
+  function openSolarSpecsModal() {
+    const modalInner = document.querySelector("#modalOverlay .modal-inner");
+    const modalOverlay = document.getElementById("modalOverlay");
+    if (!modalInner || !modalOverlay) return;
+
+    modalInner.innerHTML = generateSolarSpecsModalContent();
+    modalOverlay.style.display = "flex";
+  }
+
+  // Expose to window for onclick handler
+  window.openSolarSpecsModal = openSolarSpecsModal;
 })();
