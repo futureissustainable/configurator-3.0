@@ -567,7 +567,7 @@
 
         // Add descriptions for specific upgrades
         if (inputValue === "solar-kit") {
-            priceDisplayHTML += '<div class="option-description">Acoperă 160% din necesarul energetic al casei. <a href="#" class="solar-specs-link" onclick="event.preventDefault(); event.stopPropagation(); window.openSolarSpecsModal();">Vezi specificații</a></div>';
+            priceDisplayHTML += '<div class="option-description">Acoperă 160% din necesarul energetic al casei. <a href="#" class="solar-specs-link" onclick="event.preventDefault(); event.stopPropagation(); window.openSolarSpecsModal();">Specificații</a></div>';
         } else if (inputValue === "ventilation-system") {
             priceDisplayHTML += '<div class="option-description">Certificat Passivhaus. Filtre de calitate medicală.</div>';
         } else if (inputValue === "blinds") {
