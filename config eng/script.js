@@ -1275,7 +1275,7 @@ Technical Performance<split>The mentioned performances (including energy consump
           reservationLink.id = "reservation-link";
           reservationLink.className = "reservation-link";
           reservationLink.href = "/design/reserve";
-          reservationLink.textContent = "Or reserve your 2026 slot - 250€ fully refundable";
+          reservationLink.textContent = "Or pre-reserve now in advance.";
           buttonRow.parentNode.insertBefore(reservationLink, buttonRow.nextSibling);
         }
       }

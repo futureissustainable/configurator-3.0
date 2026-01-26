@@ -487,7 +487,7 @@
                     reservationLink.id = 'reservation-link';
                     reservationLink.className = 'reservation-link';
                     reservationLink.href = '/design/reserve';
-                    reservationLink.textContent = 'Sau rezervă un slot pentru 2026 - 250€ rambursabil.';
+                    reservationLink.textContent = 'Sau pre-rezervă acum în avans.';
                     buttonRow.parentNode.insertBefore(reservationLink, buttonRow.nextSibling);
                 }
             }
