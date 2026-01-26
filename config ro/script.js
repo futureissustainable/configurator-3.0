@@ -13,6 +13,88 @@
 
     const yakisugiImageUrl = "";
 
+    // Solar Kit Specifications
+    const solarKits = {
+        "nest-24": {
+            kWp: 4,
+            price: 7800,
+            pricePerKWp: 1950,
+            panelPower: 500,
+            panelCount: 8,
+            minRoofArea: 16,
+            inverter: "SUN2000-4KTL-L1",
+            phase: 1,
+            phaseLabel: "Monofazat",
+            stringConfig: "1×8 sau 2×4"
+        },
+        "wanderlust-48": {
+            kWp: 6,
+            price: 11800,
+            pricePerKWp: 1967,
+            panelPower: 500,
+            panelCount: 12,
+            minRoofArea: 24,
+            inverter: "SUN2000-6KTL-M1",
+            phase: 3,
+            phaseLabel: "Trifazat",
+            stringConfig: "2×6"
+        },
+        "serenity-95": {
+            kWp: 8,
+            price: 14800,
+            pricePerKWp: 1850,
+            panelPower: 500,
+            panelCount: 16,
+            minRoofArea: 32,
+            inverter: "SUN2000-8KTL-M1",
+            phase: 3,
+            phaseLabel: "Trifazat",
+            stringConfig: "2×8"
+        },
+        "sanctuary-142": {
+            kWp: 10,
+            price: 16800,
+            pricePerKWp: 1680,
+            panelPower: 500,
+            panelCount: 20,
+            minRoofArea: 40,
+            inverter: "SUN2000-10KTL-M1",
+            phase: 3,
+            phaseLabel: "Trifazat",
+            stringConfig: "2×10"
+        }
+    };
+
+    // Ventilation System Specifications
+    const ventilationKits = {
+        "nest-24": {
+            ventilation: "Zehnder ComfoAir 70",
+            heatPump: "Panasonic P-MOZ25IC5-E",
+            heatRecovery: "95%",
+            features: ["Filtre de calitate medicală", "Certificat Passivhaus", "Funcționare silențioasă"]
+        },
+        "wanderlust-48": {
+            ventilation: "Zehnder ComfoAir 100",
+            heatPump: "Panasonic P-MOZ25IC5-E",
+            heatRecovery: "95%",
+            features: ["Filtre de calitate medicală", "Certificat Passivhaus", "Funcționare silențioasă"]
+        },
+        "serenity-95": {
+            ventilation: "Zehnder ComfoAir Q350 + ComfoClime 24",
+            ventilationAlt: "Genvex 250 Preheat",
+            heatPump: "Panasonic P-MOZ30IC5-E",
+            heatRecovery: "95%",
+            features: ["Filtre de calitate medicală", "Certificat Passivhaus", "Funcționare silențioasă"]
+        },
+        "sanctuary-142": {
+            ventilation: "Zehnder ComfoAir Q350 + ComfoClime 24",
+            ventilationAlt: "Genvex 250 Preheat",
+            heatPump: "Panasonic P-MOZ30IC5-E",
+            heatRecovery: "95%",
+            features: ["Filtre de calitate medicală", "Certificat Passivhaus", "Funcționare silențioasă"]
+        }
+    };
+
     const config = {
         'nest-24' : {
             "image" : "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2de1073da9af1229b5a_24%20EXT.avif",
@@ -405,7 +487,7 @@
                     reservationLink.id = 'reservation-link';
                     reservationLink.className = 'reservation-link';
                     reservationLink.href = '/design/reserve';
-                    reservationLink.textContent = 'Sau rezervă un slot pentru 2026 - 250€ rambursabil.';
+                    reservationLink.textContent = 'Sau pre-rezervă acum în avans.';
                     buttonRow.parentNode.insertBefore(reservationLink, buttonRow.nextSibling);
                 }
             }
@@ -471,8 +553,8 @@
     }
 
     const upgradeRenderConfig = [
-        { groupIndex: 0, queryParam: 'SQF_PARQUET', type: 'parquet', defaultName: 'Parchet' },
-        { groupIndex: 1, queryParam: 'SQF_FACADE', type: 'parquet', defaultName: 'Fatada' },
+        { groupIndex: 0, queryParam: 'SQF_PARQUET', type: 'parquet', defaultName: 'Podea' },
+        { groupIndex: 1, queryParam: 'SQF_FACADE', type: 'parquet', defaultName: 'Fațadă' },
         { groupIndex: 2, queryParam: 'SQF_VENTILATION', type: 'checkbox', defaultName: 'Sistem Ventilație Zehnder' },
         { groupIndex: 3, queryParam: 'SQF_BLINDS', type: 'checkbox', defaultName: 'Jaluzele Smart' },
         { groupIndex: 4, queryParam: 'SQF_SOLAR', type: 'checkbox', defaultName: 'Kit Solar - Prosumator' }
@@ -490,7 +572,7 @@
         if (isTurnkey && isVentOrBlinds && (inputName === 'SQF_VENTILATION' || inputName === 'SQF_BLINDS')) {
             const upgradeData = findUpgradeInCurrentFinish(inputValue);
             if (upgradeData && upgradeData.included && upgradeData.price === 0) {
-                specialPriceText = "Inclus La Cheie";
+                specialPriceText = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align: middle; margin-right: 4px;"><polyline points="20 6 9 17 4 12"></polyline></svg>Inclus';
                 isDisabled = true;
                 isChecked = true;
                 if(queryArgs[inputName] !== inputValue) queryArgs[inputName] = inputValue;
@@ -511,6 +593,15 @@
             priceDisplayHTML = `<span class="option-price">Inclus</span>`;
         } else {
             priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} + TVA</span>`;
+        }
+
+        // Add descriptions for specific upgrades
+        if (inputValue === "solar-kit") {
+            priceDisplayHTML += '<div class="option-description">Acoperă 160% din necesarul energetic al casei. <a href="#" class="solar-specs-link" onclick="event.preventDefault(); event.stopPropagation(); window.openSolarSpecsModal();">Specificații</a></div>';
+        } else if (inputValue === "ventilation-system") {
+            priceDisplayHTML += '<div class="option-description">Certificat Passivhaus. Filtre de calitate medicală. <a href="#" class="solar-specs-link" onclick="event.preventDefault(); event.stopPropagation(); window.openVentilationSpecsModal();">Specificații</a></div>';
+        } else if (inputValue === "blinds") {
+            priceDisplayHTML += '<div class="option-description">Blochează peste 99% din UV. Smart. Standard Passivhaus.</div>';
         }
 
         return `
@@ -1642,5 +1733,116 @@ function findUpgradeInCurrentFinish(upgradeSlug) {
 
     return null;
 }
+
+// Solar Specs Modal
+function generateSolarSpecsModalContent() {
+    const specs = solarKits[type];
+    if (!specs) {
+        return "<p>Specificațiile kitului solar nu sunt disponibile pentru acest model.</p>";
+    }
+
+    const houseName = config[type]?.name || type;
+
+    return `
+        <img src="${solarImage}" alt="Panouri Solare" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">
+        <h3>Specificații Kit Solar</h3>
+        <p style="color: #737579; margin-bottom: 1.5rem;">Kit solar Zero Energy pentru ${houseName}</p>
+        <table class="solar-specs-table">
+            <tbody>
+                <tr>
+                    <td class="spec-label">Putere DC</td>
+                    <td class="spec-value">${specs.kWp} kWp</td>
+                </tr>
+                <tr>
+                    <td class="spec-label">Putere panou</td>
+                    <td class="spec-value">${specs.panelPower} W</td>
+                </tr>
+                <tr>
+                    <td class="spec-label">Număr panouri</td>
+                    <td class="spec-value">${specs.panelCount}</td>
+                </tr>
+                <tr>
+                    <td class="spec-label">Suprafață min. acoperiș</td>
+                    <td class="spec-value">~${specs.minRoofArea} m&sup2;</td>
+                </tr>
+                <tr>
+                    <td class="spec-label">Invertor</td>
+                    <td class="spec-value">Huawei ${specs.inverter}</td>
+                </tr>
+                <tr>
+                    <td class="spec-label">Fază</td>
+                    <td class="spec-value">${specs.phaseLabel}</td>
+                </tr>
+                <tr>
+                    <td class="spec-label">Configurație stringuri</td>
+                    <td class="spec-value">${specs.stringConfig}</td>
+                </tr>
+            </tbody>
+        </table>
+    `;
+}
+
+function openSolarSpecsModal() {
+    const modalInner = document.querySelector("#modalOverlay .modal-inner");
+    const modalOverlay = document.getElementById("modalOverlay");
+    if (!modalInner || !modalOverlay) return;
+
+    modalInner.innerHTML = generateSolarSpecsModalContent();
+    modalOverlay.style.display = "flex";
+}
+
+// Expose to window for onclick handler
+window.openSolarSpecsModal = openSolarSpecsModal;
+
+// Ventilation Specs Modal
+function generateVentilationSpecsModalContent() {
+    const specs = ventilationKits[type];
+    if (!specs) {
+        return "<p>Specificațiile sistemului de ventilație nu sunt disponibile pentru acest model.</p>";
+    }
+
+    const houseName = config[type]?.name || type;
+    const ventilationText = specs.ventilationAlt
+        ? `${specs.ventilation}<br><span style="color: #737579; font-size: 0.85rem;">sau ${specs.ventilationAlt}</span>`
+        : specs.ventilation;
+
+    // Select correct ventilation image based on house type
+    let ventImg = ventilationImage;
+    if (type === "nest-24") ventImg = ventilationImage24;
+    else if (type === "wanderlust-48") ventImg = ventilationImage48;
+
+    return `
+        <img src="${ventImg}" alt="Sistem Ventilație" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">
+        <h3>Specificații Sistem Ventilație</h3>
+        <p style="color: #737579; margin-bottom: 1.5rem;">Sistem ventilație Zehnder pentru ${houseName}</p>
+        <table class="solar-specs-table">
+            <tbody>
+                <tr>
+                    <td class="spec-label">Unitate ventilație</td>
+                    <td class="spec-value">${ventilationText}</td>
+                </tr>
+                <tr>
+                    <td class="spec-label">Pompă de căldură</td>
+                    <td class="spec-value">${specs.heatPump}</td>
+                </tr>
+                <tr>
+                    <td class="spec-label">Recuperare căldură</td>
+                    <td class="spec-value">Până la ${specs.heatRecovery}</td>
+                </tr>
+            </tbody>
+        </table>
+    `;
+}
+
+function openVentilationSpecsModal() {
+    const modalInner = document.querySelector("#modalOverlay .modal-inner");
+    const modalOverlay = document.getElementById("modalOverlay");
+    if (!modalInner || !modalOverlay) return;
+
+    modalInner.innerHTML = generateVentilationSpecsModalContent();
+    modalOverlay.style.display = "flex";
+}
+
+window.openVentilationSpecsModal = openVentilationSpecsModal;
 
 })();
