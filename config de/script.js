@@ -76,6 +76,36 @@
     }
   };
 
+  // Ventilation System Specifications
+  const ventilationKits = {
+    "nest-24": {
+      ventilation: "Zehnder ComfoAir 70",
+      heatPump: "Panasonic P-MOZ25IC5-E",
+      heatRecovery: "95%",
+      features: ["Filter in medizinischer Qualität", "Passivhaus-zertifiziert", "Leiser Betrieb"]
+    },
+    "wanderlust-48": {
+      ventilation: "Zehnder ComfoAir 100",
+      heatPump: "Panasonic P-MOZ25IC5-E",
+      heatRecovery: "95%",
+      features: ["Filter in medizinischer Qualität", "Passivhaus-zertifiziert", "Leiser Betrieb"]
+    },
+    "serenity-95": {
+      ventilation: "Zehnder ComfoAir Q350 + ComfoClime 24",
+      ventilationAlt: "Genvex 250 Preheat",
+      heatPump: "Panasonic P-MOZ30IC5-E",
+      heatRecovery: "95%",
+      features: ["Filter in medizinischer Qualität", "Passivhaus-zertifiziert", "Leiser Betrieb"]
+    },
+    "sanctuary-142": {
+      ventilation: "Zehnder ComfoAir Q350 + ComfoClime 24",
+      ventilationAlt: "Genvex 250 Preheat",
+      heatPump: "Panasonic P-MOZ30IC5-E",
+      heatRecovery: "95%",
+      features: ["Filter in medizinischer Qualität", "Passivhaus-zertifiziert", "Leiser Betrieb"]
+    }
+  };
+
   const config = {
     "nest-24": {
       image:
@@ -1449,7 +1479,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
         '<div class="option-description">Deckt 160% des Energiebedarfs Ihres Hauses. <a href="#" class="solar-specs-link" onclick="event.preventDefault(); event.stopPropagation(); window.openSolarSpecsModal();">Spezifikationen</a></div>';
     } else if (inputValue === "ventilation-system") {
       priceDisplayHTML +=
-        '<div class="option-description">Passivhaus-zertifiziert. Filter in medizinischer Qualität.</div>';
+        '<div class="option-description">Passivhaus-zertifiziert. Filter in medizinischer Qualität. <a href="#" class="solar-specs-link" onclick="event.preventDefault(); event.stopPropagation(); window.openVentilationSpecsModal();">Spezifikationen</a></div>';
     } else if (inputValue === "blinds") {
       priceDisplayHTML +=
         '<div class="option-description">Blockiert über 99% der UV. Smart. Passivhaus-Standard.</div>';
@@ -3195,4 +3225,55 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
 
   // Expose to window for onclick handler
   window.openSolarSpecsModal = openSolarSpecsModal;
+
+  // Ventilation Specs Modal
+  function generateVentilationSpecsModalContent() {
+    const specs = ventilationKits[type];
+    if (!specs) {
+      return "<p>Lüftungssystem-Spezifikationen für dieses Modell nicht verfügbar.</p>";
+    }
+
+    const houseName = config[type]?.name || type;
+    const ventilationText = specs.ventilationAlt
+      ? `${specs.ventilation}<br><span style="color: #737579; font-size: 0.85rem;">oder ${specs.ventilationAlt}</span>`
+      : specs.ventilation;
+
+    // Select correct ventilation image based on house type
+    let ventImg = ventilationImage;
+    if (type === "nest-24") ventImg = ventilationImage24;
+    else if (type === "wanderlust-48") ventImg = ventilationImage48;
+
+    return `
+      <img src="${ventImg}" alt="Lüftungssystem" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">
+      <h3>Lüftungssystem-Spezifikationen</h3>
+      <p style="color: #737579; margin-bottom: 1.5rem;">Zehnder Lüftungssystem für ${houseName}</p>
+      <table class="solar-specs-table">
+        <tbody>
+          <tr>
+            <td class="spec-label">Lüftungsgerät</td>
+            <td class="spec-value">${ventilationText}</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Wärmepumpe</td>
+            <td class="spec-value">${specs.heatPump}</td>
+          </tr>
+          <tr>
+            <td class="spec-label">Wärmerückgewinnung</td>
+            <td class="spec-value">Bis zu ${specs.heatRecovery}</td>
+          </tr>
+        </tbody>
+      </table>
+    `;
+  }
+
+  function openVentilationSpecsModal() {
+    const modalInner = document.querySelector("#modalOverlay .modal-inner");
+    const modalOverlay = document.getElementById("modalOverlay");
+    if (!modalInner || !modalOverlay) return;
+
+    modalInner.innerHTML = generateVentilationSpecsModalContent();
+    modalOverlay.style.display = "flex";
+  }
+
+  window.openVentilationSpecsModal = openVentilationSpecsModal;
 })();
