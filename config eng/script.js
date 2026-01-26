@@ -1483,9 +1483,9 @@ Technical Performance<split>The mentioned performances (including energy consump
       }
     } else if (specialPriceText) {
       priceDisplayHTML = `<span class="option-price price-included-turnkey">${specialPriceText}</span>`;
-    } else if (rawPrice === 0 && context !== "floorplan") {
+    } else if (rawPrice === 0 && context !== "floorplans") {
       priceDisplayHTML = `<span class="option-price">Included</span>`;
-    } else if (rawPrice === 0 && context === "floorplan") {
+    } else if (rawPrice === 0 && context === "floorplans") {
       priceDisplayHTML = '';
     } else {
       priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ VAT</span></span>`;
