@@ -589,9 +589,9 @@
 
         if (specialPriceText) {
             priceDisplayHTML = `<span class="option-price">${specialPriceText}</span>`;
-        } else if (rawPrice === 0 && context !== "floorplan") {
+        } else if (rawPrice === 0 && context !== "floorplans") {
             priceDisplayHTML = `<span class="option-price">Inclus</span>`;
-        } else if (rawPrice === 0 && context === "floorplan") {
+        } else if (rawPrice === 0 && context === "floorplans") {
             priceDisplayHTML = '';
         } else {
             priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} + TVA</span>`;

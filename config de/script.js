@@ -1467,9 +1467,9 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       }
     } else if (specialPriceText) {
       priceDisplayHTML = `<span class="option-price price-included-turnkey">${specialPriceText}</span>`;
-    } else if (rawPrice === 0 && context !== "floorplan") {
+    } else if (rawPrice === 0 && context !== "floorplans") {
       priceDisplayHTML = `<span class="option-price">Inbegriffen</span>`;
-    } else if (rawPrice === 0 && context === "floorplan") {
+    } else if (rawPrice === 0 && context === "floorplans") {
       priceDisplayHTML = '';
     } else {
       priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ MwSt.</span></span>`;
