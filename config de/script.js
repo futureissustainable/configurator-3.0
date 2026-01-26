@@ -1384,7 +1384,7 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       groupIndex: 1,
       queryParam: "SQF_FACADE",
       type: "parquet",
-      defaultName: "Außenfassade",
+      defaultName: "Fassade",
     },
     {
       groupIndex: 2,

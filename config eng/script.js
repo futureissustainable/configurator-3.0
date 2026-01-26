@@ -1389,7 +1389,7 @@ Technical Performance<split>The mentioned performances (including energy consump
       groupIndex: 1,
       queryParam: "SQF_FACADE",
       type: "parquet",
-      defaultName: "Exterior Facade",
+      defaultName: "Facade",
     },
     {
       groupIndex: 2,

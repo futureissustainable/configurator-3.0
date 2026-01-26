@@ -554,7 +554,7 @@
 
     const upgradeRenderConfig = [
         { groupIndex: 0, queryParam: 'SQF_PARQUET', type: 'parquet', defaultName: 'Podea' },
-        { groupIndex: 1, queryParam: 'SQF_FACADE', type: 'parquet', defaultName: 'Fațadă Exterioară' },
+        { groupIndex: 1, queryParam: 'SQF_FACADE', type: 'parquet', defaultName: 'Fațadă' },
         { groupIndex: 2, queryParam: 'SQF_VENTILATION', type: 'checkbox', defaultName: 'Sistem Ventilație Zehnder' },
         { groupIndex: 3, queryParam: 'SQF_BLINDS', type: 'checkbox', defaultName: 'Jaluzele Smart' },
         { groupIndex: 4, queryParam: 'SQF_SOLAR', type: 'checkbox', defaultName: 'Kit Solar - Prosumator' }
