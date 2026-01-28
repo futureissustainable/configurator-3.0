@@ -1028,6 +1028,7 @@ Ariston Velis Warmwasserspeicher<split>Schlankes Design; hohe Energieeffizienz.
 Walk-in-Dusche<split>In Frankreich entworfen; minimalistisches, modernes Design.
 SMART-SYSTEME // TITLE
 Stromschiene<split>Flexible Konfiguration für LED und Spots; modernes Erscheinungsbild.
+Smarte Beleuchtung<split>Philips HUE oder IKEA TRÅDFRI; einfache Smart-Konfiguration.
 Smarte Außenjalousien<split>>95 % Sonneneinstrahlung abgeschirmt; App-/manuelle Steuerung; zertifiziert vom Passivhaus Institut Darmstadt; CE-zertifiziert.
 Zehnder Lüftungssystem<split>{{VENTILATION_SPECS}}
 ZERTIFIKATE UND GARANTIEN // TITLE

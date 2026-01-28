@@ -980,3 +980,30 @@ p {
 .modal-inner p:last-of-type strong {
     font-weight: 400;
 }
+
+/* === GERMAN TEXT OVERFLOW FIXES === */
+
+/* Modal material grid: use minmax for flexible column width */
+.modal-content .modal-material-item {
+    grid-template-columns: minmax(120px, 40%) auto;
+}
+
+/* Material name: allow word breaking for long German compound words */
+.modal-content .material-name p {
+    word-break: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+/* Radio card option names: prevent overflow */
+.config .option-name {
+    word-break: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+/* Referral toggle: allow text wrapping */
+.referral-toggle {
+    white-space: normal;
+    line-height: 1.4;
+}
