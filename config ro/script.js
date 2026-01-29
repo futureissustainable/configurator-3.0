@@ -278,7 +278,7 @@
             { name: "Structură C24 Timber Frame BIOBUILDS", desc: "Lemn certificat FSC/PEFC, rezistență excepțională la sarcini." },
             { name: "Izolație din fibră de lemn STEICO", desc: "Organic, sustenabil și ultra-eficient (λ ≈ 0,036 W/m·K), certificat CE." },
             { name: "Placă ECO OSB 3 (AGEPAN, Germania)", desc: "Fără formaldehidă și VOC, aprobat Passive House, certificat CE." },
-            { name: "Placă DWD (AGEPAN, Germania)", desc: "Permite pereților să „respire", menținând etanșeitatea la exterior; certificat CE." },
+            { name: "Placă DWD (AGEPAN, Germania)", desc: "Permite pereților să 'respire', menținând etanșeitatea la exterior; certificat CE." },
             { name: "Membrană inteligentă", desc: "Asigură etanșeitatea interioară cu difuzie controlată a vaporilor spre exterior." }
         ],
         "FINISAJE EXTERIOARE": [
@@ -340,7 +340,7 @@
             { name: "Structură C24 Timber Frame BIOBUILDS", desc: "Lemn certificat FSC/PEFC, rezistență excepțională la sarcini." },
             { name: "Izolație din fibră de lemn STEICO", desc: "Organic, sustenabil și ultra-eficient (λ ≈ 0,036 W/m·K), certificat CE." },
             { name: "Placă ECO OSB 3 (AGEPAN, Germania)", desc: "Fără formaldehidă și VOC, aprobat Passive House, certificat CE." },
-            { name: "Placă DWD (AGEPAN, Germania)", desc: "Permite pereților să „respire", menținând etanșeitatea la exterior; certificat CE." },
+            { name: "Placă DWD (AGEPAN, Germania)", desc: "Permite pereților să 'respire', menținând etanșeitatea la exterior; certificat CE." },
             { name: "Membrană inteligentă", desc: "Asigură etanșeitatea interioară cu difuzie controlată a vaporilor spre exterior." }
         ],
         "FINISAJE EXTERIOARE": [
