@@ -555,10 +555,10 @@
                 if (turnkeyOpt && semiFinishedOpt) {
                     if (inputValue === "turnkey") {
                         priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ TVA</span></span>`;
-                        taglineHTML = '<div class="option-tagline">Gata de mutat mâine.</div>';
+                        taglineHTML = '<div class="option-tagline">Muta-te a doua zi.</div>';
                     } else if (inputValue === "semi-finished") {
                         priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ TVA</span></span>`;
-                        taglineHTML = '<div class="option-tagline">Fii propriul tău designer de interior.</div>';
+                        taglineHTML = '<div class="option-tagline">Fii propriul designer de interior.</div>';
                     }
                 } else {
                     priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ TVA</span></span>`;
