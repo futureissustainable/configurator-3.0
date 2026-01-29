@@ -991,167 +991,110 @@
     },
   };
 
-  const turnkeyMaterialItemsRaw = `
-MODULAR-UPGRADE // TITLE
-Neue Generation<split>MODULAR, jetzt perfektioniert mit Passivhaus-zertifizierten Aluminiumrahmen, ultra-organischer Holzfaser-Dämmung, optimiertem und robusterem Tragwerk sowie einer exklusiven Auswahl hochwertiger Oberflächen. Für Komfort, Langlebigkeit und Effizienz auf höchstem Niveau.
-TRAGWERK // TITLE
-Das MODULAR-Tragwerk<split>MODULAR™ Struktur mit ~35 cm Wandstärke, Passivhaus / EPD zertifiziert. Keine Wärmebrücken. Außergewöhnliche strukturelle Festigkeit. Vollständig luftdicht.
-C24-Holzrahmen BIOBUILDS<split>FSC/PEFC-zertifiziertes Holz, hohe Tragfähigkeit.
-300 mm STEICO Holzfaser-Dämmung<split>Organisch, nachhaltig und hocheffizient (λ ≈ 0,036 W/(m·K)), CE-zertifiziert.
-ECO OSB 3 Platte (AGEPAN, Deutschland)<split>Frei von Formaldehyd und VOC, Passivhaus-geeignet, CE-zertifiziert.
-DWD-Platte (AGEPAN, Deutschland)<split>Diffusionsoffen mit äußerer Luftdichtheit; CE-zertifiziert.
-pro clima Smart-Membran<split>Sichert die innere Luftdichtheit mit gesteuertem Dampfdiffusionsabtrag nach außen.
-AUSSENOBERFLÄCHEN // TITLE
-Hinterlüftete Fassade aus Yakisugi/Lunawood<split>Thermisch modifiziertes Holz, geringe Wartung, guter Brandschutz, langlebig, markante Optik, nachhaltige Herkunft.
-Belüftetes Flachdach<split>Hohe Wärmedämmleistung, längere Lebensdauer durch Vermeidung von Feuchte und Überhitzung. Kaum sichtbare Neigung (~5°), abgedichtet mit Premium-Bahn, mind. 10 Jahre Herstellergarantie.
-Integrierte Regenwasserableitung<split>Verdeckte Rinnen, unauffällig in die Fassade integriert, bereit für nachhaltige Regenwassernutzung.
-FENSTER UND TÜREN AUSSEN // TITLE
-Genesis 90 Aluminiumprofile<split>Steif und hocheffizient, Passivhaus-zertifiziert (Uwi ≤ 0,85 W/m²K), CE-zertifiziert.
-Dreifachverglasung, laminiert<split>Sehr effizient und sicher (U = 0,50 W/m²K), zusätzliche Schutzlaminierung.
-KÜCHE // TITLE
-Kücheninstallationen<split>Vorgerüstete Anschlüsse, bereit für Ihre Möbel und Geräte.
-TECHNISCHE INSTALLATIONEN // TITLE
-Elektrische Installation<split>Vollständiger Verteiler nach strengen EU-Normen. Schalter und Schutzorgane gemäß lokalen Vorschriften, inkl. AFDD-Technologie.
-Sanitärinstallation<split>Hochwertige Rohrsysteme und Fittings (PPR/PEX), konform mit lokalen und EU-Vorgaben.
-KOMPLETTER INNENAUSBAU // TITLE
-Holzlamellendecke + Filz<split>Naturholz und Recycling-Filz; exzellente Akustik.
-Glasfasertapete<split>Sehr hohe Reißfestigkeit und Abriebfestigkeit; abwaschbar; modernes Erscheinungsbild.
-Dreischichtiges Parkett aus Echtholz<split>Stärke 9–14 mm; FSC/PEFC-zertifiziert; sehr widerstandsfähige Oberfläche.
-Schneider-Steckdosen<split>Premium, Made in Germany; CE/VDE-zertifiziert.
-INNENTÜREN // TITLE
-S10-Vollspantüren<split>CE-zertifiziert; massiver Kern.
-KOMPLETTE BADEZIMMER-AUSSTATTUNG // TITLE
-Steinverbund-Großformatplatten<split>2,5 × 1,2 m; 100 % wasserfest; sehr langlebig.
-Italienisches Design-Waschbecken<split>Premium-Verbundmaterial; ultradünn, modern, langlebig.
-Grohe Wand-WC<split>Made in Germany; minimalistisches Design.
-Ariston Velis Warmwasserspeicher<split>Schlankes Design; hohe Energieeffizienz.
-Walk-in-Dusche<split>In Frankreich entworfen; minimalistisches, modernes Design.
-SMART-SYSTEME // TITLE
-Stromschiene<split>Flexible Konfiguration für LED und Spots; modernes Erscheinungsbild.
-Smarte Beleuchtung<split>Philips HUE oder IKEA TRÅDFRI; einfache Smart-Konfiguration.
-Smarte Außenjalousien<split>>95 % Sonneneinstrahlung abgeschirmt; App-/manuelle Steuerung; zertifiziert vom Passivhaus Institut Darmstadt; CE-zertifiziert.
-Zehnder Lüftungssystem<split>{{VENTILATION_SPECS}}
-ZERTIFIKATE UND GARANTIEN // TITLE
-Passivhaus-Zertifizierung<split>Ausgestellt vom Passivhaus Institut (Deutschland); bestätigt höchste Energieeffizienz und Komfort.
-EPD-Zertifizierung<split>Ausgestellt von EPD International; bestätigt CO₂-negative Bilanz und verantwortungsvolles Bauen.
-CE-Kennzeichnung<split>Alle Komponenten entsprechen der EU-Bauprodukteverordnung.
-EU-Standardgarantie<split>24 Monate privat. 12 Monate gewerblich. Garantieverlängerung auf Anfrage.
-Herstellergarantien<split>Volle Abdeckung gemäß den Garantien der jeweiligen Lieferanten.
-HAFTUNGSHINWEIS // TITLE
-Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basieren auf standardisierten Passivhaus-Bedingungen. Reale Ergebnisse variieren je nach Klima, Ausrichtung, Größe und Nutzung. Für exakte Details gelten die Berechnungen im Passivhaus-Projektierungspaket (PHPP).
-`;
-  const semiTurnkeyMaterialItemsRaw = `
-MODULAR-UPGRADE // TITLE
-Neue Generation<split>MODULAR, jetzt perfektioniert mit Passivhaus-zertifizierten Aluminiumrahmen, ultra-organischer Holzfaser-Dämmung und optimiertem Tragwerk. Für Komfort, Langlebigkeit und Effizienz auf höchstem Niveau.
-TRAGWERK // TITLE
-Das MODULAR-Tragwerk<split>MODULAR™ Struktur mit ~35 cm Wandstärke, Passivhaus / EPD zertifiziert. Keine Wärmebrücken. Außergewöhnliche strukturelle Festigkeit. Vollständig luftdicht.
-C24-Holzrahmen BIOBUILDS<split>FSC/PEFC-zertifiziertes Holz, hohe Tragfähigkeit.
-300 mm STEICO Holzfaser-Dämmung<split>Organisch, nachhaltig und hocheffizient (λ ≈ 0,036 W/(m·K)), CE-zertifiziert.
-ECO OSB 3 Platte (AGEPAN, Deutschland)<split>Frei von Formaldehyd und VOC, Passivhaus-geeignet, CE-zertifiziert.
-DWD-Platte (AGEPAN, Deutschland)<split>Diffusionsoffen mit äußerer Luftdichtheit; CE-zertifiziert.
-pro clima Smart-Membran<split>Sichert die innere Luftdichtheit mit gesteuertem Dampfdiffusionsabtrag nach außen.
-AUSSENOBERFLÄCHEN // TITLE
-Hinterlüftete Fassade aus Yakisugi/Lunawood<split>Thermisch modifiziertes Holz, geringe Wartung, guter Brandschutz, langlebig, markante Optik, nachhaltige Herkunft.
-Belüftetes Flachdach<split>Hohe Wärmedämmleistung, längere Lebensdauer durch Vermeidung von Feuchte und Überhitzung. Kaum sichtbare Neigung (~5°), abgedichtet mit Premium-Bahn, mind. 10 Jahre Herstellergarantie.
-Integrierte Regenwasserableitung<split>Verdeckte Rinnen, unauffällig in die Fassade integriert, bereit für nachhaltige Regenwassernutzung.
-FENSTER UND TÜREN AUSSEN // TITLE
-Genesis 90 Aluminiumprofile<split>Steif und hocheffizient, Passivhaus-zertifiziert (Uwi ≤ 0,85 W/m²K), CE-zertifiziert.
-Dreifachverglasung, laminiert<split>Sehr effizient und sicher (U = 0,50 W/m²K), zusätzliche Schutzlaminierung.
-KÜCHE // TITLE
-Kücheninstallationen<split>Vorgerüstete Anschlüsse, bereit für Ihre Möbel und Geräte.
-TECHNISCHE INSTALLATIONEN // TITLE
-Elektrische Installation<split>Vollständiger Verteiler nach strengen EU-Normen. Schalter und Schutzorgane gemäß lokalen Vorschriften, inkl. AFDD-Technologie.
-Sanitärinstallation<split>Hochwertige Rohrsysteme und Fittings (PPR/PEX), konform mit lokalen und EU-Vorgaben.
-BADEZIMMER // TITLE
-Wasserdichte Badezimmer<split>Vollständig abgedichtete Badezimmerbereiche mit allen Sanitärinstallationen, fertig für Ihre Oberflächen.
-ZERTIFIKATE UND GARANTIEN // TITLE
-Passivhaus-Zertifizierung<split>Ausgestellt vom Passivhaus Institut (Deutschland); bestätigt höchste Energieeffizienz und Komfort.
-EPD-Zertifizierung<split>Ausgestellt von EPD International; bestätigt CO₂-negative Bilanz und verantwortungsvolles Bauen.
-CE-Kennzeichnung<split>Alle Komponenten entsprechen der EU-Bauprodukteverordnung.
-EU-Standardgarantie<split>24 Monate privat. 12 Monate gewerblich. Garantieverlängerung auf Anfrage.
-Herstellergarantien<split>Volle Abdeckung gemäß den Garantien der jeweiligen Lieferanten.
-HAFTUNGSHINWEIS // TITLE
-Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basieren auf standardisierten Passivhaus-Bedingungen. Reale Ergebnisse variieren je nach Klima, Ausrichtung, Größe und Nutzung. Für exakte Details gelten die Berechnungen im Passivhaus-Projektierungspaket (PHPP).
-`;
+  const turnkeyMaterials = {
+    "MODULAR-UPGRADE": [
+      { name: "Neue Generation", desc: "MODULAR, jetzt perfektioniert mit Passivhaus-zertifizierten Aluminiumrahmen, ultra-organischer Holzfaser-Dämmung, optimiertem und robusterem Tragwerk sowie einer exklusiven Auswahl hochwertiger Oberflächen. Für Komfort, Langlebigkeit und Effizienz auf höchstem Niveau." }
+    ],
+    "TRAGWERK": [
+      { name: "Das MODULAR-Tragwerk", desc: "MODULAR™ Struktur mit ~35 cm Wandstärke, Passivhaus / EPD zertifiziert. Keine Wärmebrücken. Außergewöhnliche strukturelle Festigkeit. Vollständig luftdicht." },
+      { name: "C24-Holzrahmen BIOBUILDS", desc: "FSC/PEFC-zertifiziertes Holz, hohe Tragfähigkeit." },
+      { name: "300 mm STEICO Holzfaser-Dämmung", desc: "Organisch, nachhaltig und hocheffizient (λ ≈ 0,036 W/(m·K)), CE-zertifiziert." },
+      { name: "ECO OSB 3 Platte (AGEPAN, Deutschland)", desc: "Frei von Formaldehyd und VOC, Passivhaus-geeignet, CE-zertifiziert." },
+      { name: "DWD-Platte (AGEPAN, Deutschland)", desc: "Diffusionsoffen mit äußerer Luftdichtheit; CE-zertifiziert." },
+      { name: "pro clima Smart-Membran", desc: "Sichert die innere Luftdichtheit mit gesteuertem Dampfdiffusionsabtrag nach außen." }
+    ],
+    "AUSSENOBERFLÄCHEN": [
+      { name: "Hinterlüftete Fassade aus Yakisugi/Lunawood", desc: "Thermisch modifiziertes Holz, geringe Wartung, guter Brandschutz, langlebig, markante Optik, nachhaltige Herkunft." },
+      { name: "Belüftetes Flachdach", desc: "Hohe Wärmedämmleistung, längere Lebensdauer durch Vermeidung von Feuchte und Überhitzung. Kaum sichtbare Neigung (~5°), abgedichtet mit Premium-Bahn, mind. 10 Jahre Herstellergarantie." },
+      { name: "Integrierte Regenwasserableitung", desc: "Verdeckte Rinnen, unauffällig in die Fassade integriert, bereit für nachhaltige Regenwassernutzung." }
+    ],
+    "FENSTER UND TÜREN AUSSEN": [
+      { name: "Genesis 90 Aluminiumprofile", desc: "Steif und hocheffizient, Passivhaus-zertifiziert (Uwi ≤ 0,85 W/m²K), CE-zertifiziert." },
+      { name: "Dreifachverglasung, laminiert", desc: "Sehr effizient und sicher (U = 0,50 W/m²K), zusätzliche Schutzlaminierung." }
+    ],
+    "KÜCHE": [
+      { name: "Kücheninstallationen", desc: "Vorgerüstete Anschlüsse, bereit für Ihre Möbel und Geräte." }
+    ],
+    "TECHNISCHE INSTALLATIONEN": [
+      { name: "Elektrische Installation", desc: "Vollständiger Verteiler nach strengen EU-Normen. Schalter und Schutzorgane gemäß lokalen Vorschriften, inkl. AFDD-Technologie." },
+      { name: "Sanitärinstallation", desc: "Hochwertige Rohrsysteme und Fittings (PPR/PEX), konform mit lokalen und EU-Vorgaben." }
+    ],
+    "KOMPLETTER INNENAUSBAU": [
+      { name: "Holzlamellendecke + Filz", desc: "Naturholz und Recycling-Filz; exzellente Akustik." },
+      { name: "Glasfasertapete", desc: "Sehr hohe Reißfestigkeit und Abriebfestigkeit; abwaschbar; modernes Erscheinungsbild." },
+      { name: "Dreischichtiges Parkett aus Echtholz", desc: "Stärke 9–14 mm; FSC/PEFC-zertifiziert; sehr widerstandsfähige Oberfläche." },
+      { name: "Schneider-Steckdosen", desc: "Premium, Made in Germany; CE/VDE-zertifiziert." }
+    ],
+    "INNENTÜREN": [
+      { name: "S10-Vollspantüren", desc: "CE-zertifiziert; massiver Kern." }
+    ],
+    "KOMPLETTE BADEZIMMER-AUSSTATTUNG": [
+      { name: "Steinverbund-Großformatplatten", desc: "2,5 × 1,2 m; 100 % wasserfest; sehr langlebig." },
+      { name: "Italienisches Design-Waschbecken", desc: "Premium-Verbundmaterial; ultradünn, modern, langlebig." },
+      { name: "Grohe Wand-WC", desc: "Made in Germany; minimalistisches Design." },
+      { name: "Ariston Velis Warmwasserspeicher", desc: "Schlankes Design; hohe Energieeffizienz." },
+      { name: "Walk-in-Dusche", desc: "In Frankreich entworfen; minimalistisches, modernes Design." }
+    ],
+    "SMART-SYSTEME": [
+      { name: "Stromschiene", desc: "Flexible Konfiguration für LED und Spots; modernes Erscheinungsbild." },
+      { name: "Smarte Beleuchtung", desc: "Philips HUE oder IKEA TRÅDFRI; einfache Smart-Konfiguration." },
+      { name: "Smarte Außenjalousien", desc: ">95 % Sonneneinstrahlung abgeschirmt; App-/manuelle Steuerung; zertifiziert vom Passivhaus Institut Darmstadt; CE-zertifiziert." },
+      { name: "Zehnder Lüftungssystem", desc: "{{VENTILATION_SPECS}}" }
+    ],
+    "ZERTIFIKATE UND GARANTIEN": [
+      { name: "Passivhaus-Zertifizierung", desc: "Ausgestellt vom Passivhaus Institut (Deutschland); bestätigt höchste Energieeffizienz und Komfort." },
+      { name: "EPD-Zertifizierung", desc: "Ausgestellt von EPD International; bestätigt CO₂-negative Bilanz und verantwortungsvolles Bauen." },
+      { name: "CE-Kennzeichnung", desc: "Alle Komponenten entsprechen der EU-Bauprodukteverordnung." },
+      { name: "EU-Standardgarantie", desc: "24 Monate privat. 12 Monate gewerblich. Garantieverlängerung auf Anfrage." },
+      { name: "Herstellergarantien", desc: "Volle Abdeckung gemäß den Garantien der jeweiligen Lieferanten." }
+    ],
+    "HAFTUNGSHINWEIS": [
+      { name: "Technische Leistungswerte", desc: "Angegebene Werte (inkl. Energieverbrauch) basieren auf standardisierten Passivhaus-Bedingungen. Reale Ergebnisse variieren je nach Klima, Ausrichtung, Größe und Nutzung. Für exakte Details gelten die Berechnungen im Passivhaus-Projektierungspaket (PHPP)." }
+    ]
+  };
 
-  function parseItemLine(line) {
-    if (!line || line.trim() === "") return null;
-    const delimiter = "<split>";
-    const delimiterIndex = line.indexOf(delimiter);
-
-    if (delimiterIndex !== -1) {
-      const materialPart = line.substring(0, delimiterIndex).trim();
-      const charPart = line
-        .substring(delimiterIndex + delimiter.length)
-        .trim()
-        .replace(/<end of materials spec>/g, "")
-        .trim();
-      if (materialPart) {
-        return { material: materialPart, characteristics: charPart };
-      }
-    }
-    const trimmedLine = line
-      .replace(/\s*\/\/ TITLE$/, "")
-      .trim()
-      .replace(/<end of materials spec>/g, "")
-      .trim();
-    if (trimmedLine) {
-      return { material: trimmedLine, characteristics: "" };
-    }
-    return null;
-  }
-
-  function parseMaterialData(rawDataString) {
-    const lines = rawDataString.trim().split("\n");
-    const items = [];
-    let currentSection = "";
-    const sectionOrder = [];
-
-    lines.forEach((line) => {
-      const trimmedLine = line.trim();
-      if (trimmedLine.length === 0) return;
-
-      const isAllUpper = trimmedLine === trimmedLine.toUpperCase();
-      const hasTitleComment = /\s*\/\/ TITLE$/.test(line);
-      const cleanPotentialTitle = trimmedLine
-        .replace(/\s*\/\/ TITLE$/, "")
-        .trim();
-
-      const isSectionHeader =
-        (isAllUpper &&
-          cleanPotentialTitle.length > 3 &&
-          !cleanPotentialTitle.includes("<split>") &&
-          !/\d/.test(cleanPotentialTitle)) ||
-        (hasTitleComment &&
-          cleanPotentialTitle.length > 0 &&
-          !cleanPotentialTitle.includes("<split>"));
-
-      if (isSectionHeader) {
-        currentSection = cleanPotentialTitle;
-        if (!sectionOrder.includes(currentSection)) {
-          sectionOrder.push(currentSection);
-        }
-      } else if (currentSection || items.length === 0) {
-        const parsedItem = parseItemLine(line);
-        if (parsedItem && parsedItem.material) {
-          const sectionToAssign = currentSection;
-
-          items.push({
-            section: sectionToAssign || "General",
-            material: parsedItem.material,
-            characteristics: parsedItem.characteristics,
-          });
-          if (
-            (sectionToAssign || "General") === "General" &&
-            !sectionOrder.includes("General")
-          ) {
-            sectionOrder.unshift("General");
-          }
-        }
-      }
-    });
-    return { items, sectionOrder };
-  }
+  const semiTurnkeyMaterials = {
+    "MODULAR-UPGRADE": [
+      { name: "Neue Generation", desc: "MODULAR, jetzt perfektioniert mit Passivhaus-zertifizierten Aluminiumrahmen, ultra-organischer Holzfaser-Dämmung und optimiertem Tragwerk. Für Komfort, Langlebigkeit und Effizienz auf höchstem Niveau." }
+    ],
+    "TRAGWERK": [
+      { name: "Das MODULAR-Tragwerk", desc: "MODULAR™ Struktur mit ~35 cm Wandstärke, Passivhaus / EPD zertifiziert. Keine Wärmebrücken. Außergewöhnliche strukturelle Festigkeit. Vollständig luftdicht." },
+      { name: "C24-Holzrahmen BIOBUILDS", desc: "FSC/PEFC-zertifiziertes Holz, hohe Tragfähigkeit." },
+      { name: "300 mm STEICO Holzfaser-Dämmung", desc: "Organisch, nachhaltig und hocheffizient (λ ≈ 0,036 W/(m·K)), CE-zertifiziert." },
+      { name: "ECO OSB 3 Platte (AGEPAN, Deutschland)", desc: "Frei von Formaldehyd und VOC, Passivhaus-geeignet, CE-zertifiziert." },
+      { name: "DWD-Platte (AGEPAN, Deutschland)", desc: "Diffusionsoffen mit äußerer Luftdichtheit; CE-zertifiziert." },
+      { name: "pro clima Smart-Membran", desc: "Sichert die innere Luftdichtheit mit gesteuertem Dampfdiffusionsabtrag nach außen." }
+    ],
+    "AUSSENOBERFLÄCHEN": [
+      { name: "Hinterlüftete Fassade aus Yakisugi/Lunawood", desc: "Thermisch modifiziertes Holz, geringe Wartung, guter Brandschutz, langlebig, markante Optik, nachhaltige Herkunft." },
+      { name: "Belüftetes Flachdach", desc: "Hohe Wärmedämmleistung, längere Lebensdauer durch Vermeidung von Feuchte und Überhitzung. Kaum sichtbare Neigung (~5°), abgedichtet mit Premium-Bahn, mind. 10 Jahre Herstellergarantie." },
+      { name: "Integrierte Regenwasserableitung", desc: "Verdeckte Rinnen, unauffällig in die Fassade integriert, bereit für nachhaltige Regenwassernutzung." }
+    ],
+    "FENSTER UND TÜREN AUSSEN": [
+      { name: "Genesis 90 Aluminiumprofile", desc: "Steif und hocheffizient, Passivhaus-zertifiziert (Uwi ≤ 0,85 W/m²K), CE-zertifiziert." },
+      { name: "Dreifachverglasung, laminiert", desc: "Sehr effizient und sicher (U = 0,50 W/m²K), zusätzliche Schutzlaminierung." }
+    ],
+    "KÜCHE": [
+      { name: "Kücheninstallationen", desc: "Vorgerüstete Anschlüsse, bereit für Ihre Möbel und Geräte." }
+    ],
+    "TECHNISCHE INSTALLATIONEN": [
+      { name: "Elektrische Installation", desc: "Vollständiger Verteiler nach strengen EU-Normen. Schalter und Schutzorgane gemäß lokalen Vorschriften, inkl. AFDD-Technologie." },
+      { name: "Sanitärinstallation", desc: "Hochwertige Rohrsysteme und Fittings (PPR/PEX), konform mit lokalen und EU-Vorgaben." }
+    ],
+    "BADEZIMMER": [
+      { name: "Wasserdichte Badezimmer", desc: "Vollständig abgedichtete Badezimmerbereiche mit allen Sanitärinstallationen, fertig für Ihre Oberflächen." }
+    ],
+    "ZERTIFIKATE UND GARANTIEN": [
+      { name: "Passivhaus-Zertifizierung", desc: "Ausgestellt vom Passivhaus Institut (Deutschland); bestätigt höchste Energieeffizienz und Komfort." },
+      { name: "EPD-Zertifizierung", desc: "Ausgestellt von EPD International; bestätigt CO₂-negative Bilanz und verantwortungsvolles Bauen." },
+      { name: "CE-Kennzeichnung", desc: "Alle Komponenten entsprechen der EU-Bauprodukteverordnung." },
+      { name: "EU-Standardgarantie", desc: "24 Monate privat. 12 Monate gewerblich. Garantieverlängerung auf Anfrage." },
+      { name: "Herstellergarantien", desc: "Volle Abdeckung gemäß den Garantien der jeweiligen Lieferanten." }
+    ],
+    "HAFTUNGSHINWEIS": [
+      { name: "Technische Leistungswerte", desc: "Angegebene Werte (inkl. Energieverbrauch) basieren auf standardisierten Passivhaus-Bedingungen. Reale Ergebnisse variieren je nach Klima, Ausrichtung, Größe und Nutzung. Für exakte Details gelten die Berechnungen im Passivhaus-Projektierungspaket (PHPP)." }
+    ]
+  };
 
   let type = getUrlParameter("SQF_TYPE");
   if (type === null || !config[type]) {
@@ -1552,40 +1495,28 @@ Technische Leistungswerte<split>Angegebene Werte (inkl. Energieverbrauch) basier
       return "<p>Details zum Ausbaustandard nicht verfügbar.</p>";
     }
 
-    let rawMaterialData =
-      currentFinishSlug === "turnkey"
-        ? turnkeyMaterialItemsRaw
-        : semiTurnkeyMaterialItemsRaw;
+    const materials = currentFinishSlug === "turnkey" ? turnkeyMaterials : semiTurnkeyMaterials;
 
-    // Replace ventilation placeholder with model-specific specs for turnkey
-    if (currentFinishSlug === "turnkey") {
-      const ventilationSpecs = {
-        "nest-24": "Zehnder ComfoAir 70 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea Wärmepumpe zum Heizen und Kühlen.",
-        "wanderlust-48": "Zehnder ComfoAir 100 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea Wärmepumpe zum Heizen und Kühlen.",
-        "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea Wärmepumpe zum Heizen und Kühlen.",
-        "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea Wärmepumpe zum Heizen und Kühlen.",
-      };
-      const specs = ventilationSpecs[houseTypeKey] || "Bis zu 95 % Wärmerückgewinnung + Wärmepumpe zum Heizen und Kühlen.";
-      rawMaterialData = rawMaterialData.replace("{{VENTILATION_SPECS}}", specs);
-    }
-
-    const { items, sectionOrder } = parseMaterialData(rawMaterialData);
+    const ventilationSpecs = {
+      "nest-24": "Zehnder ComfoAir 70 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea Wärmepumpe zum Heizen und Kühlen.",
+      "wanderlust-48": "Zehnder ComfoAir 100 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea Wärmepumpe zum Heizen und Kühlen.",
+      "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea Wärmepumpe zum Heizen und Kühlen.",
+      "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea Wärmepumpe zum Heizen und Kühlen.",
+    };
 
     let html = `<img src="https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69303cdf299025f5b7e0e219_95%20Wall%20Section.avif" alt="Wall Section" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">`;
 
-    sectionOrder.forEach((sectionName) => {
-      const sectionItems = items.filter((item) => item.section === sectionName);
-      if (sectionItems.length > 0) {
-        html += `<div class="modal-section-title">${sectionName}</div>`;
-        sectionItems.forEach((item) => {
-          html += `
-                      <div class="modal-material-item">
-                          <div class="material-name"><p>${item.material}</p></div>
-                          <div class="material-chars"><p>${item.characteristics}</p></div>
-                      </div>
-                  `;
-        });
-      }
+    Object.entries(materials).forEach(([sectionName, items]) => {
+      html += `<div class="modal-section-title">${sectionName}</div>`;
+      items.forEach((item) => {
+        const desc = item.desc.replace("{{VENTILATION_SPECS}}", ventilationSpecs[houseTypeKey] || "Bis zu 95 % Wärmerückgewinnung + Wärmepumpe zum Heizen und Kühlen.");
+        html += `
+          <div class="modal-material-item">
+            <div class="material-name"><p>${item.name}</p></div>
+            <div class="material-chars"><p>${desc}</p></div>
+          </div>
+        `;
+      });
     });
 
     return html;
