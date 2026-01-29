@@ -519,6 +519,7 @@
 
     const optionTemplate = (labelClass, inputType, inputName, inputValue, optionName, rawPrice, context = "upgrades", isDisabled = false, isChecked = false, fullOptionObject = null) => {
         let priceDisplayHTML = '';
+        let taglineHTML = '';
         let effectiveLabelClass = labelClass;
         let inputAttributes = '';
 
@@ -544,14 +545,33 @@
             inputAttributes += ' checked';
         }
 
-        if (specialPriceText) {
+        // Handle finish option price display with taglines
+        if (context === "finishes" && inputName === "SQF_FINISH") {
+            const houseData = config[type];
+            if (houseData && houseData.options) {
+                const turnkeyOpt = houseData.options.find(opt => opt.slug === "turnkey");
+                const semiFinishedOpt = houseData.options.find(opt => opt.slug === "semi-finished");
+
+                if (turnkeyOpt && semiFinishedOpt) {
+                    if (inputValue === "turnkey") {
+                        priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ TVA</span></span>`;
+                        taglineHTML = '<div class="option-tagline">Mută-te a doua zi.</div>';
+                    } else if (inputValue === "semi-finished") {
+                        priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ TVA</span></span>`;
+                        taglineHTML = '<div class="option-tagline">Fii propriul designer de interior.</div>';
+                    }
+                } else {
+                    priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ TVA</span></span>`;
+                }
+            }
+        } else if (specialPriceText) {
             priceDisplayHTML = `<span class="option-price">${specialPriceText}</span>`;
         } else if (rawPrice === 0 && context !== "floorplans") {
             priceDisplayHTML = `<span class="option-price">Inclus</span>`;
         } else if (rawPrice === 0 && context === "floorplans") {
             priceDisplayHTML = '';
         } else {
-            priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} + TVA</span>`;
+            priceDisplayHTML = `<span class="option-price">${formatCurrency(rawPrice)} <span class="vat-label">+ TVA</span></span>`;
         }
 
         // Add descriptions for specific upgrades
@@ -563,12 +583,21 @@
             priceDisplayHTML += '<div class="option-description">Blochează peste 99% din UV. Smart. Standard Passivhaus.</div>';
         }
 
+        // Update option names
+        let displayName = optionName;
+        if (inputValue === "turnkey") {
+            displayName = "La Cheie Complet";
+        } else if (inputValue === "ventilation-system") {
+            displayName = "Sistem Ventilație Zehnder";
+        }
+
         return `
             <label class="${effectiveLabelClass}">
                 <input type="${inputType}" name="${inputName}" price="${rawPrice}" value="${inputValue}" ${inputAttributes} />
-                <span class="option-name">${optionName}</span>
+                <span class="option-name">${displayName}</span>
                 <br>
                 ${priceDisplayHTML}
+                ${taglineHTML}
             </label>
         `;
     };
