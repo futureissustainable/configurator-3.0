@@ -990,167 +990,110 @@
     },
   };
 
-  const turnkeyMaterialItemsRaw = `
-MODULAR UPGRADE // TITLE
-New Generation<split>MODULAR, now perfected with Passivhaus certified aluminum frames, ultra-organic wood fiber insulation, an optimized, more resilient structure, and an exclusive selection of premium finishes. Designed for comfort, durability, and efficiency at the highest level.
-STRUCTURE // TITLE
-The MODULAR Structural System<split>MODULAR™ ~35 cm structure, Passivhaus / EPD certified. No thermal bridges. Exceptional structural strength. Fully airtight.
-C24 Timber Frame BIOBUILDS Structure<split>FSC/PEFC certified wood, exceptional load resistance.
-STEICO wood fiber insulation<split>Organic, sustainable, and ultra-efficient (λ ≈ 0.036 W/m·K), CE certified.
-ECO OSB 3 Board (AGEPAN, Germany)<split>Formaldehyde and VOC-free, Passive House approved, CE certified.
-DWD Board (AGEPAN, Germany)<split>Allows walls to "breathe," maintaining exterior airtightness; CE certified.
-Smart membrane<split>Ensures interior airtightness with controlled vapor diffusion to the exterior.
-EXTERIOR FINISHES // TITLE
-Ventilated facade of Yakisugi/Lunawood wood<split>Thermally treated natural wood, with significantly reduced maintenance, excellent fire resistance, durable, with a special aesthetic and sustainable origin.
-Ventilated flat roof<split>Superior thermal performance, extended lifespan by preventing moisture accumulation and overheating. The roof has an invisible slope (~5°), waterproofed with a premium membrane, minimum 10-year manufacturer warranty.
-Integrated rainwater collection system<split>Hidden gutters, discreetly integrated into the facade, ready for sustainable rainwater collection.
-EXTERIOR WINDOWS AND DOORS // TITLE
-Genesis 90 aluminum profiles<split>Rigid, ultra-efficient profiles, certified for passive houses (Uwi ≤ 0.85 W/m²K), CE certified.
-Triple-laminated glazing<split>Exceptional efficiency and safety (U = 0.50 W/m²K), laminated for additional protection.
-KITCHEN // TITLE
-Kitchen installations<split>Pre-equipped installations, ready for your furniture and appliances.
-TECHNICAL INSTALLATIONS // TITLE
-Electrical installation<split>Complete electrical panel, compliant with strict EU standards. Switches and protections compliant with local regulations, including AFDD technology.
-Plumbing installation<split>High-quality pipes and fittings (PPR/PEX), compatible with all local and EU regulations.
-COMPLETE INTERIOR FINISHES // TITLE
-Wood slat ceiling + felt<split>Natural wood and recycled felt; excellent acoustic absorption.
-Fiberglass wallpaper<split>Very high tensile strength and wear resistance; washable; modern look.
-Triple-layered natural wood parquet<split>Thickness 9–14 mm; FSC/PEFC certified wood; very durable finish.
-Schneider outlets<split>Premium outlets made in Germany; CE/VDE certified.
-INTERIOR DOORS // TITLE
-S10 interior doors<split>CE certified; Solid core.
-COMPLETE BATHROOM FINISHES // TITLE
-Stone composite tiles<split>Premium full-size tiles of 2.5 × 1.2 m; 100% waterproof; very high durability.
-Italian design sink<split>Premium composite material; ultra-thin, modern, and durable.
-Grohe wall-hung toilet<split>Made in Germany; minimalist, modern design.
-Ariston Velis water heater<split>Ultra-slim design; high energy efficiency.
-Walk-in shower<split>Designed in France; minimalist, modern design.
-SMART SYSTEMS // TITLE
-Lighting track<split>Flexible configuration for LEDs and spotlights; modern aesthetic.
-Smart Lighting<split>Philips HUE or IKEA TRÅDFRI; easy Smart configuration.
-Smart exterior blinds<split>Block > 95% of solar radiation; app/manual control; certified by the Passive House Institute in Darmstadt, Germany; CE certified.
-Zehnder Ventilation System<split>{{VENTILATION_SPECS}}
-CERTIFICATIONS AND WARRANTIES // TITLE
-Passivhaus Certification<split>Issued by the Passive House Institute (Germany), attests to unprecedented energy efficiency, exceptional comfort. For a permanent home built to the strictest international standards.
-EPD Certification<split>Issued by EPD International, confirms a carbon-negative product and responsible construction practices.
-CE Marking<split>All components comply with EU regulations for construction products.
-Standard EU Warranty<split>24 months residential. 12 months commercial. Warranty extension options available upon request.
-Manufacturer Warranties<split>Beneficiaries receive full coverage through warranties provided by individual suppliers.
-DISCLAIMER // TITLE
-Technical Performance<split>The mentioned performances (including energy consumption) are calculated according to standard Passive House conditions. Actual results may vary depending on climate, house orientation, dimensions, and usage. For exact details, consult the PHPP (Passive House Planning Package) calculations for the project.
-`;
-  const semiTurnkeyMaterialItemsRaw = `
-MODULAR UPGRADE // TITLE
-New Generation<split>MODULAR, now perfected with Passivhaus certified aluminum frames, ultra-organic wood fiber insulation, and an optimized structure. Designed for comfort, durability, and efficiency at the highest level.
-STRUCTURE // TITLE
-The MODULAR Structural System<split>MODULAR™ ~35 cm structure, Passivhaus / EPD certified. No thermal bridges. Exceptional structural strength. Fully airtight.
-C24 Timber Frame BIOBUILDS Structure<split>FSC/PEFC certified wood, exceptional load resistance.
-STEICO wood fiber insulation<split>Organic, sustainable, and ultra-efficient (λ ≈ 0.036 W/m·K), CE certified.
-ECO OSB 3 Board (AGEPAN, Germany)<split>Formaldehyde and VOC-free, Passive House approved, CE certified.
-DWD Board (AGEPAN, Germany)<split>Allows walls to "breathe," maintaining exterior airtightness; CE certified.
-Smart membrane<split>Ensures interior airtightness with controlled vapor diffusion to the exterior.
-EXTERIOR FINISHES // TITLE
-Ventilated facade of Yakisugi/Lunawood wood<split>Thermally treated natural wood, with significantly reduced maintenance, excellent fire resistance, durable, with a special aesthetic and sustainable origin.
-Ventilated flat roof<split>Superior thermal performance, extended lifespan by preventing moisture accumulation and overheating. The roof has an invisible slope (~5°), waterproofed with a premium membrane, minimum 10-year manufacturer warranty.
-Integrated rainwater collection system<split>Hidden gutters, discreetly integrated into the facade, ready for sustainable rainwater collection.
-EXTERIOR WINDOWS AND DOORS // TITLE
-Genesis 90 aluminum profiles<split>Rigid, ultra-efficient profiles, certified for passive houses (Uwi ≤ 0.85 W/m²K), CE certified.
-Triple-laminated glazing<split>Exceptional efficiency and safety (U = 0.50 W/m²K), laminated for additional protection.
-KITCHEN // TITLE
-Kitchen installations<split>Pre-equipped installations, ready for your furniture and appliances.
-TECHNICAL INSTALLATIONS // TITLE
-Electrical installation<split>Complete electrical panel, compliant with strict EU standards. Switches and protections compliant with local regulations, including AFDD technology.
-Plumbing installation<split>High-quality pipes and fittings (PPR/PEX), compatible with all local and EU regulations.
-BATHROOM // TITLE
-Waterproofed bathrooms<split>Fully waterproofed bathroom areas with all plumbing installations in place, ready for your finishes.
-CERTIFICATIONS AND WARRANTIES // TITLE
-Passivhaus Certification<split>Issued by the Passive House Institute (Germany), attests to unprecedented energy efficiency, exceptional comfort. For a permanent home built to the strictest international standards.
-EPD Certification<split>Issued by EPD International, confirms a carbon-negative product and responsible construction practices.
-CE Marking<split>All components comply with EU regulations for construction products.
-Standard EU Warranty<split>24 months residential. 12 months commercial. Warranty extension options available upon request.
-Manufacturer Warranties<split>Beneficiaries receive full coverage through warranties provided by individual suppliers.
-DISCLAIMER // TITLE
-Technical Performance<split>The mentioned performances (including energy consumption) are calculated according to standard Passive House conditions. Actual results may vary depending on climate, house orientation, dimensions, and usage. For exact details, consult the PHPP (Passive House Planning Package) calculations for the project.
-`;
+  const turnkeyMaterials = {
+    "MODULAR UPGRADE": [
+      { name: "New Generation", desc: "MODULAR, now perfected with Passivhaus certified aluminum frames, ultra-organic wood fiber insulation, an optimized, more resilient structure, and an exclusive selection of premium finishes. Designed for comfort, durability, and efficiency at the highest level." }
+    ],
+    "STRUCTURE": [
+      { name: "The MODULAR Structural System", desc: "MODULAR™ ~35 cm structure, Passivhaus / EPD certified. No thermal bridges. Exceptional structural strength. Fully airtight." },
+      { name: "C24 Timber Frame BIOBUILDS Structure", desc: "FSC/PEFC certified wood, exceptional load resistance." },
+      { name: "STEICO wood fiber insulation", desc: "Organic, sustainable, and ultra-efficient (λ ≈ 0.036 W/m·K), CE certified." },
+      { name: "ECO OSB 3 Board (AGEPAN, Germany)", desc: "Formaldehyde and VOC-free, Passive House approved, CE certified." },
+      { name: "DWD Board (AGEPAN, Germany)", desc: "Allows walls to \"breathe,\" maintaining exterior airtightness; CE certified." },
+      { name: "Smart membrane", desc: "Ensures interior airtightness with controlled vapor diffusion to the exterior." }
+    ],
+    "EXTERIOR FINISHES": [
+      { name: "Ventilated facade of Yakisugi/Lunawood wood", desc: "Thermally treated natural wood, with significantly reduced maintenance, excellent fire resistance, durable, with a special aesthetic and sustainable origin." },
+      { name: "Ventilated flat roof", desc: "Superior thermal performance, extended lifespan by preventing moisture accumulation and overheating. The roof has an invisible slope (~5°), waterproofed with a premium membrane, minimum 10-year manufacturer warranty." },
+      { name: "Integrated rainwater collection system", desc: "Hidden gutters, discreetly integrated into the facade, ready for sustainable rainwater collection." }
+    ],
+    "EXTERIOR WINDOWS AND DOORS": [
+      { name: "Genesis 90 aluminum profiles", desc: "Rigid, ultra-efficient profiles, certified for passive houses (Uwi ≤ 0.85 W/m²K), CE certified." },
+      { name: "Triple-laminated glazing", desc: "Exceptional efficiency and safety (U = 0.50 W/m²K), laminated for additional protection." }
+    ],
+    "KITCHEN": [
+      { name: "Kitchen installations", desc: "Pre-equipped installations, ready for your furniture and appliances." }
+    ],
+    "TECHNICAL INSTALLATIONS": [
+      { name: "Electrical installation", desc: "Complete electrical panel, compliant with strict EU standards. Switches and protections compliant with local regulations, including AFDD technology." },
+      { name: "Plumbing installation", desc: "High-quality pipes and fittings (PPR/PEX), compatible with all local and EU regulations." }
+    ],
+    "COMPLETE INTERIOR FINISHES": [
+      { name: "Wood slat ceiling + felt", desc: "Natural wood and recycled felt; excellent acoustic absorption." },
+      { name: "Fiberglass wallpaper", desc: "Very high tensile strength and wear resistance; washable; modern look." },
+      { name: "Triple-layered natural wood parquet", desc: "Thickness 9–14 mm; FSC/PEFC certified wood; very durable finish." },
+      { name: "Schneider outlets", desc: "Premium outlets made in Germany; CE/VDE certified." }
+    ],
+    "INTERIOR DOORS": [
+      { name: "S10 interior doors", desc: "CE certified; Solid core." }
+    ],
+    "COMPLETE BATHROOM FINISHES": [
+      { name: "Stone composite tiles", desc: "Premium full-size tiles of 2.5 × 1.2 m; 100% waterproof; very high durability." },
+      { name: "Italian design sink", desc: "Premium composite material; ultra-thin, modern, and durable." },
+      { name: "Grohe wall-hung toilet", desc: "Made in Germany; minimalist, modern design." },
+      { name: "Ariston Velis water heater", desc: "Ultra-slim design; high energy efficiency." },
+      { name: "Walk-in shower", desc: "Designed in France; minimalist, modern design." }
+    ],
+    "SMART SYSTEMS": [
+      { name: "Lighting track", desc: "Flexible configuration for LEDs and spotlights; modern aesthetic." },
+      { name: "Smart Lighting", desc: "Philips HUE or IKEA TRÅDFRI; easy Smart configuration." },
+      { name: "Smart exterior blinds", desc: "Block > 95% of solar radiation; app/manual control; certified by the Passive House Institute in Darmstadt, Germany; CE certified." },
+      { name: "Zehnder Ventilation System", desc: "{{VENTILATION_SPECS}}" }
+    ],
+    "CERTIFICATIONS AND WARRANTIES": [
+      { name: "Passivhaus Certification", desc: "Issued by the Passive House Institute (Germany), attests to unprecedented energy efficiency, exceptional comfort. For a permanent home built to the strictest international standards." },
+      { name: "EPD Certification", desc: "Issued by EPD International, confirms a carbon-negative product and responsible construction practices." },
+      { name: "CE Marking", desc: "All components comply with EU regulations for construction products." },
+      { name: "Standard EU Warranty", desc: "24 months residential. 12 months commercial. Warranty extension options available upon request." },
+      { name: "Manufacturer Warranties", desc: "Beneficiaries receive full coverage through warranties provided by individual suppliers." }
+    ],
+    "DISCLAIMER": [
+      { name: "Technical Performance", desc: "The mentioned performances (including energy consumption) are calculated according to standard Passive House conditions. Actual results may vary depending on climate, house orientation, dimensions, and usage. For exact details, consult the PHPP (Passive House Planning Package) calculations for the project." }
+    ]
+  };
+  const semiTurnkeyMaterials = {
+    "MODULAR UPGRADE": [
+      { name: "New Generation", desc: "MODULAR, now perfected with Passivhaus certified aluminum frames, ultra-organic wood fiber insulation, and an optimized structure. Designed for comfort, durability, and efficiency at the highest level." }
+    ],
+    "STRUCTURE": [
+      { name: "The MODULAR Structural System", desc: "MODULAR™ ~35 cm structure, Passivhaus / EPD certified. No thermal bridges. Exceptional structural strength. Fully airtight." },
+      { name: "C24 Timber Frame BIOBUILDS Structure", desc: "FSC/PEFC certified wood, exceptional load resistance." },
+      { name: "STEICO wood fiber insulation", desc: "Organic, sustainable, and ultra-efficient (λ ≈ 0.036 W/m·K), CE certified." },
+      { name: "ECO OSB 3 Board (AGEPAN, Germany)", desc: "Formaldehyde and VOC-free, Passive House approved, CE certified." },
+      { name: "DWD Board (AGEPAN, Germany)", desc: "Allows walls to \"breathe,\" maintaining exterior airtightness; CE certified." },
+      { name: "Smart membrane", desc: "Ensures interior airtightness with controlled vapor diffusion to the exterior." }
+    ],
+    "EXTERIOR FINISHES": [
+      { name: "Ventilated facade of Yakisugi/Lunawood wood", desc: "Thermally treated natural wood, with significantly reduced maintenance, excellent fire resistance, durable, with a special aesthetic and sustainable origin." },
+      { name: "Ventilated flat roof", desc: "Superior thermal performance, extended lifespan by preventing moisture accumulation and overheating. The roof has an invisible slope (~5°), waterproofed with a premium membrane, minimum 10-year manufacturer warranty." },
+      { name: "Integrated rainwater collection system", desc: "Hidden gutters, discreetly integrated into the facade, ready for sustainable rainwater collection." }
+    ],
+    "EXTERIOR WINDOWS AND DOORS": [
+      { name: "Genesis 90 aluminum profiles", desc: "Rigid, ultra-efficient profiles, certified for passive houses (Uwi ≤ 0.85 W/m²K), CE certified." },
+      { name: "Triple-laminated glazing", desc: "Exceptional efficiency and safety (U = 0.50 W/m²K), laminated for additional protection." }
+    ],
+    "KITCHEN": [
+      { name: "Kitchen installations", desc: "Pre-equipped installations, ready for your furniture and appliances." }
+    ],
+    "TECHNICAL INSTALLATIONS": [
+      { name: "Electrical installation", desc: "Complete electrical panel, compliant with strict EU standards. Switches and protections compliant with local regulations, including AFDD technology." },
+      { name: "Plumbing installation", desc: "High-quality pipes and fittings (PPR/PEX), compatible with all local and EU regulations." }
+    ],
+    "BATHROOM": [
+      { name: "Waterproofed bathrooms", desc: "Fully waterproofed bathroom areas with all plumbing installations in place, ready for your finishes." }
+    ],
+    "CERTIFICATIONS AND WARRANTIES": [
+      { name: "Passivhaus Certification", desc: "Issued by the Passive House Institute (Germany), attests to unprecedented energy efficiency, exceptional comfort. For a permanent home built to the strictest international standards." },
+      { name: "EPD Certification", desc: "Issued by EPD International, confirms a carbon-negative product and responsible construction practices." },
+      { name: "CE Marking", desc: "All components comply with EU regulations for construction products." },
+      { name: "Standard EU Warranty", desc: "24 months residential. 12 months commercial. Warranty extension options available upon request." },
+      { name: "Manufacturer Warranties", desc: "Beneficiaries receive full coverage through warranties provided by individual suppliers." }
+    ],
+    "DISCLAIMER": [
+      { name: "Technical Performance", desc: "The mentioned performances (including energy consumption) are calculated according to standard Passive House conditions. Actual results may vary depending on climate, house orientation, dimensions, and usage. For exact details, consult the PHPP (Passive House Planning Package) calculations for the project." }
+    ]
+  };
 
-  function parseItemLine(line) {
-    if (!line || line.trim() === "") return null;
-    const delimiter = "<split>";
-    const delimiterIndex = line.indexOf(delimiter);
-
-    if (delimiterIndex !== -1) {
-      const materialPart = line.substring(0, delimiterIndex).trim();
-      const charPart = line
-        .substring(delimiterIndex + delimiter.length)
-        .trim()
-        .replace(/<end of materials spec>/g, "")
-        .trim();
-      if (materialPart) {
-        return { material: materialPart, characteristics: charPart };
-      }
-    }
-    const trimmedLine = line
-      .replace(/\s*\/\/ TITLE$/, "")
-      .trim()
-      .replace(/<end of materials spec>/g, "")
-      .trim();
-    if (trimmedLine) {
-      return { material: trimmedLine, characteristics: "" };
-    }
-    return null;
-  }
-
-  function parseMaterialData(rawDataString) {
-    const lines = rawDataString.trim().split("\n");
-    const items = [];
-    let currentSection = "";
-    const sectionOrder = [];
-
-    lines.forEach((line) => {
-      const trimmedLine = line.trim();
-      if (trimmedLine.length === 0) return;
-
-      const isAllUpper = trimmedLine === trimmedLine.toUpperCase();
-      const hasTitleComment = /\s*\/\/ TITLE$/.test(line);
-      const cleanPotentialTitle = trimmedLine
-        .replace(/\s*\/\/ TITLE$/, "")
-        .trim();
-
-      const isSectionHeader =
-        (isAllUpper &&
-          cleanPotentialTitle.length > 3 &&
-          !cleanPotentialTitle.includes("<split>") &&
-          !/\d/.test(cleanPotentialTitle)) ||
-        (hasTitleComment &&
-          cleanPotentialTitle.length > 0 &&
-          !cleanPotentialTitle.includes("<split>"));
-
-      if (isSectionHeader) {
-        currentSection = cleanPotentialTitle;
-        if (!sectionOrder.includes(currentSection)) {
-          sectionOrder.push(currentSection);
-        }
-      } else if (currentSection || items.length === 0) {
-        const parsedItem = parseItemLine(line);
-        if (parsedItem && parsedItem.material) {
-          const sectionToAssign = currentSection;
-
-          items.push({
-            section: sectionToAssign || "General",
-            material: parsedItem.material,
-            characteristics: parsedItem.characteristics,
-          });
-          if (
-            (sectionToAssign || "General") === "General" &&
-            !sectionOrder.includes("General")
-          ) {
-            sectionOrder.unshift("General");
-          }
-        }
-      }
-    });
-    return { items, sectionOrder };
-  }
 
   let type = getUrlParameter("SQF_TYPE");
   if (type === null || !config[type]) {
@@ -1567,41 +1510,29 @@ Technical Performance<split>The mentioned performances (including energy consump
       return "<p>Finish details not available.</p>";
     }
 
-    let rawMaterialData =
-      currentFinishSlug === "turnkey"
-        ? turnkeyMaterialItemsRaw
-        : semiTurnkeyMaterialItemsRaw;
+    const materials = currentFinishSlug === "turnkey" ? turnkeyMaterials : semiTurnkeyMaterials;
 
-    // Replace ventilation placeholder with model-specific specs for turnkey
-    if (currentFinishSlug === "turnkey") {
-      const ventilationSpecs = {
-        "nest-24": "Zehnder ComfoAir 70 with up to 95% heat recovery + Panasonic Aquarea Heat Pump for heating and cooling.",
-        "wanderlust-48": "Zehnder ComfoAir 100 with up to 95% heat recovery + Panasonic Aquarea Heat Pump for heating and cooling.",
-        "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 with up to 95% heat recovery + Panasonic Aquarea Heat Pump for heating and cooling.",
-        "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 with up to 95% heat recovery + Panasonic Aquarea Heat Pump for heating and cooling.",
-      };
-      const specs = ventilationSpecs[houseTypeKey] || "Up to 95% heat recovery + heat pump for heating and cooling.";
-      rawMaterialData = rawMaterialData.replace("{{VENTILATION_SPECS}}", specs);
-    }
+    // Ventilation specs per house model (for turnkey)
+    const ventilationSpecs = {
+      "nest-24": "Zehnder ComfoAir 70 with up to 95% heat recovery + Panasonic Aquarea Heat Pump for heating and cooling.",
+      "wanderlust-48": "Zehnder ComfoAir 100 with up to 95% heat recovery + Panasonic Aquarea Heat Pump for heating and cooling.",
+      "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 with up to 95% heat recovery + Panasonic Aquarea Heat Pump for heating and cooling.",
+      "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 with up to 95% heat recovery + Panasonic Aquarea Heat Pump for heating and cooling.",
+    };
 
-    const { items, sectionOrder } = parseMaterialData(rawMaterialData);
-
-    // Start with wall section image
     let html = `<img src="https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69303cdf299025f5b7e0e219_95%20Wall%20Section.avif" alt="Wall Section" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">`;
 
-    sectionOrder.forEach((sectionName) => {
-      const sectionItems = items.filter((item) => item.section === sectionName);
-      if (sectionItems.length > 0) {
-        html += `<div class="modal-section-title">${sectionName}</div>`;
-        sectionItems.forEach((item) => {
-          html += `
-                      <div class="modal-material-item">
-                          <div class="material-name"><p>${item.material}</p></div>
-                          <div class="material-chars"><p>${item.characteristics}</p></div>
-                      </div>
-                  `;
-        });
-      }
+    Object.entries(materials).forEach(([sectionName, items]) => {
+      html += `<div class="modal-section-title">${sectionName}</div>`;
+      items.forEach((item) => {
+        const desc = item.desc.replace("{{VENTILATION_SPECS}}", ventilationSpecs[houseTypeKey] || "Up to 95% heat recovery + heat pump for heating and cooling.");
+        html += `
+          <div class="modal-material-item">
+            <div class="material-name"><p>${item.name}</p></div>
+            <div class="material-chars"><p>${desc}</p></div>
+          </div>
+        `;
+      });
     });
 
     return html;

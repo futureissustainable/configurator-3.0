@@ -269,153 +269,110 @@
         }
     };
 
-    const turnkeyMaterialItemsRaw = `
-    MODULAR UPGRADE // TITLE
-    Nouă Generație<split>MODULAR, acum perfecționat cu rame din aluminiu certificate Passivhaus, ultra-izolație organică din fibră de lemn, o structură optimizată, mai rezistentă și o selecție exclusivă de finisaje premium. Proiectat pentru confort, durabilitate și eficiență la cel mai înalt nivel.
-    STRUCTURĂ // TITLE
-    Sistemul Structural MODULAR<split>Structură MODULAR™ de ~35 cm, certificată Passivhaus / EPD. Fără punți termice. Rezistență mecanică excepțională. Complet etanșă. Construită într-un sistem volumetric timber-frame.
-    Structură C24 Timber Frame BIOBUILDS<split>Lemn certificat FSC/PEFC, rezistență excepțională la sarcini.
-    Izolație din fibră de lemn STEICO<split>Organic, sustenabil și ultra-eficient (λ ≈ 0,036 W/m·K), certificat CE.
-    Placă ECO OSB 3 (AGEPAN, Germania)<split>Fără formaldehidă și VOC, aprobat Passive House, certificat CE.
-    Placă DWD (AGEPAN, Germania)<split>Permite pereților să „respire", menținând etanșeitatea la exterior; certificat CE.
-    Membrană inteligentă<split>Asigură etanșeitatea interioară cu difuzie controlată a vaporilor spre exterior.
-    FINISAJE EXTERIOARE // TITLE
-    Fațadă ventilată din lemn Yakisugi/Lunawood<split>Lemn natural termotratat, cu întreținere semnificativ redusă, rezistență excelentă la foc, durabil, cu estetică deosebită și proveniență sustenabilă.
-    Acoperiș plat ventilat<split>Performanță termică superioară, durată de viață extinsă prin prevenirea acumulării de umiditate și supraîncălzire. Acoperișul are o pantă invizibilă (~5°), hidroizolat cu membrană premium, garanție minim 10 ani de producător.
-    Sistem de colectare a apei pluviale integrat<split>Jgheaburi ascunse, integrate discret în fațadă, pregătite pentru colectarea sustenabilă a apei de ploaie.
-    FERESTRE ȘI UȘI EXTERIOARE // TITLE
-    Profile de aluminiu Genesis 90<split>Profile rigide, ultra-eficiente, certificate pentru case pasive (Uwi ≤ 0,85 W/m²K), certificat CE.
-    Geam triplu stratificat, laminat<split>Eficiență și siguranță excepțională (U = 0,50 W/m²K), laminat pentru protecție suplimentară.
-    BUCĂTĂRIE // TITLE
-    Instalații pentru bucătărie<split>Instalații preechipate, gata pentru mobilierul și electrocasnicele tale.
-    INSTALAȚII TEHNICE // TITLE
-    Instalație electrică<split>Tablou electric complet, conform standardelor stricte UE. Comutatoare și protecții conforme normelor locale, inclusiv tehnologie AFDD.
-    Instalație sanitară<split>Țevi și fitinguri de calitate superioară (PPR/PEX), compatibile cu toate reglementările locale și UE.
-    FINISAJE INTERIOARE COMPLETE // TITLE
-    Tavan cu lamele din lemn + fetru<split>Lemn natural și fetru reciclat; absorbție acustică excelentă.
-    Tapet din fibră de sticlă<split>Rezistență foarte mare la tracțiune și uzură; lavabil; aspect modern.
-    Parchet triplustratificat din lemn natural<split>Grosime 9–14 mm; lemn certificat FSC/PEFC; finisaj foarte durabil.
-    Prize Schneider<split>Prize premium produse în Germania; certificate CE/VDE.
-    UȘI INTERIOARE // TITLE
-    Uși interioare S10<split>Certificate CE; Interior solid.
-    FINISAJE COMPLETE BAIE // TITLE
-    Plăci din compozit de piatră<split>Plăci întregi premium de 2.5 × 1.2 m; 100% impermeabile; rezistență foarte mare în timp.
-    Lavoar cu design italian<split>Material compozit premium; ultra-subțire, modern și durabil.
-    WC suspendat Grohe<split>Produs în Germania; design minimalist, modern.
-    Boiler Ariston Velis<split>Design ultra-subțire; eficiență energetică ridicată.
-    Duș walk-in<split>Proiectat în Franța; design minimalist, modern.
-    SISTEME SMART // TITLE
-    Șină de iluminat<split>Configurare flexibilă pentru LED și spoturi; estetică modernă.
-    Iluminat Smart<split>Philips HUE sau IKEA TRÅDFRI; configurare Smart ușoară.
-    Jaluzele exterioare Smart<split>Blochează > 95% din radiația solară; control prin aplicație/manual; certificate de Institutul de Case Pasive din Darmstadt, Germania; certificate CE.
-    Sistem de Ventilație Zehnder<split>{{VENTILATION_SPECS}}
-    CERTIFICĂRI ȘI GARANȚII // TITLE
-    Certificare Passivhaus<split>Emisă de Passive House Institute (Germania), atestă eficiența energetică fără precedent, confort excepțional. Pentru o locuință permanentă construită conform celor mai stricte standarde internaționale.
-    Certificare EPD<split>Emisă de EPD International, confirmă un produs carbon negativ și practici responsabile de construcție.
-    Marcaj CE<split>Toate componentele respectă reglementările UE pentru produse de construcții.
-    Garanție standard UE<split>24 de luni rezidențial. 12 luni comercial. Opțiuni de extindere a garanției disponibile la cerere.
-    Garanții producător<split>Beneficiarii primesc acoperire completă prin garanțiile oferite de furnizorii individuali.
-    DISCLAIMER // TITLE
-    Performanțe Tehnice<split>Performanțele menționate (inclusiv consumul energetic) sunt calculate conform condițiilor standard Passive House. Rezultatele reale pot avea variații în funcție de climă, orientarea casei, dimensiuni și modul de utilizare. Pentru detalii exacte, consultați calculele PHPP (Passive House Planning Package) aferente proiectului.
-    `;
-    const semiTurnkeyMaterialItemsRaw = `
-    MODULAR UPGRADE // TITLE
-    Nouă Generație<split>MODULAR, acum perfecționat cu rame din aluminiu certificate Passivhaus, ultra-izolație organică din fibră de lemn, și o structură optimizată. Proiectat pentru confort, durabilitate și eficiență la cel mai înalt nivel.
-    STRUCTURĂ // TITLE
-    Sistemul Structural MODULAR<split>Structură MODULAR™ de ~35 cm, certificată Passivhaus / EPD. Fără punți termice. Rezistență mecanică excepțională. Complet etanșă. Construită într-un sistem volumetric timber-frame.
-    Structură C24 Timber Frame BIOBUILDS<split>Lemn certificat FSC/PEFC, rezistență excepțională la sarcini.
-    Izolație din fibră de lemn STEICO<split>Organic, sustenabil și ultra-eficient (λ ≈ 0,036 W/m·K), certificat CE.
-    Placă ECO OSB 3 (AGEPAN, Germania)<split>Fără formaldehidă și VOC, aprobat Passive House, certificat CE.
-    Placă DWD (AGEPAN, Germania)<split>Permite pereților să „respire", menținând etanșeitatea la exterior; certificat CE.
-    Membrană inteligentă<split>Asigură etanșeitatea interioară cu difuzie controlată a vaporilor spre exterior.
-    FINISAJE EXTERIOARE // TITLE
-    Fațadă ventilată din lemn Yakisugi/Lunawood<split>Lemn natural termotratat, cu întreținere semnificativ redusă, rezistență excelentă la foc, durabil, cu estetică deosebită și proveniență sustenabilă.
-    Acoperiș plat ventilat<split>Performanță termică superioară, durată de viață extinsă prin prevenirea acumulării de umiditate și supraîncălzire. Acoperișul are o pantă invizibilă (~5°), hidroizolat cu membrană premium, garanție minim 10 ani de producător.
-    Sistem de colectare a apei pluviale integrat<split>Jgheaburi ascunse, integrate discret în fațadă, pregătite pentru colectarea sustenabilă a apei de ploaie.
-    FERESTRE ȘI UȘI EXTERIOARE // TITLE
-    Profile de aluminiu Genesis 90<split>Profile rigide, ultra-eficiente, certificate pentru case pasive (Uwi ≤ 0,85 W/m²K), certificat CE.
-    Geam triplu stratificat, laminat<split>Eficiență și siguranță excepțională (U = 0,50 W/m²K), laminat pentru protecție suplimentară.
-    BUCĂTĂRIE // TITLE
-    Instalații pentru bucătărie<split>Instalații preechipate, gata pentru mobilierul și electrocasnicele tale.
-    INSTALAȚII TEHNICE // TITLE
-    Instalație electrică<split>Tablou electric complet, conform standardelor stricte UE. Comutatoare și protecții conforme normelor locale, inclusiv tehnologie AFDD.
-    Instalație sanitară<split>Țevi și fitinguri de calitate superioară (PPR/PEX), compatibile cu toate reglementările locale și UE.
-    BAIE // TITLE
-    Băi impermeabilizate<split>Băi complet hidroizolate cu instalații pregătite pentru montaj final.
-    CERTIFICĂRI ȘI GARANȚII // TITLE
-    Certificare Passivhaus<split>Emisă de Passive House Institute (Germania), atestă eficiența energetică fără precedent, confort excepțional. Pentru o locuință permanentă construită conform celor mai stricte standarde internaționale.
-    Certificare EPD<split>Emisă de EPD International, confirmă un produs carbon negativ și practici responsabile de construcție.
-    Marcaj CE<split>Toate componentele respectă reglementările UE pentru produse de construcții.
-    Garanție standard UE<split>24 de luni rezidențial. 12 luni comercial. Opțiuni de extindere a garanției disponibile la cerere.
-    Garanții producător<split>Beneficiarii primesc acoperire completă prin garanțiile oferite de furnizorii individuali.
-    DISCLAIMER // TITLE
-    Performanțe Tehnice<split>Performanțele menționate (inclusiv consumul energetic) sunt calculate conform condițiilor standard Passive House. Rezultatele reale pot avea variații în funcție de climă, orientarea casei, dimensiuni și modul de utilizare. Pentru detalii exacte, consultați calculele PHPP (Passive House Planning Package) aferente proiectului.
-    `;
+    const turnkeyMaterials = {
+        "MODULAR UPGRADE": [
+            { name: "Nouă Generație", desc: "MODULAR, acum perfecționat cu rame din aluminiu certificate Passivhaus, ultra-izolație organică din fibră de lemn, o structură optimizată, mai rezistentă și o selecție exclusivă de finisaje premium. Proiectat pentru confort, durabilitate și eficiență la cel mai înalt nivel." }
+        ],
+        "STRUCTURĂ": [
+            { name: "Sistemul Structural MODULAR", desc: "Structură MODULAR™ de ~35 cm, certificată Passivhaus / EPD. Fără punți termice. Rezistență mecanică excepțională. Complet etanșă. Construită într-un sistem volumetric timber-frame." },
+            { name: "Structură C24 Timber Frame BIOBUILDS", desc: "Lemn certificat FSC/PEFC, rezistență excepțională la sarcini." },
+            { name: "Izolație din fibră de lemn STEICO", desc: "Organic, sustenabil și ultra-eficient (λ ≈ 0,036 W/m·K), certificat CE." },
+            { name: "Placă ECO OSB 3 (AGEPAN, Germania)", desc: "Fără formaldehidă și VOC, aprobat Passive House, certificat CE." },
+            { name: "Placă DWD (AGEPAN, Germania)", desc: "Permite pereților să 'respire', menținând etanșeitatea la exterior; certificat CE." },
+            { name: "Membrană inteligentă", desc: "Asigură etanșeitatea interioară cu difuzie controlată a vaporilor spre exterior." }
+        ],
+        "FINISAJE EXTERIOARE": [
+            { name: "Fațadă ventilată din lemn Yakisugi/Lunawood", desc: "Lemn natural termotratat, cu întreținere semnificativ redusă, rezistență excelentă la foc, durabil, cu estetică deosebită și proveniență sustenabilă." },
+            { name: "Acoperiș plat ventilat", desc: "Performanță termică superioară, durată de viață extinsă prin prevenirea acumulării de umiditate și supraîncălzire. Acoperișul are o pantă invizibilă (~5°), hidroizolat cu membrană premium, garanție minim 10 ani de producător." },
+            { name: "Sistem de colectare a apei pluviale integrat", desc: "Jgheaburi ascunse, integrate discret în fațadă, pregătite pentru colectarea sustenabilă a apei de ploaie." }
+        ],
+        "FERESTRE ȘI UȘI EXTERIOARE": [
+            { name: "Profile de aluminiu Genesis 90", desc: "Profile rigide, ultra-eficiente, certificate pentru case pasive (Uwi ≤ 0,85 W/m²K), certificat CE." },
+            { name: "Geam triplu stratificat, laminat", desc: "Eficiență și siguranță excepțională (U = 0,50 W/m²K), laminat pentru protecție suplimentară." }
+        ],
+        "BUCĂTĂRIE": [
+            { name: "Instalații pentru bucătărie", desc: "Instalații preechipate, gata pentru mobilierul și electrocasnicele tale." }
+        ],
+        "INSTALAȚII TEHNICE": [
+            { name: "Instalație electrică", desc: "Tablou electric complet, conform standardelor stricte UE. Comutatoare și protecții conforme normelor locale, inclusiv tehnologie AFDD." },
+            { name: "Instalație sanitară", desc: "Țevi și fitinguri de calitate superioară (PPR/PEX), compatibile cu toate reglementările locale și UE." }
+        ],
+        "FINISAJE INTERIOARE COMPLETE": [
+            { name: "Tavan cu lamele din lemn + fetru", desc: "Lemn natural și fetru reciclat; absorbție acustică excelentă." },
+            { name: "Tapet din fibră de sticlă", desc: "Rezistență foarte mare la tracțiune și uzură; lavabil; aspect modern." },
+            { name: "Parchet triplustratificat din lemn natural", desc: "Grosime 9–14 mm; lemn certificat FSC/PEFC; finisaj foarte durabil." },
+            { name: "Prize Schneider", desc: "Prize premium produse în Germania; certificate CE/VDE." }
+        ],
+        "UȘI INTERIOARE": [
+            { name: "Uși interioare S10", desc: "Certificate CE; Interior solid." }
+        ],
+        "FINISAJE COMPLETE BAIE": [
+            { name: "Plăci din compozit de piatră", desc: "Plăci întregi premium de 2.5 × 1.2 m; 100% impermeabile; rezistență foarte mare în timp." },
+            { name: "Lavoar cu design italian", desc: "Material compozit premium; ultra-subțire, modern și durabil." },
+            { name: "WC suspendat Grohe", desc: "Produs în Germania; design minimalist, modern." },
+            { name: "Boiler Ariston Velis", desc: "Design ultra-subțire; eficiență energetică ridicată." },
+            { name: "Duș walk-in", desc: "Proiectat în Franța; design minimalist, modern." }
+        ],
+        "SISTEME SMART": [
+            { name: "Șină de iluminat", desc: "Configurare flexibilă pentru LED și spoturi; estetică modernă." },
+            { name: "Iluminat Smart", desc: "Philips HUE sau IKEA TRÅDFRI; configurare Smart ușoară." },
+            { name: "Jaluzele exterioare Smart", desc: "Blochează > 95% din radiația solară; control prin aplicație/manual; certificate de Institutul de Case Pasive din Darmstadt, Germania; certificate CE." },
+            { name: "Sistem de Ventilație Zehnder", desc: "{{VENTILATION_SPECS}}" }
+        ],
+        "CERTIFICĂRI ȘI GARANȚII": [
+            { name: "Certificare Passivhaus", desc: "Emisă de Passive House Institute (Germania), atestă eficiența energetică fără precedent, confort excepțional. Pentru o locuință permanentă construită conform celor mai stricte standarde internaționale." },
+            { name: "Certificare EPD", desc: "Emisă de EPD International, confirmă un produs carbon negativ și practici responsabile de construcție." },
+            { name: "Marcaj CE", desc: "Toate componentele respectă reglementările UE pentru produse de construcții." },
+            { name: "Garanție standard UE", desc: "24 de luni rezidențial. 12 luni comercial. Opțiuni de extindere a garanției disponibile la cerere." },
+            { name: "Garanții producător", desc: "Beneficiarii primesc acoperire completă prin garanțiile oferite de furnizorii individuali." }
+        ],
+        "DISCLAIMER": [
+            { name: "Performanțe Tehnice", desc: "Performanțele menționate (inclusiv consumul energetic) sunt calculate conform condițiilor standard Passive House. Rezultatele reale pot avea variații în funcție de climă, orientarea casei, dimensiuni și modul de utilizare. Pentru detalii exacte, consultați calculele PHPP (Passive House Planning Package) aferente proiectului." }
+        ]
+    };
 
-    function parseItemLine(line) {
-        if (!line || line.trim() === "") return null;
-        const delimiter = "<split>";
-        const delimiterIndex = line.indexOf(delimiter);
-
-        if (delimiterIndex !== -1) {
-            const materialPart = line.substring(0, delimiterIndex).trim();
-            const charPart = line.substring(delimiterIndex + delimiter.length).trim().replace(/<end of materials spec>/g, '').trim();
-            if (materialPart) {
-                return { material: materialPart, characteristics: charPart };
-            }
-        }
-        const trimmedLine = line.replace(/\s*\/\/ TITLE$/,'').trim().replace(/<end of materials spec>/g, '').trim();
-        if (trimmedLine) {
-            return { material: trimmedLine, characteristics: "" };
-        }
-        return null;
-    }
-
-
-    function parseMaterialData(rawDataString) {
-        const lines = rawDataString.trim().split('\n');
-        const items = [];
-        let currentSection = "";
-        const sectionOrder = [];
-
-        lines.forEach(line => {
-            const trimmedLine = line.trim();
-            if (trimmedLine.length === 0) return;
-
-            const isAllUpper = trimmedLine === trimmedLine.toUpperCase();
-            const hasTitleComment = /\s*\/\/ TITLE$/.test(line);
-            const cleanPotentialTitle = trimmedLine.replace(/\s*\/\/ TITLE$/,'').trim();
-
-            const isSectionHeader = (isAllUpper && cleanPotentialTitle.length > 3 && !cleanPotentialTitle.includes("<split>") && !/\d/.test(cleanPotentialTitle)) ||
-                                    (hasTitleComment && cleanPotentialTitle.length > 0 && !cleanPotentialTitle.includes("<split>"));
-
-
-            if (isSectionHeader) {
-                currentSection = cleanPotentialTitle;
-                if (!sectionOrder.includes(currentSection)) {
-                    sectionOrder.push(currentSection);
-                }
-            } else if (currentSection || items.length === 0) {
-                const parsedItem = parseItemLine(line);
-                if(parsedItem && parsedItem.material) {
-
-                    const sectionToAssign = currentSection;
-                    if (!sectionToAssign && items.length === 0 && sectionOrder.length === 0 && parsedItem.material.toUpperCase() !== cleanPotentialTitle.toUpperCase()) {
-                    }
-
-                    items.push({
-                        section: sectionToAssign || "General",
-                        material: parsedItem.material,
-                        characteristics: parsedItem.characteristics
-                    });
-                     if ( (sectionToAssign || "General") === "General" && !sectionOrder.includes("General")){
-                         sectionOrder.unshift("General");
-                    }
-                }
-            }
-        });
-        return { items, sectionOrder };
-    }
+    const semiTurnkeyMaterials = {
+        "MODULAR UPGRADE": [
+            { name: "Nouă Generație", desc: "MODULAR, acum perfecționat cu rame din aluminiu certificate Passivhaus, ultra-izolație organică din fibră de lemn, și o structură optimizată. Proiectat pentru confort, durabilitate și eficiență la cel mai înalt nivel." }
+        ],
+        "STRUCTURĂ": [
+            { name: "Sistemul Structural MODULAR", desc: "Structură MODULAR™ de ~35 cm, certificată Passivhaus / EPD. Fără punți termice. Rezistență mecanică excepțională. Complet etanșă. Construită într-un sistem volumetric timber-frame." },
+            { name: "Structură C24 Timber Frame BIOBUILDS", desc: "Lemn certificat FSC/PEFC, rezistență excepțională la sarcini." },
+            { name: "Izolație din fibră de lemn STEICO", desc: "Organic, sustenabil și ultra-eficient (λ ≈ 0,036 W/m·K), certificat CE." },
+            { name: "Placă ECO OSB 3 (AGEPAN, Germania)", desc: "Fără formaldehidă și VOC, aprobat Passive House, certificat CE." },
+            { name: "Placă DWD (AGEPAN, Germania)", desc: "Permite pereților să 'respire', menținând etanșeitatea la exterior; certificat CE." },
+            { name: "Membrană inteligentă", desc: "Asigură etanșeitatea interioară cu difuzie controlată a vaporilor spre exterior." }
+        ],
+        "FINISAJE EXTERIOARE": [
+            { name: "Fațadă ventilată din lemn Yakisugi/Lunawood", desc: "Lemn natural termotratat, cu întreținere semnificativ redusă, rezistență excelentă la foc, durabil, cu estetică deosebită și proveniență sustenabilă." },
+            { name: "Acoperiș plat ventilat", desc: "Performanță termică superioară, durată de viață extinsă prin prevenirea acumulării de umiditate și supraîncălzire. Acoperișul are o pantă invizibilă (~5°), hidroizolat cu membrană premium, garanție minim 10 ani de producător." },
+            { name: "Sistem de colectare a apei pluviale integrat", desc: "Jgheaburi ascunse, integrate discret în fațadă, pregătite pentru colectarea sustenabilă a apei de ploaie." }
+        ],
+        "FERESTRE ȘI UȘI EXTERIOARE": [
+            { name: "Profile de aluminiu Genesis 90", desc: "Profile rigide, ultra-eficiente, certificate pentru case pasive (Uwi ≤ 0,85 W/m²K), certificat CE." },
+            { name: "Geam triplu stratificat, laminat", desc: "Eficiență și siguranță excepțională (U = 0,50 W/m²K), laminat pentru protecție suplimentară." }
+        ],
+        "BUCĂTĂRIE": [
+            { name: "Instalații pentru bucătărie", desc: "Instalații preechipate, gata pentru mobilierul și electrocasnicele tale." }
+        ],
+        "INSTALAȚII TEHNICE": [
+            { name: "Instalație electrică", desc: "Tablou electric complet, conform standardelor stricte UE. Comutatoare și protecții conforme normelor locale, inclusiv tehnologie AFDD." },
+            { name: "Instalație sanitară", desc: "Țevi și fitinguri de calitate superioară (PPR/PEX), compatibile cu toate reglementările locale și UE." }
+        ],
+        "BAIE": [
+            { name: "Băi impermeabilizate", desc: "Băi complet hidroizolate cu instalații pregătite pentru montaj final." }
+        ],
+        "CERTIFICĂRI ȘI GARANȚII": [
+            { name: "Certificare Passivhaus", desc: "Emisă de Passive House Institute (Germania), atestă eficiența energetică fără precedent, confort excepțional. Pentru o locuință permanentă construită conform celor mai stricte standarde internaționale." },
+            { name: "Certificare EPD", desc: "Emisă de EPD International, confirmă un produs carbon negativ și practici responsabile de construcție." },
+            { name: "Marcaj CE", desc: "Toate componentele respectă reglementările UE pentru produse de construcții." },
+            { name: "Garanție standard UE", desc: "24 de luni rezidențial. 12 luni comercial. Opțiuni de extindere a garanției disponibile la cerere." },
+            { name: "Garanții producător", desc: "Beneficiarii primesc acoperire completă prin garanțiile oferite de furnizorii individuali." }
+        ],
+        "DISCLAIMER": [
+            { name: "Performanțe Tehnice", desc: "Performanțele menționate (inclusiv consumul energetic) sunt calculate conform condițiilor standard Passive House. Rezultatele reale pot avea variații în funcție de climă, orientarea casei, dimensiuni și modul de utilizare. Pentru detalii exacte, consultați calculele PHPP (Passive House Planning Package) aferente proiectului." }
+        ]
+    };
 
     const euCountries = ["Austria","Belgia","Bulgaria","Cipru","Croația","Danemarca","Estonia","Finlanda","Franța","Germania","Grecia","Irlanda","Italia","Letonia","Lituania","Luxemburg","Malta","Polonia","Portugalia","Republica Cehă","România","Slovacia","Slovenia","Spania","Suedia","Țările de Jos","Ungaria"];
 
@@ -640,61 +597,30 @@
         const houseData = config[houseTypeKey];
         if (!houseData) return "<p>Detalii indisponibile.</p>";
 
-        let modalHtml = `<img src="https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69303cdf299025f5b7e0e219_95%20Wall%20Section.avif" alt="Wall Section" style="width:100%; max-height: 300px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">`;
-
         const currentFinishSlug = queryArgs['SQF_FINISH'] || (config[type]?.options[0]?.slug);
-        let itemsToUse; let sectionOrderToUse;
-        let rawDataString;
+        const materials = currentFinishSlug === 'turnkey' ? turnkeyMaterials : semiTurnkeyMaterials;
 
-        if (currentFinishSlug === 'turnkey') {
-            rawDataString = turnkeyMaterialItemsRaw;
-        } else {
-            rawDataString = semiTurnkeyMaterialItemsRaw;
-        }
+        const ventilationSpecs = {
+            "nest-24": "Zehnder ComfoAir 70 cu recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea pentru încălzire și răcire.",
+            "wanderlust-48": "Zehnder ComfoAir 100 cu recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea pentru încălzire și răcire.",
+            "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 cu recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea pentru încălzire și răcire.",
+            "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 cu recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea pentru încălzire și răcire.",
+        };
 
-        // Replace ventilation placeholder with model-specific specs for turnkey
-        if (currentFinishSlug === 'turnkey') {
-            const ventilationSpecs = {
-                "nest-24": "Zehnder ComfoAir 70 cu recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea pentru încălzire și răcire.",
-                "wanderlust-48": "Zehnder ComfoAir 100 cu recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea pentru încălzire și răcire.",
-                "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 cu recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea pentru încălzire și răcire.",
-                "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 cu recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea pentru încălzire și răcire.",
-            };
-            const specs = ventilationSpecs[houseTypeKey] || "Recuperare de căldură de până la 95% + pompă de căldură pentru încălzire și răcire.";
-            rawDataString = rawDataString.replace("{{VENTILATION_SPECS}}", specs);
-        }
+        let html = `<img src="https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69303cdf299025f5b7e0e219_95%20Wall%20Section.avif" alt="Wall Section" style="width:100%; max-height: 300px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">`;
 
-        const parsedData = parseMaterialData(rawDataString);
-        itemsToUse = parsedData.items;
-        sectionOrderToUse = parsedData.sectionOrder;
-
-        const categorizedItems = itemsToUse.reduce((acc, item) => {
-            const sectionKey = item.section;
-            if (!acc[sectionKey]) {
-                acc[sectionKey] = [];
-            }
-            acc[sectionKey].push({ material: item.material, characteristics: item.characteristics });
-            return acc;
-        }, {});
-
-
-        sectionOrderToUse.forEach(sectionKey => {
-            if (Object.prototype.hasOwnProperty.call(categorizedItems, sectionKey)) {
-                const items = categorizedItems[sectionKey];
-                if (items.length > 0) {
-                    const sectionTitle = sectionKey.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-                    modalHtml += `<h3 class="modal-section-title">${sectionTitle}</h3>`;
-
-                    items.forEach(item => {
-                        modalHtml += '<div class="modal-material-item">';
-                        modalHtml += `<div class="material-name"><p>${item.material}</p></div>`;
-                        modalHtml += `<div class="material-chars"><p>${item.characteristics}</p></div>`;
-                        modalHtml += '</div>';
-                    });
-                }
-            }
+        Object.entries(materials).forEach(([sectionName, items]) => {
+            html += `<h3 class="modal-section-title">${sectionName}</h3>`;
+            items.forEach(item => {
+                const desc = item.desc.replace("{{VENTILATION_SPECS}}", ventilationSpecs[houseTypeKey] || "Recuperare de căldură de până la 95% + pompă de căldură pentru încălzire și răcire.");
+                html += `<div class="modal-material-item">
+                    <div class="material-name"><p>${item.name}</p></div>
+                    <div class="material-chars"><p>${desc}</p></div>
+                </div>`;
+            });
         });
-        return modalHtml;
+
+        return html;
     }
 
     document.addEventListener("DOMContentLoaded", function() {
