@@ -971,13 +971,13 @@ p {
 }
 
 /* === FLOORPLAN MODAL TOTAL === */
-.modal-inner p:last-of-type {
+.modal-inner > p:last-of-type {
     margin-top: 16px;
     padding-top: 12px;
     border-top: 1px solid #e0e0e0;
 }
 
-.modal-inner p:last-of-type strong {
+.modal-inner > p:last-of-type strong {
     font-weight: 400;
 }
 
