@@ -305,21 +305,27 @@
       floorplan: [
         {
           slug: "floorplan-a",
-          image:
-            "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d2244f5d6be3af87aab_24m2%20Floorplan%20A.avif",
+          image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d2244f5d6be3af87aab_24m2%20Floorplan%20A.avif",
           price: 0,
           name: "Grundriss A · 1 Schlafzimmer",
-          modal:
-            "<h3>24m² Grundriss A</h3><h4>Räume</h4><p>Schlafzimmer: 13,26m²</p><p>Bad: 2,71m²</p><p><strong>Gesamt Innen: 15,97m²</strong></p>",
+          title: "24m² Grundriss A",
+          rooms: [
+            { name: "Schlafzimmer", size: "13,26m²" },
+            { name: "Bad", size: "2,71m²" }
+          ],
+          totalInterior: "15,97m²"
         },
         {
           slug: "floorplan-b",
-          image:
-            "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d22e33276e515d43a8f_24m2%20Floorplan%20B.avif",
+          image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d22e33276e515d43a8f_24m2%20Floorplan%20B.avif",
           price: 0,
           name: "Grundriss B · 1 Schlafzimmer",
-          modal:
-            "<h3>24m² Grundriss B</h3><h4>Räume</h4><p>Schlafzimmer: 13,26m²</p><p>Bad: 2,71m²</p><p><strong>Gesamt Innen: 15,97m²</strong></p>",
+          title: "24m² Grundriss B",
+          rooms: [
+            { name: "Schlafzimmer", size: "13,26m²" },
+            { name: "Bad", size: "2,71m²" }
+          ],
+          totalInterior: "15,97m²"
         },
       ],
     },
@@ -521,21 +527,31 @@
       floorplan: [
         {
           slug: "floorplan-a",
-          image:
-            "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c525733fc3797a1ea68b6_48m2%20Floorplan%20A.png",
+          image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c525733fc3797a1ea68b6_48m2%20Floorplan%20A.png",
           price: 0,
           name: "Grundriss A · 1 Schlafzimmer",
-          modal:
-            "<h3>48m² Grundriss A</h3><h4>Räume</h4><p>Wohnen + Küche: 19,54m²</p><p>Schlafzimmer: 11,43m²</p><p>Bad: 4,23m²</p><p><strong>Gesamt Innen: 35,20m²</strong></p>",
+          title: "48m² Grundriss A",
+          rooms: [
+            { name: "Wohnen + Küche", size: "19,54m²" },
+            { name: "Schlafzimmer", size: "11,43m²" },
+            { name: "Bad", size: "4,23m²" }
+          ],
+          totalInterior: "35,20m²"
         },
         {
           slug: "floorplan-b",
-          image:
-            "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f671a54486d036b53_48m2%20Floorplan%20B.png",
+          image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f671a54486d036b53_48m2%20Floorplan%20B.png",
           price: 0,
           name: "Grundriss B · 2 Schlafzimmer",
-          modal:
-            "<h3>48m² Grundriss B</h3><h4>Räume</h4><p>Flur: 4,23m²</p><p>Schlafzimmer 1: 11,43m²</p><p>Bad 1: 4,23m²</p><p>Schlafzimmer 2: 11,37m²</p><p>Bad 2: 3,44m²</p><p><strong>Gesamt Innen: 34,70m²</strong></p>",
+          title: "48m² Grundriss B",
+          rooms: [
+            { name: "Flur", size: "4,23m²" },
+            { name: "Schlafzimmer 1", size: "11,43m²" },
+            { name: "Bad 1", size: "4,23m²" },
+            { name: "Schlafzimmer 2", size: "11,37m²" },
+            { name: "Bad 2", size: "3,44m²" }
+          ],
+          totalInterior: "34,70m²"
         },
       ],
     },
@@ -737,30 +753,48 @@
       floorplan: [
         {
           slug: "floorplan-a",
-          image:
-            "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514e29f50d2da31e84dc_95m2%20Floorplan%20A.png",
+          image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514e29f50d2da31e84dc_95m2%20Floorplan%20A.png",
           price: 0,
           name: "Grundriss A · 3 Schlafzimmer",
-          modal:
-            "<h3>95m² Grundriss A</h3><h4>Räume</h4><p>Wohnen + Küche: 32,61m²</p><p>Schlafzimmer 1: 12,33m²</p><p>Schlafzimmer 2: 11,82m²</p><p>Schlafzimmer 3: 11,82m²</p><p>Bad 1: 4,63m²</p><p>Bad 2: 3,77m²</p><p><strong>Gesamt Innen: 76,98m²</strong></p>",
+          title: "95m² Grundriss A",
+          rooms: [
+            { name: "Wohnen + Küche", size: "32,61m²" },
+            { name: "Schlafzimmer 1", size: "12,33m²" },
+            { name: "Schlafzimmer 2", size: "11,82m²" },
+            { name: "Schlafzimmer 3", size: "11,82m²" },
+            { name: "Bad 1", size: "4,63m²" },
+            { name: "Bad 2", size: "3,77m²" }
+          ],
+          totalInterior: "76,98m²"
         },
         {
           slug: "floorplan-b",
-          image:
-            "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fdf7becede16b71e9_95m2%20Floorplan%20B.png",
+          image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fdf7becede16b71e9_95m2%20Floorplan%20B.png",
           price: 0,
           name: "Grundriss B · 2 Schlafzimmer",
-          modal:
-            "<h3>95m² Grundriss B</h3><h4>Räume</h4><p>Wohnen + Küche: 45,10m²</p><p>Schlafzimmer 1: 12,33m²</p><p>Schlafzimmer 2: 11,82m²</p><p>Bad 1: 4,63m²</p><p>Bad 2: 3,77m²</p><p><strong>Gesamt Innen: 77,65m²</strong></p>",
+          title: "95m² Grundriss B",
+          rooms: [
+            { name: "Wohnen + Küche", size: "45,10m²" },
+            { name: "Schlafzimmer 1", size: "12,33m²" },
+            { name: "Schlafzimmer 2", size: "11,82m²" },
+            { name: "Bad 1", size: "4,63m²" },
+            { name: "Bad 2", size: "3,77m²" }
+          ],
+          totalInterior: "77,65m²"
         },
         {
           slug: "floorplan-c",
-          image:
-            "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff885d32e87f5d5ef_95m2%20Floorplan%20C.png",
+          image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff885d32e87f5d5ef_95m2%20Floorplan%20C.png",
           price: 0,
           name: "Grundriss C · 1 Schlafzimmer",
-          modal:
-            "<h3>95m² Grundriss C</h3><h4>Räume</h4><p>Wohnen + Küche: 57,91m²</p><p>Schlafzimmer: 11,82m²</p><p>Bad 1: 4,63m²</p><p>Bad 2: 3,77m²</p><p><strong>Gesamt Innen: 78,13m²</strong></p>",
+          title: "95m² Grundriss C",
+          rooms: [
+            { name: "Wohnen + Küche", size: "57,91m²" },
+            { name: "Schlafzimmer", size: "11,82m²" },
+            { name: "Bad 1", size: "4,63m²" },
+            { name: "Bad 2", size: "3,77m²" }
+          ],
+          totalInterior: "78,13m²"
         },
       ],
     },
@@ -962,30 +996,51 @@
       floorplan: [
         {
           slug: "floorplan-a",
-          image:
-            "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff7e14cb1b083351b_142m2%20Floorplan%20A.png",
+          image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff7e14cb1b083351b_142m2%20Floorplan%20A.png",
           price: 0,
           name: "Grundriss A · 4 Schlafzimmer",
-          modal:
-            "<h3>142m² Grundriss A</h3><h4>Räume</h4><p>Wohnen + Küche: 62,94m²</p><p>Schlafzimmer 1: 11,82m²</p><p>Schlafzimmer 2: 13,53m²</p><p>Schlafzimmer 3: 11,82m²</p><p>Schlafzimmer 4: 11,82m²</p><p>Bad 1: 4,63m²</p><p>Bad 2: 3,77m²</p><p><strong>Gesamt Innen: 120,33m²</strong></p>",
+          title: "142m² Grundriss A",
+          rooms: [
+            { name: "Wohnen + Küche", size: "62,94m²" },
+            { name: "Schlafzimmer 1", size: "11,82m²" },
+            { name: "Schlafzimmer 2", size: "13,53m²" },
+            { name: "Schlafzimmer 3", size: "11,82m²" },
+            { name: "Schlafzimmer 4", size: "11,82m²" },
+            { name: "Bad 1", size: "4,63m²" },
+            { name: "Bad 2", size: "3,77m²" }
+          ],
+          totalInterior: "120,33m²"
         },
         {
           slug: "floorplan-b",
-          image:
-            "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f6966128dbeb27986_142m2%20Floorplan%20B.png",
+          image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f6966128dbeb27986_142m2%20Floorplan%20B.png",
           price: 0,
           name: "Grundriss B · 3 Schlafzimmer",
-          modal:
-            "<h3>142m² Grundriss B</h3><h4>Räume</h4><p>Wohnen + Küche: 75,22m²</p><p>Schlafzimmer 1: 13,53m²</p><p>Schlafzimmer 2: 11,82m²</p><p>Schlafzimmer 3: 11,82m²</p><p>Bad 1: 4,63m²</p><p>Bad 2: 3,77m²</p><p><strong>Gesamt Innen: 120,79m²</strong></p>",
+          title: "142m² Grundriss B",
+          rooms: [
+            { name: "Wohnen + Küche", size: "75,22m²" },
+            { name: "Schlafzimmer 1", size: "13,53m²" },
+            { name: "Schlafzimmer 2", size: "11,82m²" },
+            { name: "Schlafzimmer 3", size: "11,82m²" },
+            { name: "Bad 1", size: "4,63m²" },
+            { name: "Bad 2", size: "3,77m²" }
+          ],
+          totalInterior: "120,79m²"
         },
         {
           slug: "floorplan-c",
-          image:
-            "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fd4d57aa8ff3d75e9_142m2%20Floorplan%20C.png",
+          image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fd4d57aa8ff3d75e9_142m2%20Floorplan%20C.png",
           price: 0,
           name: "Grundriss C · 2 Schlafzimmer",
-          modal:
-            "<h3>142m² Grundriss C</h3><h4>Räume</h4><p>Wohnen + Küche: 87,71m²</p><p>Schlafzimmer 1: 13,53m²</p><p>Schlafzimmer 2: 11,82m²</p><p>Bad 1: 4,63m²</p><p>Bad 2: 3,77m²</p><p><strong>Gesamt Innen: 121,46m²</strong></p>",
+          title: "142m² Grundriss C",
+          rooms: [
+            { name: "Wohnen + Küche", size: "87,71m²" },
+            { name: "Schlafzimmer 1", size: "13,53m²" },
+            { name: "Schlafzimmer 2", size: "11,82m²" },
+            { name: "Bad 1", size: "4,63m²" },
+            { name: "Bad 2", size: "3,77m²" }
+          ],
+          totalInterior: "121,46m²"
         },
       ],
     },
@@ -1723,7 +1778,16 @@
             if (!floorplanDataForModal) {
               return "<p>Bitte einen Grundriss auswählen, um Details zu sehen.</p>";
             }
-            const modalHtml = `<img src="${floorplanDataForModal.image}" alt="Grundriss ${floorplanDataForModal.name}" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">` + floorplanDataForModal.modal;
+            const roomsHtml = floorplanDataForModal.rooms.map(room =>
+              `<div class="modal-material-item"><div class="material-name"><p>${room.name}</p></div><div class="material-chars"><p>${room.size}</p></div></div>`
+            ).join('');
+            const modalHtml = `
+              <img src="${floorplanDataForModal.image}" alt="Grundriss ${floorplanDataForModal.name}" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">
+              <h3>${floorplanDataForModal.title}</h3>
+              <div class="modal-section-title">Räume</div>
+              ${roomsHtml}
+              <p><strong>Gesamt Innen: ${floorplanDataForModal.totalInterior}</strong></p>
+            `;
             return modalHtml;
           };
           break;
