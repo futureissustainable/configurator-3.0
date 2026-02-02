@@ -316,6 +316,7 @@
             exterior: { L: "6.35m", W: "3.84m", H: "3.30m" },
             interior: { L: "5.59m", W: "3.08m", H: "2.50m" }
           },
+          totalExterior: "24.38m²",
           totalInterior: "15.97m²"
         },
         {
@@ -332,6 +333,7 @@
             exterior: { L: "6.35m", W: "3.84m", H: "3.30m" },
             interior: { L: "5.59m", W: "3.08m", H: "2.50m" }
           },
+          totalExterior: "24.38m²",
           totalInterior: "15.97m²"
         },
       ],
@@ -547,6 +549,7 @@
             exterior: { L: "12.59m", W: "3.84m", H: "3.30m" },
             interior: { L: "11.83m", W: "3.08m", H: "2.50m" }
           },
+          totalExterior: "48.35m²",
           totalInterior: "35.20m²"
         },
         {
@@ -566,6 +569,7 @@
             exterior: { L: "12.59m", W: "3.84m", H: "3.30m" },
             interior: { L: "11.83m", W: "3.08m", H: "2.50m" }
           },
+          totalExterior: "48.35m²",
           totalInterior: "34.70m²"
         },
       ],
@@ -784,6 +788,7 @@
             exterior: { L: "12.59m", W: "7.59m", H: "3.30m" },
             interior: { L: "11.83m", W: "6.83m", H: "2.50m" }
           },
+          totalExterior: "95.56m²",
           totalInterior: "76.98m²"
         },
         {
@@ -803,6 +808,7 @@
             exterior: { L: "12.59m", W: "7.59m", H: "3.30m" },
             interior: { L: "11.83m", W: "6.83m", H: "2.50m" }
           },
+          totalExterior: "95.56m²",
           totalInterior: "77.65m²"
         },
         {
@@ -821,6 +827,7 @@
             exterior: { L: "12.59m", W: "7.59m", H: "3.30m" },
             interior: { L: "11.83m", W: "6.83m", H: "2.50m" }
           },
+          totalExterior: "95.56m²",
           totalInterior: "78.13m²"
         },
       ],
@@ -1040,6 +1047,7 @@
             exterior: { L: "12.59m", W: "11.34m", H: "3.30m" },
             interior: { L: "11.83m", W: "10.58m", H: "2.50m" }
           },
+          totalExterior: "142.80m²",
           totalInterior: "120.33m²"
         },
         {
@@ -1060,6 +1068,7 @@
             exterior: { L: "12.59m", W: "11.34m", H: "3.30m" },
             interior: { L: "11.83m", W: "10.58m", H: "2.50m" }
           },
+          totalExterior: "142.80m²",
           totalInterior: "120.79m²"
         },
         {
@@ -1079,6 +1088,7 @@
             exterior: { L: "12.59m", W: "11.34m", H: "3.30m" },
             interior: { L: "11.83m", W: "10.58m", H: "2.50m" }
           },
+          totalExterior: "142.80m²",
           totalInterior: "121.46m²"
         },
       ],
@@ -1851,7 +1861,8 @@
               ${roomsHtml}
               <div class="modal-section-title">Dimensions (L × W × H)</div>
               ${dimensionsHtml}
-              <p><strong>Total Interior: ${floorplanDataForModal.totalInterior}</strong></p>
+              <div class="modal-material-item"><div class="material-name"><p><strong>Total Exterior</strong></p></div><div class="material-chars"><p><strong>${floorplanDataForModal.totalExterior}</strong></p></div></div>
+              <div class="modal-material-item"><div class="material-name"><p><strong>Total Interior</strong></p></div><div class="material-chars"><p><strong>${floorplanDataForModal.totalInterior}</strong></p></div></div>
             `;
             return modalHtml;
           };
