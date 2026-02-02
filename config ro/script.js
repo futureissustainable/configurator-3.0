@@ -810,13 +810,14 @@
                         `;
                         const modalHtml = `
                             <img src="${floorplanDataForModal.image}" alt="Plan ${floorplanDataForModal.name}" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">
-                            <h3>${floorplanDataForModal.title}</h3>
+                            <h3 style="padding-bottom: 20px; margin-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.1);">${floorplanDataForModal.title}</h3>
                             <div class="modal-section-title">Camere</div>
                             ${roomsHtml}
-                            <div class="modal-section-title">Dimensiuni (L × l × H)</div>
+                            <div class="modal-section-title">Dimensiuni</div>
                             ${dimensionsHtml}
-                            <div class="modal-material-item"><div class="material-name"><p><strong>Total Exterior</strong></p></div><div class="material-chars"><p><strong>${floorplanDataForModal.totalExterior}</strong></p></div></div>
-                            <div class="modal-material-item"><div class="material-name"><p><strong>Total Interior</strong></p></div><div class="material-chars"><p><strong>${floorplanDataForModal.totalInterior}</strong></p></div></div>
+                            <div class="modal-section-title">Total</div>
+                            <div class="modal-material-item"><div class="material-name"><p>Exterior</p></div><div class="material-chars"><p>${floorplanDataForModal.totalExterior}</p></div></div>
+                            <div class="modal-material-item"><div class="material-name"><p>Interior</p></div><div class="material-chars"><p>${floorplanDataForModal.totalInterior}</p></div></div>
                         `;
                         return modalHtml;
                     };
