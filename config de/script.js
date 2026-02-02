@@ -313,6 +313,10 @@
             { name: "Schlafzimmer", size: "13,26m²" },
             { name: "Bad", size: "2,71m²" }
           ],
+          dimensions: {
+            exterior: { L: "6,35m", W: "3,84m", H: "3,30m" },
+            interior: { L: "5,59m", W: "3,08m", H: "2,50m" }
+          },
           totalInterior: "15,97m²"
         },
         {
@@ -325,6 +329,10 @@
             { name: "Schlafzimmer", size: "13,26m²" },
             { name: "Bad", size: "2,71m²" }
           ],
+          dimensions: {
+            exterior: { L: "6,35m", W: "3,84m", H: "3,30m" },
+            interior: { L: "5,59m", W: "3,08m", H: "2,50m" }
+          },
           totalInterior: "15,97m²"
         },
       ],
@@ -536,6 +544,10 @@
             { name: "Schlafzimmer", size: "11,43m²" },
             { name: "Bad", size: "4,23m²" }
           ],
+          dimensions: {
+            exterior: { L: "12,59m", W: "3,84m", H: "3,30m" },
+            interior: { L: "11,83m", W: "3,08m", H: "2,50m" }
+          },
           totalInterior: "35,20m²"
         },
         {
@@ -551,6 +563,10 @@
             { name: "Schlafzimmer 2", size: "11,37m²" },
             { name: "Bad 2", size: "3,44m²" }
           ],
+          dimensions: {
+            exterior: { L: "12,59m", W: "3,84m", H: "3,30m" },
+            interior: { L: "11,83m", W: "3,08m", H: "2,50m" }
+          },
           totalInterior: "34,70m²"
         },
       ],
@@ -765,6 +781,10 @@
             { name: "Bad 1", size: "4,63m²" },
             { name: "Bad 2", size: "3,77m²" }
           ],
+          dimensions: {
+            exterior: { L: "12,59m", W: "7,59m", H: "3,30m" },
+            interior: { L: "11,83m", W: "6,83m", H: "2,50m" }
+          },
           totalInterior: "76,98m²"
         },
         {
@@ -780,6 +800,10 @@
             { name: "Bad 1", size: "4,63m²" },
             { name: "Bad 2", size: "3,77m²" }
           ],
+          dimensions: {
+            exterior: { L: "12,59m", W: "7,59m", H: "3,30m" },
+            interior: { L: "11,83m", W: "6,83m", H: "2,50m" }
+          },
           totalInterior: "77,65m²"
         },
         {
@@ -794,6 +818,10 @@
             { name: "Bad 1", size: "4,63m²" },
             { name: "Bad 2", size: "3,77m²" }
           ],
+          dimensions: {
+            exterior: { L: "12,59m", W: "7,59m", H: "3,30m" },
+            interior: { L: "11,83m", W: "6,83m", H: "2,50m" }
+          },
           totalInterior: "78,13m²"
         },
       ],
@@ -1009,6 +1037,10 @@
             { name: "Bad 1", size: "4,63m²" },
             { name: "Bad 2", size: "3,77m²" }
           ],
+          dimensions: {
+            exterior: { L: "12,59m", W: "11,34m", H: "3,30m" },
+            interior: { L: "11,83m", W: "10,58m", H: "2,50m" }
+          },
           totalInterior: "120,33m²"
         },
         {
@@ -1025,6 +1057,10 @@
             { name: "Bad 1", size: "4,63m²" },
             { name: "Bad 2", size: "3,77m²" }
           ],
+          dimensions: {
+            exterior: { L: "12,59m", W: "11,34m", H: "3,30m" },
+            interior: { L: "11,83m", W: "10,58m", H: "2,50m" }
+          },
           totalInterior: "120,79m²"
         },
         {
@@ -1040,6 +1076,10 @@
             { name: "Bad 1", size: "4,63m²" },
             { name: "Bad 2", size: "3,77m²" }
           ],
+          dimensions: {
+            exterior: { L: "12,59m", W: "11,34m", H: "3,30m" },
+            interior: { L: "11,83m", W: "10,58m", H: "2,50m" }
+          },
           totalInterior: "121,46m²"
         },
       ],
@@ -1781,11 +1821,18 @@
             const roomsHtml = floorplanDataForModal.rooms.map(room =>
               `<div class="modal-material-item"><div class="material-name"><p>${room.name}</p></div><div class="material-chars"><p>${room.size}</p></div></div>`
             ).join('');
+            const dims = floorplanDataForModal.dimensions;
+            const dimensionsHtml = `
+              <div class="modal-material-item"><div class="material-name"><p>Außen</p></div><div class="material-chars"><p>${dims.exterior.L} × ${dims.exterior.W} × ${dims.exterior.H}</p></div></div>
+              <div class="modal-material-item"><div class="material-name"><p>Innen</p></div><div class="material-chars"><p>${dims.interior.L} × ${dims.interior.W} × ${dims.interior.H}</p></div></div>
+            `;
             const modalHtml = `
               <img src="${floorplanDataForModal.image}" alt="Grundriss ${floorplanDataForModal.name}" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">
               <h3>${floorplanDataForModal.title}</h3>
               <div class="modal-section-title">Räume</div>
               ${roomsHtml}
+              <div class="modal-section-title">Maße (L × B × H)</div>
+              ${dimensionsHtml}
               <p><strong>Gesamt Innen: ${floorplanDataForModal.totalInterior}</strong></p>
             `;
             return modalHtml;

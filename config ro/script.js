@@ -135,8 +135,8 @@
                 }
             ],
             "floorplan" : [
-                { slug: "floorplan-a", image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d2244f5d6be3af87aab_24m2%20Floorplan%20A.avif", price: 0, name: "Plan A · 1 Dormitor", title: "24m² Plan A", rooms: [{ name: "Dormitor", size: "13.26m²" }, { name: "Baie", size: "2.71m²" }], totalInterior: "15.97m²" },
-                { slug: "floorplan-b", image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d22e33276e515d43a8f_24m2%20Floorplan%20B.avif", price: 0, name: "Plan B · 1 Dormitor", title: "24m² Plan B", rooms: [{ name: "Dormitor", size: "13.26m²" }, { name: "Baie", size: "2.71m²" }], totalInterior: "15.97m²" }
+                { slug: "floorplan-a", image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d2244f5d6be3af87aab_24m2%20Floorplan%20A.avif", price: 0, name: "Plan A · 1 Dormitor", title: "24m² Plan A", rooms: [{ name: "Dormitor", size: "13.26m²" }, { name: "Baie", size: "2.71m²" }], dimensions: { exterior: { L: "6.35m", W: "3.84m", H: "3.30m" }, interior: { L: "5.59m", W: "3.08m", H: "2.50m" } }, totalInterior: "15.97m²" },
+                { slug: "floorplan-b", image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d22e33276e515d43a8f_24m2%20Floorplan%20B.avif", price: 0, name: "Plan B · 1 Dormitor", title: "24m² Plan B", rooms: [{ name: "Dormitor", size: "13.26m²" }, { name: "Baie", size: "2.71m²" }], dimensions: { exterior: { L: "6.35m", W: "3.84m", H: "3.30m" }, interior: { L: "5.59m", W: "3.08m", H: "2.50m" } }, totalInterior: "15.97m²" }
             ]
         },
         'wanderlust-48' : {
@@ -177,8 +177,8 @@
                 }
             ],
             "floorplan" : [
-                { slug: "floorplan-a", image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c525733fc3797a1ea68b6_48m2%20Floorplan%20A.png", price: 0, name: "Plan A · 1 Dormitor", title: "48m² Plan A", rooms: [{ name: "Living + Bucătărie", size: "19.54m²" }, { name: "Dormitor", size: "11.43m²" }, { name: "Baie", size: "4.23m²" }], totalInterior: "35.20m²" },
-                { slug: "floorplan-b", image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f671a54486d036b53_48m2%20Floorplan%20B.png", price: 0, name: "Plan B · 2 Dormitoare", title: "48m² Plan B", rooms: [{ name: "Hol", size: "4.23m²" }, { name: "Dormitor 1", size: "11.43m²" }, { name: "Baie 1", size: "4.23m²" }, { name: "Dormitor 2", size: "11.37m²" }, { name: "Baie 2", size: "3.44m²" }], totalInterior: "34.70m²" }
+                { slug: "floorplan-a", image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c525733fc3797a1ea68b6_48m2%20Floorplan%20A.png", price: 0, name: "Plan A · 1 Dormitor", title: "48m² Plan A", rooms: [{ name: "Living + Bucătărie", size: "19.54m²" }, { name: "Dormitor", size: "11.43m²" }, { name: "Baie", size: "4.23m²" }], dimensions: { exterior: { L: "12.59m", W: "3.84m", H: "3.30m" }, interior: { L: "11.83m", W: "3.08m", H: "2.50m" } }, totalInterior: "35.20m²" },
+                { slug: "floorplan-b", image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f671a54486d036b53_48m2%20Floorplan%20B.png", price: 0, name: "Plan B · 2 Dormitoare", title: "48m² Plan B", rooms: [{ name: "Hol", size: "4.23m²" }, { name: "Dormitor 1", size: "11.43m²" }, { name: "Baie 1", size: "4.23m²" }, { name: "Dormitor 2", size: "11.37m²" }, { name: "Baie 2", size: "3.44m²" }], dimensions: { exterior: { L: "12.59m", W: "3.84m", H: "3.30m" }, interior: { L: "11.83m", W: "3.08m", H: "2.50m" } }, totalInterior: "34.70m²" }
             ]
         },
         'serenity-95' : {
@@ -219,9 +219,9 @@
                 }
             ],
             "floorplan" : [
-                { slug: "floorplan-a", image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514e29f50d2da31e84dc_95m2%20Floorplan%20A.png", price: 0, name: "Plan A · 3 Dormitoare", title: "95m² Plan A", rooms: [{ name: "Living + Bucătărie", size: "32.61m²" }, { name: "Dormitor 1", size: "12.33m²" }, { name: "Dormitor 2", size: "11.82m²" }, { name: "Dormitor 3", size: "11.82m²" }, { name: "Baie 1", size: "4.63m²" }, { name: "Baie 2", size: "3.77m²" }], totalInterior: "76.98m²" },
-                { slug: "floorplan-b", image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fdf7becede16b71e9_95m2%20Floorplan%20B.png", price: 0, name: "Plan B · 2 Dormitoare", title: "95m² Plan B", rooms: [{ name: "Living + Bucătărie", size: "45.10m²" }, { name: "Dormitor 1", size: "12.33m²" }, { name: "Dormitor 2", size: "11.82m²" }, { name: "Baie 1", size: "4.63m²" }, { name: "Baie 2", size: "3.77m²" }], totalInterior: "77.65m²" },
-                { slug: "floorplan-c", image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff885d32e87f5d5ef_95m2%20Floorplan%20C.png", price: 0, name: "Plan C · 1 Dormitor", title: "95m² Plan C", rooms: [{ name: "Living + Bucătărie", size: "57.91m²" }, { name: "Dormitor", size: "11.82m²" }, { name: "Baie 1", size: "4.63m²" }, { name: "Baie 2", size: "3.77m²" }], totalInterior: "78.13m²" }
+                { slug: "floorplan-a", image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514e29f50d2da31e84dc_95m2%20Floorplan%20A.png", price: 0, name: "Plan A · 3 Dormitoare", title: "95m² Plan A", rooms: [{ name: "Living + Bucătărie", size: "32.61m²" }, { name: "Dormitor 1", size: "12.33m²" }, { name: "Dormitor 2", size: "11.82m²" }, { name: "Dormitor 3", size: "11.82m²" }, { name: "Baie 1", size: "4.63m²" }, { name: "Baie 2", size: "3.77m²" }], dimensions: { exterior: { L: "12.59m", W: "7.59m", H: "3.30m" }, interior: { L: "11.83m", W: "6.83m", H: "2.50m" } }, totalInterior: "76.98m²" },
+                { slug: "floorplan-b", image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fdf7becede16b71e9_95m2%20Floorplan%20B.png", price: 0, name: "Plan B · 2 Dormitoare", title: "95m² Plan B", rooms: [{ name: "Living + Bucătărie", size: "45.10m²" }, { name: "Dormitor 1", size: "12.33m²" }, { name: "Dormitor 2", size: "11.82m²" }, { name: "Baie 1", size: "4.63m²" }, { name: "Baie 2", size: "3.77m²" }], dimensions: { exterior: { L: "12.59m", W: "7.59m", H: "3.30m" }, interior: { L: "11.83m", W: "6.83m", H: "2.50m" } }, totalInterior: "77.65m²" },
+                { slug: "floorplan-c", image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff885d32e87f5d5ef_95m2%20Floorplan%20C.png", price: 0, name: "Plan C · 1 Dormitor", title: "95m² Plan C", rooms: [{ name: "Living + Bucătărie", size: "57.91m²" }, { name: "Dormitor", size: "11.82m²" }, { name: "Baie 1", size: "4.63m²" }, { name: "Baie 2", size: "3.77m²" }], dimensions: { exterior: { L: "12.59m", W: "7.59m", H: "3.30m" }, interior: { L: "11.83m", W: "6.83m", H: "2.50m" } }, totalInterior: "78.13m²" }
             ]
         },
         'sanctuary-142' : {
@@ -262,9 +262,9 @@
                 }
             ],
             "floorplan" : [
-                { slug: "floorplan-a", image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff7e14cb1b083351b_142m2%20Floorplan%20A.png", price: 0, name: "Plan A · 4 Dormitoare", title: "142m² Plan A", rooms: [{ name: "Living + Bucătărie", size: "62.94m²" }, { name: "Dormitor 1", size: "11.82m²" }, { name: "Dormitor 2", size: "13.53m²" }, { name: "Dormitor 3", size: "11.82m²" }, { name: "Dormitor 4", size: "11.82m²" }, { name: "Baie 1", size: "4.63m²" }, { name: "Baie 2", size: "3.77m²" }], totalInterior: "120.33m²" },
-                { slug: "floorplan-b", image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f6966128dbeb27986_142m2%20Floorplan%20B.png", price: 0, name: "Plan B · 3 Dormitoare", title: "142m² Plan B", rooms: [{ name: "Living + Bucătărie", size: "75.22m²" }, { name: "Dormitor 1", size: "13.53m²" }, { name: "Dormitor 2", size: "11.82m²" }, { name: "Dormitor 3", size: "11.82m²" }, { name: "Baie 1", size: "4.63m²" }, { name: "Baie 2", size: "3.77m²" }], totalInterior: "120.79m²" },
-                { slug: "floorplan-c", image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fd4d57aa8ff3d75e9_142m2%20Floorplan%20C.png", price: 0, name: "Plan C · 2 Dormitoare", title: "142m² Plan C", rooms: [{ name: "Living + Bucătărie", size: "87.71m²" }, { name: "Dormitor 1", size: "13.53m²" }, { name: "Dormitor 2", size: "11.82m²" }, { name: "Baie 1", size: "4.63m²" }, { name: "Baie 2", size: "3.77m²" }], totalInterior: "121.46m²" }
+                { slug: "floorplan-a", image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff7e14cb1b083351b_142m2%20Floorplan%20A.png", price: 0, name: "Plan A · 4 Dormitoare", title: "142m² Plan A", rooms: [{ name: "Living + Bucătărie", size: "62.94m²" }, { name: "Dormitor 1", size: "11.82m²" }, { name: "Dormitor 2", size: "13.53m²" }, { name: "Dormitor 3", size: "11.82m²" }, { name: "Dormitor 4", size: "11.82m²" }, { name: "Baie 1", size: "4.63m²" }, { name: "Baie 2", size: "3.77m²" }], dimensions: { exterior: { L: "12.59m", W: "11.34m", H: "3.30m" }, interior: { L: "11.83m", W: "10.58m", H: "2.50m" } }, totalInterior: "120.33m²" },
+                { slug: "floorplan-b", image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f6966128dbeb27986_142m2%20Floorplan%20B.png", price: 0, name: "Plan B · 3 Dormitoare", title: "142m² Plan B", rooms: [{ name: "Living + Bucătărie", size: "75.22m²" }, { name: "Dormitor 1", size: "13.53m²" }, { name: "Dormitor 2", size: "11.82m²" }, { name: "Dormitor 3", size: "11.82m²" }, { name: "Baie 1", size: "4.63m²" }, { name: "Baie 2", size: "3.77m²" }], dimensions: { exterior: { L: "12.59m", W: "11.34m", H: "3.30m" }, interior: { L: "11.83m", W: "10.58m", H: "2.50m" } }, totalInterior: "120.79m²" },
+                { slug: "floorplan-c", image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fd4d57aa8ff3d75e9_142m2%20Floorplan%20C.png", price: 0, name: "Plan C · 2 Dormitoare", title: "142m² Plan C", rooms: [{ name: "Living + Bucătărie", size: "87.71m²" }, { name: "Dormitor 1", size: "13.53m²" }, { name: "Dormitor 2", size: "11.82m²" }, { name: "Baie 1", size: "4.63m²" }, { name: "Baie 2", size: "3.77m²" }], dimensions: { exterior: { L: "12.59m", W: "11.34m", H: "3.30m" }, interior: { L: "11.83m", W: "10.58m", H: "2.50m" } }, totalInterior: "121.46m²" }
             ]
         }
     };
@@ -803,11 +803,18 @@
                         const roomsHtml = floorplanDataForModal.rooms.map(room =>
                             `<div class="modal-material-item"><div class="material-name"><p>${room.name}</p></div><div class="material-chars"><p>${room.size}</p></div></div>`
                         ).join('');
+                        const dims = floorplanDataForModal.dimensions;
+                        const dimensionsHtml = `
+                            <div class="modal-material-item"><div class="material-name"><p>Exterior</p></div><div class="material-chars"><p>${dims.exterior.L} × ${dims.exterior.W} × ${dims.exterior.H}</p></div></div>
+                            <div class="modal-material-item"><div class="material-name"><p>Interior</p></div><div class="material-chars"><p>${dims.interior.L} × ${dims.interior.W} × ${dims.interior.H}</p></div></div>
+                        `;
                         const modalHtml = `
                             <img src="${floorplanDataForModal.image}" alt="Plan ${floorplanDataForModal.name}" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">
                             <h3>${floorplanDataForModal.title}</h3>
                             <div class="modal-section-title">Camere</div>
                             ${roomsHtml}
+                            <div class="modal-section-title">Dimensiuni (L × l × H)</div>
+                            ${dimensionsHtml}
                             <p><strong>Total Interior: ${floorplanDataForModal.totalInterior}</strong></p>
                         `;
                         return modalHtml;
