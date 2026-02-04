@@ -1,0 +1,723 @@
+# BIOBUILDS CONFIGURATOR 3.0 - COMPLETE DATA EXTRACTION
+# Generated: 2026-02-04
+# Source: configurator-3.0 codebase
+
+================================================================================
+                              TABLE OF CONTENTS
+================================================================================
+
+1.  MODELS / FLOORPLANS
+2.  UPGRADES / OPTIONS
+3.  VENTILATION SYSTEM SPECIFICATIONS
+4.  SHIPPING PRICES
+5.  REFERRAL / DISCOUNT CODES
+6.  TECHNICAL SPECIFICATIONS & MATERIALS
+7.  CERTIFICATIONS & WARRANTIES
+8.  FLOORPLAN IMAGES
+9.  MODEL-SPECIFIC INTERIOR/EXTERIOR IMAGES
+10. VENTILATION IMAGES
+11. UPGRADE CONFIGURATION STRUCTURE
+12. PRICE RANGE SUMMARY
+13. LOCALIZATION NOTES
+
+================================================================================
+                         1. MODELS / FLOORPLANS
+================================================================================
+
+------------------------------------------------------------------------------
+MODEL 1: NEST (24m2)
+------------------------------------------------------------------------------
+
+Slug:                   nest-24
+Description:            24m2 | Passivhaus | Built in EU
+Est. Energy Savings:    EUR 34,920 (over 50 years)
+
+PRICING:
+  Semi-finished:        EUR 39,800
+  Turnkey:              EUR 59,800
+
+Main Image: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2de1073da9af1229b5a_24%20EXT.avif
+
+DIMENSIONS:
+  Exterior:             L=6.35m, W=3.84m, H=3.30m
+  Interior:             L=5.59m, W=3.08m, H=2.50m
+
+FLOORPLANS:
+
+  Floorplan A (1 Bedroom):
+    - Bedroom:          13.26 m2
+    - Bathroom:         2.71 m2
+    - Total Interior:   15.97 m2
+    - Total Exterior:   24.38 m2
+
+  Floorplan B (1 Bedroom):
+    - Bedroom:          13.26 m2
+    - Bathroom:         2.71 m2
+    - Total Interior:   15.97 m2
+    - Total Exterior:   24.38 m2
+
+------------------------------------------------------------------------------
+MODEL 2: WANDERLUST (48m2)
+------------------------------------------------------------------------------
+
+Slug:                   wanderlust-48
+Description:            48m2 | Passivhaus | Built in EU
+Est. Energy Savings:    EUR 69,840 (over 50 years)
+
+PRICING:
+  Semi-finished:        EUR 59,800
+  Turnkey:              EUR 109,800
+
+Main Image: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2e1dfc362059ebe425a_48%20EXT.avif
+
+DIMENSIONS:
+  Exterior:             L=12.59m, W=3.84m, H=3.30m
+  Interior:             L=11.83m, W=3.08m, H=2.50m
+
+FLOORPLANS:
+
+  Floorplan A (1 Bedroom):
+    - Living + Kitchen: 19.54 m2
+    - Bedroom:          11.43 m2
+    - Bathroom:         4.23 m2
+    - Total Interior:   35.20 m2
+    - Total Exterior:   48.35 m2
+
+  Floorplan B (2 Bedrooms):
+    - Hallway:          4.23 m2
+    - Bedroom 1:        11.43 m2
+    - Bathroom 1:       4.23 m2
+    - Bedroom 2:        11.37 m2
+    - Bathroom 2:       3.44 m2
+    - Total Interior:   34.70 m2
+    - Total Exterior:   48.35 m2
+
+------------------------------------------------------------------------------
+MODEL 3: SERENITY (95m2)
+------------------------------------------------------------------------------
+
+Slug:                   serenity-95
+Description:            95m2 | Passivhaus | Built in EU
+Est. Energy Savings:    EUR 138,225 (over 50 years)
+
+PRICING:
+  Semi-finished:        EUR 109,800
+  Turnkey:              EUR 189,800
+
+Main Image: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2def577675af1e0311b_95%20EXT.avif
+
+DIMENSIONS:
+  Exterior:             L=12.59m, W=7.59m, H=3.30m
+  Interior:             L=11.83m, W=6.83m, H=2.50m
+
+FLOORPLANS:
+
+  Floorplan A (3 Bedrooms):
+    - Living + Kitchen: 32.61 m2
+    - Bedroom 1:        12.33 m2
+    - Bedroom 2:        11.82 m2
+    - Bedroom 3:        11.82 m2
+    - Bathroom 1:       4.63 m2
+    - Bathroom 2:       3.77 m2
+    - Total Interior:   76.98 m2
+    - Total Exterior:   95.56 m2
+
+  Floorplan B (2 Bedrooms):
+    - Living + Kitchen: 45.10 m2
+    - Bedroom 1:        12.33 m2
+    - Bedroom 2:        11.82 m2
+    - Bathroom 1:       4.63 m2
+    - Bathroom 2:       3.77 m2
+    - Total Interior:   77.65 m2
+    - Total Exterior:   95.56 m2
+
+  Floorplan C (1 Bedroom):
+    - Living + Kitchen: 57.91 m2
+    - Bedroom:          11.82 m2
+    - Bathroom 1:       4.63 m2
+    - Bathroom 2:       3.77 m2
+    - Total Interior:   78.13 m2
+    - Total Exterior:   95.56 m2
+
+------------------------------------------------------------------------------
+MODEL 4: SANCTUARY (142m2)
+------------------------------------------------------------------------------
+
+Slug:                   sanctuary-142
+Description:            142m2 | Passivhaus | Built in EU
+Est. Energy Savings:    EUR 175,285 (over 50 years)
+
+PRICING:
+  Semi-finished:        EUR 159,800
+  Turnkey:              EUR 279,800
+
+Main Image: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2dbf906e66f4ea4c2c0_142%20EXT.avif
+
+DIMENSIONS:
+  Exterior:             L=12.59m, W=11.34m, H=3.30m
+  Interior:             L=11.83m, W=10.58m, H=2.50m
+
+FLOORPLANS:
+
+  Floorplan A (4 Bedrooms):
+    - Living + Kitchen: 62.94 m2
+    - Bedroom 1:        11.82 m2
+    - Bedroom 2:        13.53 m2
+    - Bedroom 3:        11.82 m2
+    - Bedroom 4:        11.82 m2
+    - Bathroom 1:       4.63 m2
+    - Bathroom 2:       3.77 m2
+    - Total Interior:   120.33 m2
+    - Total Exterior:   142.80 m2
+
+  Floorplan B (3 Bedrooms):
+    - Living + Kitchen: 75.22 m2
+    - Bedroom 1:        13.53 m2
+    - Bedroom 2:        11.82 m2
+    - Bedroom 3:        11.82 m2
+    - Bathroom 1:       4.63 m2
+    - Bathroom 2:       3.77 m2
+    - Total Interior:   120.79 m2
+    - Total Exterior:   142.80 m2
+
+  Floorplan C (2 Bedrooms):
+    - Living + Kitchen: 87.71 m2
+    - Bedroom 1:        13.53 m2
+    - Bedroom 2:        11.82 m2
+    - Bathroom 1:       4.63 m2
+    - Bathroom 2:       3.77 m2
+    - Total Interior:   121.46 m2
+    - Total Exterior:   142.80 m2
+
+
+================================================================================
+                          2. UPGRADES / OPTIONS
+================================================================================
+
+------------------------------------------------------------------------------
+CATEGORY 1: FLOORING (Parquet)
+------------------------------------------------------------------------------
+
+Option: OSB (Raw)
+  Slug:                 parquet-raw-osb
+  Semi-finished:        Included
+  Turnkey:              Included
+  Icon: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/682781bf8f050a99912807bd_8168f669e43e0dce4cc4a44c5e6fa5a9_Raw%2BOSB.avif
+
+Option: Cashmere Parquet
+  Slug:                 parquet-cashmere
+  Semi-finished:        See pricing below
+  Turnkey:              Included
+  Icon: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/682781fe749314ab971e22b6_a163b084d45d85d3dc6c99c8ccf00203_Cashmere.avif
+
+Option: Hazelnut Parquet
+  Slug:                 parquet-hazelnut
+  Semi-finished:        See pricing below
+  Turnkey:              Optional (EUR 0)
+  Icon: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6827826189d9a03adacb10fc_0f99c5082da56476985be14a8d96df3d_Hazelnut.avif
+
+PARQUET UPGRADE PRICES (Semi-finished only):
+  Nest 24:              EUR 1,800
+  Wanderlust 48:        EUR 3,800
+  Serenity 95:          EUR 7,800
+  Sanctuary 142:        EUR 11,800
+
+------------------------------------------------------------------------------
+CATEGORY 2: FACADE (Exterior)
+------------------------------------------------------------------------------
+
+Option: Yakisugi Exterior Facade
+  Slug:                 facade-yakisugi
+  Price:                EUR 0 (Included in both finishes)
+  Icon: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6891f60b4a12d16a97258f9e_8090eb60385f013115bc5f0f57d370f7_Yakisugi%20Modular.avif
+
+Option: Lunawood Exterior Facade
+  Slug:                 facade-lunawood
+  Price:                EUR 0 (Included in both finishes)
+  Icon: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6891f60a87823a871ab57392_2ae606770a59238d22e79f8573f47452_Lunawood%20Modular.avif
+
+------------------------------------------------------------------------------
+CATEGORY 3: ZEHNDER VENTILATION SYSTEM
+------------------------------------------------------------------------------
+
+Description:            Passivhaus certified. Medical grade filters.
+Image: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6936c8569d218b1d3c2ac007_Zehnder.avif
+
+PRICING:
+  Nest 24:
+    Semi-finished:      EUR 4,800
+    Turnkey:            Included
+
+  Wanderlust 48:
+    Semi-finished:      EUR 7,800
+    Turnkey:            Included
+
+  Serenity 95:
+    Semi-finished:      EUR 9,800
+    Turnkey:            Included
+
+  Sanctuary 142:
+    Semi-finished:      EUR 9,800
+    Turnkey:            Included
+
+------------------------------------------------------------------------------
+CATEGORY 4: SMART BLINDS
+------------------------------------------------------------------------------
+
+Description:            Blocks over 99% of UV. Smart. Passivhaus standard.
+Image: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c8f3a05d31e358a262f2f_b377fa85acb0af7122188efe4e1c06c6_Modular%20Blinds.avif
+
+PRICING:
+  Nest 24:
+    Semi-finished:      EUR 2,000
+    Turnkey:            Included
+
+  Wanderlust 48:
+    Semi-finished:      EUR 4,000
+    Turnkey:            Included
+
+  Serenity 95:
+    Semi-finished:      EUR 7,000
+    Turnkey:            Included
+
+  Sanctuary 142:
+    Semi-finished:      EUR 9,000
+    Turnkey:            Included
+
+------------------------------------------------------------------------------
+CATEGORY 5: SOLAR PANELS (Zero Energy Kit)
+------------------------------------------------------------------------------
+
+Description:            Covers 160% of your home's energy needs.
+Image: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68e35fa1ebd21311eeb0f8ac_Solar%20Pannels.avif
+
+NEST 24:
+  Price:                EUR 7,800
+  Capacity:             4 kWp
+  Panels:               8 panels x 500W
+  Price per kWp:        EUR 1,950
+  Min Roof Area:        16 m2
+  Inverter:             SUN2000-4KTL-L1
+  Phase:                Single-phase
+  String Config:        1x8 or 2x4
+
+WANDERLUST 48:
+  Price:                EUR 11,800
+  Capacity:             6 kWp
+  Panels:               12 panels x 500W
+  Price per kWp:        EUR 1,967
+  Min Roof Area:        24 m2
+  Inverter:             SUN2000-6KTL-M1
+  Phase:                Three-phase
+  String Config:        2x6
+
+SERENITY 95:
+  Price:                EUR 14,800
+  Capacity:             8 kWp
+  Panels:               16 panels x 500W
+  Price per kWp:        EUR 1,850
+  Min Roof Area:        32 m2
+  Inverter:             SUN2000-8KTL-M1
+  Phase:                Three-phase
+  String Config:        2x8
+
+SANCTUARY 142:
+  Price:                EUR 16,800
+  Capacity:             10 kWp
+  Panels:               20 panels x 500W
+  Price per kWp:        EUR 1,680
+  Min Roof Area:        40 m2
+  Inverter:             SUN2000-10KTL-M1
+  Phase:                Three-phase
+  String Config:        2x10
+
+
+================================================================================
+                    3. VENTILATION SYSTEM SPECIFICATIONS
+================================================================================
+
+NEST 24:
+  Ventilation Unit:     Zehnder ComfoAir 70
+  Heat Pump:            Panasonic P-MOZ25IC5-E
+  Heat Recovery:        95%
+
+WANDERLUST 48:
+  Ventilation Unit:     Zehnder ComfoAir 100
+  Heat Pump:            Panasonic P-MOZ25IC5-E
+  Heat Recovery:        95%
+
+SERENITY 95:
+  Ventilation Unit:     Zehnder ComfoAir Q350 + ComfoClime 24
+  Alternative:          Genvex 250 Preheat
+  Heat Pump:            Panasonic P-MOZ30IC5-E
+  Heat Recovery:        95%
+
+SANCTUARY 142:
+  Ventilation Unit:     Zehnder ComfoAir Q350 + ComfoClime 24
+  Alternative:          Genvex 250 Preheat
+  Heat Pump:            Panasonic P-MOZ30IC5-E
+  Heat Recovery:        95%
+
+FEATURES (All Models):
+  - Medical grade filters
+  - Passivhaus certified
+  - Silent operation
+
+
+================================================================================
+                           4. SHIPPING PRICES
+================================================================================
+
+Note: Base prices shown are for smallest models (Nest 24 / Wanderlust 48).
+      Serenity 95 = 2x base price
+      Sanctuary 142 = 3x base price
+
+COUNTRY                     BASE PRICE
+--------------------------------------
+From Factory (Pickup)       EUR 0
+Austria                     EUR 7,400
+Belgium                     EUR 9,800
+Bulgaria                    EUR 4,900
+Croatia                     EUR 6,300
+Cyprus                      Custom Offer
+Czech Republic              EUR 7,100
+Denmark                     EUR 9,000
+Estonia                     EUR 9,500
+Finland                     EUR 10,900
+France                      EUR 9,500
+Germany                     EUR 8,500
+Greece                      EUR 6,800
+Hungary                     EUR 5,300
+Ireland                     Custom Offer
+Italy                       EUR 7,900
+Latvia                      EUR 9,000
+Lithuania                   EUR 7,900
+Luxembourg                  EUR 9,300
+Malta                       Custom Offer
+Moldova                     EUR 4,800
+Netherlands                 EUR 9,500
+Poland                      EUR 6,600
+Portugal                    EUR 12,800
+Serbia                      EUR 5,200
+Slovakia                    EUR 6,000
+Slovenia                    EUR 6,800
+Spain                       EUR 11,700
+Sweden                      EUR 10,100
+
+
+================================================================================
+                       5. REFERRAL / DISCOUNT CODES
+================================================================================
+
+CODE            DISCOUNT
+------------------------
+BUHNICI         4%
+MATEUS          4%
+FOREST          5%
+CHRISTMAS       5%
+TURISM          5%
+
+
+================================================================================
+                  6. TECHNICAL SPECIFICATIONS & MATERIALS
+================================================================================
+
+------------------------------------------------------------------------------
+TURNKEY FINISH INCLUDES:
+------------------------------------------------------------------------------
+
+MODULAR UPGRADE:
+  - New Generation MODULAR perfected with Passivhaus certified aluminum frames
+  - Ultra-organic wood fiber insulation
+  - Optimized resilient structure
+  - Exclusive premium finishes
+
+STRUCTURE:
+  - MODULAR Structural System: ~35 cm structure
+    - Passivhaus/EPD certified
+    - No thermal bridges
+    - Fully airtight
+
+  - C24 Timber Frame BIOBUILDS Structure:
+    - FSC/PEFC certified wood
+
+  - STEICO Wood Fiber Insulation:
+    - Organic, sustainable
+    - Lambda = 0.036 W/m.K
+    - CE certified
+
+  - ECO OSB 3 Board (AGEPAN, Germany):
+    - Formaldehyde/VOC-free
+    - Passive House approved
+
+  - DWD Board (AGEPAN, Germany):
+    - Breathable walls
+    - Exterior airtightness
+
+  - Smart Membrane:
+    - Interior airtightness
+    - Controlled vapor diffusion
+
+EXTERIOR FINISHES:
+  - Ventilated Facade (Yakisugi/Lunawood wood):
+    - Thermally treated
+    - Reduced maintenance
+    - Fire resistant
+
+  - Ventilated Flat Roof:
+    - ~5 degree slope
+    - Premium membrane waterproofing
+    - 10-year warranty
+
+  - Integrated Rainwater Collection System:
+    - Hidden gutters
+
+EXTERIOR WINDOWS AND DOORS:
+  - Genesis 90 Aluminum Profiles:
+    - Uwi <= 0.85 W/m2K
+    - CE certified
+
+  - Triple-Laminated Glazing:
+    - U = 0.50 W/m2K
+    - Laminated for safety
+
+KITCHEN:
+  - Pre-equipped installations ready for furniture and appliances
+
+TECHNICAL INSTALLATIONS:
+  - Electrical:
+    - Complete panel
+    - EU standards
+    - AFDD technology
+
+  - Plumbing:
+    - PPR/PEX pipes and fittings
+    - EU compliant
+
+COMPLETE INTERIOR FINISHES:
+  - Wood Slat Ceiling + Felt:
+    - Natural wood
+    - Recycled felt
+    - Acoustic absorption
+
+  - Fiberglass Wallpaper:
+    - High tensile strength
+    - Washable
+
+  - Triple-Layered Natural Wood Parquet:
+    - 9-14 mm thickness
+    - FSC/PEFC certified
+
+  - Schneider Outlets:
+    - Premium
+    - Made in Germany
+    - CE/VDE certified
+
+INTERIOR DOORS:
+  - S10 Interior Doors:
+    - CE certified
+    - Solid core
+
+COMPLETE BATHROOM FINISHES:
+  - Stone Composite Tiles:
+    - 2.5 x 1.2 m full-size
+    - 100% waterproof
+
+  - Italian Design Sink:
+    - Premium composite
+    - Ultra-thin
+
+  - Grohe Wall-Hung Toilet:
+    - Made in Germany
+
+  - Ariston Velis Water Heater:
+    - Ultra-slim
+    - High efficiency
+
+  - Walk-in Shower:
+    - Designed in France
+    - Minimalist
+
+SMART SYSTEMS:
+  - Lighting Track:
+    - Flexible LED/spotlight configuration
+
+  - Smart Lighting:
+    - Philips HUE or IKEA TRADFRI
+
+  - Smart Exterior Blinds:
+    - >95% solar radiation blocking
+    - App/manual control
+    - Passivhaus certified
+
+  - Zehnder Ventilation System:
+    - Model-specific (see ventilation specs)
+
+------------------------------------------------------------------------------
+SEMI-FINISHED INCLUDES:
+------------------------------------------------------------------------------
+
+All of the above EXCEPT:
+  - Complete interior finishes (parquet optional upgrade)
+  - Complete bathroom finishes (waterproofed only)
+  - Smart systems (ventilation, blinds are optional upgrades)
+
+
+================================================================================
+                      7. CERTIFICATIONS & WARRANTIES
+================================================================================
+
+PASSIVHAUS CERTIFICATION:
+  - Issued by Passive House Institute (Germany)
+  - Energy efficiency
+  - Exceptional comfort
+
+EPD CERTIFICATION:
+  - Issued by EPD International
+  - Carbon-negative product
+
+CE MARKING:
+  - All components comply with EU construction regulations
+
+STANDARD EU WARRANTY:
+  - 24 months residential
+  - 12 months commercial
+  - Extension available
+
+MANUFACTURER WARRANTIES:
+  - Full coverage from individual suppliers
+
+
+================================================================================
+                          8. FLOORPLAN IMAGES
+================================================================================
+
+NEST 24:
+  Floorplan A: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d2244f5d6be3af87aab_24m2%20Floorplan%20A.avif
+  Floorplan B: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d22e33276e515d43a8f_24m2%20Floorplan%20B.avif
+
+WANDERLUST 48:
+  Floorplan A: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c525733fc3797a1ea68b6_48m2%20Floorplan%20A.png
+  Floorplan B: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f671a54486d036b53_48m2%20Floorplan%20B.png
+
+SERENITY 95:
+  Floorplan A: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514e29f50d2da31e84dc_95m2%20Floorplan%20A.png
+  Floorplan B: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fdf7becede16b71e9_95m2%20Floorplan%20B.png
+  Floorplan C: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff885d32e87f5d5ef_95m2%20Floorplan%20C.png
+
+SANCTUARY 142:
+  Floorplan A: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff7e14cb1b083351b_142m2%20Floorplan%20A.png
+  Floorplan B: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f6966128dbeb27986_142m2%20Floorplan%20B.png
+  Floorplan C: https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fd4d57aa8ff3d75e9_142m2%20Floorplan%20C.png
+
+
+================================================================================
+                  9. MODEL-SPECIFIC INTERIOR/EXTERIOR IMAGES
+================================================================================
+
+------------------------------------------------------------------------------
+NEST 24
+------------------------------------------------------------------------------
+Exterior (Yakisugi):        https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2de1073da9af1229b5a_24%20EXT.avif
+Exterior (Lunawood):        https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2db5bc300eaac8d8d34_24%20EXT%20LUNA.avif
+Interior Semi-finished:     https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2de2f5f16c2ddd166de_24%20INT%20SEMI.avif
+Interior Turnkey:           https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2d5825431c8de2a4647_24%20INT.avif
+Interior Semi Cashmere:     https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9e626baf48e649fa6f_24%20INT%20SEMI%20CASHMERE.avif
+Interior Semi Hazelnut:     https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9ded2f00c9544f77e8_24%20INT%20SEMI%20HAZELNUT.avif
+Interior Turnkey Hazelnut:  https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c999e84b323b4840928_24%20INT%20TURNKEY%20HAZELNUT.avif
+
+------------------------------------------------------------------------------
+WANDERLUST 48
+------------------------------------------------------------------------------
+Exterior (Yakisugi):        https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2e1dfc362059ebe425a_48%20EXT.avif
+Exterior (Lunawood):        https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2de138a2e743e8b46a5_48%20EXT%20LUNA.avif
+Interior Semi-finished:     https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2dbc3983bc6c1db37d5_48%20INT%20SEMI.avif
+Interior Turnkey:           https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2d4c4987465f99fdb83_48%20INT.avif
+Interior Semi Cashmere:     https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9d58a01418fbcb2041_48%20INT%20SEMI%20CASHMERE.avif
+Interior Semi Hazelnut:     https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9fdc93278ac1ebcb15_48%20INT%20SEMI%20HAZELNUT.avif
+Interior Turnkey Hazelnut:  https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9c67b49cdd4284575f_48%20INT%20TURNKEY%20HAZELNUT.avif
+
+------------------------------------------------------------------------------
+SERENITY 95
+------------------------------------------------------------------------------
+Exterior (Yakisugi):        https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2def577675af1e0311b_95%20EXT.avif
+Exterior (Lunawood):        https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2de42d32a56c177baee_95%20EXT%20LUNA.avif
+Interior Semi-finished:     https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2d570c656a121f2f894_95%20INT%20SEMI.avif
+Interior Turnkey:           https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2e1032083199a0f6c91_b01fd90d9516b5947a7ebf431c594038_95%20INT.avif
+Interior Semi Cashmere:     https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9d2329a1114c0b4a71_95%20INT%20SEMI%20CASHMERE.avif
+Interior Semi Hazelnut:     https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9fa6475a26839192bd_95%20INT%20SEMI%20HAZELNUT.avif
+Interior Turnkey Hazelnut:  https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301ca4896ae35084ea4c8a_95%20INT%20TURNKEY%20HAZELNUT.avif
+
+------------------------------------------------------------------------------
+SANCTUARY 142
+------------------------------------------------------------------------------
+Exterior (Yakisugi):        https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2dbf906e66f4ea4c2c0_142%20EXT.avif
+Exterior (Lunawood):        https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2d4db512d9db681f6e6_142%20EXT%20LUNA.avif
+Interior Semi-finished:     https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2e013c0363b4b84943c_142%20INT%20SEMI.avif
+Interior Turnkey:           https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/692ef2def7f9aedcdd1efa47_142%20INT.avif
+Interior Semi Cashmere:     https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301ca3e171b36af9268036_142%20INT%20SEMI%20CASHMERE.avif
+Interior Semi Hazelnut:     https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301ca4d06d247c753b592b_142%20INT%20SEMI%20HAZELNUT.avif
+Interior Turnkey Hazelnut:  https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69301c9d43a6473248399be6_142%20INT%20TURNKEY%20HAZELNUT.avif
+
+
+================================================================================
+                          10. VENTILATION IMAGES
+================================================================================
+
+24m2 Models:    https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6936c855d0d77fec69cd6914_Zehnder24.avif
+48m2 Models:    https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6936c855653c5fcdcf119a96_Zehnder48.avif
+95m2/142m2:     https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/6936c8569d218b1d3c2ac007_Zehnder.avif
+
+
+================================================================================
+                    11. UPGRADE CONFIGURATION STRUCTURE
+================================================================================
+
+The upgrades are organized into 5 groups:
+
+Group 0 (SQF_PARQUET):      Floor options - radio selection
+Group 1 (SQF_FACADE):       Facade options - radio selection
+Group 2 (SQF_VENTILATION):  Ventilation system - checkbox
+Group 3 (SQF_BLINDS):       Smart blinds - checkbox
+Group 4 (SQF_SOLAR):        Solar panels - checkbox
+
+
+================================================================================
+                         12. PRICE RANGE SUMMARY
+================================================================================
+
+MODEL           SEMI-FINISHED    TURNKEY      MAX UPGRADES (SEMI)
+-----------------------------------------------------------------
+Nest 24         EUR 39,800       EUR 59,800   +EUR 16,400
+Wanderlust 48   EUR 59,800       EUR 109,800  +EUR 27,400
+Serenity 95     EUR 109,800      EUR 189,800  +EUR 39,400
+Sanctuary 142   EUR 159,800      EUR 279,800  +EUR 47,400
+
+Note: Turnkey includes ventilation + blinds. Solar is always optional.
+
+
+================================================================================
+                         13. LOCALIZATION NOTES
+================================================================================
+
+The configurator exists in 3 languages with identical pricing:
+
+ENGLISH (/config eng/):
+  - "From EUR X"
+  - "Semi-finished"
+  - "Turnkey"
+
+GERMAN (/config de/):
+  - "Ab X EUR"
+  - "Halbfertig"
+  - "Schluesselfertig"
+
+ROMANIAN (/config ro/):
+  - "De la X EUR"
+  - "Semifinisat"
+  - "La cheie"
+
+
+================================================================================
+                              END OF EXTRACTION
+================================================================================
