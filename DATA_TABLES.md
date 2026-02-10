@@ -20,8 +20,8 @@
 | **Floor**      | Hazelnut Parquet          | €1,800              | €0 (included) |
 | **Facade**       | Yakisugi (default)        | €0 (included)       | €0 (included) |
 | **Facade**       | Lunawood                  | €0 (included)       | €0 (included) |
-| **Ventilation**  | Zehnder Ventilation System| €4,800              | €0 (included) |
-| **Blinds**       | Smart Blinds              | €2,000              | €0 (included) |
+| **Ventilation**  | Zehnder Ventilation System| €4,800 (or included in Turnkey) | €0 (included) |
+| **Blinds**       | Smart Blinds              | €2,000 (or included in Turnkey) | €0 (included) |
 | **Solar**        | Solar Panels - Zero Energy| €7,800              | €7,800        |
 
 ### Solar Kit Specifications
@@ -81,8 +81,8 @@
 | **Floor**      | Hazelnut Parquet          | €3,800              | €0 (included) |
 | **Facade**       | Yakisugi (default)        | €0 (included)       | €0 (included) |
 | **Facade**       | Lunawood                  | €0 (included)       | €0 (included) |
-| **Ventilation**  | Zehnder Ventilation System| €7,800              | €0 (included) |
-| **Blinds**       | Smart Blinds              | €4,000              | €0 (included) |
+| **Ventilation**  | Zehnder Ventilation System| €7,800 (or included in Turnkey) | €0 (included) |
+| **Blinds**       | Smart Blinds              | €4,000 (or included in Turnkey) | €0 (included) |
 | **Solar**        | Solar Panels - Zero Energy| €11,800             | €11,800       |
 
 ### Solar Kit Specifications
@@ -143,8 +143,8 @@
 | **Floor**      | Hazelnut Parquet          | €7,800              | €0 (included) |
 | **Facade**       | Yakisugi (default)        | €0 (included)       | €0 (included) |
 | **Facade**       | Lunawood                  | €0 (included)       | €0 (included) |
-| **Ventilation**  | Zehnder Ventilation System| €9,800              | €0 (included) |
-| **Blinds**       | Smart Blinds              | €7,000              | €0 (included) |
+| **Ventilation**  | Zehnder Ventilation System| €9,800 (or included in Turnkey) | €0 (included) |
+| **Blinds**       | Smart Blinds              | €7,000 (or included in Turnkey) | €0 (included) |
 | **Solar**        | Solar Panels - Zero Energy| €14,800             | €14,800       |
 
 ### Solar Kit Specifications
@@ -224,8 +224,8 @@
 | **Floor**      | Hazelnut Parquet          | €11,800             | €0 (included) |
 | **Facade**       | Yakisugi (default)        | €0 (included)       | €0 (included) |
 | **Facade**       | Lunawood                  | €0 (included)       | €0 (included) |
-| **Ventilation**  | Zehnder Ventilation System| €9,800              | €0 (included) |
-| **Blinds**       | Smart Blinds              | €9,000              | €0 (included) |
+| **Ventilation**  | Zehnder Ventilation System| €9,800 (or included in Turnkey) | €0 (included) |
+| **Blinds**       | Smart Blinds              | €9,000 (or included in Turnkey) | €0 (included) |
 | **Solar**        | Solar Panels - Zero Energy| €16,800             | €16,800       |
 
 ### Solar Kit Specifications
