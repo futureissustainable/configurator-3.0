@@ -44,8 +44,6 @@
 |-------------------|------------------------------|
 | Ventilation Unit  | Zehnder ComfoAir 70          |
 | Heat Pump         | Panasonic P-MOZ25IC5-E       |
-| Heat Recovery     | 95%                          |
-| Features          | Medical grade filters, Passivhaus certified, Silent operation |
 
 ### Floor Plans
 
@@ -105,8 +103,6 @@
 |-------------------|------------------------------|
 | Ventilation Unit  | Zehnder ComfoAir 100         |
 | Heat Pump         | Panasonic P-MOZ25IC5-E       |
-| Heat Recovery     | 95%                          |
-| Features          | Medical grade filters, Passivhaus certified, Silent operation |
 
 ### Floor Plans
 
@@ -168,8 +164,6 @@
 | Ventilation Unit  | Zehnder ComfoAir Q350 + ComfoClime 24     |
 | Alternative       | Genvex 250 Preheat                        |
 | Heat Pump         | Panasonic P-MOZ30IC5-E                    |
-| Heat Recovery     | 95%                                       |
-| Features          | Medical grade filters, Passivhaus certified, Silent operation |
 
 ### Floor Plans
 
@@ -249,8 +243,6 @@
 | Ventilation Unit  | Zehnder ComfoAir Q350 + ComfoClime 24     |
 | Alternative       | Genvex 250 Preheat                        |
 | Heat Pump         | Panasonic P-MOZ30IC5-E                    |
-| Heat Recovery     | 95%                                       |
-| Features          | Medical grade filters, Passivhaus certified, Silent operation |
 
 ### Floor Plans
 
@@ -332,7 +324,6 @@
 | Unit           | ComfoAir 70       | ComfoAir 100      | ComfoAir Q350 + ComfoClime 24       | ComfoAir Q350 + ComfoClime 24       |
 | Alternative    | -                 | -                 | Genvex 250 Preheat                  | Genvex 250 Preheat                  |
 | Heat Pump      | P-MOZ25IC5-E      | P-MOZ25IC5-E      | P-MOZ30IC5-E                        | P-MOZ30IC5-E                        |
-| Heat Recovery  | 95%               | 95%               | 95%                                 | 95%                                 |
 
 ### Dimensions Comparison (All Floor Plans Share Same Shell Per Model)
 
