@@ -15,9 +15,9 @@
 
 | Upgrade Category | Option                    | Semi-finished Price | Turnkey Price |
 |------------------|---------------------------|---------------------|---------------|
-| **Parquet**      | Raw OSB (default)         | €0 (included)       | €0 (included) |
-| **Parquet**      | Cashmere Parquet          | €1,800              | €0 (included) |
-| **Parquet**      | Hazelnut Parquet          | €1,800              | €0 (included) |
+| **Floor**      | Raw OSB (default)         | €0 (included)       | €0 (included) |
+| **Floor**      | Cashmere Parquet          | €1,800              | €0 (included) |
+| **Floor**      | Hazelnut Parquet          | €1,800              | €0 (included) |
 | **Facade**       | Yakisugi (default)        | €0 (included)       | €0 (included) |
 | **Facade**       | Lunawood                  | €0 (included)       | €0 (included) |
 | **Ventilation**  | Zehnder Ventilation System| €4,800              | €0 (included) |
@@ -76,9 +76,9 @@
 
 | Upgrade Category | Option                    | Semi-finished Price | Turnkey Price |
 |------------------|---------------------------|---------------------|---------------|
-| **Parquet**      | Raw OSB (default)         | €0 (included)       | €0 (included) |
-| **Parquet**      | Cashmere Parquet          | €3,800              | €0 (included) |
-| **Parquet**      | Hazelnut Parquet          | €3,800              | €0 (included) |
+| **Floor**      | Raw OSB (default)         | €0 (included)       | €0 (included) |
+| **Floor**      | Cashmere Parquet          | €3,800              | €0 (included) |
+| **Floor**      | Hazelnut Parquet          | €3,800              | €0 (included) |
 | **Facade**       | Yakisugi (default)        | €0 (included)       | €0 (included) |
 | **Facade**       | Lunawood                  | €0 (included)       | €0 (included) |
 | **Ventilation**  | Zehnder Ventilation System| €7,800              | €0 (included) |
@@ -138,9 +138,9 @@
 
 | Upgrade Category | Option                    | Semi-finished Price | Turnkey Price |
 |------------------|---------------------------|---------------------|---------------|
-| **Parquet**      | Raw OSB (default)         | €0 (included)       | €0 (included) |
-| **Parquet**      | Cashmere Parquet          | €7,800              | €0 (included) |
-| **Parquet**      | Hazelnut Parquet          | €7,800              | €0 (included) |
+| **Floor**      | Raw OSB (default)         | €0 (included)       | €0 (included) |
+| **Floor**      | Cashmere Parquet          | €7,800              | €0 (included) |
+| **Floor**      | Hazelnut Parquet          | €7,800              | €0 (included) |
 | **Facade**       | Yakisugi (default)        | €0 (included)       | €0 (included) |
 | **Facade**       | Lunawood                  | €0 (included)       | €0 (included) |
 | **Ventilation**  | Zehnder Ventilation System| €9,800              | €0 (included) |
@@ -219,9 +219,9 @@
 
 | Upgrade Category | Option                    | Semi-finished Price | Turnkey Price |
 |------------------|---------------------------|---------------------|---------------|
-| **Parquet**      | Raw OSB (default)         | €0 (included)       | €0 (included) |
-| **Parquet**      | Cashmere Parquet          | €11,800             | €0 (included) |
-| **Parquet**      | Hazelnut Parquet          | €11,800             | €0 (included) |
+| **Floor**      | Raw OSB (default)         | €0 (included)       | €0 (included) |
+| **Floor**      | Cashmere Parquet          | €11,800             | €0 (included) |
+| **Floor**      | Hazelnut Parquet          | €11,800             | €0 (included) |
 | **Facade**       | Yakisugi (default)        | €0 (included)       | €0 (included) |
 | **Facade**       | Lunawood                  | €0 (included)       | €0 (included) |
 | **Ventilation**  | Zehnder Ventilation System| €9,800              | €0 (included) |
