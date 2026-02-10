@@ -11,8 +11,6 @@
 | Semi-finished  | €39,800   |
 | Turnkey        | €59,800   |
 
-**Energy Rating:** 34,920 kWh
-
 ### Upgrade Options & Prices
 
 | Upgrade Category | Option                    | Semi-finished Price | Turnkey Price |
@@ -73,8 +71,6 @@
 |----------------|------------|
 | Semi-finished  | €59,800    |
 | Turnkey        | €109,800   |
-
-**Energy Rating:** 69,840 kWh
 
 ### Upgrade Options & Prices
 
@@ -137,8 +133,6 @@
 |----------------|------------|
 | Semi-finished  | €109,800   |
 | Turnkey        | €189,800   |
-
-**Energy Rating:** 138,225 kWh
 
 ### Upgrade Options & Prices
 
@@ -221,8 +215,6 @@
 | Semi-finished  | €159,800   |
 | Turnkey        | €279,800   |
 
-**Energy Rating:** 175,285 kWh
-
 ### Upgrade Options & Prices
 
 | Upgrade Category | Option                    | Semi-finished Price | Turnkey Price |
@@ -301,12 +293,12 @@
 
 ### Base Prices at a Glance
 
-| Model              | Size   | Semi-finished | Turnkey   | Energy (kWh) |
-|--------------------|--------|---------------|-----------|--------------|
-| Nest               | 24m²   | €39,800       | €59,800   | 34,920       |
-| Wanderlust         | 48m²   | €59,800       | €109,800  | 69,840       |
-| Serenity           | 95m²   | €109,800      | €189,800  | 138,225      |
-| Sanctuary          | 142m²  | €159,800      | €279,800  | 175,285      |
+| Model              | Size   | Semi-finished | Turnkey   |
+|--------------------|--------|---------------|-----------|
+| Nest               | 24m²   | €39,800       | €59,800   |
+| Wanderlust         | 48m²   | €59,800       | €109,800  |
+| Serenity           | 95m²   | €109,800      | €189,800  |
+| Sanctuary          | 142m²  | €159,800      | €279,800  |
 
 ### Upgrade Prices Comparison (Semi-finished)
 
