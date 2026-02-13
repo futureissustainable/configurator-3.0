@@ -320,23 +320,6 @@
           totalExterior: "24,38m²",
           totalInterior: "15,97m²"
         },
-        {
-          slug: "floorplan-b",
-          image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/68c43d22e33276e515d43a8f_24m2%20Floorplan%20B.avif",
-          price: 0,
-          name: "Grundriss B · 1 Schlafzimmer",
-          title: "24m² Grundriss B",
-          rooms: [
-            { name: "Schlafzimmer", size: "13,26m²" },
-            { name: "Bad", size: "2,71m²" }
-          ],
-          dimensions: {
-            exterior: { L: "6,35m", W: "3,84m", H: "3,30m" },
-            interior: { L: "5,59m", W: "3,08m", H: "2,50m" }
-          },
-          totalExterior: "24,38m²",
-          totalInterior: "15,97m²"
-        },
       ],
     },
     "wanderlust-48": {
@@ -552,26 +535,6 @@
           },
           totalExterior: "48,35m²",
           totalInterior: "35,20m²"
-        },
-        {
-          slug: "floorplan-b",
-          image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514f671a54486d036b53_48m2%20Floorplan%20B.png",
-          price: 0,
-          name: "Grundriss B · 2 Schlafzimmer",
-          title: "48m² Grundriss B",
-          rooms: [
-            { name: "Flur", size: "4,23m²" },
-            { name: "Schlafzimmer 1", size: "11,43m²" },
-            { name: "Bad 1", size: "4,23m²" },
-            { name: "Schlafzimmer 2", size: "11,37m²" },
-            { name: "Bad 2", size: "3,44m²" }
-          ],
-          dimensions: {
-            exterior: { L: "12,59m", W: "3,84m", H: "3,30m" },
-            interior: { L: "11,83m", W: "3,08m", H: "2,50m" }
-          },
-          totalExterior: "48,35m²",
-          totalInterior: "34,70m²"
         },
       ],
     },
@@ -811,25 +774,6 @@
           },
           totalExterior: "95,56m²",
           totalInterior: "77,65m²"
-        },
-        {
-          slug: "floorplan-c",
-          image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514ff885d32e87f5d5ef_95m2%20Floorplan%20C.png",
-          price: 0,
-          name: "Grundriss C · 1 Schlafzimmer",
-          title: "95m² Grundriss C",
-          rooms: [
-            { name: "Wohnen + Küche", size: "57,91m²" },
-            { name: "Schlafzimmer", size: "11,82m²" },
-            { name: "Bad 1", size: "4,63m²" },
-            { name: "Bad 2", size: "3,77m²" }
-          ],
-          dimensions: {
-            exterior: { L: "12,59m", W: "7,59m", H: "3,30m" },
-            interior: { L: "11,83m", W: "6,83m", H: "2,50m" }
-          },
-          totalExterior: "95,56m²",
-          totalInterior: "78,13m²"
         },
       ],
     },
@@ -1071,26 +1015,6 @@
           },
           totalExterior: "142,80m²",
           totalInterior: "120,79m²"
-        },
-        {
-          slug: "floorplan-c",
-          image: "https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/689c514fd4d57aa8ff3d75e9_142m2%20Floorplan%20C.png",
-          price: 0,
-          name: "Grundriss C · 2 Schlafzimmer",
-          title: "142m² Grundriss C",
-          rooms: [
-            { name: "Wohnen + Küche", size: "87,71m²" },
-            { name: "Schlafzimmer 1", size: "13,53m²" },
-            { name: "Schlafzimmer 2", size: "11,82m²" },
-            { name: "Bad 1", size: "4,63m²" },
-            { name: "Bad 2", size: "3,77m²" }
-          ],
-          dimensions: {
-            exterior: { L: "12,59m", W: "11,34m", H: "3,30m" },
-            interior: { L: "11,83m", W: "10,58m", H: "2,50m" }
-          },
-          totalExterior: "142,80m²",
-          totalInterior: "121,46m²"
         },
       ],
     },
