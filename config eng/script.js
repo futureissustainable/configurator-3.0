@@ -1153,7 +1153,8 @@
       { name: "Manufacturer Warranties", desc: "Beneficiaries receive full coverage through warranties provided by individual suppliers." }
     ],
     "DISCLAIMER": [
-      { name: "Technical Performance", desc: "The mentioned performances (including energy consumption) are calculated according to standard Passive House conditions. Actual results may vary depending on climate, house orientation, dimensions, and usage. For exact details, consult the PHPP (Passive House Planning Package) calculations for the project." }
+      { name: "Performance", desc: "The mentioned performances (including energy consumption) are calculated according to standard Passive House conditions. Actual results may vary depending on climate, house orientation, dimensions, and usage. For exact details, consult the PHPP (Passive House Planning Package) calculations for the project." },
+      { name: "Innovation", desc: "Through continuous testing and innovation, we strive to meet the highest benchmarks for our homes. As part of this commitment, we regularly evaluate products at our facility to ensure optimal long-term performance. As a result, your home may include upgraded versions of the products listed here, selected on the basis of our testing to deliver improved performance and durability over time." }
     ]
   };
   const semiTurnkeyMaterials = {
@@ -1195,7 +1196,8 @@
       { name: "Manufacturer Warranties", desc: "Beneficiaries receive full coverage through warranties provided by individual suppliers." }
     ],
     "DISCLAIMER": [
-      { name: "Technical Performance", desc: "The mentioned performances (including energy consumption) are calculated according to standard Passive House conditions. Actual results may vary depending on climate, house orientation, dimensions, and usage. For exact details, consult the PHPP (Passive House Planning Package) calculations for the project." }
+      { name: "Performance", desc: "The mentioned performances (including energy consumption) are calculated according to standard Passive House conditions. Actual results may vary depending on climate, house orientation, dimensions, and usage. For exact details, consult the PHPP (Passive House Planning Package) calculations for the project." },
+      { name: "Innovation", desc: "Through continuous testing and innovation, we strive to meet the highest benchmarks for our homes. As part of this commitment, we regularly evaluate products at our facility to ensure optimal long-term performance. As a result, your home may include upgraded versions of the products listed here, selected on the basis of our testing to deliver improved performance and durability over time." }
     ]
   };
 

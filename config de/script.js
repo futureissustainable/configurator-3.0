@@ -1154,7 +1154,8 @@
       { name: "Herstellergarantien", desc: "Volle Abdeckung gemäß den Garantien der jeweiligen Lieferanten." }
     ],
     "HAFTUNGSHINWEIS": [
-      { name: "Technische Leistungswerte", desc: "Angegebene Werte (inkl. Energieverbrauch) basieren auf standardisierten Passivhaus-Bedingungen. Reale Ergebnisse variieren je nach Klima, Ausrichtung, Größe und Nutzung. Für exakte Details gelten die Berechnungen im Passivhaus-Projektierungspaket (PHPP)." }
+      { name: "Leistungswerte", desc: "Angegebene Werte (inkl. Energieverbrauch) basieren auf standardisierten Passivhaus-Bedingungen. Reale Ergebnisse variieren je nach Klima, Ausrichtung, Größe und Nutzung. Für exakte Details gelten die Berechnungen im Passivhaus-Projektierungspaket (PHPP)." },
+      { name: "Innovation", desc: "Durch kontinuierliche Tests und Innovation streben wir die höchsten Maßstäbe für unsere Häuser an. Im Rahmen dieses Engagements bewerten wir regelmäßig Produkte in unserer Anlage, um eine optimale Langzeitleistung sicherzustellen. Daher kann Ihr Haus verbesserte Versionen der hier aufgeführten Produkte enthalten, die auf Grundlage unserer Tests für eine bessere Leistung und Haltbarkeit über einen längeren Zeitraum ausgewählt wurden." }
     ]
   };
 
@@ -1197,7 +1198,8 @@
       { name: "Herstellergarantien", desc: "Volle Abdeckung gemäß den Garantien der jeweiligen Lieferanten." }
     ],
     "HAFTUNGSHINWEIS": [
-      { name: "Technische Leistungswerte", desc: "Angegebene Werte (inkl. Energieverbrauch) basieren auf standardisierten Passivhaus-Bedingungen. Reale Ergebnisse variieren je nach Klima, Ausrichtung, Größe und Nutzung. Für exakte Details gelten die Berechnungen im Passivhaus-Projektierungspaket (PHPP)." }
+      { name: "Leistungswerte", desc: "Angegebene Werte (inkl. Energieverbrauch) basieren auf standardisierten Passivhaus-Bedingungen. Reale Ergebnisse variieren je nach Klima, Ausrichtung, Größe und Nutzung. Für exakte Details gelten die Berechnungen im Passivhaus-Projektierungspaket (PHPP)." },
+      { name: "Innovation", desc: "Durch kontinuierliche Tests und Innovation streben wir die höchsten Maßstäbe für unsere Häuser an. Im Rahmen dieses Engagements bewerten wir regelmäßig Produkte in unserer Anlage, um eine optimale Langzeitleistung sicherzustellen. Daher kann Ihr Haus verbesserte Versionen der hier aufgeführten Produkte enthalten, die auf Grundlage unserer Tests für eine bessere Leistung und Haltbarkeit über einen längeren Zeitraum ausgewählt wurden." }
     ]
   };
 
