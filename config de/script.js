@@ -1155,7 +1155,7 @@
     ],
     "HAFTUNGSHINWEIS": [
       { name: "Leistungswerte", desc: "Angegebene Werte (inkl. Energieverbrauch) basieren auf standardisierten Passivhaus-Bedingungen. Reale Ergebnisse variieren je nach Klima, Ausrichtung, Größe und Nutzung. Für exakte Details gelten die Berechnungen im Passivhaus-Projektierungspaket (PHPP)." },
-      { name: "Innovation", desc: "Durch kontinuierliche Tests und Innovation streben wir die höchsten Maßstäbe für unsere Häuser an. Im Rahmen dieses Engagements bewerten wir regelmäßig Produkte in unserer Anlage, um eine optimale Langzeitleistung sicherzustellen. Daher kann Ihr Haus Produkte enthalten, die von den hier aufgeführten abweichen — einschließlich gleichwertiger oder verbesserter Alternativen — die auf Grundlage unserer Tests für eine gleiche oder bessere Leistung und Haltbarkeit für Ihr Zuhause ausgewählt wurden." }
+      { name: "Innovation", desc: "Wir setzen auf das bestmögliche Zuhause für Sie. Durch kontinuierliche Tests und Innovation in unserer Anlage kann Ihr Haus Produkte enthalten, die über diese Liste hinausgehen, sorgfältig ausgewählt, um Leistung und Wohnqualität zu steigern." }
     ]
   };
 
@@ -1199,7 +1199,7 @@
     ],
     "HAFTUNGSHINWEIS": [
       { name: "Leistungswerte", desc: "Angegebene Werte (inkl. Energieverbrauch) basieren auf standardisierten Passivhaus-Bedingungen. Reale Ergebnisse variieren je nach Klima, Ausrichtung, Größe und Nutzung. Für exakte Details gelten die Berechnungen im Passivhaus-Projektierungspaket (PHPP)." },
-      { name: "Innovation", desc: "Durch kontinuierliche Tests und Innovation streben wir die höchsten Maßstäbe für unsere Häuser an. Im Rahmen dieses Engagements bewerten wir regelmäßig Produkte in unserer Anlage, um eine optimale Langzeitleistung sicherzustellen. Daher kann Ihr Haus Produkte enthalten, die von den hier aufgeführten abweichen — einschließlich gleichwertiger oder verbesserter Alternativen — die auf Grundlage unserer Tests für eine gleiche oder bessere Leistung und Haltbarkeit für Ihr Zuhause ausgewählt wurden." }
+      { name: "Innovation", desc: "Wir setzen auf das bestmögliche Zuhause für Sie. Durch kontinuierliche Tests und Innovation in unserer Anlage kann Ihr Haus Produkte enthalten, die über diese Liste hinausgehen, sorgfältig ausgewählt, um Leistung und Wohnqualität zu steigern." }
     ]
   };
 
