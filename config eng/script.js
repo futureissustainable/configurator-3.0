@@ -1154,7 +1154,7 @@
     ],
     "DISCLAIMER": [
       { name: "Performance", desc: "The mentioned performances (including energy consumption) are calculated according to standard Passive House conditions. Actual results may vary depending on climate, house orientation, dimensions, and usage. For exact details, consult the PHPP (Passive House Planning Package) calculations for the project." },
-      { name: "Innovation", desc: "We are committed to delivering the best home possible. Through continuous testing and innovation at our facility, your home may include products that go beyond this list, carefully selected to enhance performance and your overall living experience." }
+      { name: "Innovation", desc: "Every home we build benefits from our ongoing research and development. Through continuous testing and innovation at our facility, your home may include upgrades or replacements to the products listed here, carefully selected to enhance performance and your overall living experience." }
     ]
   };
   const semiTurnkeyMaterials = {
@@ -1197,7 +1197,7 @@
     ],
     "DISCLAIMER": [
       { name: "Performance", desc: "The mentioned performances (including energy consumption) are calculated according to standard Passive House conditions. Actual results may vary depending on climate, house orientation, dimensions, and usage. For exact details, consult the PHPP (Passive House Planning Package) calculations for the project." },
-      { name: "Innovation", desc: "We are committed to delivering the best home possible. Through continuous testing and innovation at our facility, your home may include products that go beyond this list, carefully selected to enhance performance and your overall living experience." }
+      { name: "Innovation", desc: "Every home we build benefits from our ongoing research and development. Through continuous testing and innovation at our facility, your home may include upgrades or replacements to the products listed here, carefully selected to enhance performance and your overall living experience." }
     ]
   };
 

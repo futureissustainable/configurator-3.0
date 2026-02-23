@@ -328,7 +328,7 @@
         ],
         "DISCLAIMER": [
             { name: "Performanță", desc: "Performanțele menționate (inclusiv consumul energetic) sunt calculate conform condițiilor standard Passive House. Rezultatele reale pot avea variații în funcție de climă, orientarea casei, dimensiuni și modul de utilizare. Pentru detalii exacte, consultați calculele PHPP (Passive House Planning Package) aferente proiectului." },
-            { name: "Inovație", desc: "Ne angajăm să livrăm cea mai bună locuință posibilă. Prin testare continuă și inovație în unitatea noastră, casa dumneavoastră poate include produse care depășesc această listă, selectate cu atenție pentru a îmbunătăți performanța și experiența locuirii." }
+            { name: "Inovație", desc: "Fiecare casă pe care o construim beneficiază de cercetarea și dezvoltarea noastră continuă. Prin testare constantă și inovație în unitatea noastră, casa dumneavoastră poate include upgrade-uri sau înlocuiri ale produselor enumerate aici, selectate cu atenție pentru a îmbunătăți performanța și experiența locuirii." }
         ]
     };
 
@@ -372,7 +372,7 @@
         ],
         "DISCLAIMER": [
             { name: "Performanță", desc: "Performanțele menționate (inclusiv consumul energetic) sunt calculate conform condițiilor standard Passive House. Rezultatele reale pot avea variații în funcție de climă, orientarea casei, dimensiuni și modul de utilizare. Pentru detalii exacte, consultați calculele PHPP (Passive House Planning Package) aferente proiectului." },
-            { name: "Inovație", desc: "Ne angajăm să livrăm cea mai bună locuință posibilă. Prin testare continuă și inovație în unitatea noastră, casa dumneavoastră poate include produse care depășesc această listă, selectate cu atenție pentru a îmbunătăți performanța și experiența locuirii." }
+            { name: "Inovație", desc: "Fiecare casă pe care o construim beneficiază de cercetarea și dezvoltarea noastră continuă. Prin testare constantă și inovație în unitatea noastră, casa dumneavoastră poate include upgrade-uri sau înlocuiri ale produselor enumerate aici, selectate cu atenție pentru a îmbunătăți performanța și experiența locuirii." }
         ]
     };
 

@@ -1155,7 +1155,7 @@
     ],
     "HAFTUNGSHINWEIS": [
       { name: "Leistungswerte", desc: "Angegebene Werte (inkl. Energieverbrauch) basieren auf standardisierten Passivhaus-Bedingungen. Reale Ergebnisse variieren je nach Klima, Ausrichtung, Größe und Nutzung. Für exakte Details gelten die Berechnungen im Passivhaus-Projektierungspaket (PHPP)." },
-      { name: "Innovation", desc: "Wir setzen auf das bestmögliche Zuhause für Sie. Durch kontinuierliche Tests und Innovation in unserer Anlage kann Ihr Haus Produkte enthalten, die über diese Liste hinausgehen, sorgfältig ausgewählt, um Leistung und Wohnqualität zu steigern." }
+      { name: "Innovation", desc: "Jedes Haus, das wir bauen, profitiert von unserer fortlaufenden Forschung und Entwicklung. Durch kontinuierliche Tests und Innovation in unserer Anlage kann Ihr Haus Upgrades oder Ersatzprodukte zu den hier aufgeführten Produkten enthalten, sorgfältig ausgewählt, um Leistung und Wohnqualität zu steigern." }
     ]
   };
 
@@ -1199,7 +1199,7 @@
     ],
     "HAFTUNGSHINWEIS": [
       { name: "Leistungswerte", desc: "Angegebene Werte (inkl. Energieverbrauch) basieren auf standardisierten Passivhaus-Bedingungen. Reale Ergebnisse variieren je nach Klima, Ausrichtung, Größe und Nutzung. Für exakte Details gelten die Berechnungen im Passivhaus-Projektierungspaket (PHPP)." },
-      { name: "Innovation", desc: "Wir setzen auf das bestmögliche Zuhause für Sie. Durch kontinuierliche Tests und Innovation in unserer Anlage kann Ihr Haus Produkte enthalten, die über diese Liste hinausgehen, sorgfältig ausgewählt, um Leistung und Wohnqualität zu steigern." }
+      { name: "Innovation", desc: "Jedes Haus, das wir bauen, profitiert von unserer fortlaufenden Forschung und Entwicklung. Durch kontinuierliche Tests und Innovation in unserer Anlage kann Ihr Haus Upgrades oder Ersatzprodukte zu den hier aufgeführten Produkten enthalten, sorgfältig ausgewählt, um Leistung und Wohnqualität zu steigern." }
     ]
   };
 
