@@ -1619,10 +1619,10 @@
 
     // Ventilation specs per house model (for turnkey)
     const ventilationSpecs = {
-      "nest-24": "Zehnder ComfoAir 70 with up to 95% heat recovery + Panasonic Aquarea Heat Pump for heating and cooling.",
-      "wanderlust-48": "Zehnder ComfoAir 100 with up to 95% heat recovery + Panasonic Aquarea Heat Pump for heating and cooling.",
-      "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 with up to 95% heat recovery + Panasonic Aquarea Heat Pump for heating and cooling.",
-      "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 with up to 95% heat recovery + Panasonic Aquarea Heat Pump for heating and cooling.",
+      "nest-24": "Zehnder ComfoAir 70 with up to 95% heat recovery + Panasonic P-MOZ30IC5-E Heat Pump for heating and cooling.",
+      "wanderlust-48": "Zehnder ComfoAir 100 with up to 95% heat recovery + Panasonic P-MOZ30IC5-E Heat Pump for heating and cooling.",
+      "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 with up to 95% heat recovery + Panasonic P-MOZ30IC5-E Heat Pump for heating and cooling.",
+      "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 with up to 95% heat recovery + Panasonic P-MOZ30IC5-E Heat Pump for heating and cooling.",
     };
 
     let html = `<img src="https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69303cdf299025f5b7e0e219_95%20Wall%20Section.avif" alt="Wall Section" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">`;
