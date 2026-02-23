@@ -1153,7 +1153,8 @@
       { name: "Manufacturer Warranties", desc: "Beneficiaries receive full coverage through warranties provided by individual suppliers." }
     ],
     "DISCLAIMER": [
-      { name: "Technical Performance", desc: "The mentioned performances (including energy consumption) are calculated according to standard Passive House conditions. Actual results may vary depending on climate, house orientation, dimensions, and usage. For exact details, consult the PHPP (Passive House Planning Package) calculations for the project." }
+      { name: "Performance", desc: "The mentioned performances (including energy consumption) are calculated according to standard Passive House conditions. Actual results may vary depending on climate, house orientation, dimensions, and usage. For exact details, consult the PHPP (Passive House Planning Package) calculations for the project." },
+      { name: "Innovation", desc: "Every home we build benefits from our ongoing research and development. Through continuous testing and innovation at our facility, your home may include upgrades or replacements to the products listed here, carefully selected to enhance performance and your overall living experience." }
     ]
   };
   const semiTurnkeyMaterials = {
@@ -1195,7 +1196,8 @@
       { name: "Manufacturer Warranties", desc: "Beneficiaries receive full coverage through warranties provided by individual suppliers." }
     ],
     "DISCLAIMER": [
-      { name: "Technical Performance", desc: "The mentioned performances (including energy consumption) are calculated according to standard Passive House conditions. Actual results may vary depending on climate, house orientation, dimensions, and usage. For exact details, consult the PHPP (Passive House Planning Package) calculations for the project." }
+      { name: "Performance", desc: "The mentioned performances (including energy consumption) are calculated according to standard Passive House conditions. Actual results may vary depending on climate, house orientation, dimensions, and usage. For exact details, consult the PHPP (Passive House Planning Package) calculations for the project." },
+      { name: "Innovation", desc: "Every home we build benefits from our ongoing research and development. Through continuous testing and innovation at our facility, your home may include upgrades or replacements to the products listed here, carefully selected to enhance performance and your overall living experience." }
     ]
   };
 
@@ -1619,10 +1621,10 @@
 
     // Ventilation specs per house model (for turnkey)
     const ventilationSpecs = {
-      "nest-24": "Zehnder ComfoAir 70 with up to 95% heat recovery + Panasonic Aquarea Heat Pump for heating and cooling.",
-      "wanderlust-48": "Zehnder ComfoAir 100 with up to 95% heat recovery + Panasonic Aquarea Heat Pump for heating and cooling.",
-      "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 with up to 95% heat recovery + Panasonic Aquarea Heat Pump for heating and cooling.",
-      "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 with up to 95% heat recovery + Panasonic Aquarea Heat Pump for heating and cooling.",
+      "nest-24": "Zehnder ComfoAir 70 with up to 95% heat recovery + Panasonic P-MOZ30IC5-E Heat Pump for heating and cooling.",
+      "wanderlust-48": "Zehnder ComfoAir 100 with up to 95% heat recovery + Panasonic P-MOZ30IC5-E Heat Pump for heating and cooling.",
+      "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 with up to 95% heat recovery + Panasonic P-MOZ30IC5-E Heat Pump for heating and cooling.",
+      "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 with up to 95% heat recovery + Panasonic P-MOZ30IC5-E Heat Pump for heating and cooling.",
     };
 
     let html = `<img src="https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69303cdf299025f5b7e0e219_95%20Wall%20Section.avif" alt="Wall Section" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">`;

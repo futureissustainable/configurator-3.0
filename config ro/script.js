@@ -327,7 +327,8 @@
             { name: "Garanții producător", desc: "Beneficiarii primesc acoperire completă prin garanțiile oferite de furnizorii individuali." }
         ],
         "DISCLAIMER": [
-            { name: "Performanțe Tehnice", desc: "Performanțele menționate (inclusiv consumul energetic) sunt calculate conform condițiilor standard Passive House. Rezultatele reale pot avea variații în funcție de climă, orientarea casei, dimensiuni și modul de utilizare. Pentru detalii exacte, consultați calculele PHPP (Passive House Planning Package) aferente proiectului." }
+            { name: "Performanță", desc: "Performanțele menționate (inclusiv consumul energetic) sunt calculate conform condițiilor standard Passive House. Rezultatele reale pot avea variații în funcție de climă, orientarea casei, dimensiuni și modul de utilizare. Pentru detalii exacte, consultați calculele PHPP (Passive House Planning Package) aferente proiectului." },
+            { name: "Inovație", desc: "Fiecare casă pe care o construim beneficiază de cercetarea și dezvoltarea noastră continuă. Prin testare constantă și inovație în unitatea noastră, casa dumneavoastră poate include upgrade-uri sau înlocuiri ale produselor enumerate aici, selectate cu atenție pentru a îmbunătăți performanța și experiența locuirii." }
         ]
     };
 
@@ -370,7 +371,8 @@
             { name: "Garanții producător", desc: "Beneficiarii primesc acoperire completă prin garanțiile oferite de furnizorii individuali." }
         ],
         "DISCLAIMER": [
-            { name: "Performanțe Tehnice", desc: "Performanțele menționate (inclusiv consumul energetic) sunt calculate conform condițiilor standard Passive House. Rezultatele reale pot avea variații în funcție de climă, orientarea casei, dimensiuni și modul de utilizare. Pentru detalii exacte, consultați calculele PHPP (Passive House Planning Package) aferente proiectului." }
+            { name: "Performanță", desc: "Performanțele menționate (inclusiv consumul energetic) sunt calculate conform condițiilor standard Passive House. Rezultatele reale pot avea variații în funcție de climă, orientarea casei, dimensiuni și modul de utilizare. Pentru detalii exacte, consultați calculele PHPP (Passive House Planning Package) aferente proiectului." },
+            { name: "Inovație", desc: "Fiecare casă pe care o construim beneficiază de cercetarea și dezvoltarea noastră continuă. Prin testare constantă și inovație în unitatea noastră, casa dumneavoastră poate include upgrade-uri sau înlocuiri ale produselor enumerate aici, selectate cu atenție pentru a îmbunătăți performanța și experiența locuirii." }
         ]
     };
 
@@ -630,10 +632,10 @@
         const materials = currentFinishSlug === 'turnkey' ? turnkeyMaterials : semiTurnkeyMaterials;
 
         const ventilationSpecs = {
-            "nest-24": "Zehnder ComfoAir 70 cu recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea pentru încălzire și răcire.",
-            "wanderlust-48": "Zehnder ComfoAir 100 cu recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea pentru încălzire și răcire.",
-            "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 cu recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea pentru încălzire și răcire.",
-            "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 cu recuperare de căldură de până la 95% + Pompă de căldură Panasonic Aquarea pentru încălzire și răcire.",
+            "nest-24": "Zehnder ComfoAir 70 cu recuperare de căldură de până la 95% + Pompă de căldură Panasonic P-MOZ30IC5-E pentru încălzire și răcire.",
+            "wanderlust-48": "Zehnder ComfoAir 100 cu recuperare de căldură de până la 95% + Pompă de căldură Panasonic P-MOZ30IC5-E pentru încălzire și răcire.",
+            "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 cu recuperare de căldură de până la 95% + Pompă de căldură Panasonic P-MOZ30IC5-E pentru încălzire și răcire.",
+            "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 cu recuperare de căldură de până la 95% + Pompă de căldură Panasonic P-MOZ30IC5-E pentru încălzire și răcire.",
         };
 
         let html = `<img src="https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69303cdf299025f5b7e0e219_95%20Wall%20Section.avif" alt="Wall Section" style="width:100%; max-height: 300px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">`;

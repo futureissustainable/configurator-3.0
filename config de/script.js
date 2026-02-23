@@ -1154,7 +1154,8 @@
       { name: "Herstellergarantien", desc: "Volle Abdeckung gemäß den Garantien der jeweiligen Lieferanten." }
     ],
     "HAFTUNGSHINWEIS": [
-      { name: "Technische Leistungswerte", desc: "Angegebene Werte (inkl. Energieverbrauch) basieren auf standardisierten Passivhaus-Bedingungen. Reale Ergebnisse variieren je nach Klima, Ausrichtung, Größe und Nutzung. Für exakte Details gelten die Berechnungen im Passivhaus-Projektierungspaket (PHPP)." }
+      { name: "Leistungswerte", desc: "Angegebene Werte (inkl. Energieverbrauch) basieren auf standardisierten Passivhaus-Bedingungen. Reale Ergebnisse variieren je nach Klima, Ausrichtung, Größe und Nutzung. Für exakte Details gelten die Berechnungen im Passivhaus-Projektierungspaket (PHPP)." },
+      { name: "Innovation", desc: "Jedes Haus, das wir bauen, profitiert von unserer fortlaufenden Forschung und Entwicklung. Durch kontinuierliche Tests und Innovation in unserer Anlage kann Ihr Haus Upgrades oder Ersatzprodukte zu den hier aufgeführten Produkten enthalten, sorgfältig ausgewählt, um Leistung und Wohnqualität zu steigern." }
     ]
   };
 
@@ -1197,7 +1198,8 @@
       { name: "Herstellergarantien", desc: "Volle Abdeckung gemäß den Garantien der jeweiligen Lieferanten." }
     ],
     "HAFTUNGSHINWEIS": [
-      { name: "Technische Leistungswerte", desc: "Angegebene Werte (inkl. Energieverbrauch) basieren auf standardisierten Passivhaus-Bedingungen. Reale Ergebnisse variieren je nach Klima, Ausrichtung, Größe und Nutzung. Für exakte Details gelten die Berechnungen im Passivhaus-Projektierungspaket (PHPP)." }
+      { name: "Leistungswerte", desc: "Angegebene Werte (inkl. Energieverbrauch) basieren auf standardisierten Passivhaus-Bedingungen. Reale Ergebnisse variieren je nach Klima, Ausrichtung, Größe und Nutzung. Für exakte Details gelten die Berechnungen im Passivhaus-Projektierungspaket (PHPP)." },
+      { name: "Innovation", desc: "Jedes Haus, das wir bauen, profitiert von unserer fortlaufenden Forschung und Entwicklung. Durch kontinuierliche Tests und Innovation in unserer Anlage kann Ihr Haus Upgrades oder Ersatzprodukte zu den hier aufgeführten Produkten enthalten, sorgfältig ausgewählt, um Leistung und Wohnqualität zu steigern." }
     ]
   };
 
@@ -1603,10 +1605,10 @@
     const materials = currentFinishSlug === "turnkey" ? turnkeyMaterials : semiTurnkeyMaterials;
 
     const ventilationSpecs = {
-      "nest-24": "Zehnder ComfoAir 70 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea Wärmepumpe zum Heizen und Kühlen.",
-      "wanderlust-48": "Zehnder ComfoAir 100 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea Wärmepumpe zum Heizen und Kühlen.",
-      "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea Wärmepumpe zum Heizen und Kühlen.",
-      "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 mit bis zu 95 % Wärmerückgewinnung + Panasonic Aquarea Wärmepumpe zum Heizen und Kühlen.",
+      "nest-24": "Zehnder ComfoAir 70 mit bis zu 95 % Wärmerückgewinnung + Panasonic P-MOZ30IC5-E Wärmepumpe zum Heizen und Kühlen.",
+      "wanderlust-48": "Zehnder ComfoAir 100 mit bis zu 95 % Wärmerückgewinnung + Panasonic P-MOZ30IC5-E Wärmepumpe zum Heizen und Kühlen.",
+      "serenity-95": "Zehnder ComfoAir Q350 + ComfoClime 24 mit bis zu 95 % Wärmerückgewinnung + Panasonic P-MOZ30IC5-E Wärmepumpe zum Heizen und Kühlen.",
+      "sanctuary-142": "Zehnder ComfoAir Q350 + ComfoClime 24 mit bis zu 95 % Wärmerückgewinnung + Panasonic P-MOZ30IC5-E Wärmepumpe zum Heizen und Kühlen.",
     };
 
     let html = `<img src="https://cdn.prod.website-files.com/6801f60a2febd7da21a30b43/69303cdf299025f5b7e0e219_95%20Wall%20Section.avif" alt="Wall Section" style="width:100%; max-height: 400px; object-fit: contain; margin-bottom: 20px; border-radius: 4px;" onerror="this.onerror=null; this.src='';">`;
