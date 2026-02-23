@@ -1154,7 +1154,7 @@
     ],
     "DISCLAIMER": [
       { name: "Performance", desc: "The mentioned performances (including energy consumption) are calculated according to standard Passive House conditions. Actual results may vary depending on climate, house orientation, dimensions, and usage. For exact details, consult the PHPP (Passive House Planning Package) calculations for the project." },
-      { name: "Innovation", desc: "Through continuous testing and innovation, we strive to meet the highest benchmarks for our homes. As part of this commitment, we regularly evaluate products at our facility to ensure optimal long-term performance. As a result, your home may include upgraded versions of the products listed here, selected on the basis of our testing to deliver improved performance and durability over time." }
+      { name: "Innovation", desc: "Through continuous testing and innovation, we strive to meet the highest benchmarks for our homes. As part of this commitment, we regularly evaluate products at our facility to ensure optimal long-term performance. As a result, your home may feature products that differ from those listed here — including equivalent or enhanced alternatives — selected on the basis of our testing to deliver equal or improved performance and durability for your home." }
     ]
   };
   const semiTurnkeyMaterials = {
@@ -1197,7 +1197,7 @@
     ],
     "DISCLAIMER": [
       { name: "Performance", desc: "The mentioned performances (including energy consumption) are calculated according to standard Passive House conditions. Actual results may vary depending on climate, house orientation, dimensions, and usage. For exact details, consult the PHPP (Passive House Planning Package) calculations for the project." },
-      { name: "Innovation", desc: "Through continuous testing and innovation, we strive to meet the highest benchmarks for our homes. As part of this commitment, we regularly evaluate products at our facility to ensure optimal long-term performance. As a result, your home may include upgraded versions of the products listed here, selected on the basis of our testing to deliver improved performance and durability over time." }
+      { name: "Innovation", desc: "Through continuous testing and innovation, we strive to meet the highest benchmarks for our homes. As part of this commitment, we regularly evaluate products at our facility to ensure optimal long-term performance. As a result, your home may feature products that differ from those listed here — including equivalent or enhanced alternatives — selected on the basis of our testing to deliver equal or improved performance and durability for your home." }
     ]
   };
 

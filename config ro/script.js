@@ -328,7 +328,7 @@
         ],
         "DISCLAIMER": [
             { name: "Performanță", desc: "Performanțele menționate (inclusiv consumul energetic) sunt calculate conform condițiilor standard Passive House. Rezultatele reale pot avea variații în funcție de climă, orientarea casei, dimensiuni și modul de utilizare. Pentru detalii exacte, consultați calculele PHPP (Passive House Planning Package) aferente proiectului." },
-            { name: "Inovație", desc: "Prin testare continuă și inovație, ne propunem să atingem cele mai înalte standarde pentru casele noastre. Ca parte a acestui angajament, evaluăm periodic produsele în unitatea noastră pentru a asigura performanța optimă pe termen lung. Ca urmare, casa dumneavoastră poate include versiuni îmbunătățite ale produselor enumerate aici, selectate pe baza testelor noastre pentru a oferi performanță și durabilitate superioare în timp." }
+            { name: "Inovație", desc: "Prin testare continuă și inovație, ne propunem să atingem cele mai înalte standarde pentru casele noastre. Ca parte a acestui angajament, evaluăm periodic produsele în unitatea noastră pentru a asigura performanța optimă pe termen lung. Ca urmare, casa dumneavoastră poate include produse diferite de cele enumerate aici — inclusiv alternative echivalente sau îmbunătățite — selectate pe baza testelor noastre pentru a oferi performanță și durabilitate egale sau superioare pentru locuința dumneavoastră." }
         ]
     };
 
@@ -372,7 +372,7 @@
         ],
         "DISCLAIMER": [
             { name: "Performanță", desc: "Performanțele menționate (inclusiv consumul energetic) sunt calculate conform condițiilor standard Passive House. Rezultatele reale pot avea variații în funcție de climă, orientarea casei, dimensiuni și modul de utilizare. Pentru detalii exacte, consultați calculele PHPP (Passive House Planning Package) aferente proiectului." },
-            { name: "Inovație", desc: "Prin testare continuă și inovație, ne propunem să atingem cele mai înalte standarde pentru casele noastre. Ca parte a acestui angajament, evaluăm periodic produsele în unitatea noastră pentru a asigura performanța optimă pe termen lung. Ca urmare, casa dumneavoastră poate include versiuni îmbunătățite ale produselor enumerate aici, selectate pe baza testelor noastre pentru a oferi performanță și durabilitate superioare în timp." }
+            { name: "Inovație", desc: "Prin testare continuă și inovație, ne propunem să atingem cele mai înalte standarde pentru casele noastre. Ca parte a acestui angajament, evaluăm periodic produsele în unitatea noastră pentru a asigura performanța optimă pe termen lung. Ca urmare, casa dumneavoastră poate include produse diferite de cele enumerate aici — inclusiv alternative echivalente sau îmbunătățite — selectate pe baza testelor noastre pentru a oferi performanță și durabilitate egale sau superioare pentru locuința dumneavoastră." }
         ]
     };
 
