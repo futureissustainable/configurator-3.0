@@ -1308,9 +1308,6 @@
       scrollPercent = 100;
     }
 
-    // Get or create the reservation link
-    let reservationLink = document.getElementById("reservation-link");
-
     const buttonRow = document.querySelector(".button-row");
 
     if (scrollPercent >= 70) {
@@ -1318,31 +1315,11 @@
       btn.classList.add("active");
       box.classList.add("raise");
       if (buttonRow) buttonRow.classList.add("ready");
-
-      // Show reservation link when button is active
-      if (!reservationLink) {
-        if (buttonRow) {
-          reservationLink = document.createElement("a");
-          reservationLink.id = "reservation-link";
-          reservationLink.className = "reservation-link";
-          reservationLink.href = "/design/reserve";
-          reservationLink.textContent = "Oder jetzt im Voraus reservieren.";
-          buttonRow.parentNode.insertBefore(reservationLink, buttonRow.nextSibling);
-        }
-      }
-      if (reservationLink) {
-        reservationLink.style.display = "block";
-      }
     } else {
       btn.disabled = true;
       btn.classList.remove("active");
       box.classList.remove("raise");
       if (buttonRow) buttonRow.classList.remove("ready");
-
-      // Hide reservation link when button is not active
-      if (reservationLink) {
-        reservationLink.style.display = "none";
-      }
     }
   }
 
